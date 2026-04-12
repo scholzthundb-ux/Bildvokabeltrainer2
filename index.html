@@ -21,20 +21,25 @@
     }
 
     .ui-btn {
-      padding: 14px 22px;
-      margin: 6px;
-      border-radius: 14px;
+      padding: 18px 28px;
+      margin: 8px;
+      border-radius: 18px;
       border: none;
       background: #2d7df6;
       color: white;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
     }
 
     .ui-btn:active {
       transform: scale(0.98);
+    }
+
+    .mode-btn {
+      font-size: 26px;
+      padding: 18px 26px;
     }
 
     .mode-btn.active {
@@ -154,13 +159,38 @@
       min-height: 36px;
     }
 
-    .richtig { color: green; }
-    .falsch { color: red; }
+    .richtig {
+      color: red;
+      font-weight: bold;
+      font-size: 32px;
+    }
+
+    .falsch {
+      color: green;
+      font-weight: bold;
+      font-size: 32px;
+    }
 
     #lernInfo {
       font-size: 22px;
       font-weight: bold;
       margin: 12px;
+    }
+
+    #boostInfo {
+      font-size: 18px;
+      color: #4b5563;
+      margin: 6px 0 14px;
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(0.6); opacity: 0; }
+      60%  { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .feedback-anim {
+      animation: pop 0.35s ease;
     }
   </style>
 </head>
@@ -195,6 +225,7 @@
   <div id="quizBox">
     <div id="frage"></div>
     <div id="feedback"></div>
+    <div id="boostInfo">Falsch geklickte Wörter kommen öfter wieder.</div>
   </div>
 
   <div class="bild">
@@ -212,19 +243,19 @@
   let timer = null;
 
   const hotspots = [
-    { wort:"el sol", clickX:70, clickY:26, width:8, height:8, labelX:74, labelY:22 },
-    { wort:"la palmera", clickX:14, clickY:41, width:8, height:8, labelX:22, labelY:31 },
-    { wort:"el mar", clickX:38, clickY:50, width:8, height:8, labelX:42, labelY:44 },
-    { wort:"el barco", clickX:52, clickY:46, width:8, height:8, labelX:56, labelY:48 },
-    { wort:"la ola", clickX:73, clickY:58, width:8, height:8, labelX:72, labelY:58 },
-    { wort:"la tabla de surf", clickX:47, clickY:59, width:8, height:8, labelX:61, labelY:63 },
-    { wort:"el bañador", clickX:38, clickY:71, width:8, height:8, labelX:56, labelY:68 },
-    { wort:"la sombrilla", clickX:13, clickY:66, width:8, height:8, labelX:12, labelY:69 },
-    { wort:"la toalla", clickX:12, clickY:86, width:8, height:8, labelX:18, labelY:90 },
-    { wort:"las gafas de sol", clickX:36, clickY:90, width:8, height:8, labelX:41, labelY:92 },
-    { wort:"la crema solar", clickX:60, clickY:87, width:8, height:8, labelX:66, labelY:89 },
-    { wort:"la concha", clickX:90, clickY:90, width:8, height:8, labelX:86, labelY:90 },
-    { wort:"el chiringuito", clickX:90, clickY:53, width:8, height:8, labelX:84, labelY:66 }
+    { wort:"el sol", clickX:70, clickY:26, width:8, height:8, labelX:74, labelY:22, boost:1 },
+    { wort:"la palmera", clickX:14, clickY:41, width:8, height:8, labelX:22, labelY:31, boost:1 },
+    { wort:"el mar", clickX:38, clickY:50, width:8, height:8, labelX:42, labelY:44, boost:1 },
+    { wort:"el barco", clickX:52, clickY:46, width:8, height:8, labelX:56, labelY:48, boost:1 },
+    { wort:"la ola", clickX:73, clickY:58, width:8, height:8, labelX:72, labelY:58, boost:1 },
+    { wort:"la tabla de surf", clickX:47, clickY:59, width:8, height:8, labelX:61, labelY:63, boost:1 },
+    { wort:"el bañador", clickX:38, clickY:71, width:8, height:8, labelX:56, labelY:68, boost:1 },
+    { wort:"la sombrilla", clickX:13, clickY:66, width:8, height:8, labelX:12, labelY:69, boost:1 },
+    { wort:"la toalla", clickX:12, clickY:86, width:8, height:8, labelX:18, labelY:90, boost:1 },
+    { wort:"las gafas de sol", clickX:36, clickY:90, width:8, height:8, labelX:41, labelY:92, boost:1 },
+    { wort:"la crema solar", clickX:60, clickY:87, width:8, height:8, labelX:66, labelY:89, boost:1 },
+    { wort:"la concha", clickX:90, clickY:90, width:8, height:8, labelX:86, labelY:90, boost:1 },
+    { wort:"el chiringuito", clickX:90, clickY:53, width:8, height:8, labelX:84, labelY:66, boost:1 }
   ];
 
   const menu = document.getElementById("menu");
@@ -297,11 +328,25 @@
 
     if (h.wort === gesucht) {
       feedback.textContent = "Richtig";
-      feedback.className = "richtig";
+      feedback.className = "richtig feedback-anim";
+      void feedback.offsetWidth;
+
+      h.boost = Math.max(1, h.boost - 1);
       timer = setTimeout(nextQuestion, 600);
     } else {
       feedback.textContent = "Falsch";
-      feedback.className = "falsch";
+      feedback.className = "falsch feedback-anim";
+      void feedback.offsetWidth;
+
+      if (navigator.vibrate) {
+        navigator.vibrate(150);
+      }
+
+      const ziel = hotspots.find(x => x.wort === gesucht);
+      if (ziel) {
+        ziel.boost = Math.min(8, ziel.boost + 2);
+      }
+
       el.classList.add("fehler");
       setTimeout(() => el.classList.remove("fehler"), 300);
     }
@@ -314,14 +359,30 @@
     label.style.display = "block";
   }
 
-  function nextQuestion() {
-    let neu;
-    do {
-      neu = hotspots[Math.floor(Math.random() * hotspots.length)].wort;
-    } while (neu === letztesGesucht);
+  function getWeightedNextWord() {
+    const kandidaten = hotspots.filter(h => h.wort !== letztesGesucht);
+    const pool = kandidaten.length > 0 ? kandidaten : hotspots;
 
-    gesucht = neu;
-    letztesGesucht = neu;
+    let gesamt = 0;
+    for (const h of pool) {
+      gesamt += h.boost;
+    }
+
+    let zufall = Math.random() * gesamt;
+
+    for (const h of pool) {
+      zufall -= h.boost;
+      if (zufall <= 0) {
+        return h.wort;
+      }
+    }
+
+    return pool[pool.length - 1].wort;
+  }
+
+  function nextQuestion() {
+    gesucht = getWeightedNextWord();
+    letztesGesucht = gesucht;
 
     frage.textContent = "Finde: " + gesucht;
     feedback.textContent = "";
