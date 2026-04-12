@@ -194,6 +194,27 @@
       margin: 4px 0 6px;
     }
 
+    #quizBox {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #frage {
+      font-size: 30px;
+      margin: 2px 8px 0;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    #feedback {
+      font-size: 34px;
+      font-weight: bold;
+      min-height: 42px;
+      margin: 0;
+      line-height: 1.2;
+    }
+
     .bild {
       position: relative;
       width: 100vw;
@@ -260,20 +281,10 @@
       animation: bubbleIn 0.18s ease-out;
     }
 
-    #quizBox {
-      display: none;
-    }
-
-    #frage {
-      font-size: 30px;
-      margin: 6px 8px;
+    #lernInfo {
+      font-size: 18px;
       font-weight: bold;
-    }
-
-    #feedback {
-      font-size: 34px;
-      font-weight: bold;
-      min-height: 42px;
+      margin: 4px 8px 2px;
     }
 
     .richtig {
@@ -286,18 +297,6 @@
       color: red;
       font-weight: bold;
       font-size: 34px;
-    }
-
-    #lernInfo {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 4px 8px 2px;
-    }
-
-    #boostInfo {
-      font-size: 16px;
-      color: #4b5563;
-      margin: 4px 0 8px;
     }
 
     @keyframes pop {
@@ -386,6 +385,16 @@
         height: 56px;
         font-size: 36px;
       }
+
+      #frage {
+        font-size: 26px;
+      }
+
+      #feedback,
+      .richtig,
+      .falsch {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
@@ -434,13 +443,13 @@
     </div>
 
     <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
-    <div id="swipeInfo" class="swipe-info">Zum Bildwechsel nach links oder rechts wischen.</div>
 
     <div id="quizBox">
       <div id="frage"></div>
       <div id="feedback"></div>
-      <div id="boostInfo">Falsch geklickte Wörter kommen öfter wieder.</div>
     </div>
+
+    <div id="swipeInfo" class="swipe-info">Zum Bildwechsel nach links oder rechts wischen.</div>
 
     <div class="bild">
       <img id="bild" src="" alt="Strandbild">
