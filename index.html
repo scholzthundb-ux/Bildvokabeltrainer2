@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -40,8 +41,9 @@
     }
 
     .ui-btn.small {
-      font-size: 24px;
-      padding: 18px 26px;
+      font-size: 18px;
+      padding: 12px 18px;
+      margin: 6px;
     }
 
     #menu,
@@ -136,25 +138,54 @@
 
     .nav-row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       width: min(96vw, 760px);
       margin: 0 auto 2px;
-      padding-left: 6px;
+      padding: 0 6px;
+      box-sizing: border-box;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .back-arrow {
       background: rgba(0,0,0,0.12);
       color: #1f2a37;
       border: none;
-      font-size: 26px;
-      width: 42px;
-      height: 42px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .back-arrow:active {
       transform: scale(0.9);
+    }
+
+    .fullscreen-btn {
+      background: #0b57d0;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+    }
+
+    .fullscreen-btn:active {
+      transform: scale(0.97);
     }
 
     .swipe-info {
@@ -338,6 +369,18 @@
         opacity: 1;
       }
     }
+
+    @media (max-width: 600px) {
+      .mode-segment {
+        font-size: 24px;
+        padding: 18px 8px;
+      }
+
+      .fullscreen-btn {
+        font-size: 14px;
+        padding: 9px 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -378,7 +421,10 @@
     </div>
 
     <div class="nav-row">
-      <button class="back-arrow" id="backToFolderBtn">←</button>
+      <div class="nav-left">
+        <button class="back-arrow" id="backToFolderBtn">←</button>
+      </div>
+      <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
     </div>
 
     <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
@@ -469,6 +515,7 @@
     const bild = document.getElementById("bild");
     const currentImageTitle = document.getElementById("currentImageTitle");
     const bildContainer = document.querySelector(".bild");
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
 
     document.getElementById("openStrandBtn").addEventListener("click", openFolderMenu);
     document.getElementById("backToStartBtn").addEventListener("click", backToStart);
@@ -476,6 +523,7 @@
 
     lernBtn.addEventListener("click", () => setMode("lernen"));
     quizBtn.addEventListener("click", () => setMode("quiz"));
+    fullscreenBtn.addEventListener("click", enterFullscreen);
 
     document.querySelectorAll("#folderMenu .image-btn").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -491,6 +539,8 @@
       touchEndX = e.changedTouches[0].screenX;
       handleSwipe();
     });
+
+    document.addEventListener("fullscreenchange", updateFullscreenButtonText);
 
     function getCurrentImageData() {
       return folders[currentFolderKey].images[currentImageIndex];
@@ -508,7 +558,7 @@
       menu.style.display = "flex";
     }
 
-    function backToFolderMenu() {
+    async function backToFolderMenu() {
       app.style.display = "none";
       folderMenu.style.display = "flex";
       clearTimeout(timer);
@@ -516,6 +566,7 @@
       label.style.display = "none";
       feedback.textContent = "";
       feedback.className = "";
+      await exitFullscreen();
     }
 
     function openImage(index) {
@@ -779,6 +830,34 @@
       } else {
         showPrevImage();
       }
+    }
+
+    async function enterFullscreen() {
+      try {
+        const el = document.documentElement;
+
+        if (!document.fullscreenElement) {
+          if (el.requestFullscreen) {
+            await el.requestFullscreen({ navigationUI: "hide" });
+          }
+        }
+      } catch (err) {
+        alert("Vollbild wurde vom Browser nicht gestartet.");
+      }
+    }
+
+    async function exitFullscreen() {
+      try {
+        if (document.fullscreenElement && document.exitFullscreen) {
+          await document.exitFullscreen();
+        }
+      } catch (err) {
+        console.log("Fullscreen konnte nicht beendet werden.");
+      }
+    }
+
+    function updateFullscreenButtonText() {
+      fullscreenBtn.textContent = document.fullscreenElement ? "Vollbild an" : "Vollbild";
     }
   </script>
 </body>
