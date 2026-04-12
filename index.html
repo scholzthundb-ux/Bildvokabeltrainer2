@@ -1,171 +1,162 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vokabeltrainer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vokabeltrainer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      background: #f0f4f8;
+      padding: 0 10px 30px;
+    }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  background: #f0f4f8;
-}
+    h1 {
+      margin: 20px 0;
+    }
 
-h1 {
-  margin: 20px 0;
-}
+    #menu {
+      padding: 20px 0;
+    }
 
-#menu {
-  padding: 20px;
-}
+    .menu-btn, #back {
+      padding: 12px 18px;
+      margin: 8px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background: #0d6efd;
+      color: white;
+      cursor: pointer;
+    }
 
-button {
-  padding: 12px 18px;
-  margin: 8px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
-  background: #0d6efd;
-  color: white;
-}
+    .bild {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-.bild {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-}
+    #bild {
+      width: 100%;
+      display: block;
+    }
 
-img {
-  width: 100%;
-  display: block;
-}
+    #hotspots {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
 
-#hotspots {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+    .hotspot {
+      position: absolute;
+      background: transparent;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      z-index: 11;
+    }
 
-.hotspot {
-  position: absolute;
-  background: transparent;
-  border: none;
-}
+    .kreis {
+      border-radius: 50%;
+    }
 
-.kreis {
-  border-radius: 50%;
-}
+    #label {
+      position: absolute;
+      display: none;
+      background: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 6px 10px;
+      font-size: 22px;
+      font-weight: bold;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      white-space: nowrap;
+    }
 
-#label {
-  position: absolute;
-  display: none;
-  background: white;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 6px 10px;
-  font-size: 22px;
-  font-weight: bold;
-  transform: translate(-50%, -50%);
-}
-
-#back {
-  margin: 15px;
-}
-</style>
+    #app {
+      display: none;
+    }
+  </style>
 </head>
-
 <body>
 
-<h1>Vokabeltrainer</h1>
+  <h1>Vokabeltrainer</h1>
 
-<div id="menu"></div>
-
-<div id="app" style="display:none;">
-  <button id="back" onclick="zurueck()">← Zurück</button>
-  <div class="bild">
-    <img id="bild">
-    <div id="hotspots"></div>
-    <div id="label"></div>
+  <div id="menu">
+    <button class="menu-btn" onclick="ladeThema('strand')">Strand</button>
   </div>
-</div>
 
-<script>
+  <div id="app">
+    <button id="back" onclick="zurueck()">← Zurück</button>
 
-const themen = [
-  {
-    name: "Strand",
-    image: "strand-ohne-woerter.png",
-    hotspots: [
-      { wort:"el sol", left:65, top:12, width:12, height:12, x:60, y:28, kreis:true },
-      { wort:"la palmera", left:9, top:36, width:9, height:10, x:23, y:29 },
-      { wort:"el mar", left:33, top:44, width:8, height:9, x:43, y:33 },
-      { wort:"el barco", left:48, top:42, width:8, height:9, x:54, y:24 },
-      { wort:"la ola", left:69, top:56, width:7, height:8, x:72, y:40 },
-      { wort:"la tabla de surf", left:45, top:60, width:8, height:10, x:52, y:49 },
-      { wort:"el bañador", left:37, top:71, width:9, height:9, x:54, y:60 },
-      { wort:"la sombrilla", left:8, top:61, width:8, height:10, x:19, y:58 },
-      { wort:"la toalla", left:8, top:86, width:8, height:9, x:16, y:86 },
-      { wort:"las gafas de sol", left:34, top:87, width:8, height:8, x:35, y:92 },
-      { wort:"la crema solar", left:55, top:85, width:8, height:8, x:66, y:84 },
-      { wort:"la concha", left:90, top:87, width:7, height:8, x:86, y:91 },
-      { wort:"el chiringuito", left:87, top:60, width:7, height:9, x:82, y:58 }
-    ]
-  }
-];
+    <div class="bild">
+      <img id="bild" src="" alt="Bildvokabeln">
+      <div id="hotspots"></div>
+      <div id="label"></div>
+    </div>
+  </div>
 
-function startMenu(){
-  const menu = document.getElementById("menu");
-  menu.innerHTML = "";
-  themen.forEach((t,i)=>{
-    const btn = document.createElement("button");
-    btn.innerText = t.name;
-    btn.onclick = ()=> ladeThema(i);
-    menu.appendChild(btn);
-  });
-}
-
-function ladeThema(index){
-  document.getElementById("menu").style.display="none";
-  document.getElementById("app").style.display="block";
-
-  const t = themen[index];
-  document.getElementById("bild").src = t.image;
-
-  const container = document.getElementById("hotspots");
-  container.innerHTML = "";
-
-  t.hotspots.forEach(h=>{
-    const btn = document.createElement("button");
-    btn.className = "hotspot" + (h.kreis ? " kreis":"");
-    btn.style.left = h.left + "%";
-    btn.style.top = h.top + "%";
-    btn.style.width = h.width + "%";
-    btn.style.height = h.height + "%";
-
-    btn.onclick = ()=>{
-      const label = document.getElementById("label");
-      label.innerText = h.wort;
-      label.style.left = h.x + "%";
-      label.style.top = h.y + "%";
-      label.style.display = "block";
+  <script>
+    const themen = {
+      strand: {
+        image: "strand-ohne-woerter.png",
+        hotspots: [
+          { wort:"el sol", left:65, top:12, width:12, height:12, x:60, y:28, kreis:true },
+          { wort:"la palmera", left:9, top:36, width:9, height:10, x:23, y:29 },
+          { wort:"el mar", left:33, top:44, width:8, height:9, x:43, y:33 },
+          { wort:"el barco", left:48, top:42, width:8, height:9, x:54, y:24 },
+          { wort:"la ola", left:69, top:56, width:7, height:8, x:72, y:40 },
+          { wort:"la tabla de surf", left:45, top:60, width:8, height:10, x:52, y:49 },
+          { wort:"el bañador", left:37, top:71, width:9, height:9, x:54, y:60 },
+          { wort:"la sombrilla", left:8, top:61, width:8, height:10, x:19, y:58 },
+          { wort:"la toalla", left:8, top:86, width:8, height:9, x:16, y:86 },
+          { wort:"las gafas de sol", left:34, top:87, width:8, height:8, x:35, y:92 },
+          { wort:"la crema solar", left:55, top:85, width:8, height:8, x:66, y:84 },
+          { wort:"la concha", left:90, top:87, width:7, height:8, x:86, y:91 },
+          { wort:"el chiringuito", left:87, top:60, width:7, height:9, x:82, y:58 }
+        ]
+      }
     };
 
-    container.appendChild(btn);
-  });
-}
+    function ladeThema(name) {
+      const thema = themen[name];
+      if (!thema) return;
 
-function zurueck(){
-  document.getElementById("menu").style.display="block";
-  document.getElementById("app").style.display="none";
-}
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("app").style.display = "block";
+      document.getElementById("bild").src = thema.image;
 
-startMenu();
+      const hotspots = document.getElementById("hotspots");
+      hotspots.innerHTML = "";
 
-</script>
+      thema.hotspots.forEach(h => {
+        const btn = document.createElement("button");
+        btn.className = "hotspot" + (h.kreis ? " kreis" : "");
+        btn.style.left = h.left + "%";
+        btn.style.top = h.top + "%";
+        btn.style.width = h.width + "%";
+        btn.style.height = h.height + "%";
+        btn.onclick = function () {
+          const label = document.getElementById("label");
+          label.textContent = h.wort;
+          label.style.left = h.x + "%";
+          label.style.top = h.y + "%";
+          label.style.display = "block";
+        };
+        hotspots.appendChild(btn);
+      });
+    }
+
+    function zurueck() {
+      document.getElementById("app").style.display = "none";
+      document.getElementById("menu").style.display = "block";
+      document.getElementById("label").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
