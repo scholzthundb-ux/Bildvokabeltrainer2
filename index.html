@@ -6,13 +6,7 @@
 <title>Vokabeltrainer</title>
 
 <style>
-body {
-  font-family: Arial;
-  text-align: center;
-  margin: 0;
-  background: #f0f4f8;
-}
-
+body { font-family:Arial; text-align:center; margin:0; background:#f0f4f8; }
 h1 { margin:20px; }
 
 button {
@@ -28,23 +22,14 @@ button {
 
 .mode-btn.active { background:#084298; }
 
-.bild {
-  position: relative;
-  max-width:900px;
-  margin:auto;
-}
-
-#bild {
-  width:100%;
-  display:block;
-}
+.bild { position:relative; max-width:900px; margin:auto; }
+#bild { width:100%; display:block; }
 
 .hotspot {
   position:absolute;
   background:transparent;
   border:none;
   transform:translate(-50%, -50%);
-  z-index:11;
 }
 
 .hotspot.fehler {
@@ -64,40 +49,18 @@ button {
   transform:translate(-50%,-50%);
   display:none;
   z-index:20;
-  white-space:nowrap;
-  box-shadow:0 6px 14px rgba(0,0,0,0.4);
 }
 
 #app { display:none; }
-
 #quizBox { display:none; }
 
-#frage {
-  font-size:28px;
-  margin:10px;
-  font-weight:bold;
-}
-
-#feedback {
-  font-size:26px;
-  font-weight:bold;
-  min-height:32px;
-}
-
-#loesung {
-  font-size:22px;
-  min-height:28px;
-  margin-bottom:8px;
-}
+#frage { font-size:28px; margin:10px; font-weight:bold; }
+#feedback { font-size:26px; font-weight:bold; min-height:32px; }
 
 .richtig { color:green; }
 .falsch { color:red; }
 
-#lernInfo {
-  font-size:20px;
-  font-weight:bold;
-  margin:10px;
-}
+#lernInfo { font-size:20px; font-weight:bold; margin:10px; }
 </style>
 </head>
 
@@ -123,165 +86,128 @@ button {
 <div id="quizBox">
   <div id="frage"></div>
   <div id="feedback"></div>
-  <div id="loesung"></div>
 </div>
 
 <div class="bild">
-  <img id="bild" src="strand-ohne-woerter.png">
-  <div id="hotspots"></div>
-  <div id="label"></div>
+<img src="strand-ohne-woerter.png">
+<div id="hotspots"></div>
+<div id="label"></div>
 </div>
 
 </div>
 
 <script>
-let mode = "lernen";
-let gesucht = "";
-let letztesGesucht = "";
-let quizAktiv = false;
-let wechselTimer = null;
 
-/* Mittelpunkt = Pfeilspitze */
-const hotspots = [
-  { wort:"el sol", clickX:70, clickY:24, width:8, height:8, labelX:74, labelY:22 },
-  { wort:"la palmera", clickX:14, clickY:42, width:8, height:8, labelX:22, labelY:31 },
-  { wort:"el mar", clickX:38, clickY:50, width:8, height:8, labelX:42, labelY:44 },
-  { wort:"el barco", clickX:52, clickY:46, width:8, height:8, labelX:56, labelY:48 },
-  { wort:"la ola", clickX:71, clickY:60, width:8, height:8, labelX:72, labelY:58 },
-  { wort:"la tabla de surf", clickX:47, clickY:63, width:8, height:8, labelX:61, labelY:63 },
-  { wort:"el bañador", clickX:38, clickY:74, width:8, height:8, labelX:56, labelY:68 },
-  { wort:"la sombrilla", clickX:13, clickY:68, width:8, height:8, labelX:12, labelY:69 },
-  { wort:"la toalla", clickX:12, clickY:86, width:8, height:8, labelX:18, labelY:90 },
-  { wort:"las gafas de sol", clickX:36, clickY:90, width:8, height:8, labelX:41, labelY:92 },
-  { wort:"la crema solar", clickX:60, clickY:87, width:8, height:8, labelX:66, labelY:89 },
-  { wort:"la concha", clickX:90, clickY:90, width:8, height:8, labelX:86, labelY:90 },
-  { wort:"el chiringuito", clickX:88, clickY:52, width:8, height:8, labelX:84, labelY:66 }
+let mode="lernen";
+let gesucht="";
+let letztesGesucht="";
+let quizAktiv=false;
+
+const hotspots=[
+{ wort:"el sol", clickX:70, clickY:24, width:8, height:8, labelX:74, labelY:22 },
+{ wort:"la palmera", clickX:14, clickY:42, width:8, height:8, labelX:22, labelY:31 },
+{ wort:"el mar", clickX:38, clickY:50, width:8, height:8, labelX:42, labelY:44 },
+{ wort:"el barco", clickX:52, clickY:46, width:8, height:8, labelX:56, labelY:48 },
+{ wort:"la ola", clickX:71, clickY:60, width:8, height:8, labelX:72, labelY:58 },
+{ wort:"la tabla de surf", clickX:47, clickY:63, width:8, height:8, labelX:61, labelY:63 },
+{ wort:"el bañador", clickX:38, clickY:74, width:8, height:8, labelX:56, labelY:68 },
+{ wort:"la sombrilla", clickX:13, clickY:68, width:8, height:8, labelX:12, labelY:69 },
+{ wort:"la toalla", clickX:12, clickY:86, width:8, height:8, labelX:18, labelY:90 },
+{ wort:"las gafas de sol", clickX:36, clickY:90, width:8, height:8, labelX:41, labelY:92 },
+{ wort:"la crema solar", clickX:60, clickY:87, width:8, height:8, labelX:66, labelY:89 },
+{ wort:"la concha", clickX:90, clickY:90, width:8, height:8, labelX:86, labelY:90 },
+{ wort:"el chiringuito", clickX:88, clickY:52, width:8, height:8, labelX:84, labelY:66 }
 ];
 
-function start() {
-  document.getElementById("menu").style.display = "none";
-  document.getElementById("app").style.display = "block";
-  build();
+function start(){
+document.getElementById("menu").style.display="none";
+document.getElementById("app").style.display="block";
+build();
 }
 
-function build() {
-  const container = document.getElementById("hotspots");
-  container.innerHTML = "";
+function build(){
+const c=document.getElementById("hotspots");
+c.innerHTML="";
 
-  hotspots.forEach(h => {
-    const b = document.createElement("button");
-    b.className = "hotspot";
-    b.style.left = h.clickX + "%";
-    b.style.top = h.clickY + "%";
-    b.style.width = h.width + "%";
-    b.style.height = h.height + "%";
-    b.onclick = () => handleClick(h, b);
-    container.appendChild(b);
-  });
+hotspots.forEach(h=>{
+let b=document.createElement("button");
+b.className="hotspot";
+b.style.left=h.clickX+"%";
+b.style.top=h.clickY+"%";
+b.style.width=h.width+"%";
+b.style.height=h.height+"%";
+b.onclick=()=>click(h,b);
+c.appendChild(b);
+});
 }
 
-function setMode(m) {
-  mode = m;
+function setMode(m){
+mode=m;
 
-  if (wechselTimer) {
-    clearTimeout(wechselTimer);
-    wechselTimer = null;
-  }
+document.getElementById("lernBtn").classList.toggle("active",m==="lernen");
+document.getElementById("quizBtn").classList.toggle("active",m==="quiz");
 
-  document.getElementById("lernBtn").classList.toggle("active", m === "lernen");
-  document.getElementById("quizBtn").classList.toggle("active", m === "quiz");
+document.getElementById("label").style.display="none";
+document.getElementById("feedback").textContent="";
 
-  document.getElementById("label").style.display = "none";
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("feedback").className = "";
-  document.getElementById("loesung").textContent = "";
-
-  if (m === "lernen") {
-    document.getElementById("quizBox").style.display = "none";
-    document.getElementById("lernInfo").style.display = "block";
-    quizAktiv = false;
-  } else {
-    document.getElementById("quizBox").style.display = "block";
-    document.getElementById("lernInfo").style.display = "none";
-    nextFrage();
-  }
+if(m==="lernen"){
+document.getElementById("quizBox").style.display="none";
+document.getElementById("lernInfo").style.display="block";
+quizAktiv=false;
+}else{
+document.getElementById("quizBox").style.display="block";
+document.getElementById("lernInfo").style.display="none";
+next();
+}
 }
 
-function handleClick(h, btn) {
-  if (mode === "lernen") {
-    showLabel(h.wort, h.labelX, h.labelY);
-    return;
-  }
+function click(h,btn){
 
-  if (!quizAktiv) return;
-
-  quizAktiv = false;
-
-  const feedback = document.getElementById("feedback");
-  const loesung = document.getElementById("loesung");
-
-  if (h.wort === gesucht) {
-    feedback.textContent = "Richtig";
-    feedback.className = "richtig";
-    loesung.textContent = "";
-
-    wechselTimer = setTimeout(() => {
-      nextFrage();
-    }, 700);
-  } else {
-    feedback.textContent = "Falsch";
-    feedback.className = "falsch";
-    loesung.textContent = "Richtig wäre: " + gesucht;
-
-    btn.classList.add("fehler");
-    setTimeout(() => btn.classList.remove("fehler"), 300);
-
-    wechselTimer = setTimeout(() => {
-      nextFrage();
-    }, 1300);
-  }
+if(mode==="lernen"){
+let l=document.getElementById("label");
+l.textContent=h.wort;
+l.style.left=h.labelX+"%";
+l.style.top=h.labelY+"%";
+l.style.display="block";
+return;
 }
 
-function showLabel(text, x, y) {
-  const l = document.getElementById("label");
-  l.textContent = text;
-  l.style.left = x + "%";
-  l.style.top = y + "%";
-  l.style.display = "block";
+if(!quizAktiv) return;
+
+if(h.wort===gesucht){
+document.getElementById("feedback").textContent="Richtig";
+document.getElementById("feedback").className="richtig";
+
+setTimeout(()=>next(),600);
+
+}else{
+document.getElementById("feedback").textContent="Falsch";
+document.getElementById("feedback").className="falsch";
+
+btn.classList.add("fehler");
+setTimeout(()=>btn.classList.remove("fehler"),300);
+}
 }
 
-function nextFrage() {
-  if (wechselTimer) {
-    clearTimeout(wechselTimer);
-    wechselTimer = null;
-  }
+function next(){
 
-  let neuesWort = "";
+let neu;
 
-  if (hotspots.length === 1) {
-    neuesWort = hotspots[0].wort;
-  } else {
-    do {
-      const i = Math.floor(Math.random() * hotspots.length);
-      neuesWort = hotspots[i].wort;
-    } while (neuesWort === letztesGesucht);
-  }
+do{
+neu=hotspots[Math.floor(Math.random()*hotspots.length)].wort;
+}while(neu===letztesGesucht);
 
-  gesucht = neuesWort;
-  letztesGesucht = neuesWort;
+gesucht=neu;
+letztesGesucht=neu;
 
-  document.getElementById("frage").textContent = "Finde: " + gesucht;
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("feedback").className = "";
-  document.getElementById("loesung").textContent = "";
-  document.getElementById("label").style.display = "none";
-
-  quizAktiv = true;
+document.getElementById("frage").textContent="Finde: "+gesucht;
+document.getElementById("feedback").textContent="";
 }
 
-function zurueck() {
-  location.reload();
+function zurueck(){
+location.reload();
 }
+
 </script>
 
 </body>
