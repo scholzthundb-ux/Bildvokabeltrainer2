@@ -1,119 +1,101 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vokabeltrainer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vokabeltrainer</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      background: #f0f4f8;
-      padding: 0 10px 30px;
-    }
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  margin: 0;
+  background: #f0f4f8;
+}
 
-    h1 {
-      margin: 20px 0 10px;
-      font-size: 28px;
-    }
+h1 { margin:20px; }
 
-    #menu {
-      padding: 20px 0;
-    }
+button {
+  padding:10px 16px;
+  margin:5px;
+  border-radius:10px;
+  border:none;
+  background:#2d7df6;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
 
-    button {
-      padding: 10px 16px;
-      margin: 5px;
-      border-radius: 10px;
-      border: none;
-      background: #2d7df6;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.mode-btn.active { background:#084298; }
 
-    .mode-btn.active {
-      background: #084298;
-    }
+.bild {
+  position: relative;
+  max-width:900px;
+  margin:auto;
+}
 
-    .bild {
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-    }
+#bild {
+  width:100%;
+  display:block;
+}
 
-    #bild {
-      width: 100%;
-      display: block;
-    }
+/* 🔥 ZENTRIERTE HOTSPOTS */
+.hotspot {
+  position:absolute;
+  background:transparent;
+  border:none;
+  transform:translate(-50%, -50%);
+  z-index:11;
+}
 
-    .hotspot {
-      position: absolute;
-      background: transparent;
-      border: none;
-      transform: translate(-50%, -50%);
-      z-index: 11;
-      cursor: pointer;
-    }
+.hotspot.fehler {
+  background:rgba(255,0,0,0.3);
+  border:2px solid red;
+  border-radius:10px;
+}
 
-    .hotspot.fehler {
-      background: rgba(255, 0, 0, 0.28);
-      border: 2px solid red;
-      border-radius: 10px;
-    }
+#label {
+  position:absolute;
+  background:white;
+  border:3px solid black;
+  border-radius:14px;
+  padding:14px 20px;
+  font-size:clamp(24px,6vw,40px);
+  font-weight:bold;
+  transform:translate(-50%,-50%);
+  display:none;
+  z-index:20;
+  white-space:nowrap;
+  box-shadow:0 6px 14px rgba(0,0,0,0.4);
+}
 
-    #label {
-      position: absolute;
-      background: white;
-      border: 3px solid black;
-      border-radius: 14px;
-      padding: 14px 20px;
-      font-size: clamp(24px, 6vw, 40px);
-      font-weight: bold;
-      transform: translate(-50%, -50%);
-      display: none;
-      z-index: 20;
-      white-space: nowrap;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-    }
+#app { display:none; }
 
-    #app {
-      display: none;
-    }
+#quizBox { display:none; }
 
-    #quizBox {
-      display: none;
-    }
+#frage {
+  font-size:28px;
+  margin:10px;
+  font-weight:bold;
+}
 
-    #frage {
-      font-size: 28px;
-      margin: 10px;
-      font-weight: bold;
-    }
+#feedback {
+  font-size:26px;
+  font-weight:bold;
+  min-height:32px;
+}
 
-    #feedback {
-      font-size: 26px;
-      font-weight: bold;
-      min-height: 32px;
-    }
+.richtig { color:green; }
+.falsch { color:red; }
 
-    .richtig {
-      color: green;
-    }
-
-    .falsch {
-      color: red;
-    }
-
-    #lernInfo {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 10px;
-    }
-  </style>
+#lernInfo {
+  font-size:20px;
+  font-weight:bold;
+  margin:10px;
+}
+</style>
 </head>
+
 <body>
 
 <h1>Vokabeltrainer</h1>
@@ -123,140 +105,157 @@
 </div>
 
 <div id="app">
-  <button onclick="zurueck()">← Zurück</button>
 
-  <div>
-    <button id="lernBtn" class="mode-btn active" onclick="setMode('lernen')">Lernmodus</button>
-    <button id="quizBtn" class="mode-btn" onclick="setMode('quiz')">Quizmodus</button>
-  </div>
+<button onclick="zurueck()">← Zurück</button>
 
-  <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
+<div>
+<button id="lernBtn" class="mode-btn active" onclick="setMode('lernen')">Lernmodus</button>
+<button id="quizBtn" class="mode-btn" onclick="setMode('quiz')">Quizmodus</button>
+</div>
 
-  <div id="quizBox">
-    <div id="frage"></div>
-    <div id="feedback"></div>
-    <button onclick="nextFrage()">Nächster Begriff</button>
-  </div>
+<div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
 
-  <div class="bild">
-    <img id="bild" src="strand-ohne-woerter.png" alt="Strand">
-    <div id="hotspots"></div>
-    <div id="label"></div>
-  </div>
+<div id="quizBox">
+<div id="frage"></div>
+<div id="feedback"></div>
+<button onclick="nextFrage()">Nächster Begriff</button>
+</div>
+
+<div class="bild">
+<img id="bild" src="strand-ohne-woerter.png">
+<div id="hotspots"></div>
+<div id="label"></div>
+</div>
+
 </div>
 
 <script>
-let mode = "lernen";
-let gesucht = "";
-let quizAktiv = false;
 
-/*
-  clickX / clickY  = Mittelpunkt der Klickfläche = Pfeilspitze
-  labelX / labelY  = Position, wo das Wort erscheinen soll
-  width / height   = Größe der unsichtbaren Klickfläche
-*/
+let mode="lernen";
+let gesucht="";
+let quizAktiv=false;
 
-const hotspots = [
-  { wort:"el sol",            clickX: 67, clickY: 31, width: 8, height: 8, labelX: 74, labelY: 22 },
-  { wort:"la palmera",        clickX: 14, clickY: 42, width: 8, height: 8, labelX: 22, labelY: 31 },
-  { wort:"el mar",            clickX: 38, clickY: 50, width: 8, height: 8, labelX: 42, labelY: 44 },
-  { wort:"el barco",          clickX: 52, clickY: 46, width: 8, height: 8, labelX: 56, labelY: 48 },
-  { wort:"la ola",            clickX: 71, clickY: 60, width: 8, height: 8, labelX: 72, labelY: 58 },
-  { wort:"la tabla de surf",  clickX: 47, clickY: 63, width: 8, height: 8, labelX: 61, labelY: 63 },
-  { wort:"el bañador",        clickX: 38, clickY: 74, width: 8, height: 8, labelX: 56, labelY: 68 },
-  { wort:"la sombrilla",      clickX: 13, clickY: 68, width: 8, height: 8, labelX: 12, labelY: 69 },
-  { wort:"la toalla",         clickX: 12, clickY: 86, width: 8, height: 8, labelX: 18, labelY: 90 },
-  { wort:"las gafas de sol",  clickX: 36, clickY: 90, width: 8, height: 8, labelX: 41, labelY: 92 },
-  { wort:"la crema solar",    clickX: 60, clickY: 87, width: 8, height: 8, labelX: 66, labelY: 89 },
-  { wort:"la concha",         clickX: 90, clickY: 90, width: 8, height: 8, labelX: 86, labelY: 90 },
-  { wort:"el chiringuito",    clickX: 89, clickY: 64, width: 8, height: 8, labelX: 84, labelY: 66 }
+/* Mittelpunkt = Pfeilspitze */
+const hotspots=[
+
+{ wort:"el sol", clickX:70, clickY:24, width:8, height:8, labelX:74, labelY:22 },
+
+{ wort:"la palmera", clickX:14, clickY:42, width:8, height:8, labelX:22, labelY:31 },
+
+{ wort:"el mar", clickX:38, clickY:50, width:8, height:8, labelX:42, labelY:44 },
+
+{ wort:"el barco", clickX:52, clickY:46, width:8, height:8, labelX:56, labelY:48 },
+
+{ wort:"la ola", clickX:71, clickY:60, width:8, height:8, labelX:72, labelY:58 },
+
+{ wort:"la tabla de surf", clickX:47, clickY:63, width:8, height:8, labelX:61, labelY:63 },
+
+{ wort:"el bañador", clickX:38, clickY:74, width:8, height:8, labelX:56, labelY:68 },
+
+{ wort:"la sombrilla", clickX:13, clickY:68, width:8, height:8, labelX:12, labelY:69 },
+
+{ wort:"la toalla", clickX:12, clickY:86, width:8, height:8, labelX:18, labelY:90 },
+
+{ wort:"las gafas de sol", clickX:36, clickY:90, width:8, height:8, labelX:41, labelY:92 },
+
+{ wort:"la crema solar", clickX:60, clickY:87, width:8, height:8, labelX:66, labelY:89 },
+
+{ wort:"la concha", clickX:90, clickY:90, width:8, height:8, labelX:86, labelY:90 },
+
+{ wort:"el chiringuito", clickX:88, clickY:60, width:8, height:8, labelX:84, labelY:66 }
+
 ];
 
-function start() {
-  document.getElementById("menu").style.display = "none";
-  document.getElementById("app").style.display = "block";
-  buildHotspots();
+function start(){
+document.getElementById("menu").style.display="none";
+document.getElementById("app").style.display="block";
+build();
 }
 
-function buildHotspots() {
-  const container = document.getElementById("hotspots");
-  container.innerHTML = "";
+function build(){
+const container=document.getElementById("hotspots");
+container.innerHTML="";
 
-  hotspots.forEach(h => {
-    const b = document.createElement("button");
-    b.className = "hotspot";
-    b.style.left = h.clickX + "%";
-    b.style.top = h.clickY + "%";
-    b.style.width = h.width + "%";
-    b.style.height = h.height + "%";
+hotspots.forEach(h=>{
+const b=document.createElement("button");
+b.className="hotspot";
 
-    b.onclick = () => handleClick(h, b);
+b.style.left=h.clickX+"%";
+b.style.top=h.clickY+"%";
+b.style.width=h.width+"%";
+b.style.height=h.height+"%";
 
-    container.appendChild(b);
-  });
+b.onclick=()=>handleClick(h,b);
+
+container.appendChild(b);
+});
 }
 
-function setMode(neu) {
-  mode = neu;
+function setMode(m){
+mode=m;
 
-  document.getElementById("lernBtn").classList.toggle("active", neu === "lernen");
-  document.getElementById("quizBtn").classList.toggle("active", neu === "quiz");
+document.getElementById("lernBtn").classList.toggle("active",m==="lernen");
+document.getElementById("quizBtn").classList.toggle("active",m==="quiz");
 
-  document.getElementById("label").style.display = "none";
-  document.getElementById("feedback").textContent = "";
+document.getElementById("label").style.display="none";
+document.getElementById("feedback").textContent="";
 
-  if (neu === "lernen") {
-    document.getElementById("quizBox").style.display = "none";
-    document.getElementById("lernInfo").style.display = "block";
-    quizAktiv = false;
-  } else {
-    document.getElementById("quizBox").style.display = "block";
-    document.getElementById("lernInfo").style.display = "none";
-    nextFrage();
-  }
+if(m==="lernen"){
+document.getElementById("quizBox").style.display="none";
+document.getElementById("lernInfo").style.display="block";
+quizAktiv=false;
+}else{
+document.getElementById("quizBox").style.display="block";
+document.getElementById("lernInfo").style.display="none";
+nextFrage();
+}
 }
 
-function handleClick(h, btn) {
-  if (mode === "lernen") {
-    showLabel(h.wort, h.labelX, h.labelY);
-    return;
-  }
+function handleClick(h,btn){
 
-  if (!quizAktiv) return;
-
-  if (h.wort === gesucht) {
-    document.getElementById("feedback").textContent = "Richtig";
-    document.getElementById("feedback").className = "richtig";
-    quizAktiv = false;
-  } else {
-    document.getElementById("feedback").textContent = "Falsch";
-    document.getElementById("feedback").className = "falsch";
-    btn.classList.add("fehler");
-    setTimeout(() => btn.classList.remove("fehler"), 300);
-  }
+if(mode==="lernen"){
+showLabel(h.wort,h.labelX,h.labelY);
+return;
 }
 
-function showLabel(text, x, y) {
-  const label = document.getElementById("label");
-  label.textContent = text;
-  label.style.left = x + "%";
-  label.style.top = y + "%";
-  label.style.display = "block";
+if(!quizAktiv) return;
+
+if(h.wort===gesucht){
+document.getElementById("feedback").textContent="Richtig";
+document.getElementById("feedback").className="richtig";
+quizAktiv=false;
+}else{
+document.getElementById("feedback").textContent="Falsch";
+document.getElementById("feedback").className="falsch";
+btn.classList.add("fehler");
+setTimeout(()=>btn.classList.remove("fehler"),300);
+}
 }
 
-function nextFrage() {
-  const i = Math.floor(Math.random() * hotspots.length);
-  gesucht = hotspots[i].wort;
-  document.getElementById("frage").textContent = "Finde: " + gesucht;
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("feedback").className = "";
-  document.getElementById("label").style.display = "none";
-  quizAktiv = true;
+function showLabel(text,x,y){
+const l=document.getElementById("label");
+l.textContent=text;
+l.style.left=x+"%";
+l.style.top=y+"%";
+l.style.display="block";
 }
 
-function zurueck() {
-  location.reload();
+function nextFrage(){
+const i=Math.floor(Math.random()*hotspots.length);
+gesucht=hotspots[i].wort;
+
+document.getElementById("frage").textContent="Finde: "+gesucht;
+document.getElementById("feedback").textContent="";
+document.getElementById("feedback").className="";
+document.getElementById("label").style.display="none";
+
+quizAktiv=true;
 }
+
+function zurueck(){
+location.reload();
+}
+
 </script>
 
 </body>
