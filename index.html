@@ -54,14 +54,8 @@
       position: absolute;
       background: transparent;
       border: none;
-      padding: 0;
-      margin: 0;
       cursor: pointer;
       z-index: 11;
-    }
-
-    .kreis {
-      border-radius: 50%;
     }
 
     #label {
@@ -76,7 +70,6 @@
       transform: translate(-50%, -50%);
       z-index: 20;
       white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
 
     #app {
@@ -86,81 +79,94 @@
 </head>
 <body>
 
-  <h1>Vokabeltrainer</h1>
+<h1>Vokabeltrainer</h1>
 
-  <div id="menu">
-    <button class="menu-btn" onclick="ladeThema('strand')">Strand</button>
+<div id="menu">
+  <button class="menu-btn" onclick="ladeThema('strand')">Strand</button>
+</div>
+
+<div id="app">
+  <button id="back" onclick="zurueck()">← Zurück</button>
+
+  <div class="bild">
+    <img id="bild" src="">
+    <div id="hotspots"></div>
+    <div id="label"></div>
   </div>
+</div>
 
-  <div id="app">
-    <button id="back" onclick="zurueck()">← Zurück</button>
+<script>
+const themen = {
+  strand: {
+    image: "strand-ohne-woerter.png",
+    hotspots: [
+      { wort:"el sol", x:78, y:18, left:65, top:12, width:12, height:12 },
 
-    <div class="bild">
-      <img id="bild" src="" alt="Bildvokabeln">
-      <div id="hotspots"></div>
-      <div id="label"></div>
-    </div>
-  </div>
+      { wort:"la palmera", x:22, y:31, left:9, top:36, width:9, height:10 },
 
-  <script>
-    const themen = {
-      strand: {
-        image: "strand-ohne-woerter.png",
-        hotspots: [
-          { wort:"el sol", left:65, top:12, width:12, height:12, x:78, y:18, kreis:true },
-          { wort:"la palmera", left:9, top:36, width:9, height:10, x:22, y:31 },
-          { wort:"el mar", left:33, top:44, width:8, height:9, x:42, y:40 },
-          { wort:"el barco", left:48, top:42, width:8, height:9, x:56, y:31 },
-          { wort:"la ola", left:69, top:56, width:7, height:8, x:72, y:58 },
-          { wort:"la tabla de surf", left:45, top:60, width:8, height:10, x:61, y:63 },
-          { wort:"el bañador", left:37, top:71, width:9, height:9, x:56, y:76 },
-          { wort:"la sombrilla", left:8, top:61, width:8, height:10, x:18, y:69 },
-          { wort:"la toalla", left:8, top:86, width:8, height:9, x:18, y:90 },
-          { wort:"las gafas de sol", left:34, top:87, width:8, height:8, x:41, y:92 },
-          { wort:"la crema solar", left:55, top:85, width:8, height:8, x:66, y:89 },
-          { wort:"la concha", left:90, top:87, width:7, height:8, x:86, y:90 },
-          { wort:"el chiringuito", left:87, top:60, width:7, height:9, x:84, y:66 }
-        ]
-      }
+      { wort:"el mar", x:42, y:40, left:33, top:44, width:8, height:9 },
+
+      // 🔽 DEUTLICH TIEFER
+      { wort:"el barco", x:56, y:42, left:48, top:42, width:8, height:9 },
+
+      { wort:"la ola", x:72, y:58, left:69, top:56, width:7, height:8 },
+
+      { wort:"la tabla de surf", x:61, y:63, left:45, top:60, width:8, height:10 },
+
+      // 🔼 HÖHER
+      { wort:"el bañador", x:56, y:70, left:37, top:71, width:9, height:9 },
+
+      // ⬅️ WEITER LINKS
+      { wort:"la sombrilla", x:12, y:69, left:8, top:61, width:8, height:10 },
+
+      { wort:"la toalla", x:18, y:90, left:8, top:86, width:8, height:9 },
+
+      { wort:"las gafas de sol", x:41, y:92, left:34, top:87, width:8, height:8 },
+
+      { wort:"la crema solar", x:66, y:89, left:55, top:85, width:8, height:8 },
+
+      { wort:"la concha", x:86, y:90, left:90, top:87, width:7, height:8 },
+
+      { wort:"el chiringuito", x:84, y:66, left:87, top:60, width:7, height:9 }
+    ]
+  }
+};
+
+function ladeThema(name) {
+  const t = themen[name];
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("bild").src = t.image;
+
+  const h = document.getElementById("hotspots");
+  h.innerHTML = "";
+
+  t.hotspots.forEach(e => {
+    const b = document.createElement("button");
+    b.className = "hotspot";
+    b.style.left = e.left + "%";
+    b.style.top = e.top + "%";
+    b.style.width = e.width + "%";
+    b.style.height = e.height + "%";
+
+    b.onclick = () => {
+      const l = document.getElementById("label");
+      l.textContent = e.wort;
+      l.style.left = e.x + "%";
+      l.style.top = e.y + "%";
+      l.style.display = "block";
     };
 
-    function ladeThema(name) {
-      const thema = themen[name];
-      if (!thema) return;
+    h.appendChild(b);
+  });
+}
 
-      document.getElementById("menu").style.display = "none";
-      document.getElementById("app").style.display = "block";
-      document.getElementById("bild").src = thema.image;
-
-      const hotspots = document.getElementById("hotspots");
-      hotspots.innerHTML = "";
-
-      thema.hotspots.forEach(h => {
-        const btn = document.createElement("button");
-        btn.className = "hotspot" + (h.kreis ? " kreis" : "");
-        btn.style.left = h.left + "%";
-        btn.style.top = h.top + "%";
-        btn.style.width = h.width + "%";
-        btn.style.height = h.height + "%";
-
-        btn.onclick = function () {
-          const label = document.getElementById("label");
-          label.textContent = h.wort;
-          label.style.left = h.x + "%";
-          label.style.top = h.y + "%";
-          label.style.display = "block";
-        };
-
-        hotspots.appendChild(btn);
-      });
-    }
-
-    function zurueck() {
-      document.getElementById("app").style.display = "none";
-      document.getElementById("menu").style.display = "block";
-      document.getElementById("label").style.display = "none";
-    }
-  </script>
+function zurueck() {
+  document.getElementById("app").style.display = "none";
+  document.getElementById("menu").style.display = "block";
+  document.getElementById("label").style.display = "none";
+}
+</script>
 
 </body>
 </html>
