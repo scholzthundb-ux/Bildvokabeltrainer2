@@ -160,13 +160,13 @@
     }
 
     .richtig {
-      color: red;
+      color: green;
       font-weight: bold;
       font-size: 32px;
     }
 
     .falsch {
-      color: green;
+      color: red;
       font-weight: bold;
       font-size: 32px;
     }
@@ -245,7 +245,7 @@
   const hotspots = [
     { wort:"el sol", clickX:70, clickY:26, width:8, height:8, labelX:74, labelY:22, boost:1 },
     { wort:"la palmera", clickX:14, clickY:41, width:8, height:8, labelX:22, labelY:31, boost:1 },
-    { wort:"el mar", clickX:38, clickY:50, width:8, height:8, labelX:42, labelY:44, boost:1 },
+    { wort:"el mar", clickX:41, clickY:48, width:8, height:8, labelX:42, labelY:44, boost:1 },
     { wort:"el barco", clickX:52, clickY:46, width:8, height:8, labelX:56, labelY:48, boost:1 },
     { wort:"la ola", clickX:73, clickY:58, width:8, height:8, labelX:72, labelY:58, boost:1 },
     { wort:"la tabla de surf", clickX:47, clickY:59, width:8, height:8, labelX:61, labelY:63, boost:1 },
@@ -327,14 +327,14 @@
     if (!quizAktiv) return;
 
     if (h.wort === gesucht) {
-      feedback.textContent = "Richtig";
+      feedback.textContent = "👍 Richtig";
       feedback.className = "richtig feedback-anim";
       void feedback.offsetWidth;
 
       h.boost = Math.max(1, h.boost - 1);
       timer = setTimeout(nextQuestion, 600);
     } else {
-      feedback.textContent = "Falsch";
+      feedback.textContent = "👎 Falsch";
       feedback.className = "falsch feedback-anim";
       void feedback.offsetWidth;
 
