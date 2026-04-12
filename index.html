@@ -72,10 +72,6 @@ button:active {
   line-height: 1.4;
 }
 
-.themenbox {
-  margin-top: 10px;
-}
-
 .themenbox button {
   font-size: 28px;
   padding: 20px 36px;
@@ -106,15 +102,21 @@ button:active {
 #hotspots {
   position: absolute;
   inset: 0;
+  z-index: 10;
 }
 
+/* WICHTIG: Hotspots dürfen KEIN globales Button-Padding/Margin haben */
 .hotspot {
   position: absolute;
+  padding: 0;
+  margin: 0;
   background: transparent;
   border: none;
   transform: translate(-50%, -50%);
   z-index: 11;
   cursor: pointer;
+  box-shadow: none;
+  min-width: 0;
 }
 
 .hotspot.fehler {
@@ -247,7 +249,7 @@ function build() {
   c.innerHTML = "";
 
   hotspots.forEach(h => {
-    let b = document.createElement("button");
+    const b = document.createElement("button");
     b.className = "hotspot";
     b.style.left = h.clickX + "%";
     b.style.top = h.clickY + "%";
@@ -281,7 +283,7 @@ function setMode(m) {
 
 function clickHotspot(h, btn) {
   if (mode === "lernen") {
-    let l = document.getElementById("label");
+    const l = document.getElementById("label");
     l.textContent = h.wort;
     l.style.left = h.labelX + "%";
     l.style.top = h.labelY + "%";
