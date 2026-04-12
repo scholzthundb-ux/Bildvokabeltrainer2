@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -20,16 +19,16 @@
     }
 
     .ui-btn {
-      padding: 18px 28px;
-      margin: 8px;
-      border-radius: 18px;
+      padding: 24px 36px;
+      margin: 10px;
+      border-radius: 22px;
       border: none;
       background: #2d7df6;
       color: white;
-      font-size: 24px;
+      font-size: 30px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }
 
     .ui-btn:active {
@@ -41,12 +40,7 @@
     }
 
     .ui-btn.small {
-      font-size: 20px;
-      padding: 14px 22px;
-    }
-
-    .mode-btn {
-      font-size: 26px;
+      font-size: 24px;
       padding: 18px 26px;
     }
 
@@ -73,35 +67,35 @@
     .card {
       background: white;
       width: 100%;
-      max-width: 620px;
+      max-width: 700px;
       border-radius: 26px;
-      padding: 34px 24px 32px;
+      padding: 40px 28px 36px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
 
     .start-icon {
-      font-size: 54px;
-      margin-bottom: 14px;
+      font-size: 64px;
+      margin-bottom: 18px;
     }
 
     .subtitle {
-      font-size: 20px;
-      margin-top: 12px;
-      margin-bottom: 26px;
+      font-size: 24px;
+      margin-top: 14px;
+      margin-bottom: 30px;
       color: #4b5563;
       line-height: 1.4;
     }
 
     .folder-title {
-      font-size: 36px;
-      margin-bottom: 16px;
+      font-size: 42px;
+      margin-bottom: 18px;
       font-weight: bold;
     }
 
     .folder-subtitle {
-      font-size: 20px;
+      font-size: 24px;
       color: #4b5563;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .app-wrap {
@@ -113,15 +107,49 @@
     }
 
     .current-title {
-      font-size: 26px;
+      font-size: 30px;
       font-weight: bold;
-      margin: 8px 0 10px;
+      margin: 10px 0 14px;
+    }
+
+    .mode-switch {
+      display: flex;
+      width: min(92vw, 760px);
+      margin: 16px auto 12px;
+      background: #dbe7f7;
+      border-radius: 24px;
+      padding: 8px;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .mode-segment {
+      flex: 1;
+      border: none;
+      background: transparent;
+      color: #234;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 22px 10px;
+      border-radius: 18px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .mode-segment.active {
+      background: #0b57d0;
+      color: white;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    }
+
+    .mode-segment:active {
+      transform: scale(0.98);
     }
 
     .bild {
       position: relative;
       max-width: 900px;
       margin: auto;
+      touch-action: pan-y;
     }
 
     #bild {
@@ -186,39 +214,39 @@
     }
 
     #frage {
-      font-size: 30px;
-      margin: 10px;
+      font-size: 32px;
+      margin: 12px;
       font-weight: bold;
     }
 
     #feedback {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: bold;
-      min-height: 40px;
+      min-height: 42px;
     }
 
     .richtig {
       color: green;
       font-weight: bold;
-      font-size: 32px;
+      font-size: 34px;
     }
 
     .falsch {
       color: red;
       font-weight: bold;
-      font-size: 32px;
+      font-size: 34px;
     }
 
     #lernInfo {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
-      margin: 12px;
+      margin: 14px;
     }
 
     #boostInfo {
-      font-size: 18px;
+      font-size: 20px;
       color: #4b5563;
-      margin: 6px 0 14px;
+      margin: 8px 0 16px;
     }
 
     @keyframes pop {
@@ -232,7 +260,7 @@
     }
 
     .button-row {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -277,12 +305,12 @@
       <button class="ui-btn image-btn small" id="img2Btn">Bild 2</button>
     </div>
 
-    <div class="button-row">
-      <button class="ui-btn mode-btn active" id="lernBtn">Lernen</button>
-      <button class="ui-btn mode-btn" id="quizBtn">Quiz</button>
+    <div class="mode-switch">
+      <button class="mode-segment active" id="lernBtn">Lernen</button>
+      <button class="mode-segment" id="quizBtn">Quiz</button>
     </div>
 
-    <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
+    <div id="lernInfo">Tippe auf eine Pfeilspitze oder wische zum nächsten Bild.</div>
 
     <div id="quizBox">
       <div id="frage"></div>
@@ -330,7 +358,7 @@
               { wort:"el socorrista", clickX:72, clickY:43, labelX:80, labelY:35, boost:1 },
               { wort:"el salvavidas", clickX:56, clickY:57, labelX:51, labelY:52, boost:1 },
               { wort:"la sombrilla", clickX:18, clickY:50, labelX:27, labelY:47, boost:1 },
-              { wort:"la tumbona", clickX:23, clickY:69, labelX:30, labelY:65, boost:1 },
+              { wort:"la tumbona", clickX:18, clickY:75, labelX:26, labelY:72, boost:1 },
               { wort:"el sombrero de sol", clickX:31, clickY:78, labelX:36, labelY:73, boost:1 },
               { wort:"el castillo de arena", clickX:49, clickY:86, labelX:57, labelY:81, boost:1 },
               { wort:"la niña", clickX:84, clickY:74, labelX:88, labelY:69, boost:1 },
@@ -350,6 +378,8 @@
     let letztesGesucht = "";
     let quizAktiv = false;
     let timer = null;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     const menu = document.getElementById("menu");
     const folderMenu = document.getElementById("folderMenu");
@@ -364,6 +394,7 @@
     const quizBtn = document.getElementById("quizBtn");
     const bild = document.getElementById("bild");
     const currentImageTitle = document.getElementById("currentImageTitle");
+    const bildContainer = document.querySelector(".bild");
 
     document.getElementById("openStrandBtn").addEventListener("click", openFolderMenu);
     document.getElementById("backToStartBtn").addEventListener("click", backToStart);
@@ -379,6 +410,15 @@
       btn.addEventListener("click", () => {
         openImage(Number(btn.dataset.index));
       });
+    });
+
+    bildContainer.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    bildContainer.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
     });
 
     function getCurrentImageData() {
@@ -561,6 +601,34 @@
       feedback.className = "";
       label.style.display = "none";
       quizAktiv = true;
+    }
+
+    function showNextImage() {
+      const total = folders[currentFolderKey].images.length;
+      currentImageIndex = (currentImageIndex + 1) % total;
+      clearTimeout(timer);
+      timer = null;
+      loadCurrentImage();
+    }
+
+    function showPrevImage() {
+      const total = folders[currentFolderKey].images.length;
+      currentImageIndex = (currentImageIndex - 1 + total) % total;
+      clearTimeout(timer);
+      timer = null;
+      loadCurrentImage();
+    }
+
+    function handleSwipe() {
+      const diff = touchEndX - touchStartX;
+
+      if (Math.abs(diff) < 50) return;
+
+      if (diff < 0) {
+        showNextImage();
+      } else {
+        showPrevImage();
+      }
     }
   </script>
 </body>
