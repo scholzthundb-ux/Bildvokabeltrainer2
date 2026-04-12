@@ -142,4 +142,30 @@ function ladeThema(index){
     const btn = document.createElement("button");
     btn.className = "hotspot" + (h.kreis ? " kreis":"");
     btn.style.left = h.left + "%";
-    btn.style.top = h.top + "%
+    btn.style.top = h.top + "%";
+    btn.style.width = h.width + "%";
+    btn.style.height = h.height + "%";
+
+    btn.onclick = ()=>{
+      const label = document.getElementById("label");
+      label.innerText = h.wort;
+      label.style.left = h.x + "%";
+      label.style.top = h.y + "%";
+      label.style.display = "block";
+    };
+
+    container.appendChild(btn);
+  });
+}
+
+function zurueck(){
+  document.getElementById("menu").style.display="block";
+  document.getElementById("app").style.display="none";
+}
+
+startMenu();
+
+</script>
+
+</body>
+</html>
