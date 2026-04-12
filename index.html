@@ -1,339 +1,212 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vokabeltrainer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vokabeltrainer</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      background: #f0f4f8;
-      padding: 0 10px 30px;
-    }
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  margin: 0;
+  background: #f0f4f8;
+}
 
-    h1 {
-      margin: 20px 0 10px;
-      font-size: 28px;
-    }
+h1 { margin:20px; }
 
-    #menu {
-      padding: 20px 0;
-    }
+button {
+  padding:10px 16px;
+  margin:5px;
+  border-radius:10px;
+  border:none;
+  background:#2d7df6;
+  color:white;
+  font-size:16px;
+}
 
-    .menu-btn, #back, #nextBtn, .mode-btn {
-      padding: 12px 18px;
-      margin: 8px;
-      font-size: 16px;
-      border-radius: 10px;
-      border: none;
-      background: #0d6efd;
-      color: white;
-      cursor: pointer;
-    }
+.mode-btn.active { background:#084298; }
 
-    .mode-btn.active {
-      background: #084298;
-    }
+.bild {
+  position: relative;
+  max-width:900px;
+  margin:auto;
+}
 
-    .bild {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+#bild {
+  width:100%;
+}
 
-    #bild {
-      width: 100%;
-      display: block;
-    }
+.hotspot {
+  position:absolute;
+  background:transparent;
+  border:none;
+}
 
-    #hotspots {
-      position: absolute;
-      inset: 0;
-      z-index: 10;
-    }
+.hotspot.fehler {
+  background:rgba(255,0,0,0.3);
+  border:2px solid red;
+  border-radius:10px;
+}
 
-    .hotspot {
-      position: absolute;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      z-index: 11;
-    }
+#label {
+  position:absolute;
+  background:white;
+  border:3px solid black;
+  border-radius:12px;
+  padding:12px 18px;
+  font-size:32px;
+  font-weight:bold;
+  transform:translate(-50%,-50%);
+  display:none;
+}
 
-    .hotspot.fehler {
-      background: rgba(220, 53, 69, 0.28);
-      border: 2px solid rgba(220, 53, 69, 0.75);
-      border-radius: 10px;
-    }
+#quizBox { display:none; }
 
-    #app {
-      display: none;
-    }
+#frage { font-size:28px; margin:10px; }
 
-    #steuerleiste {
-      margin: 10px auto 18px;
-      max-width: 900px;
-      background: white;
-      border-radius: 14px;
-      padding: 14px 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
+#feedback { font-size:26px; font-weight:bold; }
 
-    #modusButtons {
-      margin-bottom: 10px;
-    }
+.richtig { color:green; }
+.falsch { color:red; }
 
-    #quizBox {
-      display: none;
-    }
-
-    #frage {
-      font-size: clamp(22px, 5vw, 34px);
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    #feedback {
-      min-height: 38px;
-      font-size: clamp(20px, 4.5vw, 30px);
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
-    .richtig {
-      color: #157347;
-    }
-
-    .falsch {
-      color: #b02a37;
-    }
-
-    #loesung {
-      min-height: 32px;
-      font-size: clamp(18px, 4vw, 26px);
-      margin-bottom: 8px;
-    }
-
-    #score {
-      font-size: 18px;
-      margin-top: 4px;
-    }
-
-    #lernInfo {
-      display: none;
-      font-size: clamp(20px, 4vw, 28px);
-      font-weight: bold;
-    }
-
-    #label {
-      position: absolute;
-      display: none;
-      background: white;
-      border: 3px solid black;
-      border-radius: 14px;
-      padding: 14px 20px;
-      font-size: clamp(24px, 6vw, 40px);
-      font-weight: bold;
-      transform: translate(-50%, -50%);
-      z-index: 20;
-      white-space: nowrap;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
 <h1>Vokabeltrainer</h1>
 
-<div id="menu">
-  <button class="menu-btn" onclick="ladeThema('strand')">Strand</button>
+<button onclick="start()">Strand</button>
+
+<div id="app" style="display:none;">
+
+<button onclick="zurueck()">← Zurück</button>
+
+<div>
+<button id="lernBtn" class="mode-btn active" onclick="setMode('lernen')">Lernmodus</button>
+<button id="quizBtn" class="mode-btn" onclick="setMode('quiz')">Quizmodus</button>
 </div>
 
-<div id="app">
-  <button id="back" onclick="zurueck()">← Zurück</button>
+<div id="lernInfo">Tippe auf ein Objekt.</div>
 
-  <div id="steuerleiste">
-    <div id="modusButtons">
-      <button id="lernBtn" class="mode-btn active" onclick="setModus('lernen')">Lernmodus</button>
-      <button id="quizBtn" class="mode-btn" onclick="setModus('quiz')">Quizmodus</button>
-    </div>
+<div id="quizBox">
+<div id="frage"></div>
+<div id="feedback"></div>
+<button onclick="next()">Nächster Begriff</button>
+</div>
 
-    <div id="lernInfo">
-      Tippe auf ein Objekt.
-    </div>
+<div class="bild">
+<img id="bild" src="strand-ohne-woerter.png">
+<div id="hotspots"></div>
+<div id="label"></div>
+</div>
 
-    <div id="quizBox">
-      <div id="frage">Finde: ...</div>
-      <div id="feedback"></div>
-      <div id="loesung"></div>
-      <button id="nextBtn" onclick="naechsteFrage()">Nächster Begriff</button>
-      <div id="score">0 richtig | 0 falsch</div>
-    </div>
-  </div>
-
-  <div class="bild">
-    <img id="bild" src="">
-    <div id="hotspots"></div>
-    <div id="label"></div>
-  </div>
 </div>
 
 <script>
-const themen = {
-  strand: {
-    image: "strand-ohne-woerter.png",
-    hotspots: [
-      { wort:"el sol", x:74, y:26, left:68, top:26, width:10, height:10 },
-      { wort:"la palmera", x:22, y:31, left:9, top:36, width:9, height:10 },
-      { wort:"el mar", x:42, y:44, left:33, top:44, width:8, height:9 },
-      { wort:"el barco", x:56, y:48, left:48, top:42, width:8, height:9 },
-      { wort:"la ola", x:72, y:58, left:69, top:56, width:7, height:8 },
 
-      { wort:"la tabla de surf", x:61, y:63, left:45, top:56, width:8, height:10 },
-      { wort:"el bañador", x:56, y:68, left:37, top:75, width:9, height:9 },
+let mode="lernen";
+let gesuchtes="";
+let aktiv=false;
 
-      { wort:"la sombrilla", x:12, y:69, left:8, top:61, width:8, height:10 },
-      { wort:"la toalla", x:18, y:90, left:8, top:86, width:8, height:9 },
-      { wort:"las gafas de sol", x:41, y:92, left:34, top:87, width:8, height:8 },
-      { wort:"la crema solar", x:66, y:89, left:55, top:85, width:8, height:8 },
-      { wort:"la concha", x:86, y:90, left:90, top:87, width:7, height:8 },
-      { wort:"el chiringuito", x:84, y:66, left:87, top:60, width:7, height:9 }
-    ]
-  }
-};
+const hotspots=[
+{ wort:"el sol", x:74,y:26,left:68,top:26,width:10,height:10 },
+{ wort:"la palmera", x:22,y:31,left:9,top:36,width:9,height:10 },
+{ wort:"el mar", x:42,y:44,left:33,top:44,width:8,height:9 },
+{ wort:"el barco", x:56,y:48,left:48,top:42,width:8,height:9 },
+{ wort:"la ola", x:72,y:58,left:69,top:56,width:7,height:8 },
 
-let aktuellesThema = null;
-let aktuellerModus = "lernen";
-let gesuchteVokabel = "";
-let quizAktiv = false;
-let richtig = 0;
-let falsch = 0;
+// 👉 KORRIGIERT
+{ wort:"la tabla de surf", x:61,y:63,left:44,top:52,width:8,height:10 },
+{ wort:"el bañador", x:56,y:68,left:35,top:66,width:9,height:9 },
 
-function ladeThema(name) {
-  const t = themen[name];
-  aktuellesThema = t;
+{ wort:"la sombrilla", x:12,y:69,left:8,top:61,width:8,height:10 },
+{ wort:"la toalla", x:18,y:90,left:8,top:86,width:8,height:9 },
+{ wort:"las gafas de sol", x:41,y:92,left:34,top:87,width:8,height:8 },
+{ wort:"la crema solar", x:66,y:89,left:55,top:85,width:8,height:8 },
+{ wort:"la concha", x:86,y:90,left:90,top:87,width:7,height:8 },
+{ wort:"el chiringuito", x:84,y:66,left:87,top:60,width:7,height:9 }
+];
 
-  document.getElementById("menu").style.display = "none";
-  document.getElementById("app").style.display = "block";
-  document.getElementById("bild").src = t.image;
-
-  const h = document.getElementById("hotspots");
-  h.innerHTML = "";
-
-  t.hotspots.forEach(e => {
-    const b = document.createElement("button");
-    b.className = "hotspot";
-    b.style.left = e.left + "%";
-    b.style.top = e.top + "%";
-    b.style.width = e.width + "%";
-    b.style.height = e.height + "%";
-    b.onclick = () => hotspotGeklickt(e, b);
-    h.appendChild(b);
-  });
-
-  richtig = 0;
-  falsch = 0;
-  scoreAktualisieren();
-  setModus("lernen");
+function start(){
+document.querySelector("button").style.display="none";
+document.getElementById("app").style.display="block";
+build();
 }
 
-function setModus(modus) {
-  aktuellerModus = modus;
-
-  document.getElementById("lernBtn").classList.toggle("active", modus === "lernen");
-  document.getElementById("quizBtn").classList.toggle("active", modus === "quiz");
-
-  document.getElementById("label").style.display = "none";
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("feedback").className = "";
-  document.getElementById("loesung").textContent = "";
-
-  if (modus === "lernen") {
-    document.getElementById("lernInfo").style.display = "block";
-    document.getElementById("quizBox").style.display = "none";
-    quizAktiv = false;
-  } else {
-    document.getElementById("lernInfo").style.display = "none";
-    document.getElementById("quizBox").style.display = "block";
-    naechsteFrage();
-  }
+function build(){
+const h=document.getElementById("hotspots");
+h.innerHTML="";
+hotspots.forEach(e=>{
+let b=document.createElement("button");
+b.className="hotspot";
+b.style.left=e.left+"%";
+b.style.top=e.top+"%";
+b.style.width=e.width+"%";
+b.style.height=e.height+"%";
+b.onclick=()=>click(e,b);
+h.appendChild(b);
+});
 }
 
-function hotspotGeklickt(e, buttonEl) {
-  if (aktuellerModus === "lernen") {
-    const l = document.getElementById("label");
-    l.textContent = e.wort;
-    l.style.left = e.x + "%";
-    l.style.top = e.y + "%";
-    l.style.display = "block";
-    return;
-  }
+function setMode(m){
+mode=m;
+document.getElementById("lernBtn").classList.toggle("active",m==="lernen");
+document.getElementById("quizBtn").classList.toggle("active",m==="quiz");
 
-  if (aktuellerModus === "quiz") {
-    if (!quizAktiv) return;
+document.getElementById("label").style.display="none";
+document.getElementById("feedback").textContent="";
 
-    const feedback = document.getElementById("feedback");
-    const loesung = document.getElementById("loesung");
-
-    if (e.wort === gesuchteVokabel) {
-      feedback.textContent = "Richtig";
-      feedback.className = "richtig";
-      loesung.textContent = "";
-      richtig++;
-      quizAktiv = false;
-    } else {
-      feedback.textContent = "Falsch";
-      feedback.className = "falsch";
-      loesung.textContent = "Das war: " + e.wort;
-      falsch++;
-      blinkFehler(buttonEl);
-    }
-
-    scoreAktualisieren();
-  }
+if(m==="lernen"){
+document.getElementById("quizBox").style.display="none";
+document.getElementById("lernInfo").style.display="block";
+}
+else{
+document.getElementById("quizBox").style.display="block";
+document.getElementById("lernInfo").style.display="none";
+next();
+}
 }
 
-function blinkFehler(buttonEl) {
-  buttonEl.classList.add("fehler");
-  setTimeout(() => {
-    buttonEl.classList.remove("fehler");
-  }, 350);
+function click(e,btn){
+
+if(mode==="lernen"){
+let l=document.getElementById("label");
+l.textContent=e.wort;
+l.style.left=e.x+"%";
+l.style.top=e.y+"%";
+l.style.display="block";
+return;
 }
 
-function zufallsBegriff() {
-  const liste = aktuellesThema.hotspots;
-  const index = Math.floor(Math.random() * liste.length);
-  return liste[index].wort;
+if(!aktiv) return;
+
+if(e.wort===gesuchtes){
+document.getElementById("feedback").textContent="Richtig";
+document.getElementById("feedback").className="richtig";
+aktiv=false;
+}
+else{
+document.getElementById("feedback").textContent="Falsch";
+document.getElementById("feedback").className="falsch";
+btn.classList.add("fehler");
+setTimeout(()=>btn.classList.remove("fehler"),300);
+}
 }
 
-function naechsteFrage() {
-  gesuchteVokabel = zufallsBegriff();
-  quizAktiv = true;
-
-  document.getElementById("frage").textContent = "Finde: " + gesuchteVokabel;
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("feedback").className = "";
-  document.getElementById("loesung").textContent = "";
-  document.getElementById("label").style.display = "none";
+function next(){
+let i=Math.floor(Math.random()*hotspots.length);
+gesuchtes=hotspots[i].wort;
+document.getElementById("frage").textContent="Finde: "+gesuchtes;
+document.getElementById("feedback").textContent="";
+aktiv=true;
 }
 
-function scoreAktualisieren() {
-  document.getElementById("score").textContent =
-    richtig + " richtig | " + falsch + " falsch";
+function zurueck(){
+location.reload();
 }
 
-function zurueck() {
-  document.getElementById("app").style.display = "none";
-  document.getElementById("menu").style.display = "block";
-  document.getElementById("label").style.display = "none";
-  document.getElementById("frage").textContent = "Finde: ...";
-  document.getElementById("feedback").textContent = "";
-  document.getElementById("loesung").textContent = "";
-}
 </script>
 
 </body>
