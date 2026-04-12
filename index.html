@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -62,6 +61,12 @@
       border: none;
       cursor: pointer;
       z-index: 11;
+    }
+
+    .hotspot.fehler {
+      background: rgba(220, 53, 69, 0.28);
+      border: 2px solid rgba(220, 53, 69, 0.75);
+      border-radius: 10px;
     }
 
     #app {
@@ -187,8 +192,10 @@ const themen = {
       { wort:"el mar", x:42, y:44, left:33, top:44, width:8, height:9 },
       { wort:"el barco", x:56, y:48, left:48, top:42, width:8, height:9 },
       { wort:"la ola", x:72, y:58, left:69, top:56, width:7, height:8 },
-      { wort:"la tabla de surf", x:61, y:63, left:45, top:60, width:8, height:10 },
-      { wort:"el bañador", x:56, y:68, left:37, top:71, width:9, height:9 },
+
+      { wort:"la tabla de surf", x:61, y:63, left:45, top:56, width:8, height:10 },
+      { wort:"el bañador", x:56, y:68, left:37, top:75, width:9, height:9 },
+
       { wort:"la sombrilla", x:12, y:69, left:8, top:61, width:8, height:10 },
       { wort:"la toalla", x:18, y:90, left:8, top:86, width:8, height:9 },
       { wort:"las gafas de sol", x:41, y:92, left:34, top:87, width:8, height:8 },
@@ -224,7 +231,7 @@ function ladeThema(name) {
     b.style.top = e.top + "%";
     b.style.width = e.width + "%";
     b.style.height = e.height + "%";
-    b.onclick = () => hotspotGeklickt(e);
+    b.onclick = () => hotspotGeklickt(e, b);
     h.appendChild(b);
   });
 
@@ -256,7 +263,7 @@ function setModus(modus) {
   }
 }
 
-function hotspotGeklickt(e) {
+function hotspotGeklickt(e, buttonEl) {
   if (aktuellerModus === "lernen") {
     const l = document.getElementById("label");
     l.textContent = e.wort;
@@ -283,10 +290,18 @@ function hotspotGeklickt(e) {
       feedback.className = "falsch";
       loesung.textContent = "Das war: " + e.wort;
       falsch++;
+      blinkFehler(buttonEl);
     }
 
     scoreAktualisieren();
   }
+}
+
+function blinkFehler(buttonEl) {
+  buttonEl.classList.add("fehler");
+  setTimeout(() => {
+    buttonEl.classList.remove("fehler");
+  }, 350);
 }
 
 function zufallsBegriff() {
