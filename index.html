@@ -15,10 +15,8 @@
       color: #1f2a37;
     }
 
-    h1 {
+    h1, h2, h3 {
       margin: 0;
-      font-size: 40px;
-      font-weight: bold;
     }
 
     .ui-btn {
@@ -38,16 +36,27 @@
       transform: scale(0.98);
     }
 
+    .ui-btn.secondary {
+      background: #5b6b7f;
+    }
+
+    .ui-btn.small {
+      font-size: 20px;
+      padding: 14px 22px;
+    }
+
     .mode-btn {
       font-size: 26px;
       padding: 18px 26px;
     }
 
-    .mode-btn.active {
+    .mode-btn.active,
+    .image-btn.active {
       background: #0b57d0;
     }
 
-    #menu {
+    #menu,
+    #folderMenu {
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -56,10 +65,15 @@
       box-sizing: border-box;
     }
 
-    .start-card {
+    #folderMenu,
+    #app {
+      display: none;
+    }
+
+    .card {
       background: white;
       width: 100%;
-      max-width: 560px;
+      max-width: 620px;
       border-radius: 26px;
       padding: 34px 24px 32px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
@@ -70,7 +84,7 @@
       margin-bottom: 14px;
     }
 
-    .start-subtitle {
+    .subtitle {
       font-size: 20px;
       margin-top: 12px;
       margin-bottom: 26px;
@@ -78,20 +92,30 @@
       line-height: 1.4;
     }
 
-    .themenbox .ui-btn {
-      font-size: 28px;
-      padding: 20px 36px;
-      border-radius: 18px;
-      min-width: 220px;
+    .folder-title {
+      font-size: 36px;
+      margin-bottom: 16px;
+      font-weight: bold;
     }
 
-    #app {
-      display: none;
+    .folder-subtitle {
+      font-size: 20px;
+      color: #4b5563;
+      margin-bottom: 24px;
+    }
+
+    .app-wrap {
       padding-bottom: 30px;
     }
 
     .topbar {
       padding-top: 16px;
+    }
+
+    .current-title {
+      font-size: 26px;
+      font-weight: bold;
+      margin: 8px 0 10px;
     }
 
     .bild {
@@ -206,210 +230,338 @@
     .feedback-anim {
       animation: pop 0.35s ease;
     }
+
+    .button-row {
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>
 
-<div id="menu">
-  <div class="start-card">
-    <div class="start-icon">🧠</div>
-    <h1>Vokabeltrainer</h1>
-    <div class="start-subtitle">
-      Lerne spanische Wörter direkt am Bild.<br>
-      Wähle ein Thema und starte.
-    </div>
-    <div class="themenbox">
-      <button class="ui-btn" id="startBtn">Strand</button>
+  <div id="menu">
+    <div class="card">
+      <div class="start-icon">🧠</div>
+      <h1>Vokabeltrainer</h1>
+      <div class="subtitle">
+        Lerne spanische Wörter direkt am Bild.
+      </div>
+      <button class="ui-btn" id="openStrandBtn">Strand</button>
     </div>
   </div>
-</div>
 
-<div id="app">
-  <div class="topbar">
-    <button class="ui-btn" id="backBtn">←</button>
+  <div id="folderMenu">
+    <div class="card">
+      <div class="folder-title">Strand</div>
+      <div class="folder-subtitle">Wähle ein Bild zum Lernen.</div>
+
+      <div>
+        <button class="ui-btn image-btn" data-index="0">Bild 1</button>
+        <button class="ui-btn image-btn" data-index="1">Bild 2</button>
+      </div>
+
+      <div style="margin-top:18px;">
+        <button class="ui-btn secondary small" id="backToStartBtn">← Zurück</button>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <button class="ui-btn mode-btn active" id="lernBtn">Lernen</button>
-    <button class="ui-btn mode-btn" id="quizBtn">Quiz</button>
+  <div id="app" class="app-wrap">
+    <div class="topbar">
+      <button class="ui-btn secondary small" id="backToFolderBtn">← Zurück</button>
+    </div>
+
+    <div class="current-title" id="currentImageTitle">Strand – Bild 1</div>
+
+    <div class="button-row">
+      <button class="ui-btn image-btn small" id="img1Btn">Bild 1</button>
+      <button class="ui-btn image-btn small" id="img2Btn">Bild 2</button>
+    </div>
+
+    <div class="button-row">
+      <button class="ui-btn mode-btn active" id="lernBtn">Lernen</button>
+      <button class="ui-btn mode-btn" id="quizBtn">Quiz</button>
+    </div>
+
+    <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
+
+    <div id="quizBox">
+      <div id="frage"></div>
+      <div id="feedback"></div>
+      <div id="boostInfo">Falsch geklickte Wörter kommen öfter wieder.</div>
+    </div>
+
+    <div class="bild">
+      <img id="bild" src="" alt="Strandbild">
+      <div id="hotspots"></div>
+      <div id="label"></div>
+    </div>
   </div>
 
-  <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
+  <script>
+    const folders = {
+      strand: {
+        title: "Strand",
+        images: [
+          {
+            title: "Strand – Bild 1",
+            file: "strand-ohne-woerter.png",
+            hotspots: [
+              { wort:"el sol", clickX:70, clickY:26, labelX:74, labelY:22, boost:1 },
+              { wort:"la palmera", clickX:14, clickY:41, labelX:22, labelY:31, boost:1 },
+              { wort:"el mar", clickX:41, clickY:48, labelX:42, labelY:44, boost:1 },
+              { wort:"el barco", clickX:50, clickY:44, labelX:56, labelY:48, boost:1 },
+              { wort:"la ola", clickX:73, clickY:58, labelX:72, labelY:58, boost:1 },
+              { wort:"la tabla de surf", clickX:47, clickY:59, labelX:61, labelY:63, boost:1 },
+              { wort:"el bañador", clickX:38, clickY:71, labelX:56, labelY:68, boost:1 },
+              { wort:"la sombrilla", clickX:13, clickY:66, labelX:12, labelY:69, boost:1 },
+              { wort:"la toalla", clickX:12, clickY:86, labelX:18, labelY:90, boost:1 },
+              { wort:"las gafas de sol", clickX:36, clickY:90, labelX:41, labelY:92, boost:1 },
+              { wort:"la crema solar", clickX:60, clickY:87, labelX:66, labelY:89, boost:1 },
+              { wort:"la concha", clickX:90, clickY:90, labelX:86, labelY:90, boost:1 },
+              { wort:"el chiringuito", clickX:90, clickY:53, labelX:84, labelY:66, boost:1 }
+            ]
+          },
+          {
+            title: "Strand – Bild 2",
+            file: "strand2.png",
+            hotspots: [
+              { wort:"el sol", clickX:28, clickY:18, labelX:33, labelY:15, boost:1 },
+              { wort:"la gaviota", clickX:69, clickY:18, labelX:67, labelY:13, boost:1 },
+              { wort:"el socorrista", clickX:72, clickY:43, labelX:80, labelY:35, boost:1 },
+              { wort:"el salvavidas", clickX:56, clickY:57, labelX:51, labelY:52, boost:1 },
+              { wort:"la sombrilla", clickX:18, clickY:50, labelX:27, labelY:47, boost:1 },
+              { wort:"la tumbona", clickX:23, clickY:69, labelX:30, labelY:65, boost:1 },
+              { wort:"el sombrero de sol", clickX:31, clickY:78, labelX:36, labelY:73, boost:1 },
+              { wort:"el castillo de arena", clickX:49, clickY:86, labelX:57, labelY:81, boost:1 },
+              { wort:"la niña", clickX:84, clickY:74, labelX:88, labelY:69, boost:1 },
+              { wort:"la pala", clickX:61, clickY:94, labelX:65, labelY:90, boost:1 },
+              { wort:"la pelota", clickX:77, clickY:93, labelX:83, labelY:89, boost:1 },
+              { wort:"el flotador", clickX:89, clickY:60, labelX:82, labelY:55, boost:1 }
+            ]
+          }
+        ]
+      }
+    };
 
-  <div id="quizBox">
-    <div id="frage"></div>
-    <div id="feedback"></div>
-    <div id="boostInfo">Falsch geklickte Wörter kommen öfter wieder.</div>
-  </div>
+    let currentFolderKey = "strand";
+    let currentImageIndex = 0;
+    let mode = "lernen";
+    let gesucht = "";
+    let letztesGesucht = "";
+    let quizAktiv = false;
+    let timer = null;
 
-  <div class="bild">
-    <img id="bild" src="strand-ohne-woerter.png?v=3" alt="Strandbild">
-    <div id="hotspots"></div>
-    <div id="label"></div>
-  </div>
-</div>
+    const menu = document.getElementById("menu");
+    const folderMenu = document.getElementById("folderMenu");
+    const app = document.getElementById("app");
+    const hotspotsLayer = document.getElementById("hotspots");
+    const label = document.getElementById("label");
+    const frage = document.getElementById("frage");
+    const feedback = document.getElementById("feedback");
+    const quizBox = document.getElementById("quizBox");
+    const lernInfo = document.getElementById("lernInfo");
+    const lernBtn = document.getElementById("lernBtn");
+    const quizBtn = document.getElementById("quizBtn");
+    const bild = document.getElementById("bild");
+    const currentImageTitle = document.getElementById("currentImageTitle");
 
-<script>
-  let mode = "lernen";
-  let gesucht = "";
-  let letztesGesucht = "";
-  let quizAktiv = false;
-  let timer = null;
+    document.getElementById("openStrandBtn").addEventListener("click", openFolderMenu);
+    document.getElementById("backToStartBtn").addEventListener("click", backToStart);
+    document.getElementById("backToFolderBtn").addEventListener("click", backToFolderMenu);
 
-  const hotspots = [
-    { wort:"el sol", clickX:70, clickY:26, labelX:74, labelY:22, boost:1 },
-    { wort:"la palmera", clickX:14, clickY:41, labelX:22, labelY:31, boost:1 },
-    { wort:"el mar", clickX:41, clickY:48, labelX:42, labelY:44, boost:1 },
-    { wort:"el barco", clickX:50, clickY:44, labelX:56, labelY:48, boost:1 },
-    { wort:"la ola", clickX:73, clickY:58, labelX:72, labelY:58, boost:1 },
-    { wort:"la tabla de surf", clickX:47, clickY:59, labelX:61, labelY:63, boost:1 },
-    { wort:"el bañador", clickX:38, clickY:71, labelX:56, labelY:68, boost:1 },
-    { wort:"la sombrilla", clickX:13, clickY:66, labelX:12, labelY:69, boost:1 },
-    { wort:"la toalla", clickX:12, clickY:86, labelX:18, labelY:90, boost:1 },
-    { wort:"las gafas de sol", clickX:36, clickY:90, labelX:41, labelY:92, boost:1 },
-    { wort:"la crema solar", clickX:60, clickY:87, labelX:66, labelY:89, boost:1 },
-    { wort:"la concha", clickX:90, clickY:90, labelX:86, labelY:90, boost:1 },
-    { wort:"el chiringuito", clickX:90, clickY:53, labelX:84, labelY:66, boost:1 }
-  ];
+    lernBtn.addEventListener("click", () => setMode("lernen"));
+    quizBtn.addEventListener("click", () => setMode("quiz"));
 
-  const menu = document.getElementById("menu");
-  const app = document.getElementById("app");
-  const hotspotsLayer = document.getElementById("hotspots");
-  const label = document.getElementById("label");
-  const frage = document.getElementById("frage");
-  const feedback = document.getElementById("feedback");
-  const quizBox = document.getElementById("quizBox");
-  const lernInfo = document.getElementById("lernInfo");
-  const lernBtn = document.getElementById("lernBtn");
-  const quizBtn = document.getElementById("quizBtn");
+    document.getElementById("img1Btn").addEventListener("click", () => openImage(0));
+    document.getElementById("img2Btn").addEventListener("click", () => openImage(1));
 
-  document.getElementById("startBtn").addEventListener("click", start);
-  document.getElementById("backBtn").addEventListener("click", zurueck);
-  lernBtn.addEventListener("click", () => setMode("lernen"));
-  quizBtn.addEventListener("click", () => setMode("quiz"));
-
-  function start() {
-    menu.style.display = "none";
-    app.style.display = "block";
-    buildHotspots();
-  }
-
-  function buildHotspots() {
-    hotspotsLayer.innerHTML = "";
-
-    hotspots.forEach(h => {
-      const d = document.createElement("div");
-      d.className = "hotspot";
-      d.style.left = h.clickX + "%";
-      d.style.top = h.clickY + "%";
-      d.addEventListener("click", () => onHotspotClick(h, d));
-      hotspotsLayer.appendChild(d);
+    document.querySelectorAll("#folderMenu .image-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        openImage(Number(btn.dataset.index));
+      });
     });
-  }
 
-  function setMode(neu) {
-    mode = neu;
-    clearTimeout(timer);
-    timer = null;
+    function getCurrentImageData() {
+      return folders[currentFolderKey].images[currentImageIndex];
+    }
 
-    lernBtn.classList.toggle("active", neu === "lernen");
-    quizBtn.classList.toggle("active", neu === "quiz");
+    function openFolderMenu() {
+      menu.style.display = "none";
+      folderMenu.style.display = "flex";
+      app.style.display = "none";
+    }
 
-    label.style.display = "none";
-    feedback.textContent = "";
-    feedback.className = "";
+    function backToStart() {
+      folderMenu.style.display = "none";
+      app.style.display = "none";
+      menu.style.display = "flex";
+    }
 
-    if (neu === "lernen") {
-      quizBox.style.display = "none";
-      lernInfo.style.display = "block";
+    function backToFolderMenu() {
+      app.style.display = "none";
+      folderMenu.style.display = "flex";
+      clearTimeout(timer);
+      timer = null;
+      label.style.display = "none";
+      feedback.textContent = "";
+      feedback.className = "";
+    }
+
+    function openImage(index) {
+      currentImageIndex = index;
+      folderMenu.style.display = "none";
+      menu.style.display = "none";
+      app.style.display = "block";
+      mode = "lernen";
       quizAktiv = false;
-    } else {
-      quizBox.style.display = "block";
-      lernInfo.style.display = "none";
-      nextQuestion();
-    }
-  }
-
-  function onHotspotClick(h, el) {
-    if (mode === "lernen") {
-      showLabel(h.wort, h.labelX, h.labelY);
-      return;
+      clearTimeout(timer);
+      timer = null;
+      updateModeButtons();
+      loadCurrentImage();
     }
 
-    if (!quizAktiv) return;
+    function updateModeButtons() {
+      lernBtn.classList.toggle("active", mode === "lernen");
+      quizBtn.classList.toggle("active", mode === "quiz");
 
-    if (h.wort === gesucht) {
-      feedback.textContent = "👍 Richtig";
-      feedback.className = "richtig feedback-anim";
-      void feedback.offsetWidth;
+      document.getElementById("img1Btn").classList.toggle("active", currentImageIndex === 0);
+      document.getElementById("img2Btn").classList.toggle("active", currentImageIndex === 1);
+    }
 
-      h.boost = Math.max(1, h.boost - 1);
-      timer = setTimeout(nextQuestion, 600);
-    } else {
-      feedback.textContent = "👎 Falsch";
-      feedback.className = "falsch feedback-anim";
-      void feedback.offsetWidth;
+    function loadCurrentImage() {
+      const imageData = getCurrentImageData();
+      bild.src = imageData.file;
+      currentImageTitle.textContent = imageData.title;
 
-      if (navigator.vibrate) {
-        navigator.vibrate(150);
+      buildHotspots();
+      label.style.display = "none";
+      feedback.textContent = "";
+      feedback.className = "";
+
+      if (mode === "lernen") {
+        quizBox.style.display = "none";
+        lernInfo.style.display = "block";
+      } else {
+        quizBox.style.display = "block";
+        lernInfo.style.display = "none";
+        nextQuestion();
       }
 
-      const ziel = hotspots.find(x => x.wort === gesucht);
-      if (ziel) {
-        ziel.boost = Math.min(8, ziel.boost + 2);
+      updateModeButtons();
+    }
+
+    function buildHotspots() {
+      hotspotsLayer.innerHTML = "";
+
+      const hotspots = getCurrentImageData().hotspots;
+
+      hotspots.forEach(h => {
+        const d = document.createElement("div");
+        d.className = "hotspot";
+        d.style.left = h.clickX + "%";
+        d.style.top = h.clickY + "%";
+        d.addEventListener("click", () => onHotspotClick(h, d));
+        hotspotsLayer.appendChild(d);
+      });
+    }
+
+    function setMode(neu) {
+      mode = neu;
+      clearTimeout(timer);
+      timer = null;
+
+      updateModeButtons();
+      label.style.display = "none";
+      feedback.textContent = "";
+      feedback.className = "";
+
+      if (neu === "lernen") {
+        quizBox.style.display = "none";
+        lernInfo.style.display = "block";
+        quizAktiv = false;
+      } else {
+        quizBox.style.display = "block";
+        lernInfo.style.display = "none";
+        nextQuestion();
+      }
+    }
+
+    function onHotspotClick(h, el) {
+      if (mode === "lernen") {
+        showLabel(h.wort, h.labelX, h.labelY);
+        return;
       }
 
-      el.classList.add("fehler");
-      setTimeout(() => el.classList.remove("fehler"), 300);
-    }
-  }
+      if (!quizAktiv) return;
 
-  function showLabel(text, x, y) {
-    label.textContent = text;
-    label.style.left = x + "%";
-    label.style.top = y + "%";
-    label.style.display = "block";
-    label.classList.remove("show");
-    void label.offsetWidth;
-    label.classList.add("show");
-  }
+      if (h.wort === gesucht) {
+        feedback.textContent = "👍 Richtig";
+        feedback.className = "richtig feedback-anim";
+        void feedback.offsetWidth;
 
-  function getWeightedNextWord() {
-    const kandidaten = hotspots.filter(h => h.wort !== letztesGesucht);
-    const pool = kandidaten.length > 0 ? kandidaten : hotspots;
+        h.boost = Math.max(1, h.boost - 1);
+        timer = setTimeout(nextQuestion, 600);
+      } else {
+        feedback.textContent = "👎 Falsch";
+        feedback.className = "falsch feedback-anim";
+        void feedback.offsetWidth;
 
-    let gesamt = 0;
-    for (const h of pool) {
-      gesamt += h.boost;
-    }
+        if (navigator.vibrate) {
+          navigator.vibrate(150);
+        }
 
-    let zufall = Math.random() * gesamt;
+        const ziel = getCurrentImageData().hotspots.find(x => x.wort === gesucht);
+        if (ziel) {
+          ziel.boost = Math.min(8, ziel.boost + 2);
+        }
 
-    for (const h of pool) {
-      zufall -= h.boost;
-      if (zufall <= 0) {
-        return h.wort;
+        el.classList.add("fehler");
+        setTimeout(() => el.classList.remove("fehler"), 300);
       }
     }
 
-    return pool[pool.length - 1].wort;
-  }
+    function showLabel(text, x, y) {
+      label.textContent = text;
+      label.style.left = x + "%";
+      label.style.top = y + "%";
+      label.style.display = "block";
+      label.classList.remove("show");
+      void label.offsetWidth;
+      label.classList.add("show");
+    }
 
-  function nextQuestion() {
-    gesucht = getWeightedNextWord();
-    letztesGesucht = gesucht;
+    function getWeightedNextWord() {
+      const hotspots = getCurrentImageData().hotspots;
+      const kandidaten = hotspots.filter(h => h.wort !== letztesGesucht);
+      const pool = kandidaten.length > 0 ? kandidaten : hotspots;
 
-    frage.textContent = "Finde: " + gesucht;
-    feedback.textContent = "";
-    feedback.className = "";
-    label.style.display = "none";
-    quizAktiv = true;
-  }
+      let gesamt = 0;
+      for (const h of pool) {
+        gesamt += h.boost;
+      }
 
-  function zurueck() {
-    location.reload();
-  }
-</script>
+      let zufall = Math.random() * gesamt;
 
+      for (const h of pool) {
+        zufall -= h.boost;
+        if (zufall <= 0) {
+          return h.wort;
+        }
+      }
+
+      return pool[pool.length - 1].wort;
+    }
+
+    function nextQuestion() {
+      gesucht = getWeightedNextWord();
+      letztesGesucht = gesucht;
+
+      frage.textContent = "Finde: " + gesucht;
+      feedback.textContent = "";
+      feedback.className = "";
+      label.style.display = "none";
+      quizAktiv = true;
+    }
+  </script>
 </body>
 </html>
