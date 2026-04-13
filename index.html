@@ -1,31 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vokabeltrainer</title>
 
   <style>
-    :root{
-      --top-safe: env(safe-area-inset-top, 0px);
-      --bottom-safe: env(safe-area-inset-bottom, 0px);
-      --left-safe: env(safe-area-inset-left, 0px);
-      --right-safe: env(safe-area-inset-right, 0px);
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #eef3f8;
-      color: #1f2a37;
+    body {
       font-family: Arial, sans-serif;
       text-align: center;
-      overscroll-behavior: none;
-    }
-
-    body {
-      min-height: 100vh;
+      margin: 0;
+      background: #eef3f8;
+      color: #1f2a37;
     }
 
     h1, h2, h3 {
@@ -62,7 +48,6 @@
     #menu,
     #folderMenu {
       min-height: 100vh;
-      min-height: 100dvh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -78,11 +63,10 @@
     .card {
       background: white;
       width: 100%;
-      max-width: 760px;
+      max-width: 700px;
       border-radius: 26px;
       padding: 40px 28px 36px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-      box-sizing: border-box;
     }
 
     .start-icon {
@@ -111,14 +95,7 @@
     }
 
     .app-wrap {
-      min-height: 100vh;
-      min-height: 100dvh;
-      padding-top: calc(var(--top-safe) + 4px);
-      padding-bottom: calc(var(--bottom-safe) + 8px);
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
+      padding: 0 0 12px;
     }
 
     .current-title {
@@ -128,13 +105,11 @@
     .mode-switch {
       display: flex;
       width: min(96vw, 760px);
-      margin: 4px auto 4px;
+      margin: 8px auto 4px;
       background: #dbe7f7;
       border-radius: 24px;
       padding: 6px;
       box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
-      box-sizing: border-box;
-      flex: 0 0 auto;
     }
 
     .mode-segment {
@@ -168,7 +143,6 @@
       margin: 0 auto 2px;
       padding: 0 6px;
       box-sizing: border-box;
-      flex: 0 0 auto;
     }
 
     .nav-left {
@@ -192,7 +166,6 @@
       align-items: center;
       justify-content: center;
       -webkit-text-stroke: 1px currentColor;
-      flex: 0 0 auto;
     }
 
     .back-arrow:active {
@@ -209,7 +182,6 @@
       border-radius: 16px;
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(0,0,0,0.18);
-      flex: 0 0 auto;
     }
 
     .fullscreen-btn:active {
@@ -219,15 +191,13 @@
     .swipe-info {
       font-size: 16px;
       color: #4b5563;
-      margin: 2px 0 4px;
-      flex: 0 0 auto;
+      margin: 4px 0 6px;
     }
 
     #quizBox {
       display: none;
       margin: 0;
       padding: 0;
-      flex: 0 0 auto;
     }
 
     .quiz-top {
@@ -273,36 +243,23 @@
       min-height: 42px;
       margin: 0;
       line-height: 1.2;
-      flex: 0 0 auto;
-    }
-
-    #lernInfo {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 4px 8px 2px;
-      flex: 0 0 auto;
     }
 
     .bild {
       position: relative;
       width: 100vw;
-      flex: 1 1 auto;
-      min-height: 0;
+      max-width: 100vw;
+      height: min(78vh, calc(100vh - 220px));
       margin: 0 auto;
       touch-action: pan-y;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
+      background: transparent;
     }
 
     #bild {
+      width: 100%;
+      height: 100%;
       display: block;
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
       object-fit: contain;
       user-select: none;
       -webkit-user-drag: none;
@@ -322,10 +279,8 @@
       background: transparent;
       border: none;
       cursor: pointer;
-      width: 8%;
-      height: 8%;
-      min-width: 28px;
-      min-height: 28px;
+      width: clamp(28px, 7vw, 54px);
+      height: clamp(28px, 7vw, 54px);
       pointer-events: auto;
     }
 
@@ -351,7 +306,7 @@
       white-space: nowrap;
       box-shadow: 0 10px 22px rgba(0,0,0,0.24);
       pointer-events: none;
-      max-width: 90vw;
+      max-width: 92vw;
     }
 
     @keyframes bubbleIn {
@@ -361,6 +316,12 @@
 
     #label.show {
       animation: bubbleIn 0.18s ease-out;
+    }
+
+    #lernInfo {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 4px 8px 2px;
     }
 
     .richtig {
@@ -402,23 +363,47 @@
     }
 
     @keyframes slideOutLeft {
-      0% { transform: translateX(0); opacity: 1; }
-      100% { transform: translateX(-28px); opacity: 0.35; }
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(-28px);
+        opacity: 0.35;
+      }
     }
 
     @keyframes slideOutRight {
-      0% { transform: translateX(0); opacity: 1; }
-      100% { transform: translateX(28px); opacity: 0.35; }
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(28px);
+        opacity: 0.35;
+      }
     }
 
     @keyframes slideInLeft {
-      0% { transform: translateX(28px); opacity: 0.35; }
-      100% { transform: translateX(0); opacity: 1; }
+      0% {
+        transform: translateX(28px);
+        opacity: 0.35;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
     @keyframes slideInRight {
-      0% { transform: translateX(-28px); opacity: 0.35; }
-      100% { transform: translateX(0); opacity: 1; }
+      0% {
+        transform: translateX(-28px);
+        opacity: 0.35;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
 
     @media (max-width: 600px) {
@@ -459,27 +444,8 @@
         padding: 9px 16px;
       }
 
-      .ui-btn {
-        font-size: 26px;
-        padding: 20px 28px;
-      }
-
-      .card {
-        padding: 30px 20px 28px;
-      }
-
-      .folder-title {
-        font-size: 34px;
-      }
-
-      .folder-subtitle,
-      .subtitle {
-        font-size: 21px;
-      }
-
-      .hotspot {
-        width: 9%;
-        height: 9%;
+      .bild {
+        height: min(74vh, calc(100vh - 210px));
       }
     }
   </style>
@@ -514,7 +480,7 @@
   </div>
 
   <div id="app" class="app-wrap">
-    <div class="current-title" id="currentImageTitle"></div>
+    <div class="current-title" id="currentImageTitle">La playa – Bild 1</div>
 
     <div class="mode-switch">
       <button class="mode-segment active" id="lernBtn">Lernen</button>
@@ -528,7 +494,7 @@
       <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
     </div>
 
-    <div id="lernInfo">Tippe auf ein Objekt.</div>
+    <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
 
     <div id="quizBox">
       <div class="quiz-top">
@@ -599,28 +565,28 @@
             title: "La ropa – Bild 1",
             file: "ropa2.png",
             hotspots: [
-              { wort:"la camiseta",      clickX:14, clickY:13, labelX:20, labelY:10 },
-              { wort:"la camisa",        clickX:39, clickY:13, labelX:46, labelY:10 },
-              { wort:"los pantalones",   clickX:64, clickY:13, labelX:67, labelY:9  },
-              { wort:"los vaqueros",     clickX:87, clickY:13, labelX:81, labelY:9  },
+              { wort:"la camiseta", clickX:14, clickY:13, labelX:20, labelY:10 },
+              { wort:"la camisa", clickX:39, clickY:13, labelX:46, labelY:10 },
+              { wort:"los pantalones", clickX:64, clickY:13, labelX:67, labelY:9 },
+              { wort:"los vaqueros", clickX:87, clickY:13, labelX:81, labelY:9 },
 
-              { wort:"la falda",         clickX:14, clickY:31, labelX:19, labelY:27 },
-              { wort:"el vestido",       clickX:39, clickY:31, labelX:46, labelY:27 },
-              { wort:"el jersey",        clickX:73, clickY:31, labelX:74, labelY:27 },
+              { wort:"la falda", clickX:14, clickY:31, labelX:19, labelY:27 },
+              { wort:"el vestido", clickX:39, clickY:31, labelX:46, labelY:27 },
+              { wort:"el jersey", clickX:73, clickY:31, labelX:74, labelY:27 },
 
-              { wort:"el abrigo",        clickX:13, clickY:57, labelX:22, labelY:53 },
-              { wort:"los zapatos",      clickX:45, clickY:48, labelX:50, labelY:44 },
-              { wort:"la chaqueta",      clickX:84, clickY:50, labelX:80, labelY:45 },
-              { wort:"las medias",       clickX:49, clickY:63, labelX:57, labelY:59 },
-              { wort:"las sandalias",    clickX:86, clickY:65, labelX:77, labelY:61 },
+              { wort:"el abrigo", clickX:13, clickY:57, labelX:22, labelY:53 },
+              { wort:"los zapatos", clickX:45, clickY:48, labelX:50, labelY:44 },
+              { wort:"la chaqueta", clickX:84, clickY:50, labelX:80, labelY:45 },
+              { wort:"las medias", clickX:49, clickY:63, labelX:57, labelY:59 },
+              { wort:"las sandalias", clickX:86, clickY:65, labelX:77, labelY:61 },
 
-              { wort:"el sombrero",      clickX:47, clickY:79, labelX:51, labelY:75 },
-              { wort:"el cinturón",      clickX:66, clickY:79, labelX:67, labelY:75 },
-              { wort:"los calcetines",   clickX:87, clickY:79, labelX:80, labelY:75 },
+              { wort:"el sombrero", clickX:47, clickY:79, labelX:51, labelY:75 },
+              { wort:"el cinturón", clickX:66, clickY:79, labelX:67, labelY:75 },
+              { wort:"los calcetines", clickX:87, clickY:79, labelX:80, labelY:75 },
 
-              { wort:"el chaleco",       clickX:14, clickY:93, labelX:22, labelY:88 },
-              { wort:"las botas",        clickX:49, clickY:93, labelX:56, labelY:88 },
-              { wort:"el chándal",       clickX:84, clickY:93, labelX:76, labelY:88 }
+              { wort:"el chaleco", clickX:14, clickY:93, labelX:22, labelY:88 },
+              { wort:"las botas", clickX:49, clickY:93, labelX:56, labelY:88 },
+              { wort:"el chándal", clickX:84, clickY:93, labelX:76, labelY:88 }
             ]
           }
         ]
@@ -641,8 +607,11 @@
     let quizQueue = [];
     let repeatQueue = [];
     let recentQuestions = [];
+    let currentLabelHotspot = null;
 
     const MIN_REPEAT_DELAY = 3;
+
+    let imageDisplay = { x: 0, y: 0, w: 0, h: 0 };
 
     const menu = document.getElementById("menu");
     const folderMenu = document.getElementById("folderMenu");
@@ -686,9 +655,6 @@
     }, { passive: true });
 
     document.addEventListener("fullscreenchange", updateFullscreenButtonText);
-    if ("speechSynthesis" in window) {
-      speechSynthesis.onvoiceschanged = () => {};
-    }
 
     function getCurrentImageData() {
       return folders[currentFolderKey].images[currentImageIndex];
@@ -726,7 +692,7 @@
       folderMenu.style.display = "flex";
       clearTimeout(timer);
       timer = null;
-      label.style.display = "none";
+      hideLabel();
       feedback.textContent = "";
       feedback.className = "";
       stopSpeech();
@@ -737,7 +703,7 @@
       currentImageIndex = index;
       folderMenu.style.display = "none";
       menu.style.display = "none";
-      app.style.display = "flex";
+      app.style.display = "block";
       mode = "lernen";
       quizAktiv = false;
       clearTimeout(timer);
@@ -762,38 +728,72 @@
       refillQuizQueue();
     }
 
-    function updateLernHint() {
-      if (currentFolderKey === "ropa") {
-        lernInfo.textContent = "Tippe auf ein Kleidungsstück.";
-      } else {
-        lernInfo.textContent = "Tippe auf eine Pfeilspitze.";
-      }
+    function updateLernInfo() {
+      lernInfo.textContent = currentFolderKey === "ropa"
+        ? "Tippe auf ein Kleidungsstück."
+        : "Tippe auf eine Pfeilspitze.";
     }
 
     function loadCurrentImage() {
       const imageData = getCurrentImageData();
-      bild.src = imageData.file;
       currentImageTitle.textContent = imageData.title;
-
-      buildHotspots();
-      label.style.display = "none";
       feedback.textContent = "";
       feedback.className = "";
-      updateLernHint();
+      hideLabel();
+      updateLernInfo();
 
-      if (mode === "lernen") {
-        quizBox.style.display = "none";
-        lernInfo.style.display = "block";
-        swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
-      } else {
-        quizBox.style.display = "block";
-        lernInfo.style.display = "none";
-        swipeInfo.style.display = "none";
-        resetQuizQueues();
-        nextQuestion();
+      bild.onload = () => {
+        updateImageDisplay();
+        buildHotspots();
+
+        if (mode === "lernen") {
+          quizBox.style.display = "none";
+          lernInfo.style.display = "block";
+          swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
+        } else {
+          quizBox.style.display = "block";
+          lernInfo.style.display = "none";
+          swipeInfo.style.display = "none";
+          resetQuizQueues();
+          nextQuestion();
+        }
+
+        updateModeButtons();
+      };
+
+      bild.src = imageData.file;
+    }
+
+    function updateImageDisplay() {
+      const rect = bild.getBoundingClientRect();
+
+      if (!bild.naturalWidth || !bild.naturalHeight || !rect.width || !rect.height) {
+        imageDisplay = { x: 0, y: 0, w: rect.width || 0, h: rect.height || 0 };
+        return;
       }
 
-      updateModeButtons();
+      const imgRatio = bild.naturalWidth / bild.naturalHeight;
+      const boxRatio = rect.width / rect.height;
+
+      if (imgRatio > boxRatio) {
+        imageDisplay.w = rect.width;
+        imageDisplay.h = rect.width / imgRatio;
+        imageDisplay.x = 0;
+        imageDisplay.y = (rect.height - imageDisplay.h) / 2;
+      } else {
+        imageDisplay.h = rect.height;
+        imageDisplay.w = rect.height * imgRatio;
+        imageDisplay.y = 0;
+        imageDisplay.x = (rect.width - imageDisplay.w) / 2;
+      }
+    }
+
+    function imagePercentToPixelX(percentX) {
+      return imageDisplay.x + (percentX / 100) * imageDisplay.w;
+    }
+
+    function imagePercentToPixelY(percentY) {
+      return imageDisplay.y + (percentY / 100) * imageDisplay.h;
     }
 
     function buildHotspots() {
@@ -805,12 +805,16 @@
         const d = document.createElement("button");
         d.className = "hotspot";
         d.type = "button";
-        d.style.left = h.clickX + "%";
-        d.style.top = h.clickY + "%";
+        d.style.left = imagePercentToPixelX(h.clickX) + "px";
+        d.style.top = imagePercentToPixelY(h.clickY) + "px";
         d.setAttribute("aria-label", h.wort);
         d.addEventListener("click", () => onHotspotClick(h, d));
         hotspotsLayer.appendChild(d);
       });
+
+      if (currentLabelHotspot) {
+        repositionCurrentLabel();
+      }
     }
 
     function setMode(neu) {
@@ -820,7 +824,7 @@
       stopSpeech();
 
       updateModeButtons();
-      label.style.display = "none";
+      hideLabel();
       feedback.textContent = "";
       feedback.className = "";
 
@@ -829,7 +833,7 @@
         lernInfo.style.display = "block";
         swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
         quizAktiv = false;
-        updateLernHint();
+        updateLernInfo();
       } else {
         quizBox.style.display = "block";
         lernInfo.style.display = "none";
@@ -841,7 +845,7 @@
 
     function onHotspotClick(h, el) {
       if (mode === "lernen") {
-        showLabel(h.wort, h.labelX, h.labelY);
+        showLabel(h);
         speakWord(h.wort);
         return;
       }
@@ -874,14 +878,28 @@
       }
     }
 
-    function showLabel(text, x, y) {
-      label.textContent = text;
-      label.style.left = x + "%";
-      label.style.top = y + "%";
+    function showLabel(hotspot) {
+      currentLabelHotspot = hotspot;
+      label.textContent = hotspot.wort;
+      label.style.left = imagePercentToPixelX(hotspot.labelX) + "px";
+      label.style.top = imagePercentToPixelY(hotspot.labelY) + "px";
       label.style.display = "block";
       label.classList.remove("show");
       void label.offsetWidth;
       label.classList.add("show");
+    }
+
+    function repositionCurrentLabel() {
+      if (!currentLabelHotspot) return;
+      label.style.left = imagePercentToPixelX(currentLabelHotspot.labelX) + "px";
+      label.style.top = imagePercentToPixelY(currentLabelHotspot.labelY) + "px";
+      label.style.display = "block";
+    }
+
+    function hideLabel() {
+      currentLabelHotspot = null;
+      label.style.display = "none";
+      label.classList.remove("show");
     }
 
     function shuffleArray(arr) {
@@ -970,7 +988,7 @@
       frage.textContent = gesucht;
       feedback.textContent = "";
       feedback.className = "";
-      label.style.display = "none";
+      hideLabel();
       quizAktiv = true;
     }
 
@@ -983,20 +1001,46 @@
 
       bild.classList.remove("slide-out-left", "slide-out-right", "slide-in-left", "slide-in-right");
       void bild.offsetWidth;
+
       bild.classList.add(outClass);
 
       setTimeout(() => {
         bild.classList.remove(outClass);
         updateImageCallback();
-        buildHotspots();
-        label.style.display = "none";
-        bild.classList.add(inClass);
+      }, 220);
 
+      function finalizeAnimationAfterLoad() {
+        bild.classList.add(inClass);
         setTimeout(() => {
           bild.classList.remove(inClass);
           isAnimating = false;
         }, 220);
-      }, 220);
+      }
+
+      bild.onload = () => {
+        updateImageDisplay();
+        buildHotspots();
+        hideLabel();
+        finalizeAnimationAfterLoad();
+
+        if (mode === "lernen") {
+          quizBox.style.display = "none";
+          lernInfo.style.display = "block";
+          swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
+          updateLernInfo();
+        } else {
+          quizBox.style.display = "block";
+          lernInfo.style.display = "none";
+          swipeInfo.style.display = "none";
+          resetQuizQueues();
+          nextQuestion();
+        }
+
+        feedback.textContent = "";
+        feedback.className = "";
+        currentImageTitle.textContent = getCurrentImageData().title;
+        updateModeButtons();
+      };
     }
 
     function showNextImage() {
@@ -1009,26 +1053,7 @@
 
       animateImageChange("left", () => {
         currentImageIndex = (currentImageIndex + 1) % total;
-        const imageData = getCurrentImageData();
-        bild.src = imageData.file;
-        currentImageTitle.textContent = imageData.title;
-        feedback.textContent = "";
-        feedback.className = "";
-        updateLernHint();
-
-        if (mode === "lernen") {
-          quizBox.style.display = "none";
-          lernInfo.style.display = "block";
-          swipeInfo.style.display = "block";
-        } else {
-          quizBox.style.display = "block";
-          lernInfo.style.display = "none";
-          swipeInfo.style.display = "none";
-          resetQuizQueues();
-          nextQuestion();
-        }
-
-        updateModeButtons();
+        bild.src = getCurrentImageData().file;
       });
     }
 
@@ -1042,30 +1067,13 @@
 
       animateImageChange("right", () => {
         currentImageIndex = (currentImageIndex - 1 + total) % total;
-        const imageData = getCurrentImageData();
-        bild.src = imageData.file;
-        currentImageTitle.textContent = imageData.title;
-        feedback.textContent = "";
-        feedback.className = "";
-        updateLernHint();
-
-        if (mode === "lernen") {
-          quizBox.style.display = "none";
-          lernInfo.style.display = "block";
-          swipeInfo.style.display = "block";
-        } else {
-          quizBox.style.display = "block";
-          lernInfo.style.display = "none";
-          swipeInfo.style.display = "none";
-          resetQuizQueues();
-          nextQuestion();
-        }
-
-        updateModeButtons();
+        bild.src = getCurrentImageData().file;
       });
     }
 
     function handleSwipe() {
+      if (mode !== "lernen" && mode !== "quiz") return;
+
       const total = folders[currentFolderKey].images.length;
       if (isAnimating || total < 2) return;
 
@@ -1082,8 +1090,11 @@
     async function enterFullscreen() {
       try {
         const el = document.documentElement;
-        if (!document.fullscreenElement && el.requestFullscreen) {
-          await el.requestFullscreen({ navigationUI: "hide" });
+
+        if (!document.fullscreenElement) {
+          if (el.requestFullscreen) {
+            await el.requestFullscreen({ navigationUI: "hide" });
+          }
         }
       } catch (err) {
         console.log("Vollbild konnte nicht automatisch gestartet werden.");
@@ -1187,6 +1198,13 @@
       playTone(260, 0.14, "square", 0.07, 0);
       playTone(180, 0.22, "square", 0.06, 0.10);
     }
+
+    window.addEventListener("resize", () => {
+      if (app.style.display === "none") return;
+      if (!bild.src) return;
+      updateImageDisplay();
+      buildHotspots();
+    });
   </script>
 </body>
 </html>
