@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vokabeltrainer</title>
 
   <style>
@@ -63,7 +64,7 @@
     .card {
       background: white;
       width: 100%;
-      max-width: 700px;
+      max-width: 760px;
       border-radius: 26px;
       padding: 40px 28px 36px;
       box-shadow: 0 10px 28px rgba(0,0,0,0.12);
@@ -92,6 +93,34 @@
       font-size: 24px;
       color: #4b5563;
       margin-bottom: 28px;
+    }
+
+    .folder-image-grid {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+
+    .image-square-btn {
+      width: 74px;
+      height: 74px;
+      padding: 0;
+      margin: 0;
+      border-radius: 14px;
+      border: none;
+      background: #2d7df6;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+
+    .image-square-btn:active {
+      transform: scale(0.97);
     }
 
     .app-wrap {
@@ -273,8 +302,8 @@
       background: transparent;
       border: none;
       cursor: pointer;
-      width: 8%;
-      height: 8%;
+      width: 7.5%;
+      height: 7.5%;
     }
 
     .hotspot.fehler {
@@ -355,47 +384,23 @@
     }
 
     @keyframes slideOutLeft {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(-28px);
-        opacity: 0.35;
-      }
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(-28px); opacity: 0.35; }
     }
 
     @keyframes slideOutRight {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(28px);
-        opacity: 0.35;
-      }
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(28px); opacity: 0.35; }
     }
 
     @keyframes slideInLeft {
-      0% {
-        transform: translateX(28px);
-        opacity: 0.35;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      0% { transform: translateX(28px); opacity: 0.35; }
+      100% { transform: translateX(0); opacity: 1; }
     }
 
     @keyframes slideInRight {
-      0% {
-        transform: translateX(-28px);
-        opacity: 0.35;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      0% { transform: translateX(-28px); opacity: 0.35; }
+      100% { transform: translateX(0); opacity: 1; }
     }
 
     @media (max-width: 600px) {
@@ -435,6 +440,17 @@
         font-size: clamp(20px, 4vw, 28px);
         padding: 9px 16px;
       }
+
+      .ui-btn {
+        font-size: 24px;
+        padding: 20px 26px;
+      }
+
+      .image-square-btn {
+        width: 66px;
+        height: 66px;
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -444,22 +460,17 @@
     <div class="card">
       <div class="start-icon">🧠</div>
       <h1>Vokabeltrainer</h1>
-      <div class="subtitle">
-        Lerne spanische Wörter direkt am Bild.
-      </div>
-      <button class="ui-btn" id="openStrandBtn">Strand</button>
+      <div class="subtitle">Lerne spanische Wörter direkt am Bild.</div>
+      <div id="folderButtons"></div>
     </div>
   </div>
 
   <div id="folderMenu">
     <div class="card">
-      <div class="folder-title">Strand</div>
+      <div class="folder-title" id="folderMenuTitle"></div>
       <div class="folder-subtitle">Wähle ein Bild zum Lernen.</div>
 
-      <div>
-        <button class="ui-btn image-btn" data-index="0">Bild 1</button>
-        <button class="ui-btn image-btn" data-index="1">Bild 2</button>
-      </div>
+      <div id="imageButtons" class="folder-image-grid"></div>
 
       <div style="margin-top:18px;">
         <button class="ui-btn secondary small" id="backToStartBtn">← Zurück</button>
@@ -468,7 +479,7 @@
   </div>
 
   <div id="app" class="app-wrap">
-    <div class="current-title" id="currentImageTitle">Strand – Bild 1</div>
+    <div class="current-title" id="currentImageTitle"></div>
 
     <div class="mode-switch">
       <button class="mode-segment active" id="lernBtn">Lernen</button>
@@ -495,7 +506,7 @@
     <div id="swipeInfo" class="swipe-info">Zum Bildwechsel nach links oder rechts wischen.</div>
 
     <div class="bild">
-      <img id="bild" src="" alt="Strandbild">
+      <img id="bild" src="" alt="Vokabelbild" />
       <div id="hotspots"></div>
       <div id="label"></div>
     </div>
@@ -503,11 +514,11 @@
 
   <script>
     const folders = {
-      strand: {
-        title: "Strand",
+      la_playa: {
+        title: "La playa",
         images: [
           {
-            title: "Strand – Bild 1",
+            title: "La playa – Bild 1",
             file: "strand-ohne-woerter.png",
             hotspots: [
               { wort:"el sol", clickX:70, clickY:26, labelX:74, labelY:22 },
@@ -526,7 +537,7 @@
             ]
           },
           {
-            title: "Strand – Bild 2",
+            title: "La playa – Bild 2",
             file: "strand2.png?v=2",
             hotspots: [
               { wort:"el sol", clickX:28, clickY:18, labelX:33, labelY:15 },
@@ -544,10 +555,39 @@
             ]
           }
         ]
+      },
+
+      el_cuerpo: {
+        title: "El cuerpo",
+        images: [
+          {
+            title: "El cuerpo – Bild 1",
+            file: "la-cabeza-direcciones.png",
+            hotspots: [
+              { wort:"el pelo",         clickX:31.8, clickY:11.7, labelX:19.5, labelY:8.3 },
+              { wort:"la ceja",         clickX:54.0, clickY:17.0, labelX:70.0, labelY:14.0 },
+              { wort:"el ojo",          clickX:31.0, clickY:22.3, labelX:17.0, labelY:20.0 },
+              { wort:"la oreja",        clickX:69.0, clickY:26.5, labelX:83.0, labelY:24.0 },
+              { wort:"la mejilla",      clickX:36.8, clickY:30.4, labelX:18.0, labelY:31.0 },
+              { wort:"los dientes",     clickX:50.5, clickY:31.6, labelX:71.0, labelY:32.0 },
+              { wort:"la lengua",       clickX:49.8, clickY:35.0, labelX:70.0, labelY:38.2 },
+              { wort:"la boca",         clickX:40.5, clickY:38.8, labelX:20.0, labelY:42.2 },
+
+              { wort:"la cabeza",       clickX:27.0, clickY:55.6, labelX:16.0, labelY:52.0 },
+              { wort:"la frente",       clickX:53.8, clickY:62.0, labelX:72.0, labelY:59.0 },
+              { wort:"las pestañas",    clickX:31.0, clickY:70.7, labelX:15.5, labelY:69.0 },
+              { wort:"el párpado",      clickX:64.8, clickY:69.0, labelX:82.0, labelY:68.0 },
+              { wort:"la nariz",        clickX:54.0, clickY:76.9, labelX:72.0, labelY:76.0 },
+              { wort:"los labios",      clickX:55.0, clickY:83.3, labelX:73.0, labelY:84.5 },
+              { wort:"la barbilla",     clickX:39.8, clickY:89.1, labelX:19.0, labelY:90.0 },
+              { wort:"el cuello",       clickX:42.2, clickY:95.0, labelX:19.0, labelY:96.5 }
+            ]
+          }
+        ]
       }
     };
 
-    let currentFolderKey = "strand";
+    let currentFolderKey = null;
     let currentImageIndex = 0;
     let mode = "lernen";
     let gesucht = "";
@@ -581,8 +621,10 @@
     const bildContainer = document.querySelector(".bild");
     const fullscreenBtn = document.getElementById("fullscreenBtn");
     const speakBtn = document.getElementById("speakBtn");
+    const folderButtons = document.getElementById("folderButtons");
+    const imageButtons = document.getElementById("imageButtons");
+    const folderMenuTitle = document.getElementById("folderMenuTitle");
 
-    document.getElementById("openStrandBtn").addEventListener("click", openFolderMenu);
     document.getElementById("backToStartBtn").addEventListener("click", backToStart);
     document.getElementById("backToFolderBtn").addEventListener("click", backToFolderMenu);
 
@@ -590,12 +632,6 @@
     quizBtn.addEventListener("click", () => setMode("quiz"));
     fullscreenBtn.addEventListener("click", enterFullscreen);
     speakBtn.addEventListener("click", () => speakWord(gesucht));
-
-    document.querySelectorAll("#folderMenu .image-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        openImage(Number(btn.dataset.index));
-      });
-    });
 
     bildContainer.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -608,17 +644,49 @@
 
     document.addEventListener("fullscreenchange", updateFullscreenButtonText);
 
+    renderFolderButtons();
+
+    function renderFolderButtons() {
+      folderButtons.innerHTML = "";
+
+      Object.keys(folders).forEach(folderKey => {
+        const btn = document.createElement("button");
+        btn.className = "ui-btn";
+        btn.textContent = folders[folderKey].title;
+        btn.addEventListener("click", () => openFolderMenu(folderKey));
+        folderButtons.appendChild(btn);
+      });
+    }
+
+    function renderImageButtons() {
+      imageButtons.innerHTML = "";
+      const folder = folders[currentFolderKey];
+
+      folder.images.forEach((img, index) => {
+        const btn = document.createElement("button");
+        btn.className = "image-square-btn";
+        btn.textContent = String(index + 1);
+        btn.addEventListener("click", () => openImage(index));
+        imageButtons.appendChild(btn);
+      });
+    }
+
     function getCurrentImageData() {
       return folders[currentFolderKey].images[currentImageIndex];
     }
 
-    function openFolderMenu() {
+    function openFolderMenu(folderKey) {
+      currentFolderKey = folderKey;
+      folderMenuTitle.textContent = folders[currentFolderKey].title;
+      renderImageButtons();
+
       menu.style.display = "none";
       folderMenu.style.display = "flex";
       app.style.display = "none";
     }
 
     function backToStart() {
+      currentFolderKey = null;
       folderMenu.style.display = "none";
       app.style.display = "none";
       menu.style.display = "flex";
@@ -668,6 +736,7 @@
     function loadCurrentImage() {
       const imageData = getCurrentImageData();
       bild.src = imageData.file;
+      bild.alt = imageData.title;
       currentImageTitle.textContent = imageData.title;
 
       buildHotspots();
@@ -678,7 +747,7 @@
       if (mode === "lernen") {
         quizBox.style.display = "none";
         lernInfo.style.display = "block";
-        swipeInfo.style.display = "block";
+        swipeInfo.style.display = folderHasMultipleImages() ? "block" : "none";
       } else {
         quizBox.style.display = "block";
         lernInfo.style.display = "none";
@@ -688,6 +757,10 @@
       }
 
       updateModeButtons();
+    }
+
+    function folderHasMultipleImages() {
+      return folders[currentFolderKey].images.length > 1;
     }
 
     function buildHotspots() {
@@ -719,7 +792,7 @@
       if (neu === "lernen") {
         quizBox.style.display = "none";
         lernInfo.style.display = "block";
-        swipeInfo.style.display = "block";
+        swipeInfo.style.display = folderHasMultipleImages() ? "block" : "none";
         quizAktiv = false;
       } else {
         quizBox.style.display = "block";
@@ -807,13 +880,7 @@
     }
 
     function scheduleRepeat(word) {
-      if (
-        word &&
-        !repeatQueue.includes(word) &&
-        word !== gesucht
-      ) {
-        repeatQueue.push(word);
-      } else if (word && !repeatQueue.includes(word)) {
+      if (word && !repeatQueue.includes(word)) {
         repeatQueue.push(word);
       }
     }
@@ -900,7 +967,7 @@
     }
 
     function showNextImage() {
-      if (isAnimating) return;
+      if (isAnimating || !folderHasMultipleImages()) return;
 
       clearTimeout(timer);
       timer = null;
@@ -912,6 +979,7 @@
 
         const imageData = getCurrentImageData();
         bild.src = imageData.file;
+        bild.alt = imageData.title;
         currentImageTitle.textContent = imageData.title;
 
         feedback.textContent = "";
@@ -934,7 +1002,7 @@
     }
 
     function showPrevImage() {
-      if (isAnimating) return;
+      if (isAnimating || !folderHasMultipleImages()) return;
 
       clearTimeout(timer);
       timer = null;
@@ -946,6 +1014,7 @@
 
         const imageData = getCurrentImageData();
         bild.src = imageData.file;
+        bild.alt = imageData.title;
         currentImageTitle.textContent = imageData.title;
 
         feedback.textContent = "";
@@ -968,7 +1037,7 @@
     }
 
     function handleSwipe() {
-      if (isAnimating) return;
+      if (isAnimating || !folderHasMultipleImages()) return;
 
       const diff = touchEndX - touchStartX;
 
