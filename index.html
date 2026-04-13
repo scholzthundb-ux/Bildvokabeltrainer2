@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -494,7 +495,7 @@
       <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
     </div>
 
-    <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
+    <div id="lernInfo">Tippe auf ein markiertes Motiv.</div>
 
     <div id="quizBox">
       <div class="quiz-top">
@@ -553,6 +554,23 @@
               { wort:"la pala", clickX:61, clickY:94, labelX:65, labelY:90 },
               { wort:"la pelota", clickX:77, clickY:93, labelX:83, labelY:89 },
               { wort:"el flotador", clickX:89, clickY:60, labelX:82, labelY:55 }
+            ]
+          },
+          {
+            title: "La playa – Bild 3",
+            file: "strand3.png",
+            hotspots: [
+              { wort:"tomar el sol", clickX:16.7, clickY:16.7, labelX:16.7, labelY:8.5 },
+              { wort:"nadar", clickX:50.0, clickY:16.7, labelX:50.0, labelY:8.5 },
+              { wort:"bucear", clickX:83.3, clickY:16.7, labelX:83.3, labelY:8.5 },
+
+              { wort:"pasear por la playa", clickX:16.7, clickY:50.0, labelX:21.0, labelY:41.5 },
+              { wort:"hacer castillos de arena", clickX:50.0, clickY:50.0, labelX:50.0, labelY:41.5 },
+              { wort:"leer", clickX:83.3, clickY:50.0, labelX:83.3, labelY:41.5 },
+
+              { wort:"recoger conchas", clickX:16.7, clickY:83.3, labelX:19.5, labelY:75.0 },
+              { wort:"sacar fotos", clickX:50.0, clickY:83.3, labelX:50.0, labelY:75.0 },
+              { wort:"surfear", clickX:83.3, clickY:83.3, labelX:83.3, labelY:75.0 }
             ]
           }
         ]
@@ -729,9 +747,17 @@
     }
 
     function updateLernInfo() {
-      lernInfo.textContent = currentFolderKey === "ropa"
-        ? "Tippe auf ein Kleidungsstück."
-        : "Tippe auf eine Pfeilspitze.";
+      if (currentFolderKey === "ropa") {
+        lernInfo.textContent = "Tippe auf ein Kleidungsstück.";
+        return;
+      }
+
+      if (currentFolderKey === "playa" && currentImageIndex === 2) {
+        lernInfo.textContent = "Tippe auf eine Tätigkeit.";
+        return;
+      }
+
+      lernInfo.textContent = "Tippe auf ein markiertes Motiv.";
     }
 
     function loadCurrentImage() {
