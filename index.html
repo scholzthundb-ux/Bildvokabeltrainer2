@@ -2,1165 +2,326 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vokabeltrainer</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      background: #eef3f8;
-      color: #1f2a37;
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-    }
-
-    .ui-btn {
-      padding: 24px 36px;
-      margin: 10px;
-      border-radius: 22px;
-      border: none;
-      background: #2d7df6;
-      color: white;
-      font-size: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-    }
-
-    .ui-btn:active {
-      transform: scale(0.98);
-    }
-
-    .ui-btn.secondary {
-      background: #5b6b7f;
-    }
-
-    .ui-btn.small {
-      font-size: 18px;
-      padding: 12px 18px;
-      margin: 6px;
-    }
-
-    #menu,
-    #folderMenu {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      box-sizing: border-box;
-    }
-
-    #folderMenu,
-    #app {
-      display: none;
-    }
-
-    .card {
-      background: white;
-      width: 100%;
-      max-width: 760px;
-      border-radius: 26px;
-      padding: 40px 28px 36px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-    }
-
-    .start-icon {
-      font-size: 64px;
-      margin-bottom: 18px;
-    }
-
-    .subtitle {
-      font-size: 24px;
-      margin-top: 14px;
-      margin-bottom: 30px;
-      color: #4b5563;
-      line-height: 1.4;
-    }
-
-    .folder-title {
-      font-size: 42px;
-      margin-bottom: 18px;
-      font-weight: bold;
-    }
-
-    .folder-subtitle {
-      font-size: 24px;
-      color: #4b5563;
-      margin-bottom: 28px;
-    }
-
-    .folder-image-grid {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-      margin-bottom: 10px;
-    }
-
-    .image-square-btn {
-      width: 74px;
-      height: 74px;
-      padding: 0;
-      margin: 0;
-      border-radius: 14px;
-      border: none;
-      background: #2d7df6;
-      color: white;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-    }
-
-    .image-square-btn:active {
-      transform: scale(0.97);
-    }
-
-    .app-wrap {
-      padding: 0 0 12px;
-    }
-
-    .current-title {
-      display: none;
-    }
-
-    .mode-switch {
-      display: flex;
-      width: min(96vw, 760px);
-      margin: 8px auto 4px;
-      background: #dbe7f7;
-      border-radius: 24px;
-      padding: 6px;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    .mode-segment {
-      flex: 1;
-      border: none;
-      background: transparent;
-      color: #234;
-      font-size: 30px;
-      font-weight: bold;
-      padding: 22px 10px;
-      border-radius: 18px;
-      cursor: pointer;
-      transition: all 0.18s ease;
-    }
-
-    .mode-segment.active {
-      background: #0b57d0;
-      color: white;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
-    }
-
-    .mode-segment:active {
-      transform: scale(0.98);
-    }
-
-    .nav-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: min(96vw, 760px);
-      margin: 0 auto 2px;
-      padding: 0 6px;
-      box-sizing: border-box;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .back-arrow {
-      background: rgba(0,0,0,0.12);
-      color: #1f2a37;
-      border: none;
-      font-size: 34px;
-      font-weight: 900;
-      line-height: 1;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-text-stroke: 1px currentColor;
-    }
-
-    .back-arrow:active {
-      transform: scale(0.9);
-    }
-
-    .fullscreen-btn {
-      background: #0b57d0;
-      color: white;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 10px 16px;
-      border-radius: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
-    }
-
-    .fullscreen-btn:active {
-      transform: scale(0.97);
-    }
-
-    .swipe-info {
-      font-size: 16px;
-      color: #4b5563;
-      margin: 4px 0 6px;
-    }
-
-    #quizBox {
-      display: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .quiz-top {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 2px 8px 0;
-    }
-
-    #frage {
-      font-size: 30px;
-      margin: 0;
-      font-weight: bold;
-      line-height: 1.2;
-    }
-
-    .sound-btn {
-      border: none;
-      background: #0b57d0;
-      color: white;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      font-size: 22px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-    }
-
-    .sound-btn:active {
-      transform: scale(0.95);
-    }
-
-    #feedback {
-      font-size: 34px;
-      font-weight: bold;
-      min-height: 42px;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .bild {
-      position: relative;
-      width: 100vw;
-      max-width: 100vw;
-      margin: 0 auto;
-      touch-action: pan-y;
-      overflow: hidden;
-    }
-
-    #bild {
-      width: 100%;
-      display: block;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    #hotspots {
-      position: absolute;
-      inset: 0;
-      z-index: 10;
-    }
-
-    .hotspot {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      z-index: 11;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      width: 7.5%;
-      height: 7.5%;
-    }
-
-    .hotspot.fehler {
-      background: rgba(255, 0, 0, 0.28);
-      border: 2px solid red;
-      border-radius: 10px;
-    }
-
-    #label {
-      position: absolute;
-      background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
-      border: 3px solid #111;
-      border-radius: 20px;
-      padding: 10px 18px;
-      font-size: clamp(22px, 4.2vw, 32px);
-      font-weight: 700;
-      color: #111;
-      line-height: 1.1;
-      transform: translate(-50%, -50%);
-      display: none;
-      z-index: 20;
-      white-space: nowrap;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.24);
-      pointer-events: none;
-    }
-
-    @keyframes bubbleIn {
-      0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0; }
-      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-    }
-
-    #label.show {
-      animation: bubbleIn 0.18s ease-out;
-    }
-
-    #lernInfo {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 4px 8px 2px;
-    }
-
-    .richtig {
-      color: green;
-      font-weight: bold;
-      font-size: 34px;
-    }
-
-    .falsch {
-      color: red;
-      font-weight: bold;
-      font-size: 34px;
-    }
-
-    @keyframes pop {
-      0%   { transform: scale(0.6); opacity: 0; }
-      60%  { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-
-    .feedback-anim {
-      animation: pop 0.35s ease;
-    }
-
-    #bild.slide-out-left {
-      animation: slideOutLeft 0.22s ease forwards;
-    }
-
-    #bild.slide-out-right {
-      animation: slideOutRight 0.22s ease forwards;
-    }
-
-    #bild.slide-in-left {
-      animation: slideInLeft 0.22s ease forwards;
-    }
-
-    #bild.slide-in-right {
-      animation: slideInRight 0.22s ease forwards;
-    }
-
-    @keyframes slideOutLeft {
-      0% { transform: translateX(0); opacity: 1; }
-      100% { transform: translateX(-28px); opacity: 0.35; }
-    }
-
-    @keyframes slideOutRight {
-      0% { transform: translateX(0); opacity: 1; }
-      100% { transform: translateX(28px); opacity: 0.35; }
-    }
-
-    @keyframes slideInLeft {
-      0% { transform: translateX(28px); opacity: 0.35; }
-      100% { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes slideInRight {
-      0% { transform: translateX(-28px); opacity: 0.35; }
-      100% { transform: translateX(0); opacity: 1; }
-    }
-
-    @media (max-width: 600px) {
-      .mode-segment {
-        font-size: 24px;
-        padding: 18px 8px;
-      }
-
-      .fullscreen-btn {
-        font-size: 14px;
-        padding: 9px 12px;
-      }
-
-      .back-arrow {
-        width: 56px;
-        height: 56px;
-        font-size: 36px;
-      }
-
-      #frage {
-        font-size: 26px;
-      }
-
-      #feedback,
-      .richtig,
-      .falsch {
-        font-size: 30px;
-      }
-
-      .sound-btn {
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
-      }
-
-      #label {
-        font-size: clamp(20px, 4vw, 28px);
-        padding: 9px 16px;
-      }
-
-      .ui-btn {
-        font-size: 24px;
-        padding: 20px 26px;
-      }
-
-      .image-square-btn {
-        width: 66px;
-        height: 66px;
-        font-size: 26px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vokabeltrainer</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  background: #eef3f8;
+  color: #1f2a37;
+}
+
+/* ===== Buttons ===== */
+
+.ui-btn {
+  padding: 24px 36px;
+  margin: 10px;
+  border-radius: 22px;
+  border: none;
+  background: #2d7df6;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.image-square-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  border: none;
+  background: #2d7df6;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== Layout ===== */
+
+#menu, #folderMenu {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#folderMenu, #app {
+  display: none;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  max-width: 760px;
+  border-radius: 26px;
+  padding: 40px;
+}
+
+.folder-image-grid {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== Bild ===== */
+
+.bild {
+  position: relative;
+  width: 100vw;
+}
+
+#bild {
+  width: 100%;
+}
+
+/* ===== HOTSPOTS ===== */
+
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 7.5%;
+  height: 7.5%;
+  cursor: pointer;
+}
+
+/* kleinere Hotspots nur für Körper */
+.hotspot.small-hitbox {
+  width: 4.2%;
+  height: 4.2%;
+}
+
+/* ===== Label ===== */
+
+#label {
+  position: absolute;
+  background: white;
+  border: 3px solid black;
+  border-radius: 16px;
+  padding: 10px;
+  font-size: 26px;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+</style>
 </head>
+
 <body>
 
-  <div id="menu">
-    <div class="card">
-      <div class="start-icon">🧠</div>
-      <h1>Vokabeltrainer</h1>
-      <div class="subtitle">Lerne spanische Wörter direkt am Bild.</div>
-      <div id="folderButtons"></div>
-    </div>
+<!-- ===== START ===== -->
+
+<div id="menu">
+  <div class="card">
+    <h1>Vokabeltrainer</h1>
+    <div id="folderButtons"></div>
+  </div>
+</div>
+
+<!-- ===== ORDNER ===== -->
+
+<div id="folderMenu">
+  <div class="card">
+    <h2 id="folderMenuTitle"></h2>
+    <div id="imageButtons" class="folder-image-grid"></div>
+    <button class="ui-btn" onclick="backToStart()">Zurück</button>
+  </div>
+</div>
+
+<!-- ===== APP ===== -->
+
+<div id="app">
+
+  <button onclick="backToFolderMenu()">←</button>
+
+  <div class="bild">
+    <img id="bild">
+    <div id="hotspots"></div>
+    <div id="label"></div>
   </div>
 
-  <div id="folderMenu">
-    <div class="card">
-      <div class="folder-title" id="folderMenuTitle"></div>
-      <div class="folder-subtitle">Wähle ein Bild zum Lernen.</div>
+</div>
 
-      <div id="imageButtons" class="folder-image-grid"></div>
+<script>
 
-      <div style="margin-top:18px;">
-        <button class="ui-btn secondary small" id="backToStartBtn">← Zurück</button>
-      </div>
-    </div>
-  </div>
+/* ===== DATEN ===== */
 
-  <div id="app" class="app-wrap">
-    <div class="current-title" id="currentImageTitle"></div>
+const folders = {
 
-    <div class="mode-switch">
-      <button class="mode-segment active" id="lernBtn">Lernen</button>
-      <button class="mode-segment" id="quizBtn">Quiz</button>
-    </div>
-
-    <div class="nav-row">
-      <div class="nav-left">
-        <button class="back-arrow" id="backToFolderBtn">←</button>
-      </div>
-      <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
-    </div>
-
-    <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
-
-    <div id="quizBox">
-      <div class="quiz-top">
-        <div id="frage"></div>
-        <button id="speakBtn" class="sound-btn" type="button" aria-label="Wort anhören">🔊</button>
-      </div>
-      <div id="feedback"></div>
-    </div>
-
-    <div id="swipeInfo" class="swipe-info">Zum Bildwechsel nach links oder rechts wischen.</div>
-
-    <div class="bild">
-      <img id="bild" src="" alt="Vokabelbild" />
-      <div id="hotspots"></div>
-      <div id="label"></div>
-    </div>
-  </div>
-
-  <script>
-    const folders = {
-      la_playa: {
-        title: "La playa",
-        images: [
-          {
-            title: "La playa – Bild 1",
-            file: "strand-ohne-woerter.png",
-            hotspots: [
-              { wort:"el sol", clickX:70, clickY:26, labelX:74, labelY:22 },
-              { wort:"la palmera", clickX:14, clickY:41, labelX:22, labelY:31 },
-              { wort:"el mar", clickX:41, clickY:48, labelX:42, labelY:44 },
-              { wort:"el barco", clickX:50, clickY:44, labelX:56, labelY:48 },
-              { wort:"la ola", clickX:73, clickY:58, labelX:72, labelY:58 },
-              { wort:"la tabla de surf", clickX:47, clickY:59, labelX:61, labelY:63 },
-              { wort:"el bañador", clickX:38, clickY:71, labelX:56, labelY:68 },
-              { wort:"la sombrilla", clickX:13, clickY:66, labelX:12, labelY:69 },
-              { wort:"la toalla", clickX:12, clickY:86, labelX:18, labelY:90 },
-              { wort:"las gafas de sol", clickX:36, clickY:90, labelX:41, labelY:92 },
-              { wort:"la crema solar", clickX:60, clickY:87, labelX:66, labelY:89 },
-              { wort:"la concha", clickX:90, clickY:90, labelX:86, labelY:90 },
-              { wort:"el chiringuito", clickX:90, clickY:53, labelX:79, labelY:66 }
-            ]
-          },
-          {
-            title: "La playa – Bild 2",
-            file: "strand2.png?v=2",
-            hotspots: [
-              { wort:"el sol", clickX:28, clickY:18, labelX:33, labelY:15 },
-              { wort:"la gaviota", clickX:69, clickY:18, labelX:67, labelY:13 },
-              { wort:"el socorrista", clickX:72, clickY:43, labelX:80, labelY:35 },
-              { wort:"el salvavidas", clickX:56, clickY:57, labelX:51, labelY:52 },
-              { wort:"la sombrilla", clickX:18, clickY:50, labelX:27, labelY:47 },
-              { wort:"la tumbona", clickX:18, clickY:75, labelX:26, labelY:72 },
-              { wort:"el sombrero de sol", clickX:31, clickY:78, labelX:36, labelY:73 },
-              { wort:"el castillo de arena", clickX:49, clickY:86, labelX:57, labelY:81 },
-              { wort:"la niña", clickX:84, clickY:74, labelX:88, labelY:69 },
-              { wort:"la pala", clickX:61, clickY:94, labelX:65, labelY:90 },
-              { wort:"la pelota", clickX:77, clickY:93, labelX:83, labelY:89 },
-              { wort:"el flotador", clickX:89, clickY:60, labelX:82, labelY:55 }
-            ]
-          }
-        ]
-      },
-
-      el_cuerpo: {
-        title: "El cuerpo",
-        images: [
-          {
-            title: "El cuerpo – Bild 1",
-            file: "la-cabeza-direcciones.png",
-            hotspots: [
-              { wort:"el pelo",         clickX:31.8, clickY:11.7, labelX:19.5, labelY:8.3 },
-              { wort:"la ceja",         clickX:54.0, clickY:17.0, labelX:70.0, labelY:14.0 },
-              { wort:"el ojo",          clickX:31.0, clickY:22.3, labelX:17.0, labelY:20.0 },
-              { wort:"la oreja",        clickX:69.0, clickY:26.5, labelX:83.0, labelY:24.0 },
-              { wort:"la mejilla",      clickX:36.8, clickY:30.4, labelX:18.0, labelY:31.0 },
-              { wort:"los dientes",     clickX:50.5, clickY:31.6, labelX:71.0, labelY:32.0 },
-              { wort:"la lengua",       clickX:49.8, clickY:35.0, labelX:70.0, labelY:38.2 },
-              { wort:"la boca",         clickX:40.5, clickY:38.8, labelX:20.0, labelY:42.2 },
-
-              { wort:"la cabeza",       clickX:27.0, clickY:55.6, labelX:16.0, labelY:52.0 },
-              { wort:"la frente",       clickX:53.8, clickY:62.0, labelX:72.0, labelY:59.0 },
-              { wort:"las pestañas",    clickX:31.0, clickY:70.7, labelX:15.5, labelY:69.0 },
-              { wort:"el párpado",      clickX:64.8, clickY:69.0, labelX:82.0, labelY:68.0 },
-              { wort:"la nariz",        clickX:54.0, clickY:76.9, labelX:72.0, labelY:76.0 },
-              { wort:"los labios",      clickX:55.0, clickY:83.3, labelX:73.0, labelY:84.5 },
-              { wort:"la barbilla",     clickX:39.8, clickY:89.1, labelX:19.0, labelY:90.0 },
-              { wort:"el cuello",       clickX:42.2, clickY:95.0, labelX:19.0, labelY:96.5 }
-            ]
-          }
+  la_playa: {
+    title: "La playa",
+    images: [
+      {
+        file: "strand-ohne-woerter.png",
+        hotspots: [
+          { wort:"el sol", clickX:70, clickY:26, labelX:74, labelY:22 },
+          { wort:"la palmera", clickX:14, clickY:41, labelX:22, labelY:31 }
         ]
       }
-    };
+    ]
+  },
 
-    let currentFolderKey = null;
-    let currentImageIndex = 0;
-    let mode = "lernen";
-    let gesucht = "";
-    let quizAktiv = false;
-    let timer = null;
-    let touchStartX = 0;
-    let touchEndX = 0;
-    let isAnimating = false;
-    let audioCtx = null;
-
-    let quizQueue = [];
-    let repeatQueue = [];
-    let recentQuestions = [];
-
-    const MIN_REPEAT_DELAY = 3;
-
-    const menu = document.getElementById("menu");
-    const folderMenu = document.getElementById("folderMenu");
-    const app = document.getElementById("app");
-    const hotspotsLayer = document.getElementById("hotspots");
-    const label = document.getElementById("label");
-    const frage = document.getElementById("frage");
-    const feedback = document.getElementById("feedback");
-    const quizBox = document.getElementById("quizBox");
-    const lernInfo = document.getElementById("lernInfo");
-    const swipeInfo = document.getElementById("swipeInfo");
-    const lernBtn = document.getElementById("lernBtn");
-    const quizBtn = document.getElementById("quizBtn");
-    const bild = document.getElementById("bild");
-    const currentImageTitle = document.getElementById("currentImageTitle");
-    const bildContainer = document.querySelector(".bild");
-    const fullscreenBtn = document.getElementById("fullscreenBtn");
-    const speakBtn = document.getElementById("speakBtn");
-    const folderButtons = document.getElementById("folderButtons");
-    const imageButtons = document.getElementById("imageButtons");
-    const folderMenuTitle = document.getElementById("folderMenuTitle");
-
-    document.getElementById("backToStartBtn").addEventListener("click", backToStart);
-    document.getElementById("backToFolderBtn").addEventListener("click", backToFolderMenu);
-
-    lernBtn.addEventListener("click", () => setMode("lernen"));
-    quizBtn.addEventListener("click", () => setMode("quiz"));
-    fullscreenBtn.addEventListener("click", enterFullscreen);
-    speakBtn.addEventListener("click", () => speakWord(gesucht));
-
-    bildContainer.addEventListener("touchstart", (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    bildContainer.addEventListener("touchend", (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
-
-    document.addEventListener("fullscreenchange", updateFullscreenButtonText);
-
-    renderFolderButtons();
-
-    function renderFolderButtons() {
-      folderButtons.innerHTML = "";
-
-      Object.keys(folders).forEach(folderKey => {
-        const btn = document.createElement("button");
-        btn.className = "ui-btn";
-        btn.textContent = folders[folderKey].title;
-        btn.addEventListener("click", () => openFolderMenu(folderKey));
-        folderButtons.appendChild(btn);
-      });
-    }
-
-    function renderImageButtons() {
-      imageButtons.innerHTML = "";
-      const folder = folders[currentFolderKey];
-
-      folder.images.forEach((img, index) => {
-        const btn = document.createElement("button");
-        btn.className = "image-square-btn";
-        btn.textContent = String(index + 1);
-        btn.addEventListener("click", () => openImage(index));
-        imageButtons.appendChild(btn);
-      });
-    }
-
-    function getCurrentImageData() {
-      return folders[currentFolderKey].images[currentImageIndex];
-    }
-
-    function openFolderMenu(folderKey) {
-      currentFolderKey = folderKey;
-      folderMenuTitle.textContent = folders[currentFolderKey].title;
-      renderImageButtons();
-
-      menu.style.display = "none";
-      folderMenu.style.display = "flex";
-      app.style.display = "none";
-    }
-
-    function backToStart() {
-      currentFolderKey = null;
-      folderMenu.style.display = "none";
-      app.style.display = "none";
-      menu.style.display = "flex";
-    }
-
-    async function backToFolderMenu() {
-      app.style.display = "none";
-      folderMenu.style.display = "flex";
-      clearTimeout(timer);
-      timer = null;
-      label.style.display = "none";
-      feedback.textContent = "";
-      feedback.className = "";
-      stopSpeech();
-      await exitFullscreen();
-    }
-
-    async function openImage(index) {
-      currentImageIndex = index;
-      folderMenu.style.display = "none";
-      menu.style.display = "none";
-      app.style.display = "block";
-      mode = "lernen";
-      quizAktiv = false;
-      clearTimeout(timer);
-      timer = null;
-      updateModeButtons();
-      loadCurrentImage();
-
-      setTimeout(async () => {
-        await enterFullscreen();
-      }, 120);
-    }
-
-    function updateModeButtons() {
-      lernBtn.classList.toggle("active", mode === "lernen");
-      quizBtn.classList.toggle("active", mode === "quiz");
-    }
-
-    function resetQuizQueues() {
-      quizQueue = [];
-      repeatQueue = [];
-      recentQuestions = [];
-      refillQuizQueue();
-    }
-
-    function loadCurrentImage() {
-      const imageData = getCurrentImageData();
-      bild.src = imageData.file;
-      bild.alt = imageData.title;
-      currentImageTitle.textContent = imageData.title;
-
-      buildHotspots();
-      label.style.display = "none";
-      feedback.textContent = "";
-      feedback.className = "";
-
-      if (mode === "lernen") {
-        quizBox.style.display = "none";
-        lernInfo.style.display = "block";
-        swipeInfo.style.display = folderHasMultipleImages() ? "block" : "none";
-      } else {
-        quizBox.style.display = "block";
-        lernInfo.style.display = "none";
-        swipeInfo.style.display = "none";
-        resetQuizQueues();
-        nextQuestion();
+  el_cuerpo: {
+    title: "El cuerpo",
+    images: [
+      {
+        file: "la-cabeza-direcciones.png",
+        hotspots: [
+          { wort:"el pelo", clickX:31.8, clickY:11.7, labelX:20, labelY:8 },
+          { wort:"la ceja", clickX:54, clickY:17, labelX:70, labelY:14 },
+          { wort:"el ojo", clickX:31, clickY:22.3, labelX:17, labelY:20 },
+          { wort:"la oreja", clickX:69, clickY:26.5, labelX:83, labelY:24 },
+          { wort:"la nariz", clickX:54, clickY:76.9, labelX:72, labelY:76 },
+          { wort:"la boca", clickX:40.5, clickY:38.8, labelX:20, labelY:42 },
+          { wort:"la lengua", clickX:49.8, clickY:35, labelX:70, labelY:38 },
+          { wort:"los labios", clickX:55, clickY:83.3, labelX:73, labelY:84 },
+          { wort:"los dientes", clickX:50.5, clickY:31.6, labelX:71, labelY:32 },
+          { wort:"la mejilla", clickX:36.8, clickY:30.4, labelX:18, labelY:31 },
+          { wort:"la barbilla", clickX:39.8, clickY:89.1, labelX:19, labelY:90 },
+          { wort:"el cuello", clickX:42.2, clickY:95, labelX:19, labelY:96 },
+          { wort:"la frente", clickX:53.8, clickY:62, labelX:72, labelY:59 },
+          { wort:"las pestañas", clickX:31, clickY:70.7, labelX:16, labelY:69 },
+          { wort:"el párpado", clickX:64.8, clickY:69, labelX:82, labelY:68 },
+          { wort:"la cabeza", clickX:27, clickY:55.6, labelX:16, labelY:52 }
+        ]
       }
+    ]
+  }
 
-      updateModeButtons();
+};
+
+/* ===== STATE ===== */
+
+let currentFolderKey = null;
+let currentImageIndex = 0;
+
+/* ===== ELEMENTE ===== */
+
+const menu = document.getElementById("menu");
+const folderMenu = document.getElementById("folderMenu");
+const app = document.getElementById("app");
+const bild = document.getElementById("bild");
+const hotspotsLayer = document.getElementById("hotspots");
+const label = document.getElementById("label");
+
+/* ===== START ===== */
+
+renderFolderButtons();
+
+function renderFolderButtons() {
+  const container = document.getElementById("folderButtons");
+  container.innerHTML = "";
+
+  Object.keys(folders).forEach(key => {
+    const btn = document.createElement("button");
+    btn.className = "ui-btn";
+    btn.textContent = folders[key].title;
+    btn.onclick = () => openFolderMenu(key);
+    container.appendChild(btn);
+  });
+}
+
+/* ===== NAVIGATION ===== */
+
+function openFolderMenu(key) {
+  currentFolderKey = key;
+  menu.style.display = "none";
+  folderMenu.style.display = "flex";
+
+  document.getElementById("folderMenuTitle").textContent =
+    folders[key].title;
+
+  renderImageButtons();
+}
+
+function backToStart() {
+  folderMenu.style.display = "none";
+  menu.style.display = "flex";
+}
+
+function backToFolderMenu() {
+  app.style.display = "none";
+  folderMenu.style.display = "flex";
+}
+
+/* ===== BILDER ===== */
+
+function renderImageButtons() {
+  const container = document.getElementById("imageButtons");
+  container.innerHTML = "";
+
+  folders[currentFolderKey].images.forEach((img, i) => {
+    const btn = document.createElement("button");
+    btn.className = "image-square-btn";
+    btn.textContent = i + 1;
+    btn.onclick = () => openImage(i);
+    container.appendChild(btn);
+  });
+}
+
+function openImage(index) {
+  currentImageIndex = index;
+  folderMenu.style.display = "none";
+  app.style.display = "block";
+
+  loadImage();
+}
+
+function loadImage() {
+  const imgData = folders[currentFolderKey].images[currentImageIndex];
+  bild.src = imgData.file;
+
+  buildHotspots();
+}
+
+/* ===== HOTSPOTS ===== */
+
+function buildHotspots() {
+  hotspotsLayer.innerHTML = "";
+
+  const hotspots = folders[currentFolderKey].images[currentImageIndex].hotspots;
+
+  hotspots.forEach(h => {
+    const d = document.createElement("div");
+    d.className = "hotspot";
+
+    // 🔥 HIER passiert die Magie
+    if (currentFolderKey === "el_cuerpo") {
+      d.classList.add("small-hitbox");
     }
 
-    function folderHasMultipleImages() {
-      return folders[currentFolderKey].images.length > 1;
-    }
+    d.style.left = h.clickX + "%";
+    d.style.top = h.clickY + "%";
 
-    function buildHotspots() {
-      hotspotsLayer.innerHTML = "";
+    d.onclick = () => showLabel(h);
 
-      const hotspots = getCurrentImageData().hotspots;
+    hotspotsLayer.appendChild(d);
+  });
+}
 
-      hotspots.forEach(h => {
-        const d = document.createElement("div");
-        d.className = "hotspot";
-        d.style.left = h.clickX + "%";
-        d.style.top = h.clickY + "%";
-        d.addEventListener("click", () => onHotspotClick(h, d));
-        hotspotsLayer.appendChild(d);
-      });
-    }
+/* ===== LABEL ===== */
 
-    function setMode(neu) {
-      mode = neu;
-      clearTimeout(timer);
-      timer = null;
-      stopSpeech();
+function showLabel(h) {
+  label.textContent = h.wort;
+  label.style.left = h.labelX + "%";
+  label.style.top = h.labelY + "%";
+  label.style.display = "block";
 
-      updateModeButtons();
-      label.style.display = "none";
-      feedback.textContent = "";
-      feedback.className = "";
+  speak(h.wort);
+}
 
-      if (neu === "lernen") {
-        quizBox.style.display = "none";
-        lernInfo.style.display = "block";
-        swipeInfo.style.display = folderHasMultipleImages() ? "block" : "none";
-        quizAktiv = false;
-      } else {
-        quizBox.style.display = "block";
-        lernInfo.style.display = "none";
-        swipeInfo.style.display = "none";
-        resetQuizQueues();
-        nextQuestion();
-      }
-    }
+/* ===== SOUND ===== */
 
-    function onHotspotClick(h, el) {
-      if (mode === "lernen") {
-        showLabel(h.wort, h.labelX, h.labelY);
-        speakWord(h.wort);
-        return;
-      }
+function speak(text) {
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "es-ES";
+  speechSynthesis.speak(u);
+}
 
-      if (!quizAktiv) return;
+</script>
 
-      if (h.wort === gesucht) {
-        playCorrectSound();
-        feedback.className = "";
-        void feedback.offsetWidth;
-        feedback.textContent = "👍 Richtig";
-        feedback.className = "richtig feedback-anim";
-
-        timer = setTimeout(nextQuestion, 650);
-      } else {
-        playWrongSound();
-        feedback.className = "";
-        void feedback.offsetWidth;
-        feedback.textContent = "👎 Falsch";
-        feedback.className = "falsch feedback-anim";
-
-        if (navigator.vibrate) {
-          navigator.vibrate([120, 70, 170]);
-        }
-
-        scheduleRepeat(gesucht);
-
-        el.classList.add("fehler");
-        setTimeout(() => el.classList.remove("fehler"), 300);
-      }
-    }
-
-    function showLabel(text, x, y) {
-      label.textContent = text;
-      label.style.left = x + "%";
-      label.style.top = y + "%";
-      label.style.display = "block";
-      label.classList.remove("show");
-      void label.offsetWidth;
-      label.classList.add("show");
-    }
-
-    function shuffleArray(arr) {
-      const copy = [...arr];
-      for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
-      }
-      return copy;
-    }
-
-    function refillQuizQueue() {
-      const hotspots = getCurrentImageData().hotspots;
-      const alleWoerter = hotspots.map(h => h.wort);
-
-      const ohneBereitsGeplante = alleWoerter.filter(
-        wort => !quizQueue.includes(wort) && !repeatQueue.includes(wort)
-      );
-
-      quizQueue.push(...shuffleArray(ohneBereitsGeplante));
-    }
-
-    function markAsked(word) {
-      recentQuestions.push(word);
-      if (recentQuestions.length > MIN_REPEAT_DELAY) {
-        recentQuestions.shift();
-      }
-    }
-
-    function canRepeatNow(word) {
-      return !recentQuestions.includes(word);
-    }
-
-    function scheduleRepeat(word) {
-      if (word && !repeatQueue.includes(word)) {
-        repeatQueue.push(word);
-      }
-    }
-
-    function getNextRepeatWord() {
-      for (let i = 0; i < repeatQueue.length; i++) {
-        const word = repeatQueue[i];
-        if (canRepeatNow(word)) {
-          repeatQueue.splice(i, 1);
-          return word;
-        }
-      }
-      return null;
-    }
-
-    function getNextNormalWord() {
-      if (quizQueue.length === 0) {
-        refillQuizQueue();
-      }
-
-      for (let i = 0; i < quizQueue.length; i++) {
-        const word = quizQueue[i];
-        if (canRepeatNow(word)) {
-          quizQueue.splice(i, 1);
-          return word;
-        }
-      }
-
-      return quizQueue.shift() || null;
-    }
-
-    function nextQuestion() {
-      if (repeatQueue.length === 0 && quizQueue.length === 0) {
-        refillQuizQueue();
-      }
-
-      let nextWord = getNextRepeatWord();
-
-      if (!nextWord) {
-        nextWord = getNextNormalWord();
-      }
-
-      if (!nextWord) {
-        refillQuizQueue();
-        nextWord = getNextNormalWord();
-      }
-
-      gesucht = nextWord;
-      markAsked(gesucht);
-
-      frage.textContent = gesucht;
-      feedback.textContent = "";
-      feedback.className = "";
-      label.style.display = "none";
-      quizAktiv = true;
-    }
-
-    function animateImageChange(direction, updateImageCallback) {
-      if (isAnimating) return;
-      isAnimating = true;
-
-      const outClass = direction === "left" ? "slide-out-left" : "slide-out-right";
-      const inClass = direction === "left" ? "slide-in-left" : "slide-in-right";
-
-      bild.classList.remove("slide-out-left", "slide-out-right", "slide-in-left", "slide-in-right");
-      void bild.offsetWidth;
-
-      bild.classList.add(outClass);
-
-      setTimeout(() => {
-        bild.classList.remove(outClass);
-
-        updateImageCallback();
-        buildHotspots();
-        label.style.display = "none";
-
-        bild.classList.add(inClass);
-
-        setTimeout(() => {
-          bild.classList.remove(inClass);
-          isAnimating = false;
-        }, 220);
-      }, 220);
-    }
-
-    function showNextImage() {
-      if (isAnimating || !folderHasMultipleImages()) return;
-
-      clearTimeout(timer);
-      timer = null;
-      stopSpeech();
-
-      animateImageChange("left", () => {
-        const total = folders[currentFolderKey].images.length;
-        currentImageIndex = (currentImageIndex + 1) % total;
-
-        const imageData = getCurrentImageData();
-        bild.src = imageData.file;
-        bild.alt = imageData.title;
-        currentImageTitle.textContent = imageData.title;
-
-        feedback.textContent = "";
-        feedback.className = "";
-
-        if (mode === "lernen") {
-          quizBox.style.display = "none";
-          lernInfo.style.display = "block";
-          swipeInfo.style.display = "block";
-        } else {
-          quizBox.style.display = "block";
-          lernInfo.style.display = "none";
-          swipeInfo.style.display = "none";
-          resetQuizQueues();
-          nextQuestion();
-        }
-
-        updateModeButtons();
-      });
-    }
-
-    function showPrevImage() {
-      if (isAnimating || !folderHasMultipleImages()) return;
-
-      clearTimeout(timer);
-      timer = null;
-      stopSpeech();
-
-      animateImageChange("right", () => {
-        const total = folders[currentFolderKey].images.length;
-        currentImageIndex = (currentImageIndex - 1 + total) % total;
-
-        const imageData = getCurrentImageData();
-        bild.src = imageData.file;
-        bild.alt = imageData.title;
-        currentImageTitle.textContent = imageData.title;
-
-        feedback.textContent = "";
-        feedback.className = "";
-
-        if (mode === "lernen") {
-          quizBox.style.display = "none";
-          lernInfo.style.display = "block";
-          swipeInfo.style.display = "block";
-        } else {
-          quizBox.style.display = "block";
-          lernInfo.style.display = "none";
-          swipeInfo.style.display = "none";
-          resetQuizQueues();
-          nextQuestion();
-        }
-
-        updateModeButtons();
-      });
-    }
-
-    function handleSwipe() {
-      if (isAnimating || !folderHasMultipleImages()) return;
-
-      const diff = touchEndX - touchStartX;
-
-      if (Math.abs(diff) < 50) return;
-
-      if (diff < 0) {
-        showNextImage();
-      } else {
-        showPrevImage();
-      }
-    }
-
-    async function enterFullscreen() {
-      try {
-        const el = document.documentElement;
-
-        if (!document.fullscreenElement) {
-          if (el.requestFullscreen) {
-            await el.requestFullscreen({ navigationUI: "hide" });
-          }
-        }
-      } catch (err) {
-        console.log("Vollbild konnte nicht automatisch gestartet werden.");
-      }
-    }
-
-    async function exitFullscreen() {
-      try {
-        if (document.fullscreenElement && document.exitFullscreen) {
-          await document.exitFullscreen();
-        }
-      } catch (err) {
-        console.log("Fullscreen konnte nicht beendet werden.");
-      }
-    }
-
-    function updateFullscreenButtonText() {
-      fullscreenBtn.textContent = document.fullscreenElement ? "Vollbild an" : "Vollbild";
-    }
-
-    function stopSpeech() {
-      if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
-      }
-    }
-
-    function getSpanishVoice() {
-      if (!("speechSynthesis" in window)) return null;
-
-      const voices = speechSynthesis.getVoices();
-      if (!voices || !voices.length) return null;
-
-      return (
-        voices.find(v => v.lang && v.lang.toLowerCase().startsWith("es-es")) ||
-        voices.find(v => v.lang && v.lang.toLowerCase().startsWith("es")) ||
-        null
-      );
-    }
-
-    function speakWord(text) {
-      if (!text || !("speechSynthesis" in window)) return;
-
-      stopSpeech();
-
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "es-ES";
-      utterance.rate = 0.9;
-      utterance.pitch = 1.0;
-      utterance.volume = 1.0;
-
-      const voice = getSpanishVoice();
-      if (voice) {
-        utterance.voice = voice;
-      }
-
-      speechSynthesis.speak(utterance);
-    }
-
-    function ensureAudioContext() {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContextClass) return null;
-
-      if (!audioCtx) {
-        audioCtx = new AudioContextClass();
-      }
-
-      if (audioCtx.state === "suspended") {
-        audioCtx.resume();
-      }
-
-      return audioCtx;
-    }
-
-    function playTone(frequency, duration, type = "sine", volume = 0.08, startDelay = 0) {
-      const ctx = ensureAudioContext();
-      if (!ctx) return;
-
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
-      osc.type = type;
-      osc.frequency.setValueAtTime(frequency, ctx.currentTime + startDelay);
-
-      gain.gain.setValueAtTime(0.0001, ctx.currentTime + startDelay);
-      gain.gain.exponentialRampToValueAtTime(volume, ctx.currentTime + startDelay + 0.01);
-      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + startDelay + duration);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start(ctx.currentTime + startDelay);
-      osc.stop(ctx.currentTime + startDelay + duration + 0.02);
-    }
-
-    function playCorrectSound() {
-      playTone(740, 0.12, "sine", 0.08, 0);
-      playTone(988, 0.16, "sine", 0.07, 0.08);
-    }
-
-    function playWrongSound() {
-      playTone(260, 0.14, "square", 0.07, 0);
-      playTone(180, 0.22, "square", 0.06, 0.10);
-    }
-  </script>
 </body>
 </html>
