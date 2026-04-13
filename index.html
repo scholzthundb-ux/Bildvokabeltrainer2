@@ -741,16 +741,18 @@
 
       if (h.wort === gesucht) {
         playCorrectSound();
+        feedback.className = "";
+        void feedback.offsetWidth;
         feedback.textContent = "👍 Richtig";
         feedback.className = "richtig feedback-anim";
-        void feedback.offsetWidth;
 
         timer = setTimeout(nextQuestion, 650);
       } else {
         playWrongSound();
+        feedback.className = "";
+        void feedback.offsetWidth;
         feedback.textContent = "👎 Falsch";
         feedback.className = "falsch feedback-anim";
-        void feedback.offsetWidth;
 
         if (navigator.vibrate) {
           navigator.vibrate([120, 70, 170]);
