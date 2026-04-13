@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -200,11 +201,40 @@
       padding: 0;
     }
 
+    .quiz-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 2px 8px 0;
+    }
+
     #frage {
       font-size: 30px;
-      margin: 2px 8px 0;
+      margin: 0;
       font-weight: bold;
       line-height: 1.2;
+    }
+
+    .sound-btn {
+      border: none;
+      background: #0b57d0;
+      color: white;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .sound-btn:active {
+      transform: scale(0.95);
     }
 
     #feedback {
@@ -395,6 +425,12 @@
       .falsch {
         font-size: 30px;
       }
+
+      .sound-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -445,7 +481,10 @@
     <div id="lernInfo">Tippe auf eine Pfeilspitze.</div>
 
     <div id="quizBox">
-      <div id="frage"></div>
+      <div class="quiz-top">
+        <div id="frage"></div>
+        <button id="speakBtn" class="sound-btn" type="button" aria-label="Wort anhören">🔊</button>
+      </div>
       <div id="feedback"></div>
     </div>
 
@@ -514,6 +553,8 @@
     let touchStartX = 0;
     let touchEndX = 0;
     let isAnimating = false;
+    let speechReady = false;
+    let audioCtx = null;
 
     const menu = document.getElementById("menu");
     const folderMenu = document.getElementById("folderMenu");
@@ -531,6 +572,7 @@
     const currentImageTitle = document.getElementById("currentImageTitle");
     const bildContainer = document.querySelector(".bild");
     const fullscreenBtn = document.getElementById("fullscreenBtn");
+    const speakBtn = document.getElementById("speakBtn");
 
     document.getElementById("openStrandBtn").addEventListener("click", openFolderMenu);
     document.getElementById("backToStartBtn").addEventListener("click", backToStart);
@@ -539,6 +581,7 @@
     lernBtn.addEventListener("click", () => setMode("lernen"));
     quizBtn.addEventListener("click", () => setMode("quiz"));
     fullscreenBtn.addEventListener("click", enterFullscreen);
+    speakBtn.addEventListener("click", () => speakWord(gesucht));
 
     document.querySelectorAll("#folderMenu .image-btn").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -556,6 +599,13 @@
     });
 
     document.addEventListener("fullscreenchange", updateFullscreenButtonText);
+
+    if ("speechSynthesis" in window) {
+      speechSynthesis.onvoiceschanged = () => {
+        speechReady = true;
+      };
+      speechReady = true;
+    }
 
     function getCurrentImageData() {
       return folders[currentFolderKey].images[currentImageIndex];
@@ -581,6 +631,7 @@
       label.style.display = "none";
       feedback.textContent = "";
       feedback.className = "";
+      stopSpeech();
       await exitFullscreen();
     }
 
@@ -649,6 +700,7 @@
       mode = neu;
       clearTimeout(timer);
       timer = null;
+      stopSpeech();
 
       updateModeButtons();
       label.style.display = "none";
@@ -671,25 +723,28 @@
     function onHotspotClick(h, el) {
       if (mode === "lernen") {
         showLabel(h.wort, h.labelX, h.labelY);
+        speakWord(h.wort);
         return;
       }
 
       if (!quizAktiv) return;
 
       if (h.wort === gesucht) {
+        playCorrectSound();
         feedback.textContent = "👍 Richtig";
         feedback.className = "richtig feedback-anim";
         void feedback.offsetWidth;
 
         h.boost = Math.max(1, h.boost - 1);
-        timer = setTimeout(nextQuestion, 600);
+        timer = setTimeout(nextQuestion, 650);
       } else {
+        playWrongSound();
         feedback.textContent = "👎 Falsch";
         feedback.className = "falsch feedback-anim";
         void feedback.offsetWidth;
 
         if (navigator.vibrate) {
-          navigator.vibrate(150);
+          navigator.vibrate([120, 70, 170]);
         }
 
         const ziel = getCurrentImageData().hotspots.find(x => x.wort === gesucht);
@@ -778,6 +833,7 @@
 
       clearTimeout(timer);
       timer = null;
+      stopSpeech();
 
       animateImageChange("left", () => {
         const total = folders[currentFolderKey].images.length;
@@ -810,6 +866,7 @@
 
       clearTimeout(timer);
       timer = null;
+      stopSpeech();
 
       animateImageChange("right", () => {
         const total = folders[currentFolderKey].images.length;
@@ -877,6 +934,90 @@
 
     function updateFullscreenButtonText() {
       fullscreenBtn.textContent = document.fullscreenElement ? "Vollbild an" : "Vollbild";
+    }
+
+    function stopSpeech() {
+      if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+      }
+    }
+
+    function getSpanishVoice() {
+      if (!("speechSynthesis" in window)) return null;
+
+      const voices = speechSynthesis.getVoices();
+      if (!voices || !voices.length) return null;
+
+      return (
+        voices.find(v => v.lang && v.lang.toLowerCase().startsWith("es-es")) ||
+        voices.find(v => v.lang && v.lang.toLowerCase().startsWith("es")) ||
+        null
+      );
+    }
+
+    function speakWord(text) {
+      if (!text || !("speechSynthesis" in window)) return;
+
+      stopSpeech();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "es-ES";
+      utterance.rate = 0.9;
+      utterance.pitch = 1.0;
+      utterance.volume = 1.0;
+
+      const voice = getSpanishVoice();
+      if (voice) {
+        utterance.voice = voice;
+      }
+
+      speechSynthesis.speak(utterance);
+    }
+
+    function ensureAudioContext() {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return null;
+
+      if (!audioCtx) {
+        audioCtx = new AudioContextClass();
+      }
+
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+      }
+
+      return audioCtx;
+    }
+
+    function playTone(frequency, duration, type = "sine", volume = 0.08, startDelay = 0) {
+      const ctx = ensureAudioContext();
+      if (!ctx) return;
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = type;
+      osc.frequency.setValueAtTime(frequency, ctx.currentTime + startDelay);
+
+      gain.gain.setValueAtTime(0.0001, ctx.currentTime + startDelay);
+      gain.gain.exponentialRampToValueAtTime(volume, ctx.currentTime + startDelay + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + startDelay + duration);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(ctx.currentTime + startDelay);
+      osc.stop(ctx.currentTime + startDelay + duration + 0.02);
+    }
+
+    function playCorrectSound() {
+      playTone(740, 0.12, "sine", 0.08, 0);
+      playTone(988, 0.16, "sine", 0.07, 0.08);
+    }
+
+    function playWrongSound() {
+      playTone(260, 0.14, "square", 0.07, 0);
+      playTone(180, 0.22, "square", 0.06, 0.10);
     }
   </script>
 </body>
