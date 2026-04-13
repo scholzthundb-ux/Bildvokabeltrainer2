@@ -215,8 +215,8 @@
       font-weight: bold;
       line-height: 1.2;
       white-space: normal;
-      word-break: break-word;
-      text-wrap: balance;
+      overflow-wrap: normal;
+      word-break: normal;
       max-width: min(92vw, 620px);
       text-align: center;
     }
@@ -304,17 +304,17 @@
       font-size: clamp(22px, 4.2vw, 32px);
       font-weight: 700;
       color: #111;
-      line-height: 1.1;
+      line-height: 1.15;
       transform: translate(-50%, -50%);
       display: none;
       z-index: 20;
       white-space: normal;
-      word-break: break-word;
-      text-wrap: balance;
+      overflow-wrap: normal;
+      word-break: normal;
       text-align: center;
       box-shadow: 0 10px 22px rgba(0,0,0,0.24);
       pointer-events: none;
-      max-width: min(260px, 80vw);
+      max-width: min(320px, 70vw);
     }
 
     @keyframes bubbleIn {
@@ -568,34 +568,34 @@
             title: "La playa – Bild 3",
             file: "strand3.png",
             hotspots: [
-              { wort:"tomar el sol", clickX:16.7, clickY:16.7, labelX:16.7, labelY:8.5 },
-              { wort:"nadar", clickX:50.0, clickY:16.7, labelX:50.0, labelY:8.5 },
-              { wort:"bucear", clickX:83.3, clickY:16.7, labelX:83.3, labelY:8.5 },
+              { wort:"tomar el sol", clickX:16.7, clickY:16.7, labelX:24.0, labelY:9.5 },
+              { wort:"nadar", clickX:50.0, clickY:16.7, labelX:50.0, labelY:9.5 },
+              { wort:"bucear", clickX:83.3, clickY:16.7, labelX:76.0, labelY:9.5 },
 
-              { wort:"pasear por la playa", clickX:16.7, clickY:50.0, labelX:21.0, labelY:41.5 },
+              { wort:"pasear por la playa", clickX:16.7, clickY:50.0, labelX:28.0, labelY:41.5 },
               { wort:"hacer castillos de arena", clickX:50.0, clickY:50.0, labelX:50.0, labelY:41.5 },
-              { wort:"leer", clickX:83.3, clickY:50.0, labelX:83.3, labelY:41.5 },
+              { wort:"leer", clickX:83.3, clickY:50.0, labelX:74.0, labelY:41.5 },
 
-              { wort:"recoger conchas", clickX:16.7, clickY:83.3, labelX:19.5, labelY:75.0 },
+              { wort:"recoger conchas", clickX:16.7, clickY:83.3, labelX:25.0, labelY:75.0 },
               { wort:"sacar fotos", clickX:50.0, clickY:83.3, labelX:50.0, labelY:75.0 },
-              { wort:"surfear", clickX:83.3, clickY:83.3, labelX:83.3, labelY:75.0 }
+              { wort:"surfear", clickX:83.3, clickY:83.3, labelX:74.0, labelY:75.0 }
             ]
           },
           {
             title: "La playa – Bild 4",
             file: "strand4.png",
             hotspots: [
-              { wort:"hacer snorkel", clickX:16.7, clickY:16.7, labelX:16.7, labelY:8.5 },
-              { wort:"jugar al voleibol playa", clickX:50.0, clickY:16.7, labelX:50.0, labelY:8.5 },
-              { wort:"tumbarse en la toalla", clickX:83.3, clickY:16.7, labelX:83.3, labelY:8.5 },
+              { wort:"hacer snorkel", clickX:16.7, clickY:16.7, labelX:24.0, labelY:9.5 },
+              { wort:"jugar al voleibol playa", clickX:50.0, clickY:16.7, labelX:50.0, labelY:9.5 },
+              { wort:"tumbarse en la toalla", clickX:83.3, clickY:16.7, labelX:76.0, labelY:9.5 },
 
-              { wort:"tomar algo en un chiringuito", clickX:16.7, clickY:50.0, labelX:21.0, labelY:41.5 },
+              { wort:"tomar algo en un chiringuito", clickX:16.7, clickY:50.0, labelX:28.0, labelY:41.5 },
               { wort:"darse un baño", clickX:50.0, clickY:50.0, labelX:50.0, labelY:41.5 },
-              { wort:"comer un helado", clickX:83.3, clickY:50.0, labelX:83.3, labelY:41.5 },
+              { wort:"comer un helado", clickX:83.3, clickY:50.0, labelX:74.0, labelY:41.5 },
 
-              { wort:"jugar con la pelota", clickX:16.7, clickY:83.3, labelX:19.5, labelY:75.0 },
+              { wort:"jugar con la pelota", clickX:16.7, clickY:83.3, labelX:25.0, labelY:75.0 },
               { wort:"mirar el mar", clickX:50.0, clickY:83.3, labelX:50.0, labelY:75.0 },
-              { wort:"escuchar música", clickX:83.3, clickY:83.3, labelX:83.3, labelY:75.0 }
+              { wort:"escuchar música", clickX:83.3, clickY:83.3, labelX:74.0, labelY:75.0 }
             ]
           }
         ]
