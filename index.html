@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -43,6 +44,15 @@
       font-size: 18px;
       padding: 12px 18px;
       margin: 6px;
+    }
+
+    .ui-btn.image-number {
+      font-size: 22px;
+      padding: 14px 18px;
+      min-width: 58px;
+      min-height: 58px;
+      border-radius: 18px;
+      margin: 8px;
     }
 
     #menu,
@@ -151,6 +161,12 @@
       gap: 8px;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .back-arrow {
       background: rgba(0,0,0,0.12);
       color: #1f2a37;
@@ -172,7 +188,8 @@
       transform: scale(0.9);
     }
 
-    .fullscreen-btn {
+    .fullscreen-btn,
+    .mute-btn {
       background: #0b57d0;
       color: white;
       border: none;
@@ -184,8 +201,13 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.18);
     }
 
-    .fullscreen-btn:active {
+    .fullscreen-btn:active,
+    .mute-btn:active {
       transform: scale(0.97);
+    }
+
+    .mute-btn.is-muted {
+      background: #5b6b7f;
     }
 
     .swipe-info {
@@ -420,7 +442,8 @@
         padding: 18px 8px;
       }
 
-      .fullscreen-btn {
+      .fullscreen-btn,
+      .mute-btn {
         font-size: 14px;
         padding: 9px 12px;
       }
@@ -455,6 +478,13 @@
 
       .bild {
         height: min(74vh, calc(100vh - 210px));
+      }
+
+      .ui-btn.image-number {
+        font-size: 20px;
+        min-width: 54px;
+        min-height: 54px;
+        padding: 12px 16px;
       }
     }
   </style>
@@ -500,7 +530,10 @@
       <div class="nav-left">
         <button class="back-arrow" id="backToFolderBtn">←</button>
       </div>
-      <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
+      <div class="nav-right">
+        <button class="mute-btn" id="muteBtn">Stumm</button>
+        <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
+      </div>
     </div>
 
     <div id="lernInfo">Tippe auf ein markiertes Motiv.</div>
@@ -640,17 +673,17 @@
               { wort:"el plumífero", clickX:50.0, clickY:16.7, labelX:50.0, labelY:10.0 },
               { wort:"el anorak", clickX:83.3, clickY:16.7, labelX:76.5, labelY:10.0 },
 
-              { wort:"la bufanda", clickX:16.7, clickY:50.0, labelX:23.0, labelY:43.5 },
-              { wort:"el gorro", clickX:50.0, clickY:50.0, labelX:50.0, labelY:43.5 },
-              { wort:"los guantes", clickX:83.3, clickY:50.0, labelX:76.5, labelY:43.5 },
+              { wort:"la bufanda", clickX:16.7, clickY:45.0, labelX:23.0, labelY:38.5 },
+              { wort:"el gorro", clickX:50.0, clickY:45.0, labelX:50.0, labelY:38.5 },
+              { wort:"los guantes", clickX:83.3, clickY:45.0, labelX:76.5, labelY:38.5 },
 
-              { wort:"las botas de invierno", clickX:16.7, clickY:83.3, labelX:25.5, labelY:76.0 },
-              { wort:"los calcetines gruesos", clickX:50.0, clickY:83.3, labelX:50.0, labelY:76.0 },
-              { wort:"el impermeable", clickX:83.3, clickY:83.3, labelX:75.0, labelY:76.0 },
+              { wort:"las botas de invierno", clickX:16.7, clickY:69.0, labelX:25.5, labelY:63.0 },
+              { wort:"los calcetines gruesos", clickX:50.0, clickY:69.0, labelX:50.0, labelY:63.0 },
+              { wort:"el impermeable", clickX:83.3, clickY:69.0, labelX:75.0, labelY:63.0 },
 
-              { wort:"la ropa térmica", clickX:35.0, clickY:95.0, labelX:35.0, labelY:90.0 },
-              { wort:"las manoplas", clickX:58.0, clickY:95.0, labelX:58.0, labelY:90.0 },
-              { wort:"las botas de lluvia", clickX:83.3, clickY:95.0, labelX:75.0, labelY:90.0 }
+              { wort:"las manoplas", clickX:16.7, clickY:92.0, labelX:23.5, labelY:86.5 },
+              { wort:"la ropa térmica", clickX:50.0, clickY:92.0, labelX:50.0, labelY:86.5 },
+              { wort:"las botas de lluvia", clickX:83.3, clickY:92.0, labelX:75.0, labelY:86.5 }
             ]
           }
         ]
@@ -667,6 +700,7 @@
     let touchEndX = 0;
     let isAnimating = false;
     let audioCtx = null;
+    let isMuted = false;
 
     let quizQueue = [];
     let repeatQueue = [];
@@ -694,6 +728,7 @@
     const bildContainer = document.getElementById("bildContainer");
     const fullscreenBtn = document.getElementById("fullscreenBtn");
     const speakBtn = document.getElementById("speakBtn");
+    const muteBtn = document.getElementById("muteBtn");
     const folderMenuTitle = document.getElementById("folderMenuTitle");
     const folderImageButtons = document.getElementById("folderImageButtons");
 
@@ -708,6 +743,7 @@
     quizBtn.addEventListener("click", () => setMode("quiz"));
     fullscreenBtn.addEventListener("click", enterFullscreen);
     speakBtn.addEventListener("click", () => speakWord(gesucht));
+    muteBtn.addEventListener("click", toggleMute);
 
     bildContainer.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -724,6 +760,19 @@
       return folders[currentFolderKey].images[currentImageIndex];
     }
 
+    function updateMuteButton() {
+      muteBtn.textContent = isMuted ? "Ton an" : "Stumm";
+      muteBtn.classList.toggle("is-muted", isMuted);
+    }
+
+    function toggleMute() {
+      isMuted = !isMuted;
+      if (isMuted) {
+        stopSpeech();
+      }
+      updateMuteButton();
+    }
+
     function openFolderMenu(folderKey) {
       currentFolderKey = folderKey;
       currentImageIndex = 0;
@@ -734,8 +783,8 @@
 
       folder.images.forEach((img, index) => {
         const btn = document.createElement("button");
-        btn.className = "ui-btn image-btn";
-        btn.textContent = `Bild ${index + 1}`;
+        btn.className = "ui-btn image-number";
+        btn.textContent = `${index + 1}`;
         btn.addEventListener("click", () => openImage(index));
         folderImageButtons.appendChild(btn);
       });
@@ -773,6 +822,7 @@
       clearTimeout(timer);
       timer = null;
       updateModeButtons();
+      updateMuteButton();
       loadCurrentImage();
 
       setTimeout(async () => {
@@ -831,6 +881,7 @@
         }
 
         updateModeButtons();
+        updateMuteButton();
       };
 
       bild.src = imageData.file;
@@ -1112,6 +1163,7 @@
         feedback.className = "";
         currentImageTitle.textContent = getCurrentImageData().title;
         updateModeButtons();
+        updateMuteButton();
       };
     }
 
@@ -1207,11 +1259,12 @@
     }
 
     function speakWord(text) {
+      if (isMuted) return;
       if (!text || !("speechSynthesis" in window)) return;
 
       stopSpeech();
 
-      const utterance = new SpeechSynthesisUtterance(text);
+      const utterance = new SpeechSynthesisUtterance(text.replace(/\n/g, " "));
       utterance.lang = "es-ES";
       utterance.rate = 0.9;
       utterance.pitch = 1.0;
@@ -1226,6 +1279,8 @@
     }
 
     function ensureAudioContext() {
+      if (isMuted) return null;
+
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
       if (!AudioContextClass) return null;
 
@@ -1277,6 +1332,8 @@
       updateImageDisplay();
       buildHotspots();
     });
+
+    updateMuteButton();
   </script>
 </body>
 </html>
