@@ -14,9 +14,7 @@
       color: #1f2a37;
     }
 
-    h1, h2, h3 {
-      margin: 0;
-    }
+    h1, h2, h3 { margin: 0; }
 
     .ui-btn {
       padding: 24px 36px;
@@ -31,13 +29,9 @@
       box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }
 
-    .ui-btn:active {
-      transform: scale(0.98);
-    }
+    .ui-btn:active { transform: scale(0.98); }
 
-    .ui-btn.secondary {
-      background: #5b6b7f;
-    }
+    .ui-btn.secondary { background: #5b6b7f; }
 
     .ui-btn.small {
       font-size: 18px;
@@ -54,8 +48,7 @@
       margin: 8px;
     }
 
-    #menu,
-    #folderMenu {
+    #menu, #folderMenu {
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -64,10 +57,7 @@
       box-sizing: border-box;
     }
 
-    #folderMenu,
-    #app {
-      display: none;
-    }
+    #folderMenu, #app { display: none; }
 
     .card {
       background: white;
@@ -103,13 +93,9 @@
       margin-bottom: 28px;
     }
 
-    .app-wrap {
-      padding: 0 0 12px;
-    }
+    .app-wrap { padding: 0 0 12px; }
 
-    .current-title {
-      display: none;
-    }
+    .current-title { display: none; }
 
     .mode-switch {
       display: flex;
@@ -140,9 +126,7 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.18);
     }
 
-    .mode-segment:active {
-      transform: scale(0.98);
-    }
+    .mode-segment:active { transform: scale(0.98); }
 
     .nav-row {
       display: flex;
@@ -154,13 +138,7 @@
       box-sizing: border-box;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-right {
+    .nav-left, .nav-right {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -183,12 +161,9 @@
       -webkit-text-stroke: 1px currentColor;
     }
 
-    .back-arrow:active {
-      transform: scale(0.9);
-    }
+    .back-arrow:active { transform: scale(0.9); }
 
-    .fullscreen-btn,
-    .mute-btn {
+    .fullscreen-btn, .mute-btn {
       background: #0b57d0;
       color: white;
       border: none;
@@ -200,14 +175,9 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.18);
     }
 
-    .fullscreen-btn:active,
-    .mute-btn:active {
-      transform: scale(0.97);
-    }
+    .fullscreen-btn:active, .mute-btn:active { transform: scale(0.97); }
 
-    .mute-btn.is-muted {
-      background: #5b6b7f;
-    }
+    .mute-btn.is-muted { background: #5b6b7f; }
 
     .swipe-info {
       font-size: 16px;
@@ -235,9 +205,6 @@
       margin: 0;
       font-weight: bold;
       line-height: 1.2;
-      white-space: normal;
-      overflow-wrap: normal;
-      word-break: normal;
       max-width: min(92vw, 620px);
       text-align: center;
     }
@@ -259,9 +226,7 @@
       flex: 0 0 auto;
     }
 
-    .sound-btn:active {
-      transform: scale(0.95);
-    }
+    .sound-btn:active { transform: scale(0.95); }
 
     #feedback {
       font-size: 34px;
@@ -330,8 +295,6 @@
       display: none;
       z-index: 20;
       white-space: pre-line;
-      overflow-wrap: normal;
-      word-break: normal;
       text-align: center;
       box-shadow: 0 10px 22px rgba(0,0,0,0.24);
       pointer-events: none;
@@ -343,9 +306,7 @@
       100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
     }
 
-    #label.show {
-      animation: bubbleIn 0.18s ease-out;
-    }
+    #label.show { animation: bubbleIn 0.18s ease-out; }
 
     #lernInfo {
       font-size: 18px;
@@ -366,73 +327,36 @@
     }
 
     @keyframes pop {
-      0%   { transform: scale(0.6); opacity: 0; }
-      60%  { transform: scale(1.2); opacity: 1; }
+      0% { transform: scale(0.6); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
       100% { transform: scale(1); }
     }
 
-    .feedback-anim {
-      animation: pop 0.35s ease;
-    }
+    .feedback-anim { animation: pop 0.35s ease; }
 
-    #bild.slide-out-left {
-      animation: slideOutLeft 0.22s ease forwards;
-    }
-
-    #bild.slide-out-right {
-      animation: slideOutRight 0.22s ease forwards;
-    }
-
-    #bild.slide-in-left {
-      animation: slideInLeft 0.22s ease forwards;
-    }
-
-    #bild.slide-in-right {
-      animation: slideInRight 0.22s ease forwards;
-    }
+    #bild.slide-out-left { animation: slideOutLeft 0.22s ease forwards; }
+    #bild.slide-out-right { animation: slideOutRight 0.22s ease forwards; }
+    #bild.slide-in-left { animation: slideInLeft 0.22s ease forwards; }
+    #bild.slide-in-right { animation: slideInRight 0.22s ease forwards; }
 
     @keyframes slideOutLeft {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(-28px);
-        opacity: 0.35;
-      }
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(-28px); opacity: 0.35; }
     }
 
     @keyframes slideOutRight {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(28px);
-        opacity: 0.35;
-      }
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(28px); opacity: 0.35; }
     }
 
     @keyframes slideInLeft {
-      0% {
-        transform: translateX(28px);
-        opacity: 0.35;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      0% { transform: translateX(28px); opacity: 0.35; }
+      100% { transform: translateX(0); opacity: 1; }
     }
 
     @keyframes slideInRight {
-      0% {
-        transform: translateX(-28px);
-        opacity: 0.35;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      0% { transform: translateX(-28px); opacity: 0.35; }
+      100% { transform: translateX(0); opacity: 1; }
     }
 
     @media (max-width: 600px) {
@@ -441,8 +365,7 @@
         padding: 18px 8px;
       }
 
-      .fullscreen-btn,
-      .mute-btn {
+      .fullscreen-btn, .mute-btn {
         font-size: 14px;
         padding: 9px 12px;
       }
@@ -453,16 +376,9 @@
         font-size: 36px;
       }
 
-      #frage {
-        font-size: 26px;
-        max-width: 92vw;
-      }
+      #frage { font-size: 26px; }
 
-      #feedback,
-      .richtig,
-      .falsch {
-        font-size: 30px;
-      }
+      #feedback, .richtig, .falsch { font-size: 30px; }
 
       .sound-btn {
         width: 42px;
@@ -494,12 +410,11 @@
     <div class="card">
       <div class="start-icon">🧠</div>
       <h1>Vokabeltrainer</h1>
-      <div class="subtitle">
-        Lerne spanische Wörter direkt am Bild.
-      </div>
+      <div class="subtitle">Lerne spanische Wörter direkt am Bild.</div>
       <div>
         <button class="ui-btn folder-open-btn" data-folder="playa">La playa</button>
         <button class="ui-btn folder-open-btn" data-folder="ropa">La ropa</button>
+        <button class="ui-btn folder-open-btn" data-folder="rutina">Rutina diaria</button>
       </div>
     </div>
   </div>
@@ -508,9 +423,7 @@
     <div class="card">
       <div class="folder-title" id="folderMenuTitle"></div>
       <div class="folder-subtitle">Wähle ein Bild zum Lernen.</div>
-
       <div id="folderImageButtons"></div>
-
       <div style="margin-top:18px;">
         <button class="ui-btn secondary small" id="backToStartBtn">← Zurück</button>
       </div>
@@ -518,7 +431,7 @@
   </div>
 
   <div id="app" class="app-wrap">
-    <div class="current-title" id="currentImageTitle">La playa – Bild 1</div>
+    <div class="current-title" id="currentImageTitle"></div>
 
     <div class="mode-switch">
       <button class="mode-segment active" id="lernBtn">Lernen</button>
@@ -540,7 +453,7 @@
     <div id="quizBox">
       <div class="quiz-top">
         <div id="frage"></div>
-        <button id="speakBtn" class="sound-btn" type="button" aria-label="Wort anhören">🔊</button>
+        <button id="speakBtn" class="sound-btn" type="button">🔊</button>
       </div>
       <div id="feedback"></div>
     </div>
@@ -600,34 +513,30 @@
             title: "La playa – Bild 3",
             file: "strand3.png",
             hotspots: [
-              { wort:"tomar el sol", clickX:16.7, clickY:16.7, labelX:24.0, labelY:9.5 },
-              { wort:"nadar", clickX:50.0, clickY:16.7, labelX:50.0, labelY:9.5 },
-              { wort:"bucear", clickX:83.3, clickY:16.7, labelX:76.0, labelY:9.5 },
-
-              { wort:"pasear por la playa", clickX:16.7, clickY:50.0, labelX:28.0, labelY:41.5 },
-              { wort:"hacer castillos de arena", clickX:50.0, clickY:50.0, labelX:50.0, labelY:41.5 },
-              { wort:"leer", clickX:83.3, clickY:50.0, labelX:74.0, labelY:41.5 },
-
-              { wort:"recoger conchas", clickX:16.7, clickY:83.3, labelX:25.0, labelY:75.0 },
-              { wort:"sacar fotos", clickX:50.0, clickY:83.3, labelX:50.0, labelY:75.0 },
-              { wort:"surfear", clickX:83.3, clickY:83.3, labelX:74.0, labelY:75.0 }
+              { wort:"tomar el sol", clickX:16.7, clickY:16.7, labelX:24, labelY:9.5 },
+              { wort:"nadar", clickX:50, clickY:16.7, labelX:50, labelY:9.5 },
+              { wort:"bucear", clickX:83.3, clickY:16.7, labelX:76, labelY:9.5 },
+              { wort:"pasear por la playa", clickX:16.7, clickY:50, labelX:28, labelY:41.5 },
+              { wort:"hacer castillos de arena", clickX:50, clickY:50, labelX:50, labelY:41.5 },
+              { wort:"leer", clickX:83.3, clickY:50, labelX:74, labelY:41.5 },
+              { wort:"recoger conchas", clickX:16.7, clickY:83.3, labelX:25, labelY:75 },
+              { wort:"sacar fotos", clickX:50, clickY:83.3, labelX:50, labelY:75 },
+              { wort:"surfear", clickX:83.3, clickY:83.3, labelX:74, labelY:75 }
             ]
           },
           {
             title: "La playa – Bild 4",
             file: "strand4.png",
             hotspots: [
-              { wort:"hacer snorkel", clickX:16.7, clickY:16.7, labelX:24.0, labelY:9.5 },
-              { wort:"jugar al voleibol playa", clickX:50.0, clickY:16.7, labelX:50.0, labelY:9.5 },
-              { wort:"tumbarse en la toalla", clickX:83.3, clickY:16.7, labelX:76.0, labelY:9.5 },
-
-              { wort:"tomar algo en\nun chiringuito", clickX:16.7, clickY:50.0, labelX:28.0, labelY:41.5 },
-              { wort:"darse un baño", clickX:50.0, clickY:50.0, labelX:50.0, labelY:41.5 },
-              { wort:"comer un helado", clickX:83.3, clickY:50.0, labelX:74.0, labelY:41.5 },
-
-              { wort:"jugar con la pelota", clickX:16.7, clickY:83.3, labelX:25.0, labelY:75.0 },
-              { wort:"mirar el mar", clickX:50.0, clickY:83.3, labelX:50.0, labelY:75.0 },
-              { wort:"escuchar música", clickX:83.3, clickY:83.3, labelX:74.0, labelY:75.0 }
+              { wort:"hacer snorkel", clickX:16.7, clickY:16.7, labelX:24, labelY:9.5 },
+              { wort:"jugar al voleibol playa", clickX:50, clickY:16.7, labelX:50, labelY:9.5 },
+              { wort:"tumbarse en la toalla", clickX:83.3, clickY:16.7, labelX:76, labelY:9.5 },
+              { wort:"tomar algo en\nun chiringuito", clickX:16.7, clickY:50, labelX:28, labelY:41.5 },
+              { wort:"darse un baño", clickX:50, clickY:50, labelX:50, labelY:41.5 },
+              { wort:"comer un helado", clickX:83.3, clickY:50, labelX:74, labelY:41.5 },
+              { wort:"jugar con la pelota", clickX:16.7, clickY:83.3, labelX:25, labelY:75 },
+              { wort:"mirar el mar", clickX:50, clickY:83.3, labelX:50, labelY:75 },
+              { wort:"escuchar música", clickX:83.3, clickY:83.3, labelX:74, labelY:75 }
             ]
           }
         ]
@@ -644,21 +553,17 @@
               { wort:"la camisa", clickX:39, clickY:13, labelX:46, labelY:10 },
               { wort:"los pantalones", clickX:64, clickY:13, labelX:67, labelY:9 },
               { wort:"los vaqueros", clickX:87, clickY:13, labelX:81, labelY:9 },
-
               { wort:"la falda", clickX:14, clickY:31, labelX:19, labelY:27 },
               { wort:"el vestido", clickX:42, clickY:31, labelX:49, labelY:27 },
               { wort:"el jersey", clickX:76, clickY:31, labelX:77, labelY:27 },
-
               { wort:"el abrigo", clickX:13, clickY:57, labelX:22, labelY:53 },
               { wort:"los zapatos", clickX:45, clickY:48, labelX:50, labelY:44 },
               { wort:"la chaqueta", clickX:84, clickY:50, labelX:80, labelY:45 },
               { wort:"las medias", clickX:49, clickY:63, labelX:57, labelY:59 },
               { wort:"las sandalias", clickX:86, clickY:65, labelX:77, labelY:61 },
-
               { wort:"el sombrero", clickX:47, clickY:79, labelX:51, labelY:75 },
               { wort:"el cinturón", clickX:66, clickY:79, labelX:67, labelY:75 },
               { wort:"los calcetines", clickX:87, clickY:79, labelX:80, labelY:75 },
-
               { wort:"el chaleco", clickX:14, clickY:93, labelX:22, labelY:88 },
               { wort:"las botas", clickX:49, clickY:93, labelX:56, labelY:88 },
               { wort:"el chándal", clickX:84, clickY:93, labelX:76, labelY:88 }
@@ -668,45 +573,63 @@
             title: "La ropa – Bild 2",
             file: "ropa3.png",
             hotspots: [
-              { wort:"las orejeras", clickX:16.7, clickY:16.7, labelX:23.5, labelY:10.0 },
-              { wort:"el plumífero", clickX:50.0, clickY:16.7, labelX:50.0, labelY:10.0 },
-              { wort:"el anorak", clickX:83.3, clickY:16.7, labelX:76.5, labelY:10.0 },
-
-              { wort:"la bufanda", clickX:16.7, clickY:42.0, labelX:23.0, labelY:36.0 },
-              { wort:"el gorro", clickX:50.0, clickY:42.0, labelX:50.0, labelY:36.0 },
-              { wort:"los guantes", clickX:83.3, clickY:42.0, labelX:76.5, labelY:36.0 },
-
-              { wort:"las botas de invierno", clickX:16.7, clickY:63.5, labelX:25.5, labelY:58.0 },
-              { wort:"los calcetines gruesos", clickX:50.0, clickY:63.5, labelX:50.0, labelY:58.0 },
-              { wort:"el impermeable", clickX:83.3, clickY:63.5, labelX:75.0, labelY:58.0 },
-
-              { wort:"las manoplas", clickX:16.7, clickY:88.0, labelX:23.5, labelY:82.5 },
-              { wort:"la ropa térmica", clickX:50.0, clickY:88.0, labelX:50.0, labelY:82.5 },
-              { wort:"las botas de lluvia", clickX:83.3, clickY:90.0, labelX:75.0, labelY:84.0 }
+              { wort:"las orejeras", clickX:16.7, clickY:16.7, labelX:23.5, labelY:10 },
+              { wort:"el plumífero", clickX:50, clickY:16.7, labelX:50, labelY:10 },
+              { wort:"el anorak", clickX:83.3, clickY:16.7, labelX:76.5, labelY:10 },
+              { wort:"la bufanda", clickX:16.7, clickY:42, labelX:23, labelY:36 },
+              { wort:"el gorro", clickX:50, clickY:42, labelX:50, labelY:36 },
+              { wort:"los guantes", clickX:83.3, clickY:42, labelX:76.5, labelY:36 },
+              { wort:"las botas de invierno", clickX:16.7, clickY:63.5, labelX:25.5, labelY:58 },
+              { wort:"los calcetines gruesos", clickX:50, clickY:63.5, labelX:50, labelY:58 },
+              { wort:"el impermeable", clickX:83.3, clickY:63.5, labelX:75, labelY:58 },
+              { wort:"las manoplas", clickX:16.7, clickY:88, labelX:23.5, labelY:82.5 },
+              { wort:"la ropa térmica", clickX:50, clickY:88, labelX:50, labelY:82.5 },
+              { wort:"las botas de lluvia", clickX:83.3, clickY:90, labelX:75, labelY:84 }
             ]
           },
           {
-  title: "La ropa – Bild 3",
-  file: "ropa4.png",
-  hotspots: [
-  { wort:"la camiseta sin mangas", clickX:16.7, clickY:15.0, labelX:26.0, labelY:9.5 },
-  { wort:"el top", clickX:50.0, clickY:15.0, labelX:50.0, labelY:9.5 },
-  { wort:"el bikini", clickX:83.3, clickY:20.0, labelX:76.0, labelY:14.0 },
+            title: "La ropa – Bild 3",
+            file: "ropa4.png",
+            hotspots: [
+              { wort:"la camiseta sin mangas", clickX:16.7, clickY:15, labelX:26, labelY:9.5 },
+              { wort:"el top", clickX:50, clickY:15, labelX:50, labelY:9.5 },
+              { wort:"el bikini", clickX:83.3, clickY:20, labelX:76, labelY:14 },
+              { wort:"la gorra de béisbol", clickX:16.7, clickY:35, labelX:26, labelY:29.5 },
+              { wort:"los pantalones cortos", clickX:50, clickY:35, labelX:50, labelY:29.5 },
+              { wort:"el bañador", clickX:18, clickY:46, labelX:29.5, labelY:40 },
+              { wort:"el pareo", clickX:16, clickY:63, labelX:28, labelY:57 },
+              { wort:"las bermudas", clickX:50, clickY:57, labelX:50, labelY:51 },
+              { wort:"el vestido de playa", clickX:83.3, clickY:52, labelX:73.5, labelY:46 },
+              { wort:"las alpargatas", clickX:16.7, clickY:86, labelX:28, labelY:80 },
+              { wort:"las chanclas", clickX:50, clickY:73, labelX:50, labelY:67 },
+              { wort:"la minifalda", clickX:83.3, clickY:86, labelX:75, labelY:80 }
+            ]
+          }
+        ]
+      },
 
-  { wort:"la gorra de béisbol", clickX:16.7, clickY:35.0, labelX:26.0, labelY:29.5 },
-  { wort:"los pantalones cortos", clickX:50.0, clickY:35.0, labelX:50.0, labelY:29.5 },
+      rutina: {
+        title: "Rutina diaria",
+        images: [
+          {
+            title: "Rutina diaria – Bild 1",
+            file: "manana_v1.png",
+            hotspots: [
+              { wort:"la mañana", clickX:50, clickY:15, labelX:58, labelY:10 },
 
-{ wort:"el bañador", clickX:18.0, clickY:46.0, labelX:29.5, labelY:40.0 },
+              { wort:"despertarse", clickX:16.7, clickY:37, labelX:25, labelY:31 },
+              { wort:"levantarse", clickX:50, clickY:37, labelX:50, labelY:31 },
+              { wort:"abrir la ventana", clickX:83.3, clickY:37, labelX:75, labelY:31 },
 
-{ wort:"el pareo", clickX:16.0, clickY:63.0, labelX:28.0, labelY:57.0 },
-  { wort:"las bermudas", clickX:50.0, clickY:57.0, labelX:50.0, labelY:51.0 },
-  { wort:"el vestido de playa", clickX:83.3, clickY:52.0, labelX:73.5, labelY:46.0 },
+              { wort:"lavarse los dientes", clickX:16.7, clickY:61, labelX:27, labelY:55 },
+              { wort:"ducharse", clickX:50, clickY:61, labelX:50, labelY:55 },
+              { wort:"vestirse", clickX:83.3, clickY:61, labelX:75, labelY:55 },
 
-  { wort:"las alpargatas", clickX:16.7, clickY:86.0, labelX:28.0, labelY:80.0 },
-  { wort:"las chanclas", clickX:50.0, clickY:73.0, labelX:50.0, labelY:67.0 },
-  { wort:"la minifalda", clickX:83.3, clickY:86.0, labelX:75.0, labelY:80.0 }
-]
-}
+              { wort:"desayunar", clickX:16.7, clickY:84, labelX:25, labelY:78 },
+              { wort:"salir de casa", clickX:50, clickY:84, labelX:50, labelY:78 },
+              { wort:"ir al colegio", clickX:83.3, clickY:84, labelX:75, labelY:78 }
+            ]
+          }
         ]
       }
     };
@@ -729,7 +652,6 @@
     let currentLabelHotspot = null;
 
     const MIN_REPEAT_DELAY = 3;
-
     let imageDisplay = { x: 0, y: 0, w: 0, h: 0 };
 
     const menu = document.getElementById("menu");
@@ -788,9 +710,7 @@
 
     function toggleMute() {
       isMuted = !isMuted;
-      if (isMuted) {
-        stopSpeech();
-      }
+      if (isMuted) stopSpeech();
       updateMuteButton();
     }
 
@@ -869,6 +789,11 @@
         return;
       }
 
+      if (currentFolderKey === "rutina") {
+        lernInfo.textContent = "Tippe auf eine Tätigkeit oder auf die Zeitleiste.";
+        return;
+      }
+
       if (currentFolderKey === "playa" && (currentImageIndex === 2 || currentImageIndex === 3)) {
         lernInfo.textContent = "Tippe auf eine Tätigkeit.";
         return;
@@ -942,7 +867,6 @@
 
     function buildHotspots() {
       hotspotsLayer.innerHTML = "";
-
       const hotspots = getCurrentImageData().hotspots;
 
       hotspots.forEach(h => {
@@ -956,9 +880,7 @@
         hotspotsLayer.appendChild(d);
       });
 
-      if (currentLabelHotspot) {
-        repositionCurrentLabel();
-      }
+      if (currentLabelHotspot) repositionCurrentLabel();
     }
 
     function setMode(neu) {
@@ -1002,7 +924,6 @@
         void feedback.offsetWidth;
         feedback.textContent = "👍 Richtig";
         feedback.className = "richtig feedback-anim";
-
         timer = setTimeout(nextQuestion, 650);
       } else {
         playWrongSound();
@@ -1011,12 +932,9 @@
         feedback.textContent = "👎 Falsch";
         feedback.className = "falsch feedback-anim";
 
-        if (navigator.vibrate) {
-          navigator.vibrate([120, 70, 170]);
-        }
+        if (navigator.vibrate) navigator.vibrate([120, 70, 170]);
 
         scheduleRepeat(gesucht);
-
         el.classList.add("fehler");
         setTimeout(() => el.classList.remove("fehler"), 300);
       }
@@ -1068,9 +986,7 @@
 
     function markAsked(word) {
       recentQuestions.push(word);
-      if (recentQuestions.length > MIN_REPEAT_DELAY) {
-        recentQuestions.shift();
-      }
+      if (recentQuestions.length > MIN_REPEAT_DELAY) recentQuestions.shift();
     }
 
     function canRepeatNow(word) {
@@ -1078,9 +994,7 @@
     }
 
     function scheduleRepeat(word) {
-      if (word && !repeatQueue.includes(word)) {
-        repeatQueue.push(word);
-      }
+      if (word && !repeatQueue.includes(word)) repeatQueue.push(word);
     }
 
     function getNextRepeatWord() {
@@ -1095,9 +1009,7 @@
     }
 
     function getNextNormalWord() {
-      if (quizQueue.length === 0) {
-        refillQuizQueue();
-      }
+      if (quizQueue.length === 0) refillQuizQueue();
 
       for (let i = 0; i < quizQueue.length; i++) {
         const word = quizQueue[i];
@@ -1111,16 +1023,10 @@
     }
 
     function nextQuestion() {
-      if (repeatQueue.length === 0 && quizQueue.length === 0) {
-        refillQuizQueue();
-      }
+      if (repeatQueue.length === 0 && quizQueue.length === 0) refillQuizQueue();
 
       let nextWord = getNextRepeatWord();
-
-      if (!nextWord) {
-        nextWord = getNextNormalWord();
-      }
-
+      if (!nextWord) nextWord = getNextNormalWord();
       if (!nextWord) {
         refillQuizQueue();
         nextWord = getNextNormalWord();
@@ -1145,7 +1051,6 @@
 
       bild.classList.remove("slide-out-left", "slide-out-right", "slide-in-left", "slide-in-right");
       void bild.offsetWidth;
-
       bild.classList.add(outClass);
 
       setTimeout(() => {
@@ -1217,29 +1122,21 @@
     }
 
     function handleSwipe() {
-      if (mode !== "lernen" && mode !== "quiz") return;
-
       const total = folders[currentFolderKey].images.length;
       if (isAnimating || total < 2) return;
 
       const diff = touchEndX - touchStartX;
       if (Math.abs(diff) < 50) return;
 
-      if (diff < 0) {
-        showNextImage();
-      } else {
-        showPrevImage();
-      }
+      if (diff < 0) showNextImage();
+      else showPrevImage();
     }
 
     async function enterFullscreen() {
       try {
         const el = document.documentElement;
-
-        if (!document.fullscreenElement) {
-          if (el.requestFullscreen) {
-            await el.requestFullscreen({ navigationUI: "hide" });
-          }
+        if (!document.fullscreenElement && el.requestFullscreen) {
+          await el.requestFullscreen({ navigationUI: "hide" });
         }
       } catch (err) {
         console.log("Vollbild konnte nicht automatisch gestartet werden.");
@@ -1261,14 +1158,11 @@
     }
 
     function stopSpeech() {
-      if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
-      }
+      if ("speechSynthesis" in window) speechSynthesis.cancel();
     }
 
     function getSpanishVoice() {
       if (!("speechSynthesis" in window)) return null;
-
       const voices = speechSynthesis.getVoices();
       if (!voices || !voices.length) return null;
 
@@ -1292,9 +1186,7 @@
       utterance.volume = 1.0;
 
       const voice = getSpanishVoice();
-      if (voice) {
-        utterance.voice = voice;
-      }
+      if (voice) utterance.voice = voice;
 
       speechSynthesis.speak(utterance);
     }
@@ -1305,13 +1197,8 @@
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
       if (!AudioContextClass) return null;
 
-      if (!audioCtx) {
-        audioCtx = new AudioContextClass();
-      }
-
-      if (audioCtx.state === "suspended") {
-        audioCtx.resume();
-      }
+      if (!audioCtx) audioCtx = new AudioContextClass();
+      if (audioCtx.state === "suspended") audioCtx.resume();
 
       return audioCtx;
     }
