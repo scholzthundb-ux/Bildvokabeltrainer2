@@ -14,11 +14,7 @@
       color: #1f2a37;
     }
 
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-    }
+    h1, h2, h3 { margin: 0; }
 
     .ui-btn {
       padding: 24px 36px;
@@ -30,16 +26,11 @@
       font-size: 30px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }
 
-    .ui-btn:active {
-      transform: scale(0.98);
-    }
-
-    .ui-btn.secondary {
-      background: #5b6b7f;
-    }
+    .ui-btn:active { transform: scale(0.98); }
+    .ui-btn.secondary { background: #5b6b7f; }
 
     .ui-btn.small {
       font-size: 18px;
@@ -77,7 +68,7 @@
       max-width: 700px;
       border-radius: 26px;
       padding: 40px 28px 36px;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
 
     .start-icon {
@@ -120,7 +111,7 @@
       background: #dbe7f7;
       border-radius: 24px;
       padding: 6px;
-      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
     }
 
     .mode-segment {
@@ -139,7 +130,7 @@
     .mode-segment.active {
       background: #0b57d0;
       color: white;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
     }
 
     .mode-segment:active {
@@ -164,7 +155,7 @@
     }
 
     .back-arrow {
-      background: rgba(0, 0, 0, 0.12);
+      background: rgba(0,0,0,0.12);
       color: #1f2a37;
       border: none;
       font-size: 34px;
@@ -194,7 +185,7 @@
       padding: 10px 16px;
       border-radius: 16px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
     }
 
     .fullscreen-btn:active,
@@ -246,7 +237,7 @@
       font-size: 22px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -305,7 +296,7 @@
     }
 
     .hotspot.fehler {
-      background: rgba(255, 0, 0, 0.28);
+      background: rgba(255,0,0,0.28);
       border: 2px solid red;
       border-radius: 10px;
     }
@@ -325,7 +316,7 @@
       z-index: 20;
       white-space: pre-line;
       text-align: center;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.24);
       pointer-events: none;
       max-width: min(320px, 70vw);
     }
@@ -335,7 +326,6 @@
         transform: translate(-50%, -50%) scale(0.85);
         opacity: 0;
       }
-
       100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
@@ -365,19 +355,9 @@
     }
 
     @keyframes pop {
-      0% {
-        transform: scale(0.6);
-        opacity: 0;
-      }
-
-      60% {
-        transform: scale(1.2);
-        opacity: 1;
-      }
-
-      100% {
-        transform: scale(1);
-      }
+      0% { transform: scale(0.6); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
     }
 
     .feedback-anim {
@@ -401,51 +381,23 @@
     }
 
     @keyframes slideOutLeft {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateX(-28px);
-        opacity: 0.35;
-      }
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(-28px); opacity: 0.35; }
     }
 
     @keyframes slideOutRight {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateX(28px);
-        opacity: 0.35;
-      }
+      0% { transform: translateX(0); opacity: 1; }
+      100% { transform: translateX(28px); opacity: 0.35; }
     }
 
     @keyframes slideInLeft {
-      0% {
-        transform: translateX(28px);
-        opacity: 0.35;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      0% { transform: translateX(28px); opacity: 0.35; }
+      100% { transform: translateX(0); opacity: 1; }
     }
 
     @keyframes slideInRight {
-      0% {
-        transform: translateX(-28px);
-        opacity: 0.35;
-      }
-
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      0% { transform: translateX(-28px); opacity: 0.35; }
+      100% { transform: translateX(0); opacity: 1; }
     }
 
     @media (max-width: 600px) {
@@ -702,7 +654,8 @@
               { wort: "el pareo", clickX: 16, clickY: 63, labelX: 28, labelY: 57 },
               { wort: "las bermudas", clickX: 50, clickY: 57, labelX: 50, labelY: 51 },
               { wort: "el vestido de playa", clickX: 83.3, clickY: 52, labelX: 73.5, labelY: 46 },
-              { wort: "las alpargatas", clickX: 16.7, clickY: 86, labelX: 28, labelY: 80 },
+              { wort: "las alpargatas", clickX:
+                { wort: "las alpargatas", clickX: 16.7, clickY: 86, labelX: 28, labelY: 80 },
               { wort: "las chanclas", clickX: 50, clickY: 73, labelX: 50, labelY: 67 },
               { wort: "la minifalda", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80 }
             ]
@@ -776,27 +729,25 @@
               { wort: "salir a cenar", clickX: 50, clickY: 86, labelX: 50, labelY: 80 },
               { wort: "descansar", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80 }
             ]
+          },
+          {
+            title: "Rutina diaria – Bild 5",
+            file: "rutina1.png",
+            hotspots: [
+              { wort: "despertar a los niños", clickX: 16.7, clickY: 16.7, labelX: 28, labelY: 10 },
+              { wort: "preparar el desayuno", clickX: 50, clickY: 16.7, labelX: 50, labelY: 10 },
+              { wort: "llevar a los niños al colegio", clickX: 83.3, clickY: 16.7, labelX: 72, labelY: 10 },
+              { wort: "recoger a los niños", clickX: 16.7, clickY: 50, labelX: 28, labelY: 42 },
+              { wort: "ayudar con los deberes", clickX: 50, clickY: 50, labelX: 50, labelY: 42 },
+              { wort: "preparar la merienda", clickX: 83.3, clickY: 50, labelX: 72, labelY: 42 },
+              { wort: "jugar juntos", clickX: 16.7, clickY: 83.3, labelX: 28, labelY: 75 },
+              { wort: "leer un cuento", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75 },
+              { wort: "acostar a los niños", clickX: 83.3, clickY: 83.3, labelX: 72, labelY: 75 }
+            ]
           }
         ]
       }
     };
-    {
-  src: "rutina1.png",
-  title: "Rutina con los niños",
-  hotspots: [
-    { x: 20, y: 20, label: "despertar a los niños" },
-    { x: 50, y: 20, label: "preparar el desayuno" },
-    { x: 80, y: 20, label: "llevar a los niños al colegio" },
-
-    { x: 20, y: 50, label: "recoger a los niños" },
-    { x: 50, y: 50, label: "ayudar con los deberes" },
-    { x: 80, y: 50, label: "preparar la merienda" },
-
-    { x: 20, y: 80, label: "jugar juntos" },
-    { x: 50, y: 80, label: "leer un cuento" },
-    { x: 80, y: 80, label: "acostar a los niños" }
-  ]
-}
 
     let currentFolderKey = "playa";
     let currentImageIndex = 0;
@@ -817,12 +768,7 @@
 
     const MIN_REPEAT_DELAY = 3;
 
-    let imageDisplay = {
-      x: 0,
-      y: 0,
-      w: 0,
-      h: 0
-    };
+    let imageDisplay = { x: 0, y: 0, w: 0, h: 0 };
 
     const menu = document.getElementById("menu");
     const folderMenu = document.getElementById("folderMenu");
@@ -858,22 +804,14 @@
     speakBtn.addEventListener("click", () => speakWord(gesucht));
     muteBtn.addEventListener("click", toggleMute);
 
-    bildContainer.addEventListener(
-      "touchstart",
-      (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      },
-      { passive: true }
-    );
+    bildContainer.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
 
-    bildContainer.addEventListener(
-      "touchend",
-      (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      },
-      { passive: true }
-    );
+    bildContainer.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
 
     document.addEventListener("fullscreenchange", updateFullscreenButtonText);
 
@@ -888,11 +826,7 @@
 
     function toggleMute() {
       isMuted = !isMuted;
-
-      if (isMuted) {
-        stopSpeech();
-      }
-
+      if (isMuted) stopSpeech();
       updateMuteButton();
     }
 
@@ -932,7 +866,6 @@
       timer = null;
 
       hideLabel();
-
       feedback.textContent = "";
       feedback.className = "";
 
@@ -985,10 +918,7 @@
         return;
       }
 
-      if (
-        currentFolderKey === "playa" &&
-        (currentImageIndex === 2 || currentImageIndex === 3)
-      ) {
+      if (currentFolderKey === "playa" && (currentImageIndex === 2 || currentImageIndex === 3)) {
         lernInfo.textContent = "Tippe auf eine Tätigkeit.";
         return;
       }
@@ -1014,8 +944,7 @@
           if (mode === "lernen") {
             quizBox.style.display = "none";
             lernInfo.style.display = "block";
-            swipeInfo.style.display =
-              folders[currentFolderKey].images.length > 1 ? "block" : "none";
+            swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
           } else {
             quizBox.style.display = "block";
             lernInfo.style.display = "none";
@@ -1107,8 +1036,7 @@
       if (neu === "lernen") {
         quizBox.style.display = "none";
         lernInfo.style.display = "block";
-        swipeInfo.style.display =
-          folders[currentFolderKey].images.length > 1 ? "block" : "none";
+        swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
         quizAktiv = false;
         updateLernInfo();
       } else {
@@ -1127,9 +1055,7 @@
         return;
       }
 
-      if (!quizAktiv) {
-        return;
-      }
+      if (!quizAktiv) return;
 
       if (h.wort === gesucht) {
         playCorrectSound();
@@ -1157,7 +1083,6 @@
         scheduleRepeat(gesucht);
 
         el.classList.add("fehler");
-
         setTimeout(() => {
           el.classList.remove("fehler");
         }, 300);
@@ -1178,9 +1103,7 @@
     }
 
     function repositionCurrentLabel() {
-      if (!currentLabelHotspot) {
-        return;
-      }
+      if (!currentLabelHotspot) return;
 
       label.style.left = imagePercentToPixelX(currentLabelHotspot.labelX) + "px";
       label.style.top = imagePercentToPixelY(currentLabelHotspot.labelY) + "px";
@@ -1278,7 +1201,6 @@
       }
 
       gesucht = nextWord;
-
       markAsked(gesucht);
 
       frage.textContent = gesucht;
@@ -1286,29 +1208,20 @@
       feedback.className = "";
 
       hideLabel();
-
       quizAktiv = true;
     }
 
     function animateImageChange(direction, updateImageCallback) {
-      if (isAnimating) {
-        return;
-      }
+      if (isAnimating) return;
 
       isAnimating = true;
 
       const outClass = direction === "left" ? "slide-out-left" : "slide-out-right";
       const inClass = direction === "left" ? "slide-in-left" : "slide-in-right";
 
-      bild.classList.remove(
-        "slide-out-left",
-        "slide-out-right",
-        "slide-in-left",
-        "slide-in-right"
-      );
+      bild.classList.remove("slide-out-left", "slide-out-right", "slide-in-left", "slide-in-right");
 
       void bild.offsetWidth;
-
       bild.classList.add(outClass);
 
       setTimeout(() => {
@@ -1330,8 +1243,7 @@
             if (mode === "lernen") {
               quizBox.style.display = "none";
               lernInfo.style.display = "block";
-              swipeInfo.style.display =
-                folders[currentFolderKey].images.length > 1 ? "block" : "none";
+              swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
               updateLernInfo();
             } else {
               quizBox.style.display = "block";
@@ -1358,9 +1270,7 @@
     function showNextImage() {
       const total = folders[currentFolderKey].images.length;
 
-      if (isAnimating || total < 2) {
-        return;
-      }
+      if (isAnimating || total < 2) return;
 
       clearTimeout(timer);
       timer = null;
@@ -1376,9 +1286,7 @@
     function showPrevImage() {
       const total = folders[currentFolderKey].images.length;
 
-      if (isAnimating || total < 2) {
-        return;
-      }
+      if (isAnimating || total < 2) return;
 
       clearTimeout(timer);
       timer = null;
@@ -1394,15 +1302,11 @@
     function handleSwipe() {
       const total = folders[currentFolderKey].images.length;
 
-      if (isAnimating || total < 2) {
-        return;
-      }
+      if (isAnimating || total < 2) return;
 
       const diff = touchEndX - touchStartX;
 
-      if (Math.abs(diff) < 50) {
-        return;
-      }
+      if (Math.abs(diff) < 50) return;
 
       if (diff < 0) {
         showNextImage();
@@ -1434,9 +1338,7 @@
     }
 
     function updateFullscreenButtonText() {
-      fullscreenBtn.textContent = document.fullscreenElement
-        ? "Vollbild an"
-        : "Vollbild";
+      fullscreenBtn.textContent = document.fullscreenElement ? "Vollbild an" : "Vollbild";
     }
 
     function stopSpeech() {
@@ -1446,15 +1348,11 @@
     }
 
     function getSpanishVoice() {
-      if (!("speechSynthesis" in window)) {
-        return null;
-      }
+      if (!("speechSynthesis" in window)) return null;
 
       const voices = speechSynthesis.getVoices();
 
-      if (!voices || !voices.length) {
-        return null;
-      }
+      if (!voices || !voices.length) return null;
 
       return (
         voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("es-es")) ||
@@ -1464,13 +1362,8 @@
     }
 
     function speakWord(text) {
-      if (isMuted) {
-        return;
-      }
-
-      if (!text || !("speechSynthesis" in window)) {
-        return;
-      }
+      if (isMuted) return;
+      if (!text || !("speechSynthesis" in window)) return;
 
       stopSpeech();
 
@@ -1491,15 +1384,11 @@
     }
 
     function ensureAudioContext() {
-      if (isMuted) {
-        return null;
-      }
+      if (isMuted) return null;
 
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
 
-      if (!AudioContextClass) {
-        return null;
-      }
+      if (!AudioContextClass) return null;
 
       if (!audioCtx) {
         audioCtx = new AudioContextClass();
@@ -1512,18 +1401,10 @@
       return audioCtx;
     }
 
-    function playTone(
-      frequency,
-      duration,
-      type = "sine",
-      volume = 0.08,
-      startDelay = 0
-    ) {
+    function playTone(frequency, duration, type = "sine", volume = 0.08, startDelay = 0) {
       const ctx = ensureAudioContext();
 
-      if (!ctx) {
-        return;
-      }
+      if (!ctx) return;
 
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -1532,14 +1413,8 @@
       osc.frequency.setValueAtTime(frequency, ctx.currentTime + startDelay);
 
       gain.gain.setValueAtTime(0.0001, ctx.currentTime + startDelay);
-      gain.gain.exponentialRampToValueAtTime(
-        volume,
-        ctx.currentTime + startDelay + 0.01
-      );
-      gain.gain.exponentialRampToValueAtTime(
-        0.0001,
-        ctx.currentTime + startDelay + duration
-      );
+      gain.gain.exponentialRampToValueAtTime(volume, ctx.currentTime + startDelay + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + startDelay + duration);
 
       osc.connect(gain);
       gain.connect(ctx.destination);
@@ -1559,13 +1434,8 @@
     }
 
     window.addEventListener("resize", () => {
-      if (app.style.display === "none") {
-        return;
-      }
-
-      if (!bild.src) {
-        return;
-      }
+      if (app.style.display === "none") return;
+      if (!bild.src) return;
 
       setTimeout(() => {
         updateImageDisplay();
