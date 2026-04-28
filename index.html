@@ -1,162 +1,1562 @@
-<!DOCTYPE html><html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vokabeltrainer</title>  <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 0; background: #eef3f8; color: #1f2a37; }
-    h1, h2, h3 { margin: 0; }
-    .ui-btn { padding: 24px 36px; margin: 10px; border-radius: 22px; border: none; background: #2d7df6; color: white; font-size: 30px; font-weight: bold; cursor: pointer; box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
-    .ui-btn:active { transform: scale(0.98); }
-    .ui-btn.secondary { background: #5b6b7f; }
-    .ui-btn.small { font-size: 18px; padding: 12px 18px; margin: 6px; }
-    .ui-btn.image-number { font-size: 22px; padding: 14px 18px; min-width: 58px; min-height: 58px; border-radius: 18px; margin: 8px; }
-    #menu, #folderMenu { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; }
-    #folderMenu, #app { display: none; }
-    .card { background: white; width: 100%; max-width: 700px; border-radius: 26px; padding: 40px 28px 36px; box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
-    .start-icon { font-size: 64px; margin-bottom: 18px; }
-    .subtitle { font-size: 24px; margin-top: 14px; margin-bottom: 30px; color: #4b5563; line-height: 1.4; }
-    .folder-title { font-size: 42px; margin-bottom: 18px; font-weight: bold; }
-    .folder-subtitle { font-size: 24px; color: #4b5563; margin-bottom: 28px; }
-    .app-wrap { padding: 0 0 12px; }
-    .current-title { display: none; }
-    .mode-switch { display: flex; width: min(96vw, 760px); margin: 8px auto 4px; background: #dbe7f7; border-radius: 24px; padding: 6px; box-shadow: inset 0 2px 6px rgba(0,0,0,0.08); }
-    .mode-segment { flex: 1; border: none; background: transparent; color: #234; font-size: 30px; font-weight: bold; padding: 22px 10px; border-radius: 18px; cursor: pointer; transition: all 0.18s ease; }
-    .mode-segment.active { background: #0b57d0; color: white; box-shadow: 0 6px 14px rgba(0,0,0,0.18); }
-    .mode-segment:active { transform: scale(0.98); }
-    .nav-row { display: flex; justify-content: space-between; align-items: center; width: min(96vw, 760px); margin: 0 auto 2px; padding: 0 6px; box-sizing: border-box; }
-    .nav-left, .nav-right { display: flex; align-items: center; gap: 8px; }
-    .back-arrow { background: rgba(0,0,0,0.12); color: #1f2a37; border: none; font-size: 34px; font-weight: 900; line-height: 1; width: 52px; height: 52px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; -webkit-text-stroke: 1px currentColor; }
-    .back-arrow:active { transform: scale(0.9); }
-    .fullscreen-btn, .mute-btn { background: #0b57d0; color: white; border: none; font-size: 16px; font-weight: bold; padding: 10px 16px; border-radius: 16px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.18); }
-    .fullscreen-btn:active, .mute-btn:active { transform: scale(0.97); }
-    .mute-btn.is-muted { background: #5b6b7f; }
-    .swipe-info { font-size: 16px; color: #4b5563; margin: 4px 0 6px; }
-    #quizBox { display: none; margin: 0; padding: 0; }
-    .quiz-top { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 2px 8px 0; flex-wrap: wrap; }
-    #frage { font-size: 30px; margin: 0; font-weight: bold; line-height: 1.2; max-width: min(92vw, 620px); text-align: center; }
-    .sound-btn { border: none; background: #0b57d0; color: white; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
-    .sound-btn:active { transform: scale(0.95); }
-    #feedback { font-size: 34px; font-weight: bold; min-height: 42px; margin: 0; line-height: 1.2; }
-    .bild { position: relative; width: 100vw; max-width: 100vw; height: min(78vh, calc(100vh - 220px)); margin: 0 auto; touch-action: pan-y; overflow: hidden; background: transparent; }
-    #bild { width: 100%; height: 100%; display: block; object-fit: contain; user-select: none; -webkit-user-drag: none; }
-    #hotspots { position: absolute; inset: 0; z-index: 10; pointer-events: none; }
-    .hotspot { position: absolute; transform: translate(-50%, -50%); z-index: 11; background: transparent; border: none; cursor: pointer; width: clamp(28px, 7vw, 54px); height: clamp(28px, 7vw, 54px); pointer-events: auto; }
-    .hotspot.fehler { background: rgba(255, 0, 0, 0.28); border: 2px solid red; border-radius: 10px; }
-    #label { position: absolute; background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%); border: 3px solid #111; border-radius: 20px; padding: 10px 18px; font-size: clamp(22px, 4.2vw, 32px); font-weight: 700; color: #111; line-height: 1.15; transform: translate(-50%, -50%); display: none; z-index: 20; white-space: pre-line; text-align: center; box-shadow: 0 10px 22px rgba(0,0,0,0.24); pointer-events: none; max-width: min(320px, 70vw); }
-    @keyframes bubbleIn { 0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
-    #label.show { animation: bubbleIn 0.18s ease-out; }
-    #lernInfo { font-size: 18px; font-weight: bold; margin: 4px 8px 2px; }
-    .richtig { color: green; font-weight: bold; font-size: 34px; }
-    .falsch { color: red; font-weight: bold; font-size: 34px; }
-    @keyframes pop { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
-    .feedback-anim { animation: pop 0.35s ease; }
-    #bild.slide-out-left { animation: slideOutLeft 0.22s ease forwards; }
-    #bild.slide-out-right { animation: slideOutRight 0.22s ease forwards; }
-    #bild.slide-in-left { animation: slideInLeft 0.22s ease forwards; }
-    #bild.slide-in-right { animation: slideInRight 0.22s ease forwards; }
-    @keyframes slideOutLeft { 0% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(-28px); opacity: 0.35; } }
-    @keyframes slideOutRight { 0% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(28px); opacity: 0.35; } }
-    @keyframes slideInLeft { 0% { transform: translateX(28px); opacity: 0.35; } 100% { transform: translateX(0); opacity: 1; } }
-    @keyframes slideInRight { 0% { transform: translateX(-28px); opacity: 0.35; } 100% { transform: translateX(0); opacity: 1; } }
-    @media (max-width: 600px) {
-      .mode-segment { font-size: 24px; padding: 18px 8px; }
-      .fullscreen-btn, .mute-btn { font-size: 14px; padding: 9px 12px; }
-      .back-arrow { width: 56px; height: 56px; font-size: 36px; }
-      #frage { font-size: 26px; }
-      #feedback, .richtig, .falsch { font-size: 30px; }
-      .sound-btn { width: 42px; height: 42px; font-size: 20px; }
-      #label { font-size: clamp(20px, 4vw, 28px); padding: 9px 16px; }
-      .bild { height: min(74vh, calc(100vh - 210px)); }
-      .ui-btn.image-number { font-size: 20px; min-width: 54px; min-height: 54px; padding: 12px 16px; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vokabeltrainer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      background: #eef3f8;
+      color: #1f2a37;
     }
-  </style></head>
-<body><div id="menu"><div class="card"><div class="start-icon">🧠</div><h1>Vokabeltrainer</h1><div class="subtitle">Lerne spanische Wörter direkt am Bild.</div><div><button class="ui-btn folder-open-btn" data-folder="playa">La playa</button><button class="ui-btn folder-open-btn" data-folder="ropa">La ropa</button><button class="ui-btn folder-open-btn" data-folder="rutina">Rutina diaria</button></div></div></div>
-<div id="folderMenu"><div class="card"><div class="folder-title" id="folderMenuTitle"></div><div class="folder-subtitle">Wähle ein Bild zum Lernen.</div><div id="folderImageButtons"></div><div style="margin-top:18px;"><button class="ui-btn secondary small" id="backToStartBtn">← Zurück</button></div></div></div>
-<div id="app" class="app-wrap"><div class="current-title" id="currentImageTitle"></div><div class="mode-switch"><button class="mode-segment active" id="lernBtn">Lernen</button><button class="mode-segment" id="quizBtn">Quiz</button></div><div class="nav-row"><div class="nav-left"><button class="back-arrow" id="backToFolderBtn">←</button></div><div class="nav-right"><button class="mute-btn" id="muteBtn">Stumm</button><button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button></div></div><div id="lernInfo">Tippe auf ein markiertes Motiv.</div><div id="quizBox"><div class="quiz-top"><div id="frage"></div><button id="speakBtn" class="sound-btn" type="button">🔊</button></div><div id="feedback"></div></div><div id="swipeInfo" class="swipe-info">Zum Bildwechsel nach links oder rechts wischen.</div><div class="bild" id="bildContainer"><img id="bild" src="" alt="Vokabelbild"><div id="hotspots"></div><div id="label"></div></div></div><script>
-const folders={
-playa:{title:"La playa",images:[
-{title:"La playa – Bild 1",file:"strand-ohne-woerter.png",hotspots:[{wort:"el sol",clickX:70,clickY:26,labelX:74,labelY:22},{wort:"la palmera",clickX:14,clickY:41,labelX:22,labelY:31},{wort:"el mar",clickX:41,clickY:48,labelX:42,labelY:44},{wort:"el barco",clickX:50,clickY:44,labelX:56,labelY:48},{wort:"la ola",clickX:73,clickY:58,labelX:72,labelY:58},{wort:"la tabla de surf",clickX:47,clickY:59,labelX:61,labelY:63},{wort:"el bañador",clickX:38,clickY:71,labelX:56,labelY:68},{wort:"la sombrilla",clickX:13,clickY:66,labelX:12,labelY:69},{wort:"la toalla",clickX:12,clickY:86,labelX:18,labelY:90},{wort:"las gafas de sol",clickX:36,clickY:90,labelX:41,labelY:92},{wort:"la crema solar",clickX:60,clickY:87,labelX:66,labelY:89},{wort:"la concha",clickX:90,clickY:90,labelX:86,labelY:90},{wort:"el chiringuito",clickX:90,clickY:53,labelX:79,labelY:66}]},
-{title:"La playa – Bild 2",file:"strand2.png?v=2",hotspots:[{wort:"el sol",clickX:28,clickY:18,labelX:33,labelY:15},{wort:"la gaviota",clickX:69,clickY:18,labelX:67,labelY:13},{wort:"el socorrista",clickX:72,clickY:43,labelX:80,labelY:35},{wort:"el salvavidas",clickX:56,clickY:57,labelX:51,labelY:52},{wort:"la sombrilla",clickX:18,clickY:50,labelX:27,labelY:47},{wort:"la tumbona",clickX:18,clickY:75,labelX:26,labelY:72},{wort:"el sombrero de sol",clickX:31,clickY:78,labelX:36,labelY:73},{wort:"el castillo de arena",clickX:49,clickY:86,labelX:57,labelY:81},{wort:"la niña",clickX:84,clickY:74,labelX:88,labelY:69},{wort:"la pala",clickX:61,clickY:94,labelX:65,labelY:90},{wort:"la pelota",clickX:77,clickY:93,labelX:83,labelY:89},{wort:"el flotador",clickX:89,clickY:60,labelX:82,labelY:55}]},
-{title:"La playa – Bild 3",file:"strand3.png",hotspots:[{wort:"tomar el sol",clickX:16.7,clickY:16.7,labelX:24,labelY:9.5},{wort:"nadar",clickX:50,clickY:16.7,labelX:50,labelY:9.5},{wort:"bucear",clickX:83.3,clickY:16.7,labelX:76,labelY:9.5},{wort:"pasear por la playa",clickX:16.7,clickY:50,labelX:28,labelY:41.5},{wort:"hacer castillos de arena",clickX:50,clickY:50,labelX:50,labelY:41.5},{wort:"leer",clickX:83.3,clickY:50,labelX:74,labelY:41.5},{wort:"recoger conchas",clickX:16.7,clickY:83.3,labelX:25,labelY:75},{wort:"sacar fotos",clickX:50,clickY:83.3,labelX:50,labelY:75},{wort:"surfear",clickX:83.3,clickY:83.3,labelX:74,labelY:75}]},
-{title:"La playa – Bild 4",file:"strand4.png",hotspots:[{wort:"hacer snorkel",clickX:16.7,clickY:16.7,labelX:24,labelY:9.5},{wort:"jugar al voleibol playa",clickX:50,clickY:16.7,labelX:50,labelY:9.5},{wort:"tumbarse en la toalla",clickX:83.3,clickY:16.7,labelX:76,labelY:9.5},{wort:"tomar algo en\nun chiringuito",clickX:16.7,clickY:50,labelX:28,labelY:41.5},{wort:"darse un baño",clickX:50,clickY:50,labelX:50,labelY:41.5},{wort:"comer un helado",clickX:83.3,clickY:50,labelX:74,labelY:41.5},{wort:"jugar con la pelota",clickX:16.7,clickY:83.3,labelX:25,labelY:75},{wort:"mirar el mar",clickX:50,clickY:83.3,labelX:50,labelY:75},{wort:"escuchar música",clickX:83.3,clickY:83.3,labelX:74,labelY:75}]}
-]},
-ropa:{title:"La ropa",images:[
-{title:"La ropa – Bild 1",file:"ropa2.png",hotspots:[{wort:"la camiseta",clickX:14,clickY:13,labelX:20,labelY:10},{wort:"la camisa",clickX:39,clickY:13,labelX:46,labelY:10},{wort:"los pantalones",clickX:64,clickY:13,labelX:67,labelY:9},{wort:"los vaqueros",clickX:87,clickY:13,labelX:81,labelY:9},{wort:"la falda",clickX:14,clickY:31,labelX:19,labelY:27},{wort:"el vestido",clickX:42,clickY:31,labelX:49,labelY:27},{wort:"el jersey",clickX:76,clickY:31,labelX:77,labelY:27},{wort:"el abrigo",clickX:13,clickY:57,labelX:22,labelY:53},{wort:"los zapatos",clickX:45,clickY:48,labelX:50,labelY:44},{wort:"la chaqueta",clickX:84,clickY:50,labelX:80,labelY:45},{wort:"las medias",clickX:49,clickY:63,labelX:57,labelY:59},{wort:"las sandalias",clickX:86,clickY:65,labelX:77,labelY:61},{wort:"el sombrero",clickX:47,clickY:79,labelX:51,labelY:75},{wort:"el cinturón",clickX:66,clickY:79,labelX:67,labelY:75},{wort:"los calcetines",clickX:87,clickY:79,labelX:80,labelY:75},{wort:"el chaleco",clickX:14,clickY:93,labelX:22,labelY:88},{wort:"las botas",clickX:49,clickY:93,labelX:56,labelY:88},{wort:"el chándal",clickX:84,clickY:93,labelX:76,labelY:88}]},
-{title:"La ropa – Bild 2",file:"ropa3.png",hotspots:[{wort:"las orejeras",clickX:16.7,clickY:16.7,labelX:23.5,labelY:10},{wort:"el plumífero",clickX:50,clickY:16.7,labelX:50,labelY:10},{wort:"el anorak",clickX:83.3,clickY:16.7,labelX:76.5,labelY:10},{wort:"la bufanda",clickX:16.7,clickY:42,labelX:23,labelY:36},{wort:"el gorro",clickX:50,clickY:42,labelX:50,labelY:36},{wort:"los guantes",clickX:83.3,clickY:42,labelX:76.5,labelY:36},{wort:"las botas de invierno",clickX:16.7,clickY:63.5,labelX:25.5,labelY:58},{wort:"los calcetines gruesos",clickX:50,clickY:63.5,labelX:50,labelY:58},{wort:"el impermeable",clickX:83.3,clickY:63.5,labelX:75,labelY:58},{wort:"las manoplas",clickX:16.7,clickY:88,labelX:23.5,labelY:82.5},{wort:"la ropa térmica",clickX:50,clickY:88,labelX:50,labelY:82.5},{wort:"las botas de lluvia",clickX:83.3,clickY:90,labelX:75,labelY:84}]},
-{title:"La ropa – Bild 3",file:"ropa4.png",hotspots:[{wort:"la camiseta sin mangas",clickX:16.7,clickY:15,labelX:26,labelY:9.5},{wort:"el top",clickX:50,clickY:15,labelX:50,labelY:9.5},{wort:"el bikini",clickX:83.3,clickY:20,labelX:76,labelY:14},{wort:"la gorra de béisbol",clickX:16.7,clickY:35,labelX:26,labelY:29.5},{wort:"los pantalones cortos",clickX:50,clickY:35,labelX:50,labelY:29.5},{wort:"el bañador",clickX:18,clickY:46,labelX:29.5,labelY:40},{wort:"el pareo",clickX:16,clickY:63,labelX:28,labelY:57},{wort:"las bermudas",clickX:50,clickY:57,labelX:50,labelY:51},{wort:"el vestido de playa",clickX:83.3,clickY:52,labelX:73.5,labelY:46},{wort:"las alpargatas",clickX:16.7,clickY:86,labelX:28,labelY:80},{wort:"las chanclas",clickX:50,clickY:73,labelX:50,labelY:67},{wort:"la minifalda",clickX:83.3,clickY:86,labelX:75,labelY:80}]}
-]},
-rutina:{title:"Rutina diaria",images:[
-{title:"Rutina diaria – Bild 1",file:"manana_v1.png",hotspots:[{wort:"la mañana",clickX:50,clickY:15,labelX:58,labelY:10},{wort:"despertarse",clickX:16.7,clickY:37,labelX:25,labelY:31},{wort:"levantarse",clickX:50,clickY:37,labelX:50,labelY:31},{wort:"abrir la ventana",clickX:83.3,clickY:37,labelX:75,labelY:31},{wort:"ducharse",clickX:16.7,clickY:61,labelX:27,labelY:55},{wort:"lavarse los dientes",clickX:50,clickY:61,labelX:50,labelY:55},{wort:"vestirse",clickX:83.3,clickY:61,labelX:75,labelY:55},{wort:"desayunar",clickX:16.7,clickY:84,labelX:25,labelY:78},{wort:"salir de casa",clickX:50,clickY:84,labelX:50,labelY:78},{wort:"ir al trabajo",clickX:83.3,clickY:84,labelX:75,labelY:78}]},
-{title:"Rutina diaria – Bild 2",file:"tarde_v1.png",hotspots:[{wort:"la tarde",clickX:50,clickY:15,labelX:58,labelY:10},{wort:"trabajar",clickX:16.7,clickY:38,labelX:25,labelY:32},{wort:"almorzar",clickX:50,clickY:38,labelX:50,labelY:32},{wort:"terminar de trabajar",clickX:83.3,clickY:38,labelX:75,labelY:32},{wort:"volver a casa",clickX:16.7,clickY:61,labelX:27,labelY:55},{wort:"tomar un café",clickX:50,clickY:61,labelX:50,labelY:55},{wort:"dar un paseo",clickX:83.3,clickY:61,labelX:75,labelY:55},{wort:"hacer deporte",clickX:16.7,clickY:84,labelX:25,labelY:78},{wort:"hacer la compra",clickX:50,clickY:84,labelX:50,labelY:78},{wort:"recoger a los niños",clickX:83.3,clickY:84,labelX:75,labelY:78}]},
-{title:"Rutina diaria – Bild 3",file:"noche_v1.png",hotspots:[{ wort:"la noche", clickX:60, clickY:14, labelX:60, labelY:9 },{wort:"preparar la cena",clickX:16.7,clickY:38,labelX:25,labelY:32},{wort:"poner la mesa",clickX:50,clickY:38,labelX:50,labelY:32},{wort:"cenar",clickX:83.3,clickY:38,labelX:75,labelY:32},{wort:"ver la tele",clickX:16.7,clickY:61,labelX:27,labelY:55},{wort:"leer",clickX:50,clickY:61,labelX:50,labelY:55},{wort:"bañarse",clickX:83.3,clickY:61,labelX:75,labelY:55},{wort:"ponerse el pijama",clickX:16.7,clickY:84,labelX:25,labelY:78},{wort:"apagar la luz",clickX:50,clickY:84,labelX:50,labelY:78},{wort:"acostarse",clickX:83.3,clickY:84,labelX:75,labelY:78}]},
-{title:"Rutina diaria – Bild 4",file:"finde_v1.png",hotspots:[{wort:"el fin de semana",clickX:75,clickY:14,labelX:70,labelY:9},{wort:"levantarse tarde",clickX:16.7,clickY:37,labelX:25,labelY:31},{wort:"desayunar tranquilamente",clickX:50,clickY:37,labelX:50,labelY:31},{wort:"hacer una excursión",clickX:83.3,clickY:37,labelX:75,labelY:31},{wort:"visitar a la familia",clickX:16.7,clickY:60,labelX:27,labelY:54},{wort:"quedar con amigos",clickX:50,clickY:60,labelX:50,labelY:54},{wort:"ir de compras",clickX:83.3,clickY:60,labelX:75,labelY:54},{wort:"ver una película",clickX:16.7,clickY:86,labelX:25,labelY:80},{wort:"salir a cenar",clickX:50,clickY:86,labelX:50,labelY:80},{wort:"descansar",clickX:83.3,clickY:86,labelX:75,labelY:80}]}
-]}
-};
 
-let currentFolderKey="playa",currentImageIndex=0,mode="lernen",gesucht="",quizAktiv=false,timer=null,touchStartX=0,touchEndX=0,isAnimating=false,audioCtx=null,isMuted=false;
-let quizQueue=[],repeatQueue=[],recentQuestions=[],currentLabelHotspot=null;
-const MIN_REPEAT_DELAY=3;
-let imageDisplay={x:0,y:0,w:0,h:0};
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
 
-const menu=document.getElementById("menu"),folderMenu=document.getElementById("folderMenu"),app=document.getElementById("app"),hotspotsLayer=document.getElementById("hotspots"),label=document.getElementById("label"),frage=document.getElementById("frage"),feedback=document.getElementById("feedback"),quizBox=document.getElementById("quizBox"),lernInfo=document.getElementById("lernInfo"),swipeInfo=document.getElementById("swipeInfo"),lernBtn=document.getElementById("lernBtn"),quizBtn=document.getElementById("quizBtn"),bild=document.getElementById("bild"),currentImageTitle=document.getElementById("currentImageTitle"),bildContainer=document.getElementById("bildContainer"),fullscreenBtn=document.getElementById("fullscreenBtn"),speakBtn=document.getElementById("speakBtn"),muteBtn=document.getElementById("muteBtn"),folderMenuTitle=document.getElementById("folderMenuTitle"),folderImageButtons=document.getElementById("folderImageButtons");
+    .ui-btn {
+      padding: 24px 36px;
+      margin: 10px;
+      border-radius: 22px;
+      border: none;
+      background: #2d7df6;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+    }
 
-document.querySelectorAll(".folder-open-btn").forEach(btn=>btn.addEventListener("click",()=>openFolderMenu(btn.dataset.folder)));
-document.getElementById("backToStartBtn").addEventListener("click",backToStart);
-document.getElementById("backToFolderBtn").addEventListener("click",backToFolderMenu);
-lernBtn.addEventListener("click",()=>setMode("lernen"));
-quizBtn.addEventListener("click",()=>setMode("quiz"));
-fullscreenBtn.addEventListener("click",enterFullscreen);
-speakBtn.addEventListener("click",()=>speakWord(gesucht));
-muteBtn.addEventListener("click",toggleMute);
+    .ui-btn:active {
+      transform: scale(0.98);
+    }
 
-bildContainer.addEventListener("touchstart",e=>{touchStartX=e.changedTouches[0].screenX;},{passive:true});
-bildContainer.addEventListener("touchend",e=>{touchEndX=e.changedTouches[0].screenX;handleSwipe();},{passive:true});
-document.addEventListener("fullscreenchange",updateFullscreenButtonText);
+    .ui-btn.secondary {
+      background: #5b6b7f;
+    }
 
-function getCurrentImageData(){return folders[currentFolderKey].images[currentImageIndex];}
-function updateMuteButton(){muteBtn.textContent=isMuted?"Ton an":"Stumm";muteBtn.classList.toggle("is-muted",isMuted);}
-function toggleMute(){isMuted=!isMuted;if(isMuted)stopSpeech();updateMuteButton();}
-function openFolderMenu(folderKey){currentFolderKey=folderKey;currentImageIndex=0;const folder=folders[folderKey];folderMenuTitle.textContent=folder.title;folderImageButtons.innerHTML="";folder.images.forEach((img,index)=>{const btn=document.createElement("button");btn.className="ui-btn image-number";btn.textContent=`${index+1}`;btn.addEventListener("click",()=>openImage(index));folderImageButtons.appendChild(btn);});menu.style.display="none";folderMenu.style.display="flex";app.style.display="none";}
-function backToStart(){folderMenu.style.display="none";app.style.display="none";menu.style.display="flex";}
-async function backToFolderMenu(){app.style.display="none";folderMenu.style.display="flex";clearTimeout(timer);timer=null;hideLabel();feedback.textContent="";feedback.className="";stopSpeech();await exitFullscreen();}
-async function openImage(index){currentImageIndex=index;folderMenu.style.display="none";menu.style.display="none";app.style.display="block";mode="lernen";quizAktiv=false;clearTimeout(timer);timer=null;updateModeButtons();updateMuteButton();loadCurrentImage();setTimeout(async()=>{await enterFullscreen();},120);}
-function updateModeButtons(){lernBtn.classList.toggle("active",mode==="lernen");quizBtn.classList.toggle("active",mode==="quiz");}
-function resetQuizQueues(){quizQueue=[];repeatQueue=[];recentQuestions=[];refillQuizQueue();}
-function updateLernInfo(){if(currentFolderKey==="ropa"){lernInfo.textContent="Tippe auf ein Kleidungsstück.";return;}if(currentFolderKey==="rutina"){lernInfo.textContent="Tippe auf eine Tätigkeit oder auf die Zeitleiste.";return;}if(currentFolderKey==="playa"&&(currentImageIndex===2||currentImageIndex===3)){lernInfo.textContent="Tippe auf eine Tätigkeit.";return;}lernInfo.textContent="Tippe auf ein markiertes Motiv.";}
+    .ui-btn.small {
+      font-size: 18px;
+      padding: 12px 18px;
+      margin: 6px;
+    }
 
-function loadCurrentImage(){const imageData=getCurrentImageData();currentImageTitle.textContent=imageData.title;feedback.textContent="";feedback.className="";hideLabel();updateLernInfo();bild.onload=()=>{setTimeout(()=>{updateImageDisplay();buildHotspots();if(mode==="lernen"){quizBox.style.display="none";lernInfo.style.display="block";swipeInfo.style.display=folders[currentFolderKey].images.length>1?"block":"none";}else{quizBox.style.display="block";lernInfo.style.display="none";swipeInfo.style.display="none";resetQuizQueues();nextQuestion();}updateModeButtons();updateMuteButton();},60);};bild.src=imageData.file;}
-function updateImageDisplay(){const rect=bild.getBoundingClientRect();if(!bild.naturalWidth||!bild.naturalHeight||!rect.width||!rect.height){imageDisplay={x:0,y:0,w:rect.width||0,h:rect.height||0};return;}const imgRatio=bild.naturalWidth/bild.naturalHeight;const boxRatio=rect.width/rect.height;if(imgRatio>boxRatio){imageDisplay.w=rect.width;imageDisplay.h=rect.width/imgRatio;imageDisplay.x=0;imageDisplay.y=(rect.height-imageDisplay.h)/2;}else{imageDisplay.h=rect.height;imageDisplay.w=rect.height*imgRatio;imageDisplay.y=0;imageDisplay.x=(rect.width-imageDisplay.w)/2;}}
-function imagePercentToPixelX(percentX){return imageDisplay.x+(percentX/100)*imageDisplay.w;}
-function imagePercentToPixelY(percentY){return imageDisplay.y+(percentY/100)*imageDisplay.h;}
-function buildHotspots(){updateImageDisplay();hotspotsLayer.innerHTML="";getCurrentImageData().hotspots.forEach(h=>{const d=document.createElement("button");d.className="hotspot";d.type="button";d.style.left=imagePercentToPixelX(h.clickX)+"px";d.style.top=imagePercentToPixelY(h.clickY)+"px";d.setAttribute("aria-label",h.wort);d.addEventListener("click",()=>onHotspotClick(h,d));hotspotsLayer.appendChild(d);});if(currentLabelHotspot)repositionCurrentLabel();}
-function setMode(neu){mode=neu;clearTimeout(timer);timer=null;stopSpeech();updateModeButtons();hideLabel();feedback.textContent="";feedback.className="";if(neu==="lernen"){quizBox.style.display="none";lernInfo.style.display="block";swipeInfo.style.display=folders[currentFolderKey].images.length>1?"block":"none";quizAktiv=false;updateLernInfo();}else{quizBox.style.display="block";lernInfo.style.display="none";swipeInfo.style.display="none";resetQuizQueues();nextQuestion();}}
-function onHotspotClick(h,el){if(mode==="lernen"){showLabel(h);speakWord(h.wort);return;}if(!quizAktiv)return;if(h.wort===gesucht){playCorrectSound();feedback.className="";void feedback.offsetWidth;feedback.textContent="👍 Richtig";feedback.className="richtig feedback-anim";timer=setTimeout(nextQuestion,650);}else{playWrongSound();feedback.className="";void feedback.offsetWidth;feedback.textContent="👎 Falsch";feedback.className="falsch feedback-anim";if(navigator.vibrate)navigator.vibrate([120,70,170]);scheduleRepeat(gesucht);el.classList.add("fehler");setTimeout(()=>el.classList.remove("fehler"),300);}}
-function showLabel(hotspot){currentLabelHotspot=hotspot;label.textContent=hotspot.wort;label.style.left=imagePercentToPixelX(hotspot.labelX)+"px";label.style.top=imagePercentToPixelY(hotspot.labelY)+"px";label.style.display="block";label.classList.remove("show");void label.offsetWidth;label.classList.add("show");}
-function repositionCurrentLabel(){if(!currentLabelHotspot)return;label.style.left=imagePercentToPixelX(currentLabelHotspot.labelX)+"px";label.style.top=imagePercentToPixelY(currentLabelHotspot.labelY)+"px";label.style.display="block";}
-function hideLabel(){currentLabelHotspot=null;label.style.display="none";label.classList.remove("show");}
-function shuffleArray(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
-function refillQuizQueue(){const alleWoerter=getCurrentImageData().hotspots.map(h=>h.wort);const rest=alleWoerter.filter(w=>!quizQueue.includes(w)&&!repeatQueue.includes(w));quizQueue.push(...shuffleArray(rest));}
-function markAsked(word){recentQuestions.push(word);if(recentQuestions.length>MIN_REPEAT_DELAY)recentQuestions.shift();}
-function canRepeatNow(word){return!recentQuestions.includes(word);}
-function scheduleRepeat(word){if(word&&!repeatQueue.includes(word))repeatQueue.push(word);}
-function getNextRepeatWord(){for(let i=0;i<repeatQueue.length;i++){const word=repeatQueue[i];if(canRepeatNow(word)){repeatQueue.splice(i,1);return word;}}return null;}
-function getNextNormalWord(){if(quizQueue.length===0)refillQuizQueue();for(let i=0;i<quizQueue.length;i++){const word=quizQueue[i];if(canRepeatNow(word)){quizQueue.splice(i,1);return word;}}return quizQueue.shift()||null;}
-function nextQuestion(){if(repeatQueue.length===0&&quizQueue.length===0)refillQuizQueue();let nextWord=getNextRepeatWord();if(!nextWord)nextWord=getNextNormalWord();if(!nextWord){refillQuizQueue();nextWord=getNextNormalWord();}gesucht=nextWord;markAsked(gesucht);frage.textContent=gesucht;feedback.textContent="";feedback.className="";hideLabel();quizAktiv=true;}
-function animateImageChange(direction,updateImageCallback){if(isAnimating)return;isAnimating=true;const outClass=direction==="left"?"slide-out-left":"slide-out-right";const inClass=direction==="left"?"slide-in-left":"slide-in-right";bild.classList.remove("slide-out-left","slide-out-right","slide-in-left","slide-in-right");void bild.offsetWidth;bild.classList.add(outClass);setTimeout(()=>{bild.classList.remove(outClass);bild.onload=()=>{setTimeout(()=>{updateImageDisplay();buildHotspots();hideLabel();bild.classList.add(inClass);setTimeout(()=>{bild.classList.remove(inClass);isAnimating=false;},220);if(mode==="lernen"){quizBox.style.display="none";lernInfo.style.display="block";swipeInfo.style.display=folders[currentFolderKey].images.length>1?"block":"none";updateLernInfo();}else{quizBox.style.display="block";lernInfo.style.display="none";swipeInfo.style.display="none";resetQuizQueues();nextQuestion();}feedback.textContent="";feedback.className="";currentImageTitle.textContent=getCurrentImageData().title;updateModeButtons();updateMuteButton();},60);};updateImageCallback();},220);}
-function showNextImage(){const total=folders[currentFolderKey].images.length;if(isAnimating||total<2)return;clearTimeout(timer);timer=null;stopSpeech();animateImageChange("left",()=>{currentImageIndex=(currentImageIndex+1)%total;bild.src=getCurrentImageData().file;});}
-function showPrevImage(){const total=folders[currentFolderKey].images.length;if(isAnimating||total<2)return;clearTimeout(timer);timer=null;stopSpeech();animateImageChange("right",()=>{currentImageIndex=(currentImageIndex-1+total)%total;bild.src=getCurrentImageData().file;});}
-function handleSwipe(){const total=folders[currentFolderKey].images.length;if(isAnimating||total<2)return;const diff=touchEndX-touchStartX;if(Math.abs(diff)<50)return;if(diff<0)showNextImage();else showPrevImage();}
-async function enterFullscreen(){try{const el=document.documentElement;if(!document.fullscreenElement&&el.requestFullscreen){await el.requestFullscreen({navigationUI:"hide"});}}catch(err){console.log("Vollbild konnte nicht automatisch gestartet werden.");}}
-async function exitFullscreen(){try{if(document.fullscreenElement&&document.exitFullscreen){await document.exitFullscreen();}}catch(err){console.log("Fullscreen konnte nicht beendet werden.");}}
-function updateFullscreenButtonText(){fullscreenBtn.textContent=document.fullscreenElement?"Vollbild an":"Vollbild";}
-function stopSpeech(){if("speechSynthesis" in window)speechSynthesis.cancel();}
-function getSpanishVoice(){if(!("speechSynthesis" in window))return null;const voices=speechSynthesis.getVoices();if(!voices||!voices.length)return null;return voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("es-es"))||voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("es"))||null;}
-function speakWord(text){if(isMuted)return;if(!text||!("speechSynthesis" in window))return;stopSpeech();const utterance=new SpeechSynthesisUtterance(text.replace(/\n/g," "));utterance.lang="es-ES";utterance.rate=0.9;utterance.pitch=1.0;utterance.volume=1.0;const voice=getSpanishVoice();if(voice)utterance.voice=voice;speechSynthesis.speak(utterance);}
-function ensureAudioContext(){if(isMuted)return null;const AudioContextClass=window.AudioContext||window.webkitAudioContext;if(!AudioContextClass)return null;if(!audioCtx)audioCtx=new AudioContextClass();if(audioCtx.state==="suspended")audioCtx.resume();return audioCtx;}
-function playTone(frequency,duration,type="sine",volume=0.08,startDelay=0){const ctx=ensureAudioContext();if(!ctx)return;const osc=ctx.createOscillator();const gain=ctx.createGain();osc.type=type;osc.frequency.setValueAtTime(frequency,ctx.currentTime+startDelay);gain.gain.setValueAtTime(0.0001,ctx.currentTime+startDelay);gain.gain.exponentialRampToValueAtTime(volume,ctx.currentTime+startDelay+0.01);gain.gain.exponentialRampToValueAtTime(0.0001,ctx.currentTime+startDelay+duration);osc.connect(gain);gain.connect(ctx.destination);osc.start(ctx.currentTime+startDelay);osc.stop(ctx.currentTime+startDelay+duration+0.02);}
-function playCorrectSound(){playTone(740,0.12,"sine",0.08,0);playTone(988,0.16,"sine",0.07,0.08);}
-function playWrongSound(){playTone(260,0.14,"square",0.07,0);playTone(180,0.22,"square",0.06,0.10);}
-window.addEventListener("resize",()=>{if(app.style.display==="none")return;if(!bild.src)return;setTimeout(()=>{updateImageDisplay();buildHotspots();},60);});
-updateMuteButton();
-</script></body>
+    .ui-btn.image-number {
+      font-size: 22px;
+      padding: 14px 18px;
+      min-width: 58px;
+      min-height: 58px;
+      border-radius: 18px;
+      margin: 8px;
+    }
+
+    #menu,
+    #folderMenu {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    #folderMenu,
+    #app {
+      display: none;
+    }
+
+    .card {
+      background: white;
+      width: 100%;
+      max-width: 700px;
+      border-radius: 26px;
+      padding: 40px 28px 36px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .start-icon {
+      font-size: 64px;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      margin-top: 14px;
+      margin-bottom: 30px;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+
+    .folder-title {
+      font-size: 42px;
+      margin-bottom: 18px;
+      font-weight: bold;
+    }
+
+    .folder-subtitle {
+      font-size: 24px;
+      color: #4b5563;
+      margin-bottom: 28px;
+    }
+
+    .app-wrap {
+      padding: 0 0 12px;
+    }
+
+    .current-title {
+      display: none;
+    }
+
+    .mode-switch {
+      display: flex;
+      width: min(96vw, 760px);
+      margin: 8px auto 4px;
+      background: #dbe7f7;
+      border-radius: 24px;
+      padding: 6px;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .mode-segment {
+      flex: 1;
+      border: none;
+      background: transparent;
+      color: #234;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 22px 10px;
+      border-radius: 18px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .mode-segment.active {
+      background: #0b57d0;
+      color: white;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .mode-segment:active {
+      transform: scale(0.98);
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: min(96vw, 760px);
+      margin: 0 auto 2px;
+      padding: 0 6px;
+      box-sizing: border-box;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .back-arrow {
+      background: rgba(0, 0, 0, 0.12);
+      color: #1f2a37;
+      border: none;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-text-stroke: 1px currentColor;
+    }
+
+    .back-arrow:active {
+      transform: scale(0.9);
+    }
+
+    .fullscreen-btn,
+    .mute-btn {
+      background: #0b57d0;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    }
+
+    .fullscreen-btn:active,
+    .mute-btn:active {
+      transform: scale(0.97);
+    }
+
+    .mute-btn.is-muted {
+      background: #5b6b7f;
+    }
+
+    .swipe-info {
+      font-size: 16px;
+      color: #4b5563;
+      margin: 4px 0 6px;
+    }
+
+    #quizBox {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .quiz-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 2px 8px 0;
+      flex-wrap: wrap;
+    }
+
+    #frage {
+      font-size: 30px;
+      margin: 0;
+      font-weight: bold;
+      line-height: 1.2;
+      max-width: min(92vw, 620px);
+      text-align: center;
+    }
+
+    .sound-btn {
+      border: none;
+      background: #0b57d0;
+      color: white;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .sound-btn:active {
+      transform: scale(0.95);
+    }
+
+    #feedback {
+      font-size: 34px;
+      font-weight: bold;
+      min-height: 42px;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .bild {
+      position: relative;
+      width: 100vw;
+      max-width: 100vw;
+      height: min(78vh, calc(100vh - 220px));
+      margin: 0 auto;
+      touch-action: pan-y;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    #bild {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    #hotspots {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .hotspot {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 11;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: clamp(28px, 7vw, 54px);
+      height: clamp(28px, 7vw, 54px);
+      pointer-events: auto;
+    }
+
+    .hotspot.fehler {
+      background: rgba(255, 0, 0, 0.28);
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+
+    #label {
+      position: absolute;
+      background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+      border: 3px solid #111;
+      border-radius: 20px;
+      padding: 10px 18px;
+      font-size: clamp(22px, 4.2vw, 32px);
+      font-weight: 700;
+      color: #111;
+      line-height: 1.15;
+      transform: translate(-50%, -50%);
+      display: none;
+      z-index: 20;
+      white-space: pre-line;
+      text-align: center;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
+      pointer-events: none;
+      max-width: min(320px, 70vw);
+    }
+
+    @keyframes bubbleIn {
+      0% {
+        transform: translate(-50%, -50%) scale(0.85);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    #label.show {
+      animation: bubbleIn 0.18s ease-out;
+    }
+
+    #lernInfo {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 4px 8px 2px;
+    }
+
+    .richtig {
+      color: green;
+      font-weight: bold;
+      font-size: 34px;
+    }
+
+    .falsch {
+      color: red;
+      font-weight: bold;
+      font-size: 34px;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.6);
+        opacity: 0;
+      }
+
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .feedback-anim {
+      animation: pop 0.35s ease;
+    }
+
+    #bild.slide-out-left {
+      animation: slideOutLeft 0.22s ease forwards;
+    }
+
+    #bild.slide-out-right {
+      animation: slideOutRight 0.22s ease forwards;
+    }
+
+    #bild.slide-in-left {
+      animation: slideInLeft 0.22s ease forwards;
+    }
+
+    #bild.slide-in-right {
+      animation: slideInRight 0.22s ease forwards;
+    }
+
+    @keyframes slideOutLeft {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(-28px);
+        opacity: 0.35;
+      }
+    }
+
+    @keyframes slideOutRight {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(28px);
+        opacity: 0.35;
+      }
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        transform: translateX(28px);
+        opacity: 0.35;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        transform: translateX(-28px);
+        opacity: 0.35;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .mode-segment {
+        font-size: 24px;
+        padding: 18px 8px;
+      }
+
+      .fullscreen-btn,
+      .mute-btn {
+        font-size: 14px;
+        padding: 9px 12px;
+      }
+
+      .back-arrow {
+        width: 56px;
+        height: 56px;
+        font-size: 36px;
+      }
+
+      #frage {
+        font-size: 26px;
+      }
+
+      #feedback,
+      .richtig,
+      .falsch {
+        font-size: 30px;
+      }
+
+      .sound-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+      }
+
+      #label {
+        font-size: clamp(20px, 4vw, 28px);
+        padding: 9px 16px;
+      }
+
+      .bild {
+        height: min(74vh, calc(100vh - 210px));
+      }
+
+      .ui-btn.image-number {
+        font-size: 20px;
+        min-width: 54px;
+        min-height: 54px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu">
+    <div class="card">
+      <div class="start-icon">🧠</div>
+      <h1>Vokabeltrainer</h1>
+      <div class="subtitle">Lerne spanische Wörter direkt am Bild.</div>
+
+      <div>
+        <button class="ui-btn folder-open-btn" data-folder="playa">La playa</button>
+        <button class="ui-btn folder-open-btn" data-folder="ropa">La ropa</button>
+        <button class="ui-btn folder-open-btn" data-folder="rutina">Rutina diaria</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="folderMenu">
+    <div class="card">
+      <div class="folder-title" id="folderMenuTitle"></div>
+      <div class="folder-subtitle">Wähle ein Bild zum Lernen.</div>
+      <div id="folderImageButtons"></div>
+
+      <div style="margin-top: 18px;">
+        <button class="ui-btn secondary small" id="backToStartBtn">← Zurück</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app-wrap">
+    <div class="current-title" id="currentImageTitle"></div>
+
+    <div class="mode-switch">
+      <button class="mode-segment active" id="lernBtn">Lernen</button>
+      <button class="mode-segment" id="quizBtn">Quiz</button>
+    </div>
+
+    <div class="nav-row">
+      <div class="nav-left">
+        <button class="back-arrow" id="backToFolderBtn">←</button>
+      </div>
+
+      <div class="nav-right">
+        <button class="mute-btn" id="muteBtn">Stumm</button>
+        <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
+      </div>
+    </div>
+
+    <div id="lernInfo">Tippe auf ein markiertes Motiv.</div>
+
+    <div id="quizBox">
+      <div class="quiz-top">
+        <div id="frage"></div>
+        <button id="speakBtn" class="sound-btn" type="button">🔊</button>
+      </div>
+
+      <div id="feedback"></div>
+    </div>
+
+    <div id="swipeInfo" class="swipe-info">
+      Zum Bildwechsel nach links oder rechts wischen.
+    </div>
+
+    <div class="bild" id="bildContainer">
+      <img id="bild" src="" alt="Vokabelbild" />
+      <div id="hotspots"></div>
+      <div id="label"></div>
+    </div>
+  </div>
+
+  <script>
+    const folders = {
+      playa: {
+        title: "La playa",
+        images: [
+          {
+            title: "La playa – Bild 1",
+            file: "strand-ohne-woerter.png",
+            hotspots: [
+              { wort: "el sol", clickX: 70, clickY: 26, labelX: 74, labelY: 22 },
+              { wort: "la palmera", clickX: 14, clickY: 41, labelX: 22, labelY: 31 },
+              { wort: "el mar", clickX: 41, clickY: 48, labelX: 42, labelY: 44 },
+              { wort: "el barco", clickX: 50, clickY: 44, labelX: 56, labelY: 48 },
+              { wort: "la ola", clickX: 73, clickY: 58, labelX: 72, labelY: 58 },
+              { wort: "la tabla de surf", clickX: 47, clickY: 59, labelX: 61, labelY: 63 },
+              { wort: "el bañador", clickX: 38, clickY: 71, labelX: 56, labelY: 68 },
+              { wort: "la sombrilla", clickX: 13, clickY: 66, labelX: 12, labelY: 69 },
+              { wort: "la toalla", clickX: 12, clickY: 86, labelX: 18, labelY: 90 },
+              { wort: "las gafas de sol", clickX: 36, clickY: 90, labelX: 41, labelY: 92 },
+              { wort: "la crema solar", clickX: 60, clickY: 87, labelX: 66, labelY: 89 },
+              { wort: "la concha", clickX: 90, clickY: 90, labelX: 86, labelY: 90 },
+              { wort: "el chiringuito", clickX: 90, clickY: 53, labelX: 79, labelY: 66 }
+            ]
+          },
+          {
+            title: "La playa – Bild 2",
+            file: "strand2.png?v=2",
+            hotspots: [
+              { wort: "el sol", clickX: 28, clickY: 18, labelX: 33, labelY: 15 },
+              { wort: "la gaviota", clickX: 69, clickY: 18, labelX: 67, labelY: 13 },
+              { wort: "el socorrista", clickX: 72, clickY: 43, labelX: 80, labelY: 35 },
+              { wort: "el salvavidas", clickX: 56, clickY: 57, labelX: 51, labelY: 52 },
+              { wort: "la sombrilla", clickX: 18, clickY: 50, labelX: 27, labelY: 47 },
+              { wort: "la tumbona", clickX: 18, clickY: 75, labelX: 26, labelY: 72 },
+              { wort: "el sombrero de sol", clickX: 31, clickY: 78, labelX: 36, labelY: 73 },
+              { wort: "el castillo de arena", clickX: 49, clickY: 86, labelX: 57, labelY: 81 },
+              { wort: "la niña", clickX: 84, clickY: 74, labelX: 88, labelY: 69 },
+              { wort: "la pala", clickX: 61, clickY: 94, labelX: 65, labelY: 90 },
+              { wort: "la pelota", clickX: 77, clickY: 93, labelX: 83, labelY: 89 },
+              { wort: "el flotador", clickX: 89, clickY: 60, labelX: 82, labelY: 55 }
+            ]
+          },
+          {
+            title: "La playa – Bild 3",
+            file: "strand3.png",
+            hotspots: [
+              { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5 },
+              { wort: "nadar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5 },
+              { wort: "bucear", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5 },
+              { wort: "pasear por la playa", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5 },
+              { wort: "hacer castillos de arena", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5 },
+              { wort: "leer", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5 },
+              { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75 },
+              { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75 },
+              { wort: "surfear", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75 }
+            ]
+          },
+          {
+            title: "La playa – Bild 4",
+            file: "strand4.png",
+            hotspots: [
+              { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5 },
+              { wort: "jugar al voleibol playa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5 },
+              { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5 },
+              { wort: "tomar algo en\nun chiringuito", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5 },
+              { wort: "darse un baño", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5 },
+              { wort: "comer un helado", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5 },
+              { wort: "jugar con la pelota", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75 },
+              { wort: "mirar el mar", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75 },
+              { wort: "escuchar música", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75 }
+            ]
+          }
+        ]
+      },
+
+      ropa: {
+        title: "La ropa",
+        images: [
+          {
+            title: "La ropa – Bild 1",
+            file: "ropa2.png",
+            hotspots: [
+              { wort: "la camiseta", clickX: 14, clickY: 13, labelX: 20, labelY: 10 },
+              { wort: "la camisa", clickX: 39, clickY: 13, labelX: 46, labelY: 10 },
+              { wort: "los pantalones", clickX: 64, clickY: 13, labelX: 67, labelY: 9 },
+              { wort: "los vaqueros", clickX: 87, clickY: 13, labelX: 81, labelY: 9 },
+              { wort: "la falda", clickX: 14, clickY: 31, labelX: 19, labelY: 27 },
+              { wort: "el vestido", clickX: 42, clickY: 31, labelX: 49, labelY: 27 },
+              { wort: "el jersey", clickX: 76, clickY: 31, labelX: 77, labelY: 27 },
+              { wort: "el abrigo", clickX: 13, clickY: 57, labelX: 22, labelY: 53 },
+              { wort: "los zapatos", clickX: 45, clickY: 48, labelX: 50, labelY: 44 },
+              { wort: "la chaqueta", clickX: 84, clickY: 50, labelX: 80, labelY: 45 },
+              { wort: "las medias", clickX: 49, clickY: 63, labelX: 57, labelY: 59 },
+              { wort: "las sandalias", clickX: 86, clickY: 65, labelX: 77, labelY: 61 },
+              { wort: "el sombrero", clickX: 47, clickY: 79, labelX: 51, labelY: 75 },
+              { wort: "el cinturón", clickX: 66, clickY: 79, labelX: 67, labelY: 75 },
+              { wort: "los calcetines", clickX: 87, clickY: 79, labelX: 80, labelY: 75 },
+              { wort: "el chaleco", clickX: 14, clickY: 93, labelX: 22, labelY: 88 },
+              { wort: "las botas", clickX: 49, clickY: 93, labelX: 56, labelY: 88 },
+              { wort: "el chándal", clickX: 84, clickY: 93, labelX: 76, labelY: 88 }
+            ]
+          },
+          {
+            title: "La ropa – Bild 2",
+            file: "ropa3.png",
+            hotspots: [
+              { wort: "las orejeras", clickX: 16.7, clickY: 16.7, labelX: 23.5, labelY: 10 },
+              { wort: "el plumífero", clickX: 50, clickY: 16.7, labelX: 50, labelY: 10 },
+              { wort: "el anorak", clickX: 83.3, clickY: 16.7, labelX: 76.5, labelY: 10 },
+              { wort: "la bufanda", clickX: 16.7, clickY: 42, labelX: 23, labelY: 36 },
+              { wort: "el gorro", clickX: 50, clickY: 42, labelX: 50, labelY: 36 },
+              { wort: "los guantes", clickX: 83.3, clickY: 42, labelX: 76.5, labelY: 36 },
+              { wort: "las botas de invierno", clickX: 16.7, clickY: 63.5, labelX: 25.5, labelY: 58 },
+              { wort: "los calcetines gruesos", clickX: 50, clickY: 63.5, labelX: 50, labelY: 58 },
+              { wort: "el impermeable", clickX: 83.3, clickY: 63.5, labelX: 75, labelY: 58 },
+              { wort: "las manoplas", clickX: 16.7, clickY: 88, labelX: 23.5, labelY: 82.5 },
+              { wort: "la ropa térmica", clickX: 50, clickY: 88, labelX: 50, labelY: 82.5 },
+              { wort: "las botas de lluvia", clickX: 83.3, clickY: 90, labelX: 75, labelY: 84 }
+            ]
+          },
+          {
+            title: "La ropa – Bild 3",
+            file: "ropa4.png",
+            hotspots: [
+              { wort: "la camiseta sin mangas", clickX: 16.7, clickY: 15, labelX: 26, labelY: 9.5 },
+              { wort: "el top", clickX: 50, clickY: 15, labelX: 50, labelY: 9.5 },
+              { wort: "el bikini", clickX: 83.3, clickY: 20, labelX: 76, labelY: 14 },
+              { wort: "la gorra de béisbol", clickX: 16.7, clickY: 35, labelX: 26, labelY: 29.5 },
+              { wort: "los pantalones cortos", clickX: 50, clickY: 35, labelX: 50, labelY: 29.5 },
+              { wort: "el bañador", clickX: 18, clickY: 46, labelX: 29.5, labelY: 40 },
+              { wort: "el pareo", clickX: 16, clickY: 63, labelX: 28, labelY: 57 },
+              { wort: "las bermudas", clickX: 50, clickY: 57, labelX: 50, labelY: 51 },
+              { wort: "el vestido de playa", clickX: 83.3, clickY: 52, labelX: 73.5, labelY: 46 },
+              { wort: "las alpargatas", clickX: 16.7, clickY: 86, labelX: 28, labelY: 80 },
+              { wort: "las chanclas", clickX: 50, clickY: 73, labelX: 50, labelY: 67 },
+              { wort: "la minifalda", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80 }
+            ]
+          }
+        ]
+      },
+
+      rutina: {
+        title: "Rutina diaria",
+        images: [
+          {
+            title: "Rutina diaria – Bild 1",
+            file: "manana_v1.png",
+            hotspots: [
+              { wort: "la mañana", clickX: 50, clickY: 15, labelX: 58, labelY: 10 },
+              { wort: "despertarse", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31 },
+              { wort: "levantarse", clickX: 50, clickY: 37, labelX: 50, labelY: 31 },
+              { wort: "abrir la ventana", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31 },
+              { wort: "ducharse", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55 },
+              { wort: "lavarse los dientes", clickX: 50, clickY: 61, labelX: 50, labelY: 55 },
+              { wort: "vestirse", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55 },
+              { wort: "desayunar", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78 },
+              { wort: "salir de casa", clickX: 50, clickY: 84, labelX: 50, labelY: 78 },
+              { wort: "ir al trabajo", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78 }
+            ]
+          },
+          {
+            title: "Rutina diaria – Bild 2",
+            file: "tarde_v1.png",
+            hotspots: [
+              { wort: "la tarde", clickX: 50, clickY: 15, labelX: 58, labelY: 10 },
+              { wort: "trabajar", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32 },
+              { wort: "almorzar", clickX: 50, clickY: 38, labelX: 50, labelY: 32 },
+              { wort: "terminar de trabajar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32 },
+              { wort: "volver a casa", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55 },
+              { wort: "tomar un café", clickX: 50, clickY: 61, labelX: 50, labelY: 55 },
+              { wort: "dar un paseo", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55 },
+              { wort: "hacer deporte", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78 },
+              { wort: "hacer la compra", clickX: 50, clickY: 84, labelX: 50, labelY: 78 },
+              { wort: "recoger a los niños", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78 }
+            ]
+          },
+          {
+            title: "Rutina diaria – Bild 3",
+            file: "noche_v1.png",
+            hotspots: [
+              { wort: "la noche", clickX: 60, clickY: 14, labelX: 60, labelY: 9 },
+              { wort: "preparar la cena", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32 },
+              { wort: "poner la mesa", clickX: 50, clickY: 38, labelX: 50, labelY: 32 },
+              { wort: "cenar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32 },
+              { wort: "ver la tele", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55 },
+              { wort: "leer", clickX: 50, clickY: 61, labelX: 50, labelY: 55 },
+              { wort: "bañarse", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55 },
+              { wort: "ponerse el pijama", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78 },
+              { wort: "apagar la luz", clickX: 50, clickY: 84, labelX: 50, labelY: 78 },
+              { wort: "acostarse", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78 }
+            ]
+          },
+          {
+            title: "Rutina diaria – Bild 4",
+            file: "finde_v1.png",
+            hotspots: [
+              { wort: "el fin de semana", clickX: 75, clickY: 14, labelX: 70, labelY: 9 },
+              { wort: "levantarse tarde", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31 },
+              { wort: "desayunar tranquilamente", clickX: 50, clickY: 37, labelX: 50, labelY: 31 },
+              { wort: "hacer una excursión", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31 },
+              { wort: "visitar a la familia", clickX: 16.7, clickY: 60, labelX: 27, labelY: 54 },
+              { wort: "quedar con amigos", clickX: 50, clickY: 60, labelX: 50, labelY: 54 },
+              { wort: "ir de compras", clickX: 83.3, clickY: 60, labelX: 75, labelY: 54 },
+              { wort: "ver una película", clickX: 16.7, clickY: 86, labelX: 25, labelY: 80 },
+              { wort: "salir a cenar", clickX: 50, clickY: 86, labelX: 50, labelY: 80 },
+              { wort: "descansar", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80 }
+            ]
+          }
+        ]
+      }
+    };
+
+    let currentFolderKey = "playa";
+    let currentImageIndex = 0;
+    let mode = "lernen";
+    let gesucht = "";
+    let quizAktiv = false;
+    let timer = null;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isAnimating = false;
+    let audioCtx = null;
+    let isMuted = false;
+
+    let quizQueue = [];
+    let repeatQueue = [];
+    let recentQuestions = [];
+    let currentLabelHotspot = null;
+
+    const MIN_REPEAT_DELAY = 3;
+
+    let imageDisplay = {
+      x: 0,
+      y: 0,
+      w: 0,
+      h: 0
+    };
+
+    const menu = document.getElementById("menu");
+    const folderMenu = document.getElementById("folderMenu");
+    const app = document.getElementById("app");
+    const hotspotsLayer = document.getElementById("hotspots");
+    const label = document.getElementById("label");
+    const frage = document.getElementById("frage");
+    const feedback = document.getElementById("feedback");
+    const quizBox = document.getElementById("quizBox");
+    const lernInfo = document.getElementById("lernInfo");
+    const swipeInfo = document.getElementById("swipeInfo");
+    const lernBtn = document.getElementById("lernBtn");
+    const quizBtn = document.getElementById("quizBtn");
+    const bild = document.getElementById("bild");
+    const currentImageTitle = document.getElementById("currentImageTitle");
+    const bildContainer = document.getElementById("bildContainer");
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
+    const speakBtn = document.getElementById("speakBtn");
+    const muteBtn = document.getElementById("muteBtn");
+    const folderMenuTitle = document.getElementById("folderMenuTitle");
+    const folderImageButtons = document.getElementById("folderImageButtons");
+
+    document.querySelectorAll(".folder-open-btn").forEach((btn) => {
+      btn.addEventListener("click", () => openFolderMenu(btn.dataset.folder));
+    });
+
+    document.getElementById("backToStartBtn").addEventListener("click", backToStart);
+    document.getElementById("backToFolderBtn").addEventListener("click", backToFolderMenu);
+
+    lernBtn.addEventListener("click", () => setMode("lernen"));
+    quizBtn.addEventListener("click", () => setMode("quiz"));
+    fullscreenBtn.addEventListener("click", enterFullscreen);
+    speakBtn.addEventListener("click", () => speakWord(gesucht));
+    muteBtn.addEventListener("click", toggleMute);
+
+    bildContainer.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+
+    bildContainer.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      },
+      { passive: true }
+    );
+
+    document.addEventListener("fullscreenchange", updateFullscreenButtonText);
+
+    function getCurrentImageData() {
+      return folders[currentFolderKey].images[currentImageIndex];
+    }
+
+    function updateMuteButton() {
+      muteBtn.textContent = isMuted ? "Ton an" : "Stumm";
+      muteBtn.classList.toggle("is-muted", isMuted);
+    }
+
+    function toggleMute() {
+      isMuted = !isMuted;
+
+      if (isMuted) {
+        stopSpeech();
+      }
+
+      updateMuteButton();
+    }
+
+    function openFolderMenu(folderKey) {
+      currentFolderKey = folderKey;
+      currentImageIndex = 0;
+
+      const folder = folders[folderKey];
+
+      folderMenuTitle.textContent = folder.title;
+      folderImageButtons.innerHTML = "";
+
+      folder.images.forEach((img, index) => {
+        const btn = document.createElement("button");
+        btn.className = "ui-btn image-number";
+        btn.textContent = `${index + 1}`;
+        btn.addEventListener("click", () => openImage(index));
+        folderImageButtons.appendChild(btn);
+      });
+
+      menu.style.display = "none";
+      folderMenu.style.display = "flex";
+      app.style.display = "none";
+    }
+
+    function backToStart() {
+      folderMenu.style.display = "none";
+      app.style.display = "none";
+      menu.style.display = "flex";
+    }
+
+    async function backToFolderMenu() {
+      app.style.display = "none";
+      folderMenu.style.display = "flex";
+
+      clearTimeout(timer);
+      timer = null;
+
+      hideLabel();
+
+      feedback.textContent = "";
+      feedback.className = "";
+
+      stopSpeech();
+      await exitFullscreen();
+    }
+
+    async function openImage(index) {
+      currentImageIndex = index;
+
+      folderMenu.style.display = "none";
+      menu.style.display = "none";
+      app.style.display = "block";
+
+      mode = "lernen";
+      quizAktiv = false;
+
+      clearTimeout(timer);
+      timer = null;
+
+      updateModeButtons();
+      updateMuteButton();
+      loadCurrentImage();
+
+      setTimeout(async () => {
+        await enterFullscreen();
+      }, 120);
+    }
+
+    function updateModeButtons() {
+      lernBtn.classList.toggle("active", mode === "lernen");
+      quizBtn.classList.toggle("active", mode === "quiz");
+    }
+
+    function resetQuizQueues() {
+      quizQueue = [];
+      repeatQueue = [];
+      recentQuestions = [];
+      refillQuizQueue();
+    }
+
+    function updateLernInfo() {
+      if (currentFolderKey === "ropa") {
+        lernInfo.textContent = "Tippe auf ein Kleidungsstück.";
+        return;
+      }
+
+      if (currentFolderKey === "rutina") {
+        lernInfo.textContent = "Tippe auf eine Tätigkeit oder auf die Zeitleiste.";
+        return;
+      }
+
+      if (
+        currentFolderKey === "playa" &&
+        (currentImageIndex === 2 || currentImageIndex === 3)
+      ) {
+        lernInfo.textContent = "Tippe auf eine Tätigkeit.";
+        return;
+      }
+
+      lernInfo.textContent = "Tippe auf ein markiertes Motiv.";
+    }
+
+    function loadCurrentImage() {
+      const imageData = getCurrentImageData();
+
+      currentImageTitle.textContent = imageData.title;
+      feedback.textContent = "";
+      feedback.className = "";
+
+      hideLabel();
+      updateLernInfo();
+
+      bild.onload = () => {
+        setTimeout(() => {
+          updateImageDisplay();
+          buildHotspots();
+
+          if (mode === "lernen") {
+            quizBox.style.display = "none";
+            lernInfo.style.display = "block";
+            swipeInfo.style.display =
+              folders[currentFolderKey].images.length > 1 ? "block" : "none";
+          } else {
+            quizBox.style.display = "block";
+            lernInfo.style.display = "none";
+            swipeInfo.style.display = "none";
+            resetQuizQueues();
+            nextQuestion();
+          }
+
+          updateModeButtons();
+          updateMuteButton();
+        }, 60);
+      };
+
+      bild.src = imageData.file;
+    }
+
+    function updateImageDisplay() {
+      const rect = bild.getBoundingClientRect();
+
+      if (!bild.naturalWidth || !bild.naturalHeight || !rect.width || !rect.height) {
+        imageDisplay = {
+          x: 0,
+          y: 0,
+          w: rect.width || 0,
+          h: rect.height || 0
+        };
+        return;
+      }
+
+      const imgRatio = bild.naturalWidth / bild.naturalHeight;
+      const boxRatio = rect.width / rect.height;
+
+      if (imgRatio > boxRatio) {
+        imageDisplay.w = rect.width;
+        imageDisplay.h = rect.width / imgRatio;
+        imageDisplay.x = 0;
+        imageDisplay.y = (rect.height - imageDisplay.h) / 2;
+      } else {
+        imageDisplay.h = rect.height;
+        imageDisplay.w = rect.height * imgRatio;
+        imageDisplay.y = 0;
+        imageDisplay.x = (rect.width - imageDisplay.w) / 2;
+      }
+    }
+
+    function imagePercentToPixelX(percentX) {
+      return imageDisplay.x + (percentX / 100) * imageDisplay.w;
+    }
+
+    function imagePercentToPixelY(percentY) {
+      return imageDisplay.y + (percentY / 100) * imageDisplay.h;
+    }
+
+    function buildHotspots() {
+      updateImageDisplay();
+      hotspotsLayer.innerHTML = "";
+
+      getCurrentImageData().hotspots.forEach((h) => {
+        const d = document.createElement("button");
+
+        d.className = "hotspot";
+        d.type = "button";
+        d.style.left = imagePercentToPixelX(h.clickX) + "px";
+        d.style.top = imagePercentToPixelY(h.clickY) + "px";
+        d.setAttribute("aria-label", h.wort);
+        d.addEventListener("click", () => onHotspotClick(h, d));
+
+        hotspotsLayer.appendChild(d);
+      });
+
+      if (currentLabelHotspot) {
+        repositionCurrentLabel();
+      }
+    }
+
+    function setMode(neu) {
+      mode = neu;
+
+      clearTimeout(timer);
+      timer = null;
+
+      stopSpeech();
+      updateModeButtons();
+      hideLabel();
+
+      feedback.textContent = "";
+      feedback.className = "";
+
+      if (neu === "lernen") {
+        quizBox.style.display = "none";
+        lernInfo.style.display = "block";
+        swipeInfo.style.display =
+          folders[currentFolderKey].images.length > 1 ? "block" : "none";
+        quizAktiv = false;
+        updateLernInfo();
+      } else {
+        quizBox.style.display = "block";
+        lernInfo.style.display = "none";
+        swipeInfo.style.display = "none";
+        resetQuizQueues();
+        nextQuestion();
+      }
+    }
+
+    function onHotspotClick(h, el) {
+      if (mode === "lernen") {
+        showLabel(h);
+        speakWord(h.wort);
+        return;
+      }
+
+      if (!quizAktiv) {
+        return;
+      }
+
+      if (h.wort === gesucht) {
+        playCorrectSound();
+
+        feedback.className = "";
+        void feedback.offsetWidth;
+
+        feedback.textContent = "👍 Richtig";
+        feedback.className = "richtig feedback-anim";
+
+        timer = setTimeout(nextQuestion, 650);
+      } else {
+        playWrongSound();
+
+        feedback.className = "";
+        void feedback.offsetWidth;
+
+        feedback.textContent = "👎 Falsch";
+        feedback.className = "falsch feedback-anim";
+
+        if (navigator.vibrate) {
+          navigator.vibrate([120, 70, 170]);
+        }
+
+        scheduleRepeat(gesucht);
+
+        el.classList.add("fehler");
+
+        setTimeout(() => {
+          el.classList.remove("fehler");
+        }, 300);
+      }
+    }
+
+    function showLabel(hotspot) {
+      currentLabelHotspot = hotspot;
+
+      label.textContent = hotspot.wort;
+      label.style.left = imagePercentToPixelX(hotspot.labelX) + "px";
+      label.style.top = imagePercentToPixelY(hotspot.labelY) + "px";
+      label.style.display = "block";
+
+      label.classList.remove("show");
+      void label.offsetWidth;
+      label.classList.add("show");
+    }
+
+    function repositionCurrentLabel() {
+      if (!currentLabelHotspot) {
+        return;
+      }
+
+      label.style.left = imagePercentToPixelX(currentLabelHotspot.labelX) + "px";
+      label.style.top = imagePercentToPixelY(currentLabelHotspot.labelY) + "px";
+      label.style.display = "block";
+    }
+
+    function hideLabel() {
+      currentLabelHotspot = null;
+      label.style.display = "none";
+      label.classList.remove("show");
+    }
+
+    function shuffleArray(arr) {
+      const copy = [...arr];
+
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+
+      return copy;
+    }
+
+    function refillQuizQueue() {
+      const alleWoerter = getCurrentImageData().hotspots.map((h) => h.wort);
+      const rest = alleWoerter.filter(
+        (w) => !quizQueue.includes(w) && !repeatQueue.includes(w)
+      );
+
+      quizQueue.push(...shuffleArray(rest));
+    }
+
+    function markAsked(word) {
+      recentQuestions.push(word);
+
+      if (recentQuestions.length > MIN_REPEAT_DELAY) {
+        recentQuestions.shift();
+      }
+    }
+
+    function canRepeatNow(word) {
+      return !recentQuestions.includes(word);
+    }
+
+    function scheduleRepeat(word) {
+      if (word && !repeatQueue.includes(word)) {
+        repeatQueue.push(word);
+      }
+    }
+
+    function getNextRepeatWord() {
+      for (let i = 0; i < repeatQueue.length; i++) {
+        const word = repeatQueue[i];
+
+        if (canRepeatNow(word)) {
+          repeatQueue.splice(i, 1);
+          return word;
+        }
+      }
+
+      return null;
+    }
+
+    function getNextNormalWord() {
+      if (quizQueue.length === 0) {
+        refillQuizQueue();
+      }
+
+      for (let i = 0; i < quizQueue.length; i++) {
+        const word = quizQueue[i];
+
+        if (canRepeatNow(word)) {
+          quizQueue.splice(i, 1);
+          return word;
+        }
+      }
+
+      return quizQueue.shift() || null;
+    }
+
+    function nextQuestion() {
+      if (repeatQueue.length === 0 && quizQueue.length === 0) {
+        refillQuizQueue();
+      }
+
+      let nextWord = getNextRepeatWord();
+
+      if (!nextWord) {
+        nextWord = getNextNormalWord();
+      }
+
+      if (!nextWord) {
+        refillQuizQueue();
+        nextWord = getNextNormalWord();
+      }
+
+      gesucht = nextWord;
+
+      markAsked(gesucht);
+
+      frage.textContent = gesucht;
+      feedback.textContent = "";
+      feedback.className = "";
+
+      hideLabel();
+
+      quizAktiv = true;
+    }
+
+    function animateImageChange(direction, updateImageCallback) {
+      if (isAnimating) {
+        return;
+      }
+
+      isAnimating = true;
+
+      const outClass = direction === "left" ? "slide-out-left" : "slide-out-right";
+      const inClass = direction === "left" ? "slide-in-left" : "slide-in-right";
+
+      bild.classList.remove(
+        "slide-out-left",
+        "slide-out-right",
+        "slide-in-left",
+        "slide-in-right"
+      );
+
+      void bild.offsetWidth;
+
+      bild.classList.add(outClass);
+
+      setTimeout(() => {
+        bild.classList.remove(outClass);
+
+        bild.onload = () => {
+          setTimeout(() => {
+            updateImageDisplay();
+            buildHotspots();
+            hideLabel();
+
+            bild.classList.add(inClass);
+
+            setTimeout(() => {
+              bild.classList.remove(inClass);
+              isAnimating = false;
+            }, 220);
+
+            if (mode === "lernen") {
+              quizBox.style.display = "none";
+              lernInfo.style.display = "block";
+              swipeInfo.style.display =
+                folders[currentFolderKey].images.length > 1 ? "block" : "none";
+              updateLernInfo();
+            } else {
+              quizBox.style.display = "block";
+              lernInfo.style.display = "none";
+              swipeInfo.style.display = "none";
+              resetQuizQueues();
+              nextQuestion();
+            }
+
+            feedback.textContent = "";
+            feedback.className = "";
+
+            currentImageTitle.textContent = getCurrentImageData().title;
+
+            updateModeButtons();
+            updateMuteButton();
+          }, 60);
+        };
+
+        updateImageCallback();
+      }, 220);
+    }
+
+    function showNextImage() {
+      const total = folders[currentFolderKey].images.length;
+
+      if (isAnimating || total < 2) {
+        return;
+      }
+
+      clearTimeout(timer);
+      timer = null;
+
+      stopSpeech();
+
+      animateImageChange("left", () => {
+        currentImageIndex = (currentImageIndex + 1) % total;
+        bild.src = getCurrentImageData().file;
+      });
+    }
+
+    function showPrevImage() {
+      const total = folders[currentFolderKey].images.length;
+
+      if (isAnimating || total < 2) {
+        return;
+      }
+
+      clearTimeout(timer);
+      timer = null;
+
+      stopSpeech();
+
+      animateImageChange("right", () => {
+        currentImageIndex = (currentImageIndex - 1 + total) % total;
+        bild.src = getCurrentImageData().file;
+      });
+    }
+
+    function handleSwipe() {
+      const total = folders[currentFolderKey].images.length;
+
+      if (isAnimating || total < 2) {
+        return;
+      }
+
+      const diff = touchEndX - touchStartX;
+
+      if (Math.abs(diff) < 50) {
+        return;
+      }
+
+      if (diff < 0) {
+        showNextImage();
+      } else {
+        showPrevImage();
+      }
+    }
+
+    async function enterFullscreen() {
+      try {
+        const el = document.documentElement;
+
+        if (!document.fullscreenElement && el.requestFullscreen) {
+          await el.requestFullscreen({ navigationUI: "hide" });
+        }
+      } catch (err) {
+        console.log("Vollbild konnte nicht automatisch gestartet werden.");
+      }
+    }
+
+    async function exitFullscreen() {
+      try {
+        if (document.fullscreenElement && document.exitFullscreen) {
+          await document.exitFullscreen();
+        }
+      } catch (err) {
+        console.log("Fullscreen konnte nicht beendet werden.");
+      }
+    }
+
+    function updateFullscreenButtonText() {
+      fullscreenBtn.textContent = document.fullscreenElement
+        ? "Vollbild an"
+        : "Vollbild";
+    }
+
+    function stopSpeech() {
+      if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+      }
+    }
+
+    function getSpanishVoice() {
+      if (!("speechSynthesis" in window)) {
+        return null;
+      }
+
+      const voices = speechSynthesis.getVoices();
+
+      if (!voices || !voices.length) {
+        return null;
+      }
+
+      return (
+        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("es-es")) ||
+        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("es")) ||
+        null
+      );
+    }
+
+    function speakWord(text) {
+      if (isMuted) {
+        return;
+      }
+
+      if (!text || !("speechSynthesis" in window)) {
+        return;
+      }
+
+      stopSpeech();
+
+      const utterance = new SpeechSynthesisUtterance(text.replace(/\n/g, " "));
+
+      utterance.lang = "es-ES";
+      utterance.rate = 0.9;
+      utterance.pitch = 1.0;
+      utterance.volume = 1.0;
+
+      const voice = getSpanishVoice();
+
+      if (voice) {
+        utterance.voice = voice;
+      }
+
+      speechSynthesis.speak(utterance);
+    }
+
+    function ensureAudioContext() {
+      if (isMuted) {
+        return null;
+      }
+
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+
+      if (!AudioContextClass) {
+        return null;
+      }
+
+      if (!audioCtx) {
+        audioCtx = new AudioContextClass();
+      }
+
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+      }
+
+      return audioCtx;
+    }
+
+    function playTone(
+      frequency,
+      duration,
+      type = "sine",
+      volume = 0.08,
+      startDelay = 0
+    ) {
+      const ctx = ensureAudioContext();
+
+      if (!ctx) {
+        return;
+      }
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = type;
+      osc.frequency.setValueAtTime(frequency, ctx.currentTime + startDelay);
+
+      gain.gain.setValueAtTime(0.0001, ctx.currentTime + startDelay);
+      gain.gain.exponentialRampToValueAtTime(
+        volume,
+        ctx.currentTime + startDelay + 0.01
+      );
+      gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        ctx.currentTime + startDelay + duration
+      );
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(ctx.currentTime + startDelay);
+      osc.stop(ctx.currentTime + startDelay + duration + 0.02);
+    }
+
+    function playCorrectSound() {
+      playTone(740, 0.12, "sine", 0.08, 0);
+      playTone(988, 0.16, "sine", 0.07, 0.08);
+    }
+
+    function playWrongSound() {
+      playTone(260, 0.14, "square", 0.07, 0);
+      playTone(180, 0.22, "square", 0.06, 0.10);
+    }
+
+    window.addEventListener("resize", () => {
+      if (app.style.display === "none") {
+        return;
+      }
+
+      if (!bild.src) {
+        return;
+      }
+
+      setTimeout(() => {
+        updateImageDisplay();
+        buildHotspots();
+      }, 60);
+    });
+
+    updateMuteButton();
+  </script>
+</body>
 </html>
