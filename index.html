@@ -304,20 +304,6 @@
       margin: 4px 0 10px;
     }
 
-    .image-counter {
-      width: fit-content;
-      max-width: 100%;
-      margin: 12px auto 0;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.76);
-      color: var(--text-soft);
-      font-size: 0.98rem;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(31, 42, 55, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
     #quizBox {
       display: none;
       margin: 0 0 10px;
@@ -721,8 +707,6 @@
       <div id="hotspots"></div>
       <div id="label"></div>
     </div>
-
-    <div id="imageCounter" class="image-counter"></div>
   </div>
 
   <script src="bilder-daten.js"></script>
@@ -771,8 +755,6 @@
     const fullscreenBtn = document.getElementById("fullscreenBtn");
     const speakBtn = document.getElementById("speakBtn");
     const muteBtn = document.getElementById("muteBtn");
-    const imageCounter = document.getElementById("imageCounter");
-
     document.querySelectorAll(".folder-open-btn").forEach((btn) => {
       btn.addEventListener("click", () => openFolder(btn.dataset.folder));
     });
@@ -812,10 +794,10 @@
       updateMuteButton();
     }
 
-    function updateImageCounter() {
+    function updateCurrentTitle() {
+      const imageData = getCurrentImageData();
       const total = folders[currentFolderKey].images.length;
-      imageCounter.textContent = `Bild ${currentImageIndex + 1} von ${total}`;
-      imageCounter.style.display = total > 0 ? "inline-flex" : "none";
+      currentImageTitle.textContent = `${imageData.title} von ${total}`;
     }
 
     function openFolder(folderKey) {
@@ -899,8 +881,7 @@
     function loadCurrentImage() {
       const imageData = getCurrentImageData();
 
-      currentImageTitle.textContent = imageData.title;
-      updateImageCounter();
+      updateCurrentTitle();
       feedback.textContent = "";
       feedback.className = "";
 
@@ -1227,8 +1208,7 @@
             feedback.textContent = "";
             feedback.className = "";
 
-            currentImageTitle.textContent = getCurrentImageData().title;
-            updateImageCounter();
+            updateCurrentTitle();
 
             updateModeButtons();
             updateMuteButton();
