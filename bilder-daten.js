@@ -24,37 +24,37 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 1",
         file: "strand-ohne-woerter.png",
         hotspots: [
-          { wort: "el sol", clickX: 70, clickY: 26, labelX: 74, labelY: 22 },
-          { wort: "la palmera", clickX: 14, clickY: 41, labelX: 22, labelY: 31 },
-          { wort: "el mar", clickX: 41, clickY: 48, labelX: 42, labelY: 44 },
-          { wort: "el barco", clickX: 50, clickY: 44, labelX: 56, labelY: 48 },
-          { wort: "la ola", clickX: 73, clickY: 58, labelX: 72, labelY: 58 },
-          { wort: "la tabla de surf", clickX: 47, clickY: 59, labelX: 61, labelY: 63 },
-          { wort: "el bañador", clickX: 38, clickY: 71, labelX: 56, labelY: 68 },
-          { wort: "la sombrilla", clickX: 13, clickY: 66, labelX: 12, labelY: 69 },
-          { wort: "la toalla", clickX: 12, clickY: 86, labelX: 18, labelY: 90 },
-          { wort: "las gafas de sol", clickX: 36, clickY: 90, labelX: 41, labelY: 92 },
-          { wort: "la crema solar", clickX: 60, clickY: 87, labelX: 66, labelY: 89 },
-          { wort: "la concha", clickX: 90, clickY: 90, labelX: 86, labelY: 90 },
-          { wort: "el chiringuito", clickX: 90, clickY: 53, labelX: 79, labelY: 66 }
+          { wort: "el sol", clickX: 67.97, clickY: 25.13, labelX: 74, labelY: 22 },
+          { wort: "la palmera", clickX: 14.36, clickY: 40.76, labelX: 22, labelY: 31 },
+          { wort: "el mar", clickX: 36.33, clickY: 47.46, labelX: 42, labelY: 44 },
+          { wort: "el barco", clickX: 53.03, clickY: 45.38, labelX: 56, labelY: 48 },
+          { wort: "la ola", clickX: 76.95, clickY: 58.01, labelX: 72, labelY: 58 },
+          { wort: "la tabla de surf", clickX: 46.58, clickY: 58.59, labelX: 61, labelY: 63 },
+          { wort: "el bañador", clickX: 38.28, clickY: 70.77, labelX: 56, labelY: 68 },
+          { wort: "la sombrilla", clickX: 10.25, clickY: 64.19, labelX: 12, labelY: 69 },
+          { wort: "la toalla", clickX: 12.21, clickY: 85.87, labelX: 18, labelY: 90 },
+          { wort: "las gafas de sol", clickX: 36.52, clickY: 90.30, labelX: 41, labelY: 92 },
+          { wort: "la crema solar", clickX: 59.86, clickY: 86.98, labelX: 66, labelY: 89 },
+          { wort: "la concha", clickX: 91.70, clickY: 90.30, labelX: 86, labelY: 90 },
+          { wort: "el chiringuito", clickX: 93.07, clickY: 52.60, labelX: 79, labelY: 66 }
         ]
       },
       {
         title: "La playa – Bild 2",
         file: "strand2.png?v=2",
         hotspots: [
-          { wort: "el sol", clickX: 28, clickY: 18, labelX: 33, labelY: 15 },
-          { wort: "la gaviota", clickX: 69, clickY: 18, labelX: 67, labelY: 13 },
-          { wort: "el socorrista", clickX: 72, clickY: 43, labelX: 80, labelY: 35 },
-          { wort: "el salvavidas", clickX: 56, clickY: 57, labelX: 51, labelY: 52 },
-          { wort: "la sombrilla", clickX: 18, clickY: 50, labelX: 27, labelY: 47 },
-          { wort: "la tumbona", clickX: 18, clickY: 75, labelX: 26, labelY: 72 },
-          { wort: "el sombrero de sol", clickX: 31, clickY: 78, labelX: 36, labelY: 73 },
-          { wort: "el castillo de arena", clickX: 49, clickY: 86, labelX: 57, labelY: 81 },
-          { wort: "la niña", clickX: 84, clickY: 74, labelX: 88, labelY: 69 },
-          { wort: "la pala", clickX: 61, clickY: 94, labelX: 65, labelY: 90 },
-          { wort: "la pelota", clickX: 77, clickY: 93, labelX: 83, labelY: 89 },
-          { wort: "el flotador", clickX: 89, clickY: 60, labelX: 82, labelY: 55 }
+          { wort: "el sol", clickX: 28.03, clickY: 17.97, labelX: 33, labelY: 15 },
+          { wort: "la gaviota", clickX: 68.95, clickY: 18.03, labelX: 67, labelY: 13 },
+          { wort: "el socorrista", clickX: 71.48, clickY: 42.71, labelX: 80, labelY: 35 },
+          { wort: "el salvavidas", clickX: 57.52, clickY: 57.03, labelX: 51, labelY: 52 },
+          { wort: "la sombrilla", clickX: 17.58, clickY: 51.50, labelX: 27, labelY: 47 },
+          { wort: "la tumbona", clickX: 17.97, clickY: 75.00, labelX: 26, labelY: 72 },
+          { wort: "el sombrero de sol", clickX: 30.76, clickY: 77.86, labelX: 36, labelY: 73 },
+          { wort: "el castillo de arena", clickX: 48.34, clickY: 86.00, labelX: 57, labelY: 81 },
+          { wort: "la niña", clickX: 83.79, clickY: 74.74, labelX: 88, labelY: 69 },
+          { wort: "la pala", clickX: 61.23, clickY: 94.14, labelX: 65, labelY: 90 },
+          { wort: "la pelota", clickX: 76.95, clickY: 92.90, labelX: 83, labelY: 89 },
+          { wort: "el flotador", clickX: 89.16, clickY: 62.17, labelX: 82, labelY: 55 }
         ]
       },
       {
@@ -163,7 +163,7 @@ window.APP_FOLDERS = {
         title: "Rutina diaria – Bild 1",
         file: "manana_v1.png",
         hotspots: [
-          { wort: "la mañana", clickX: 50, clickY: 15, labelX: 58, labelY: 10 },
+          { wort: "la mañana", clickX: 50.57, clickY: 20.59, labelX: 58, labelY: 10 },
           { wort: "despertarse", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31 },
           { wort: "levantarse", clickX: 50, clickY: 37, labelX: 50, labelY: 31 },
           { wort: "abrir la ventana", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31 },
@@ -179,7 +179,7 @@ window.APP_FOLDERS = {
         title: "Rutina diaria – Bild 2",
         file: "tarde_v1.png",
         hotspots: [
-          { wort: "la tarde", clickX: 50, clickY: 15, labelX: 58, labelY: 10 },
+          { wort: "la tarde", clickX: 50.47, clickY: 21.13, labelX: 58, labelY: 10 },
           { wort: "trabajar", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32 },
           { wort: "almorzar", clickX: 50, clickY: 38, labelX: 50, labelY: 32 },
           { wort: "terminar de trabajar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32 },
@@ -195,7 +195,7 @@ window.APP_FOLDERS = {
         title: "Rutina diaria – Bild 3",
         file: "noche_v1.png",
         hotspots: [
-          { wort: "la noche", clickX: 60, clickY: 14, labelX: 60, labelY: 9 },
+          { wort: "la noche", clickX: 55.45, clickY: 19.52, labelX: 60, labelY: 9 },
           { wort: "preparar la cena", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32 },
           { wort: "poner la mesa", clickX: 50, clickY: 38, labelX: 50, labelY: 32 },
           { wort: "cenar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32 },
@@ -211,7 +211,7 @@ window.APP_FOLDERS = {
         title: "Rutina diaria – Bild 4",
         file: "finde_v1.png",
         hotspots: [
-          { wort: "el fin de semana", clickX: 75, clickY: 14, labelX: 70, labelY: 9 },
+          { wort: "el fin de semana", clickX: 73.05, clickY: 16.60, labelX: 70, labelY: 9 },
           { wort: "levantarse tarde", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31 },
           { wort: "desayunar tranquilamente", clickX: 50, clickY: 37, labelX: 50, labelY: 31 },
           { wort: "hacer una excursión", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31 },
@@ -248,18 +248,18 @@ window.APP_FOLDERS = {
         title: "La casa – Bild 1",
         file: "Haus1.png",
         hotspots: [
-          { wort: "el ático", clickX: 46.6, clickY: 16.8, labelX: 50, labelY: 12 },
-          { wort: "el cuarto de los niños", clickX: 30.5, clickY: 33.0, labelX: 28, labelY: 38 },
-          { wort: "el dormitorio", clickX: 69.5, clickY: 33.8, labelX: 69, labelY: 38 },
-          { wort: "el salón", clickX: 29.0, clickY: 51.8, labelX: 22, labelY: 56 },
-          { wort: "el comedor", clickX: 51.5, clickY: 56.8, labelX: 51, labelY: 51 },
-          { wort: "la cocina", clickX: 76.1, clickY: 52.3, labelX: 76, labelY: 57 },
-          { wort: "el baño", clickX: 25.7, clickY: 69.9, labelX: 16.5, labelY: 74 },
-          { wort: "el pasillo", clickX: 43.8, clickY: 75.7, labelX: 44, labelY: 70 },
-          { wort: "el despacho", clickX: 64.2, clickY: 72.8, labelX: 63.5, labelY: 75 },
-          { wort: "el lavadero", clickX: 77.1, clickY: 71.0, labelX: 84, labelY: 74 },
-          { wort: "el sótano", clickX: 25.9, clickY: 87.0, labelX: 18, labelY: 91 },
-          { wort: "el trastero", clickX: 76.5, clickY: 87.0, labelX: 73, labelY: 91 }
+          { wort: "el ático", clickX: 46.58, clickY: 16.76, labelX: 50, labelY: 12 },
+          { wort: "el cuarto de los niños", clickX: 30.27, clickY: 32.37, labelX: 28, labelY: 38 },
+          { wort: "el dormitorio", clickX: 69.35, clickY: 33.78, labelX: 69, labelY: 38 },
+          { wort: "el salón", clickX: 28.94, clickY: 51.81, labelX: 22, labelY: 56 },
+          { wort: "el comedor", clickX: 51.52, clickY: 56.84, labelX: 51, labelY: 51 },
+          { wort: "la cocina", clickX: 76.09, clickY: 52.28, labelX: 76, labelY: 57 },
+          { wort: "el baño", clickX: 25.62, clickY: 69.97, labelX: 16.5, labelY: 74 },
+          { wort: "el pasillo", clickX: 43.83, clickY: 75.67, labelX: 44, labelY: 70 },
+          { wort: "el despacho", clickX: 64.23, clickY: 72.79, labelX: 63.5, labelY: 75 },
+          { wort: "el lavadero", clickX: 77.13, clickY: 70.98, labelX: 84, labelY: 74 },
+          { wort: "el sótano", clickX: 25.71, clickY: 86.86, labelX: 18, labelY: 91 },
+          { wort: "el trastero", clickX: 76.47, clickY: 86.93, labelX: 73, labelY: 91 }
         ]
       }
     ]
