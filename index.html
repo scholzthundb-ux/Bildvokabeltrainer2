@@ -157,17 +157,25 @@
         max(18px, env(safe-area-inset-bottom));
     }
 
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      margin: 0 auto 12px;
+    }
+
     .current-title {
       display: block;
-      width: fit-content;
-      max-width: 100%;
-      margin: 0 auto 12px;
+      flex: 1 1 auto;
+      min-width: 0;
       padding: 10px 16px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.68);
       color: var(--text-soft);
       font-size: clamp(0.9rem, 2.3vw, 1rem);
       font-weight: 700;
+      text-align: center;
       box-shadow: 0 8px 22px rgba(31, 42, 55, 0.08);
       backdrop-filter: blur(10px);
     }
@@ -690,7 +698,11 @@
   </div>
 
   <div id="app" class="app-wrap">
-    <div class="current-title" id="currentImageTitle"></div>
+    <div class="title-row">
+      <button class="nav-arrow-btn" id="prevImageBtn" aria-label="Vorheriges Bild"></button>
+      <div class="current-title" id="currentImageTitle"></div>
+      <button class="nav-arrow-btn is-next" id="nextImageBtn" aria-label="Nächstes Bild"></button>
+    </div>
 
     <div class="mode-switch">
       <button class="mode-segment active" id="lernBtn">Lernen</button>
@@ -700,11 +712,9 @@
     <div class="nav-row">
       <div class="nav-left">
         <button class="nav-arrow-btn" id="backToFolderBtn" aria-label="Zurück zum Menü"></button>
-        <button class="nav-arrow-btn" id="prevImageBtn" aria-label="Vorheriges Bild"></button>
       </div>
 
       <div class="nav-right">
-        <button class="nav-arrow-btn is-next" id="nextImageBtn" aria-label="Nächstes Bild"></button>
         <button class="mute-btn" id="muteBtn">Stumm</button>
         <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
       </div>
