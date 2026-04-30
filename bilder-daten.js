@@ -276,24 +276,48 @@ window.APP_FOLDERS = {
       {
         title: "La casa – Bild 3",
         file: "Haus5.png",
-        hotspots: []
+        hotspots: [
+          { wort: "el timbre", clickX: 10.9, clickY: 18.9, labelX: 18, labelY: 14.5, areaW: 8, areaH: 10 },
+          { wort: "el buzón", clickX: 12.0, clickY: 29.4, labelX: 19, labelY: 25.5, areaW: 12, areaH: 13 },
+          { wort: "la puerta", clickX: 25.0, clickY: 28.5, labelX: 35, labelY: 22.5, areaW: 24, areaH: 34 },
+          { wort: "la persiana", clickX: 76.0, clickY: 19.0, labelX: 68, labelY: 14.5, areaW: 29, areaH: 18 },
+          { wort: "la chimenea", clickX: 22.0, clickY: 67.0, labelX: 31, labelY: 62.5, areaW: 16, areaH: 22 },
+          { wort: "la claraboya", clickX: 56.0, clickY: 70.0, labelX: 63, labelY: 65.5, areaW: 24, areaH: 18 },
+          { wort: "la barandilla del balcón", clickX: 77.5, clickY: 78.0, labelX: 68, labelY: 72.5, areaW: 31, areaH: 25 }
+        ]
       },
       {
         title: "La casa – Bild 4",
         file: "Haus6.png",
         hotspots: [
-          { wort: "el tejado", clickX: 24.2, clickY: 13.6, labelX: 31, labelY: 9.5, areaW: 28, areaH: 12 },
-          { wort: "el balcón", clickX: 20.7, clickY: 33.2, labelX: 27.5, labelY: 28.5, areaW: 26, areaH: 14 },
-          { wort: "la fachada", clickX: 20.1, clickY: 48.0, labelX: 28, labelY: 43.5, areaW: 27, areaH: 16 },
-          { wort: "el ascensor", clickX: 68.7, clickY: 48.5, labelX: 78, labelY: 44, areaW: 14, areaH: 34 },
-          { wort: "la escalera", clickX: 90.2, clickY: 60.5, labelX: 80.5, labelY: 56, areaW: 18, areaH: 30 },
-          { wort: "la entrada", clickX: 32.0, clickY: 84.0, labelX: 39, labelY: 79.5, areaW: 19, areaH: 16 },
+          { wort: "el ático", clickX: 50.0, clickY: 16.5, labelX: 39, labelY: 11.5, areaW: 48, areaH: 18 },
+          { wort: "el segundo piso", clickX: 20.5, clickY: 31.5, labelX: 31, labelY: 26.5, areaW: 29, areaH: 15 },
+          { wort: "el primer piso", clickX: 20.5, clickY: 47.5, labelX: 31, labelY: 42.5, areaW: 29, areaH: 15 },
+          { wort: "la planta baja", clickX: 20.5, clickY: 63.5, labelX: 31, labelY: 58.5, areaW: 29, areaH: 15 },
+          { wort: "la escalera", clickX: 88.8, clickY: 55.0, labelX: 77.5, labelY: 50.5, areaW: 18, areaH: 36 },
+          { wort: "el ascensor", clickX: 68.8, clickY: 49.5, labelX: 79, labelY: 45, areaW: 14, areaH: 35 },
+          { wort: "el portal", clickX: 35.2, clickY: 84.0, labelX: 43, labelY: 79.5, areaW: 18, areaH: 18 },
           { wort: "los buzones", clickX: 18.8, clickY: 89.3, labelX: 27.5, labelY: 85, areaW: 13, areaH: 11 },
-          { wort: "el garaje", clickX: 89.7, clickY: 90.0, labelX: 79.5, labelY: 85, areaW: 22, areaH: 16 }
+          { wort: "el garaje", clickX: 87.8, clickY: 88.8, labelX: 78, labelY: 84, areaW: 26, areaH: 18 }
         ]
       },
       {
         title: "La casa – Bild 5",
+        file: "Haus7.png",
+        hotspots: [
+          { wort: "el porche", clickX: 50.0, clickY: 22.0, labelX: 40, labelY: 16.5, areaW: 37, areaH: 18 },
+          { wort: "la entrada", clickX: 56.0, clickY: 30.5, labelX: 65, labelY: 25.5, areaW: 11, areaH: 14 },
+          { wort: "el jardín", clickX: 18.5, clickY: 43.0, labelX: 27.5, labelY: 38, areaW: 24, areaH: 18 },
+          { wort: "el césped", clickX: 73.0, clickY: 50.0, labelX: 82, labelY: 45, areaW: 28, areaH: 22 },
+          { wort: "el camino", clickX: 52.0, clickY: 59.5, labelX: 63, labelY: 54.5, areaW: 20, areaH: 28 },
+          { wort: "la valla", clickX: 17.5, clickY: 70.5, labelX: 27.5, labelY: 65.5, areaW: 26, areaH: 16 },
+          { wort: "la verja", clickX: 50.0, clickY: 76.0, labelX: 40.5, labelY: 71, areaW: 18, areaH: 18 },
+          { wort: "la acera", clickX: 74.0, clickY: 88.5, labelX: 83, labelY: 83.5, areaW: 34, areaH: 12 },
+          { wort: "la calle", clickX: 32.0, clickY: 96.0, labelX: 22, labelY: 91, areaW: 56, areaH: 8 }
+        ]
+      },
+      {
+        title: "La casa – Bild 6",
         file: "Haus1.png",
         hotspots: [
           { wort: "el ático", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
