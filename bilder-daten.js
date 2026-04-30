@@ -304,9 +304,9 @@ window.APP_FOLDERS = {
           { wort: "la puerta", clickX: 26.0, clickY: 25.5, labelX: 35, labelY: 22.5, areaW: 15, areaH: 24 },
           { wort: "la persiana", clickX: 69.5, clickY: 19.0, labelX: 68, labelY: 14.5, areaW: 24, areaH: 18 },
           { wort: "la chimenea", clickX: 18.5, clickY: 62.5, labelX: 31, labelY: 62.5, areaW: 8, areaH: 10 },
-          { wort: "la claraboya", clickX: 50.5, clickY: 70.5, labelX: 63, labelY: 65.5, areaW: 22, areaH: 17 },
-          { wort: "el canalón", clickX: 45.5, clickY: 82.0, labelX: 57.5, labelY: 77.5, areaW: 24, areaH: 8 },
-          { wort: "la bajante", clickX: 23.8, clickY: 92.0, labelX: 37.5, labelY: 88.5, areaW: 12, areaH: 12 },
+          { wort: "la claraboya", clickX: 46.8, clickY: 70.5, labelX: 63, labelY: 65.5, areaW: 22, areaH: 17 },
+          { wort: "el canalón", clickX: 41.0, clickY: 82.0, labelX: 57.5, labelY: 77.5, areaW: 24, areaH: 8 },
+          { wort: "la bajante", clickX: 20.5, clickY: 92.0, labelX: 37.5, labelY: 88.5, areaW: 12, areaH: 12 },
           { wort: "la barandilla del balcón", clickX: 77.5, clickY: 78.0, labelX: 68, labelY: 72.5, areaW: 31, areaH: 25 }
         ]
       },
