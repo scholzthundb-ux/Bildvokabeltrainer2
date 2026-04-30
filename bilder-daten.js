@@ -163,79 +163,79 @@ window.APP_FOLDERS = {
         title: "Rutina diaria – Bild 1",
         file: "manana_v1.png",
         hotspots: [
-          { wort: "la mañana", clickX: 50.57, clickY: 20.59, labelX: 58, labelY: 10 },
-          { wort: "despertarse", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31 },
-          { wort: "levantarse", clickX: 50, clickY: 37, labelX: 50, labelY: 31 },
-          { wort: "abrir la ventana", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31 },
-          { wort: "ducharse", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55 },
-          { wort: "lavarse los dientes", clickX: 50, clickY: 61, labelX: 50, labelY: 55 },
-          { wort: "vestirse", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55 },
-          { wort: "desayunar", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78 },
-          { wort: "salir de casa", clickX: 50, clickY: 84, labelX: 50, labelY: 78 },
-          { wort: "ir al trabajo", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78 }
+          { wort: "la mañana", clickX: 50, clickY: 19.5, labelX: 58, labelY: 10, areaW: 86, areaH: 13 },
+          { wort: "despertarse", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31, areaW: 27, areaH: 20 },
+          { wort: "levantarse", clickX: 50, clickY: 37, labelX: 50, labelY: 31, areaW: 27, areaH: 20 },
+          { wort: "abrir la ventana", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31, areaW: 27, areaH: 20 },
+          { wort: "ducharse", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "lavarse los dientes", clickX: 50, clickY: 61, labelX: 50, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "vestirse", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "desayunar", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78, areaW: 27, areaH: 20 },
+          { wort: "salir de casa", clickX: 50, clickY: 84, labelX: 50, labelY: 78, areaW: 27, areaH: 20 },
+          { wort: "ir al trabajo", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78, areaW: 27, areaH: 20 }
         ]
       },
       {
         title: "Rutina diaria – Bild 2",
         file: "tarde_v1.png",
         hotspots: [
-          { wort: "la tarde", clickX: 50.47, clickY: 21.13, labelX: 58, labelY: 10 },
-          { wort: "trabajar", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32 },
-          { wort: "almorzar", clickX: 50, clickY: 38, labelX: 50, labelY: 32 },
-          { wort: "terminar de trabajar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32 },
-          { wort: "volver a casa", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55 },
-          { wort: "tomar un café", clickX: 50, clickY: 61, labelX: 50, labelY: 55 },
-          { wort: "dar un paseo", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55 },
-          { wort: "hacer deporte", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78 },
-          { wort: "hacer la compra", clickX: 50, clickY: 84, labelX: 50, labelY: 78 },
-          { wort: "recoger a los niños", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78 }
+          { wort: "la tarde", clickX: 50, clickY: 19.5, labelX: 58, labelY: 10, areaW: 86, areaH: 13 },
+          { wort: "trabajar", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32, areaW: 27, areaH: 20 },
+          { wort: "almorzar", clickX: 50, clickY: 38, labelX: 50, labelY: 32, areaW: 27, areaH: 20 },
+          { wort: "terminar de trabajar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32, areaW: 27, areaH: 20 },
+          { wort: "volver a casa", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "tomar un café", clickX: 50, clickY: 61, labelX: 50, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "dar un paseo", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "hacer deporte", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78, areaW: 27, areaH: 20 },
+          { wort: "hacer la compra", clickX: 50, clickY: 84, labelX: 50, labelY: 78, areaW: 27, areaH: 20 },
+          { wort: "recoger a los niños", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78, areaW: 27, areaH: 20 }
         ]
       },
       {
         title: "Rutina diaria – Bild 3",
         file: "noche_v1.png",
         hotspots: [
-          { wort: "la noche", clickX: 55.45, clickY: 19.52, labelX: 60, labelY: 9 },
-          { wort: "preparar la cena", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32 },
-          { wort: "poner la mesa", clickX: 50, clickY: 38, labelX: 50, labelY: 32 },
-          { wort: "cenar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32 },
-          { wort: "ver la tele", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55 },
-          { wort: "leer", clickX: 50, clickY: 61, labelX: 50, labelY: 55 },
-          { wort: "bañarse", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55 },
-          { wort: "ponerse el pijama", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78 },
-          { wort: "apagar la luz", clickX: 50, clickY: 84, labelX: 50, labelY: 78 },
-          { wort: "acostarse", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78 }
+          { wort: "la noche", clickX: 50, clickY: 19.5, labelX: 60, labelY: 9, areaW: 86, areaH: 13 },
+          { wort: "preparar la cena", clickX: 16.7, clickY: 38, labelX: 25, labelY: 32, areaW: 27, areaH: 20 },
+          { wort: "poner la mesa", clickX: 50, clickY: 38, labelX: 50, labelY: 32, areaW: 27, areaH: 20 },
+          { wort: "cenar", clickX: 83.3, clickY: 38, labelX: 75, labelY: 32, areaW: 27, areaH: 20 },
+          { wort: "ver la tele", clickX: 16.7, clickY: 61, labelX: 27, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "leer", clickX: 50, clickY: 61, labelX: 50, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "bañarse", clickX: 83.3, clickY: 61, labelX: 75, labelY: 55, areaW: 27, areaH: 20 },
+          { wort: "ponerse el pijama", clickX: 16.7, clickY: 84, labelX: 25, labelY: 78, areaW: 27, areaH: 20 },
+          { wort: "apagar la luz", clickX: 50, clickY: 84, labelX: 50, labelY: 78, areaW: 27, areaH: 20 },
+          { wort: "acostarse", clickX: 83.3, clickY: 84, labelX: 75, labelY: 78, areaW: 27, areaH: 20 }
         ]
       },
       {
         title: "Rutina diaria – Bild 4",
         file: "finde_v1.png",
         hotspots: [
-          { wort: "el fin de semana", clickX: 73.05, clickY: 16.60, labelX: 70, labelY: 9 },
-          { wort: "levantarse tarde", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31 },
-          { wort: "desayunar tranquilamente", clickX: 50, clickY: 37, labelX: 50, labelY: 31 },
-          { wort: "hacer una excursión", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31 },
-          { wort: "visitar a la familia", clickX: 16.7, clickY: 60, labelX: 27, labelY: 54 },
-          { wort: "quedar con amigos", clickX: 50, clickY: 60, labelX: 50, labelY: 54 },
-          { wort: "ir de compras", clickX: 83.3, clickY: 60, labelX: 75, labelY: 54 },
-          { wort: "ver una película", clickX: 16.7, clickY: 86, labelX: 25, labelY: 80 },
-          { wort: "salir a cenar", clickX: 50, clickY: 86, labelX: 50, labelY: 80 },
-          { wort: "descansar", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80 }
+          { wort: "el fin de semana", clickX: 50, clickY: 19.5, labelX: 70, labelY: 9, areaW: 86, areaH: 13 },
+          { wort: "levantarse tarde", clickX: 16.7, clickY: 37, labelX: 25, labelY: 31, areaW: 27, areaH: 20 },
+          { wort: "desayunar tranquilamente", clickX: 50, clickY: 37, labelX: 50, labelY: 31, areaW: 27, areaH: 20 },
+          { wort: "hacer una excursión", clickX: 83.3, clickY: 37, labelX: 75, labelY: 31, areaW: 27, areaH: 20 },
+          { wort: "visitar a la familia", clickX: 16.7, clickY: 60, labelX: 27, labelY: 54, areaW: 27, areaH: 20 },
+          { wort: "quedar con amigos", clickX: 50, clickY: 60, labelX: 50, labelY: 54, areaW: 27, areaH: 20 },
+          { wort: "ir de compras", clickX: 83.3, clickY: 60, labelX: 75, labelY: 54, areaW: 27, areaH: 20 },
+          { wort: "ver una película", clickX: 16.7, clickY: 86, labelX: 25, labelY: 80, areaW: 27, areaH: 20 },
+          { wort: "salir a cenar", clickX: 50, clickY: 86, labelX: 50, labelY: 80, areaW: 27, areaH: 20 },
+          { wort: "descansar", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80, areaW: 27, areaH: 20 }
         ]
       },
       {
         title: "Rutina diaria – Bild 5",
         file: "rutina1.png",
         hotspots: [
-          { wort: "despertar a los niños", clickX: 16.7, clickY: 20, labelX: 28, labelY: 13 },
-          { wort: "preparar el desayuno", clickX: 50, clickY: 20, labelX: 50, labelY: 13 },
-          { wort: "llevar a los niños al colegio", clickX: 83.3, clickY: 20, labelX: 72, labelY: 13 },
-          { wort: "recoger a los niños", clickX: 16.7, clickY: 50, labelX: 28, labelY: 42 },
-          { wort: "ayudar con los deberes", clickX: 50, clickY: 50, labelX: 50, labelY: 42 },
-          { wort: "preparar la merienda", clickX: 83.3, clickY: 50, labelX: 72, labelY: 42 },
-          { wort: "jugar juntos", clickX: 16.7, clickY: 78, labelX: 28, labelY: 70 },
-          { wort: "leer un cuento", clickX: 50, clickY: 78, labelX: 50, labelY: 70 },
-          { wort: "acostar a los niños", clickX: 83.3, clickY: 78, labelX: 72, labelY: 70 }
+          { wort: "despertar a los niños", clickX: 16.7, clickY: 20, labelX: 28, labelY: 13, areaW: 27, areaH: 22 },
+          { wort: "preparar el desayuno", clickX: 50, clickY: 20, labelX: 50, labelY: 13, areaW: 27, areaH: 22 },
+          { wort: "llevar a los niños al colegio", clickX: 83.3, clickY: 20, labelX: 72, labelY: 13, areaW: 27, areaH: 22 },
+          { wort: "recoger a los niños", clickX: 16.7, clickY: 50, labelX: 28, labelY: 42, areaW: 27, areaH: 22 },
+          { wort: "ayudar con los deberes", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 27, areaH: 22 },
+          { wort: "preparar la merienda", clickX: 83.3, clickY: 50, labelX: 72, labelY: 42, areaW: 27, areaH: 22 },
+          { wort: "jugar juntos", clickX: 16.7, clickY: 78, labelX: 28, labelY: 70, areaW: 27, areaH: 22 },
+          { wort: "leer un cuento", clickX: 50, clickY: 78, labelX: 50, labelY: 70, areaW: 27, areaH: 22 },
+          { wort: "acostar a los niños", clickX: 83.3, clickY: 78, labelX: 72, labelY: 70, areaW: 27, areaH: 22 }
         ]
       }
     ]
