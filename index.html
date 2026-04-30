@@ -801,12 +801,14 @@
     let repeatQueue = [];
     let recentQuestions = [];
     let currentLabelHotspot = null;
+    let labelHideTimer = null;
     let activeZoomHotspot = null;
     let pendingZoomReveal = null;
     let zoomRevealFrame = null;
     let zoomRevealTimer = null;
 
     const MIN_REPEAT_DELAY = 3;
+    const LABEL_AUTO_HIDE_MS = 5000;
     const ZOOM_REVEAL_DURATION = 960;
 
     let imageDisplay = { x: 0, y: 0, w: 0, h: 0 };
@@ -1305,6 +1307,11 @@
     }
 
     function showLabel(hotspot) {
+      if (labelHideTimer) {
+        clearTimeout(labelHideTimer);
+        labelHideTimer = null;
+      }
+
       currentLabelHotspot = hotspot;
 
       label.textContent = hotspot.wort;
@@ -1315,6 +1322,12 @@
       label.classList.remove("show");
       void label.offsetWidth;
       label.classList.add("show");
+
+      if (mode === "lernen") {
+        labelHideTimer = setTimeout(() => {
+          hideLabel();
+        }, LABEL_AUTO_HIDE_MS);
+      }
     }
 
     function repositionCurrentLabel() {
@@ -1326,6 +1339,11 @@
     }
 
     function hideLabel() {
+      if (labelHideTimer) {
+        clearTimeout(labelHideTimer);
+        labelHideTimer = null;
+      }
+
       currentLabelHotspot = null;
       label.style.display = "none";
       label.classList.remove("show");
