@@ -277,18 +277,18 @@ window.APP_FOLDERS = {
         title: "La casa – Bild 3",
         file: "Haus1.png",
         hotspots: [
-          { wort: "el ático", clickX: 46.58, clickY: 16.76, labelX: 50, labelY: 12 },
-          { wort: "el cuarto de los niños", clickX: 30.27, clickY: 32.37, labelX: 28, labelY: 38 },
-          { wort: "el dormitorio", clickX: 69.35, clickY: 33.78, labelX: 69, labelY: 38 },
-          { wort: "el salón", clickX: 28.94, clickY: 51.81, labelX: 22, labelY: 56 },
-          { wort: "el comedor", clickX: 51.52, clickY: 56.84, labelX: 51, labelY: 51 },
-          { wort: "la cocina", clickX: 76.09, clickY: 52.28, labelX: 76, labelY: 57 },
-          { wort: "el baño", clickX: 25.62, clickY: 69.97, labelX: 16.5, labelY: 74 },
-          { wort: "el pasillo", clickX: 43.83, clickY: 75.67, labelX: 44, labelY: 70 },
-          { wort: "el despacho", clickX: 64.23, clickY: 72.79, labelX: 63.5, labelY: 75 },
-          { wort: "el lavadero", clickX: 77.13, clickY: 70.98, labelX: 84, labelY: 74 },
-          { wort: "el sótano", clickX: 25.71, clickY: 86.86, labelX: 18, labelY: 91 },
-          { wort: "el trastero", clickX: 76.47, clickY: 86.93, labelX: 73, labelY: 91 }
+          { wort: "el ático", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 50, areaH: 22 },
+          { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 33, areaH: 19 },
+          { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 33, areaH: 19 },
+          { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 27, areaH: 20 },
+          { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 18, areaH: 20 },
+          { wort: "la cocina", clickX: 75.8, clickY: 52.5, labelX: 76, labelY: 57, areaW: 20, areaH: 20 },
+          { wort: "el baño", clickX: 25.4, clickY: 70, labelX: 16.5, labelY: 74, areaW: 19, areaH: 18 },
+          { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 16, areaH: 18 },
+          { wort: "el despacho", clickX: 63.9, clickY: 70, labelX: 63.5, labelY: 75, areaW: 18, areaH: 18 },
+          { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 15, areaH: 18 },
+          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 20, areaH: 17 },
+          { wort: "el trastero", clickX: 76.5, clickY: 86.8, labelX: 73, labelY: 91, areaW: 24, areaH: 17 }
         ]
       }
     ]
