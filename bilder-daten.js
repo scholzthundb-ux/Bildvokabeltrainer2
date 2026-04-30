@@ -17,6 +17,28 @@
 // }
 
 window.APP_FOLDERS = {
+  zahlen: {
+    title: "Los números",
+    images: [
+      {
+        title: "Los números – Bild 1",
+        file: "Zahlen1.png",
+        hotspots: [
+          { wort: "uno", clickX: 20.5, clickY: 19.5, labelX: 26, labelY: 10.5, areaW: 22, areaH: 20 },
+          { wort: "dos", clickX: 47.5, clickY: 18.5, labelX: 52, labelY: 10.5, areaW: 23, areaH: 20 },
+          { wort: "tres", clickX: 76.5, clickY: 19.0, labelX: 81, labelY: 10.5, areaW: 24, areaH: 21 },
+          { wort: "cuatro", clickX: 19.5, clickY: 38.0, labelX: 27, labelY: 29.5, areaW: 24, areaH: 22 },
+          { wort: "cinco", clickX: 49.5, clickY: 39.0, labelX: 55, labelY: 30.5, areaW: 24, areaH: 21 },
+          { wort: "seis", clickX: 77.0, clickY: 38.5, labelX: 83, labelY: 30, areaW: 25, areaH: 22 },
+          { wort: "siete", clickX: 26.0, clickY: 60.5, labelX: 19, labelY: 53, areaW: 33, areaH: 16 },
+          { wort: "ocho", clickX: 67.0, clickY: 61.0, labelX: 60, labelY: 53, areaW: 29, areaH: 17 },
+          { wort: "nueve", clickX: 21.0, clickY: 84.0, labelX: 16, labelY: 76, areaW: 25, areaH: 21 },
+          { wort: "diez", clickX: 65.5, clickY: 84.5, labelX: 58, labelY: 75.5, areaW: 31, areaH: 23 }
+        ]
+      }
+    ]
+  },
+
   playa: {
     title: "La playa",
     images: [
