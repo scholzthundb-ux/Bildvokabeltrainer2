@@ -66,17 +66,17 @@ window.APP_FOLDERS = {
         file: "strand2.png?v=2",
         hotspots: [
           { wort: "el sol", clickX: 24.9, clickY: 16.2, labelX: 33, labelY: 15, areaW: 18, areaH: 18, shape: "circle" },
-          { wort: "la gaviota", clickX: 68.95, clickY: 18.03, labelX: 67, labelY: 13 },
+          { wort: "la gaviota", clickX: 68.95, clickY: 18.03, labelX: 67, labelY: 13, areaW: 14, areaH: 10 },
           { wort: "el socorrista", clickX: 75.0, clickY: 42.71, labelX: 80, labelY: 35, areaW: 14, areaH: 28 },
           { wort: "el salvavidas", clickX: 57.52, clickY: 57.03, labelX: 51, labelY: 52, areaW: 16, areaH: 16, shape: "circle" },
-          { wort: "la sombrilla", clickX: 17.58, clickY: 49.6, labelX: 27, labelY: 47, areaW: 24, areaH: 23 },
+          { wort: "la sombrilla", clickX: 17.58, clickY: 48.2, labelX: 27, labelY: 47, areaW: 24, areaH: 23 },
           { wort: "la tumbona", clickX: 17.97, clickY: 75.00, labelX: 26, labelY: 72 },
           { wort: "el sombrero de sol", clickX: 30.76, clickY: 75.6, labelX: 36, labelY: 73, areaW: 11, areaH: 11 },
-          { wort: "el castillo de arena", clickX: 48.34, clickY: 86.00, labelX: 57, labelY: 81, areaW: 18, areaH: 16 },
+          { wort: "el castillo de arena", clickX: 49.7, clickY: 84.5, labelX: 57, labelY: 81, areaW: 18, areaH: 16 },
           { wort: "la niña", clickX: 83.79, clickY: 74.74, labelX: 88, labelY: 69 },
           { wort: "la pala", clickX: 63.0, clickY: 92.9, labelX: 65, labelY: 90, areaW: 12, areaH: 10 },
-          { wort: "la pelota", clickX: 80.7, clickY: 90.8, labelX: 83, labelY: 89, areaW: 8, areaH: 8, shape: "circle" },
-          { wort: "el flotador", clickX: 84.9, clickY: 62.17, labelX: 82, labelY: 55, areaW: 17, areaH: 17, shape: "circle" }
+          { wort: "la pelota", clickX: 81.8, clickY: 89.6, labelX: 83, labelY: 89, areaW: 8, areaH: 8, shape: "circle" },
+          { wort: "el flotador", clickX: 83.1, clickY: 62.17, labelX: 82, labelY: 55, areaW: 17, areaH: 17, shape: "circle" }
         ]
       },
       {
