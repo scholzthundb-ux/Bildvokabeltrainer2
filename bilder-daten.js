@@ -283,6 +283,8 @@ window.APP_FOLDERS = {
           { wort: "la persiana", clickX: 76.0, clickY: 19.0, labelX: 68, labelY: 14.5, areaW: 29, areaH: 18 },
           { wort: "la chimenea", clickX: 22.0, clickY: 67.0, labelX: 31, labelY: 62.5, areaW: 16, areaH: 22 },
           { wort: "la claraboya", clickX: 56.0, clickY: 70.0, labelX: 63, labelY: 65.5, areaW: 24, areaH: 18 },
+          { wort: "el canalón", clickX: 49.5, clickY: 82.0, labelX: 57.5, labelY: 77.5, areaW: 28, areaH: 10 },
+          { wort: "la bajante", clickX: 28.0, clickY: 93.0, labelX: 37.5, labelY: 88.5, areaW: 16, areaH: 12 },
           { wort: "la barandilla del balcón", clickX: 77.5, clickY: 78.0, labelX: 68, labelY: 72.5, areaW: 31, areaH: 25 }
         ]
       },
