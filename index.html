@@ -236,7 +236,7 @@
       margin-left: auto;
     }
 
-    .back-arrow {
+    .nav-arrow-btn {
       position: relative;
       background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(244, 247, 252, 0.88) 100%);
       color: #32445c;
@@ -255,7 +255,7 @@
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
 
-    .back-arrow::before {
+    .nav-arrow-btn::before {
       content: "←";
       font-size: 24px;
       font-weight: 800;
@@ -263,15 +263,32 @@
       transform: translateX(-1px);
     }
 
-    .back-arrow:hover {
+    .nav-arrow-btn:hover {
       background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(237, 242, 249, 0.94) 100%);
       box-shadow:
         0 12px 28px rgba(31, 42, 55, 0.14),
         inset 0 1px 0 rgba(255,255,255,0.9);
     }
 
-    .back-arrow:active {
+    .nav-arrow-btn:active {
       transform: scale(0.95);
+    }
+
+    .nav-arrow-btn.is-next::before {
+      content: "→";
+      transform: translateX(1px);
+    }
+
+    .nav-arrow-btn:disabled {
+      opacity: 0.45;
+      cursor: default;
+      box-shadow:
+        0 6px 18px rgba(31, 42, 55, 0.06),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+
+    .nav-arrow-btn:disabled:active {
+      transform: none;
     }
 
     .fullscreen-btn,
@@ -581,12 +598,12 @@
         min-height: 36px;
       }
 
-      .back-arrow {
+      .nav-arrow-btn {
         width: 54px;
         height: 50px;
       }
 
-      .back-arrow::before {
+      .nav-arrow-btn::before {
         font-size: 22px;
       }
 
@@ -682,10 +699,12 @@
 
     <div class="nav-row">
       <div class="nav-left">
-        <button class="back-arrow" id="backToFolderBtn" aria-label="Zurück"></button>
+        <button class="nav-arrow-btn" id="backToFolderBtn" aria-label="Zurück zum Menü"></button>
+        <button class="nav-arrow-btn" id="prevImageBtn" aria-label="Vorheriges Bild"></button>
       </div>
 
       <div class="nav-right">
+        <button class="nav-arrow-btn is-next" id="nextImageBtn" aria-label="Nächstes Bild"></button>
         <button class="mute-btn" id="muteBtn">Stumm</button>
         <button class="fullscreen-btn" id="fullscreenBtn">Vollbild</button>
       </div>
@@ -760,6 +779,8 @@
     const fullscreenBtn = document.getElementById("fullscreenBtn");
     const speakBtn = document.getElementById("speakBtn");
     const muteBtn = document.getElementById("muteBtn");
+    const prevImageBtn = document.getElementById("prevImageBtn");
+    const nextImageBtn = document.getElementById("nextImageBtn");
     document.querySelectorAll(".folder-open-btn").forEach((btn) => {
       btn.addEventListener("click", () => openFolder(btn.dataset.folder));
     });
@@ -771,6 +792,8 @@
     fullscreenBtn.addEventListener("click", toggleFullscreen);
     speakBtn.addEventListener("click", () => speakWord(gesucht));
     muteBtn.addEventListener("click", toggleMute);
+    prevImageBtn.addEventListener("click", showPrevImage);
+    nextImageBtn.addEventListener("click", showNextImage);
 
     bildContainer.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -820,6 +843,14 @@
       currentImageTitle.textContent = `${imageData.title} von ${total}`;
     }
 
+    function updateImageNavButtons() {
+      const total = folders[currentFolderKey].images.length;
+      const canNavigate = total > 1 && !isZoomOpen();
+
+      prevImageBtn.disabled = !canNavigate;
+      nextImageBtn.disabled = !canNavigate;
+    }
+
     function openFolder(folderKey) {
       currentFolderKey = folderKey;
       currentImageIndex = 0;
@@ -861,6 +892,7 @@
 
       updateModeButtons();
       updateMuteButton();
+      updateImageNavButtons();
       loadCurrentImage();
 
       setTimeout(async () => {
@@ -935,6 +967,7 @@
 
           updateModeButtons();
           updateMuteButton();
+          updateImageNavButtons();
 
           if (afterLoadAction) {
             afterLoadAction();
@@ -1298,6 +1331,7 @@
 
             updateModeButtons();
             updateMuteButton();
+            updateImageNavButtons();
           }, 60);
         };
 
@@ -1498,6 +1532,7 @@
     });
 
     updateMuteButton();
+    updateImageNavButtons();
   </script>
 </body>
 </html>
