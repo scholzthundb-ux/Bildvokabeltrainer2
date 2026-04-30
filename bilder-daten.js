@@ -368,15 +368,15 @@ window.APP_FOLDERS = {
         title: "Las habitaciones – Bild 1",
         file: "Haus9.png",
         hotspots: [
-          { wort: "puerta", clickX: 10.8, clickY: 49.5, labelX: 18, labelY: 37, areaW: 17, areaH: 56 },
-          { wort: "interruptor", clickX: 4.9, clickY: 46.5, labelX: 12.5, labelY: 42.5, areaW: 6, areaH: 12 },
-          { wort: "techo", clickX: 50.0, clickY: 13.5, labelX: 57, labelY: 8.5, areaW: 62, areaH: 22 },
-          { wort: "pared", clickX: 52.5, clickY: 43.5, labelX: 61, labelY: 38.5, areaW: 42, areaH: 30 },
-          { wort: "ventana", clickX: 88.0, clickY: 40.0, labelX: 79.5, labelY: 34.5, areaW: 17, areaH: 27 },
-          { wort: "alféizar", clickX: 86.0, clickY: 51.0, labelX: 79.5, labelY: 56.5, areaW: 18, areaH: 8 },
-          { wort: "enchufe", clickX: 26.0, clickY: 60.0, labelX: 18.5, labelY: 65, areaW: 7, areaH: 8 },
-          { wort: "esquina", clickX: 72.8, clickY: 61.5, labelX: 80, labelY: 66, areaW: 8, areaH: 8, shape: "circle" },
-          { wort: "suelo", clickX: 57.0, clickY: 80.5, labelX: 65.5, labelY: 74.5, areaW: 62, areaH: 38 }
+          { wort: "la puerta", clickX: 10.8, clickY: 49.5, labelX: 18, labelY: 37, areaW: 17, areaH: 56 },
+          { wort: "el interruptor", clickX: 4.9, clickY: 46.5, labelX: 12.5, labelY: 42.5, areaW: 6, areaH: 12 },
+          { wort: "el techo", clickX: 50.0, clickY: 13.5, labelX: 57, labelY: 8.5, areaW: 62, areaH: 22 },
+          { wort: "la pared", clickX: 52.5, clickY: 43.5, labelX: 61, labelY: 38.5, areaW: 42, areaH: 30 },
+          { wort: "la ventana", clickX: 88.0, clickY: 40.0, labelX: 79.5, labelY: 34.5, areaW: 17, areaH: 27 },
+          { wort: "el alféizar", clickX: 86.0, clickY: 51.0, labelX: 79.5, labelY: 56.5, areaW: 18, areaH: 8 },
+          { wort: "el enchufe", clickX: 26.0, clickY: 60.0, labelX: 18.5, labelY: 65, areaW: 7, areaH: 8 },
+          { wort: "la esquina", clickX: 72.8, clickY: 61.5, labelX: 80, labelY: 66, areaW: 8, areaH: 8, shape: "circle" },
+          { wort: "el suelo", clickX: 57.0, clickY: 80.5, labelX: 65.5, labelY: 74.5, areaW: 62, areaH: 38 }
         ]
       },
       {
