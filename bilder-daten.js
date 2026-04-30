@@ -354,8 +354,8 @@ window.APP_FOLDERS = {
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
-          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 18, areaH: 15 },
-          { wort: "el trastero", clickX: 73.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 21, areaH: 15 }
+          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 31, areaH: 18 },
+          { wort: "el trastero", clickX: 73.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 27, areaH: 18 }
         ]
       }
     ]
@@ -394,8 +394,8 @@ window.APP_FOLDERS = {
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
-          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 18, areaH: 15 },
-          { wort: "el trastero", clickX: 73.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 21, areaH: 15 }
+          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 31, areaH: 18 },
+          { wort: "el trastero", clickX: 73.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 27, areaH: 18 }
         ]
       }
     ]
