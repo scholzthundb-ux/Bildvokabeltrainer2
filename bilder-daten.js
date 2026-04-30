@@ -321,7 +321,7 @@ window.APP_FOLDERS = {
           { wort: "la escalera", clickX: 83.6, clickY: 52.0, labelX: 77.5, labelY: 50.5, areaW: 19, areaH: 43 },
           { wort: "el ascensor", clickX: 62.8, clickY: 49.5, labelX: 79, labelY: 45, areaW: 12, areaH: 35 },
           { wort: "el portal", clickX: 41.5, clickY: 84.0, labelX: 43, labelY: 79.5, areaW: 17, areaH: 18 },
-          { wort: "los buzones", clickX: 18.8, clickY: 89.3, labelX: 27.5, labelY: 85, areaW: 13, areaH: 11 },
+          { wort: "los buzones", clickX: 21.0, clickY: 87.7, labelX: 27.5, labelY: 85, areaW: 13, areaH: 11 },
           { wort: "el garaje", clickX: 79.5, clickY: 87.8, labelX: 78, labelY: 84, areaW: 36, areaH: 18 }
         ]
       },
