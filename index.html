@@ -439,10 +439,23 @@
       z-index: 11;
       background: transparent;
       border: none;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: none;
       cursor: pointer;
       width: clamp(28px, 7vw, 54px);
       height: clamp(28px, 7vw, 54px);
       pointer-events: auto;
+    }
+
+    .hotspot:focus,
+    .hotspot:focus-visible,
+    .hotspot:active {
+      outline: none;
+      background: transparent;
+      box-shadow: none;
     }
 
     .hotspot.circle {
