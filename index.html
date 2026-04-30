@@ -737,6 +737,7 @@
     let repeatQueue = [];
     let recentQuestions = [];
     let currentLabelHotspot = null;
+    let activeZoomHotspot = null;
 
     const MIN_REPEAT_DELAY = 3;
 
@@ -787,6 +788,21 @@
       return folders[currentFolderKey].images[currentImageIndex];
     }
 
+    function isZoomOpen() {
+      return !!activeZoomHotspot;
+    }
+
+    function getDisplayedImageData() {
+      if (!activeZoomHotspot) {
+        return getCurrentImageData();
+      }
+
+      return {
+        file: activeZoomHotspot.zoomImage,
+        hotspots: activeZoomHotspot.zoomHotspots || []
+      };
+    }
+
     function updateMuteButton() {
       muteBtn.textContent = isMuted ? "Ton an" : "Stumm";
       muteBtn.classList.toggle("is-muted", isMuted);
@@ -811,6 +827,11 @@
     }
 
     async function backToStart() {
+      if (isZoomOpen()) {
+        closeZoomImage();
+        return;
+      }
+
       app.style.display = "none";
       menu.style.display = "flex";
 
@@ -827,6 +848,7 @@
 
     async function openImage(index) {
       currentImageIndex = index;
+      activeZoomHotspot = null;
 
       menu.style.display = "none";
       app.style.display = "block";
@@ -870,7 +892,9 @@
       }
 
       if (currentFolderKey === "casa") {
-        lernInfo.textContent = "Tippe auf einen Raum oder Bereich im Haus.";
+        lernInfo.textContent = isZoomOpen()
+          ? "Jetzt erscheint das Wort zum vergrößerten Bild."
+          : "Tippe auf einen Raum oder Bereich im Haus.";
         return;
       }
 
@@ -882,8 +906,8 @@
       lernInfo.textContent = "Tippe auf ein markiertes Motiv.";
     }
 
-    function loadCurrentImage() {
-      const imageData = getCurrentImageData();
+    function loadCurrentImage(afterLoadAction = null) {
+      const imageData = getDisplayedImageData();
 
       updateCurrentTitle();
       feedback.textContent = "";
@@ -900,7 +924,7 @@
           if (mode === "lernen") {
             quizBox.style.display = "none";
             lernInfo.style.display = "block";
-            swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
+            swipeInfo.style.display = folders[currentFolderKey].images.length > 1 && !isZoomOpen() ? "block" : "none";
           } else {
             quizBox.style.display = "block";
             lernInfo.style.display = "none";
@@ -911,6 +935,10 @@
 
           updateModeButtons();
           updateMuteButton();
+
+          if (afterLoadAction) {
+            afterLoadAction();
+          }
         }, 60);
       };
 
@@ -958,7 +986,7 @@
       updateImageDisplay();
       hotspotsLayer.innerHTML = "";
 
-      getCurrentImageData().hotspots.forEach((h) => {
+      getDisplayedImageData().hotspots.forEach((h) => {
         const d = document.createElement("button");
 
         d.className = "hotspot";
@@ -1002,6 +1030,12 @@
       feedback.textContent = "";
       feedback.className = "";
 
+      if (isZoomOpen()) {
+        activeZoomHotspot = null;
+        loadCurrentImage();
+        return;
+      }
+
       if (neu === "lernen") {
         quizBox.style.display = "none";
         lernInfo.style.display = "block";
@@ -1019,6 +1053,11 @@
 
     function onHotspotClick(h, el) {
       if (mode === "lernen") {
+        if (h.zoomImage && !isZoomOpen()) {
+          openZoomImage(h);
+          return;
+        }
+
         showLabel(h);
         speakWord(h.wort);
         return;
@@ -1083,6 +1122,36 @@
       currentLabelHotspot = null;
       label.style.display = "none";
       label.classList.remove("show");
+    }
+
+    function openZoomImage(hotspot) {
+      clearTimeout(timer);
+      timer = null;
+
+      stopSpeech();
+      hideLabel();
+
+      activeZoomHotspot = hotspot;
+
+      loadCurrentImage(() => {
+        showLabel({
+          wort: hotspot.wort,
+          labelX: hotspot.zoomLabelX ?? 50,
+          labelY: hotspot.zoomLabelY ?? 10
+        });
+        speakWord(hotspot.wort);
+      });
+    }
+
+    function closeZoomImage() {
+      clearTimeout(timer);
+      timer = null;
+
+      stopSpeech();
+      hideLabel();
+
+      activeZoomHotspot = null;
+      loadCurrentImage();
     }
 
     function shuffleArray(arr) {
@@ -1239,7 +1308,7 @@
     function showNextImage() {
       const total = folders[currentFolderKey].images.length;
 
-      if (isAnimating || total < 2) return;
+      if (isAnimating || total < 2 || isZoomOpen()) return;
 
       clearTimeout(timer);
       timer = null;
@@ -1255,7 +1324,7 @@
     function showPrevImage() {
       const total = folders[currentFolderKey].images.length;
 
-      if (isAnimating || total < 2) return;
+      if (isAnimating || total < 2 || isZoomOpen()) return;
 
       clearTimeout(timer);
       timer = null;
@@ -1271,7 +1340,7 @@
     function handleSwipe() {
       const total = folders[currentFolderKey].images.length;
 
-      if (isAnimating || total < 2) return;
+      if (isAnimating || total < 2 || isZoomOpen()) return;
 
       const diff = touchEndX - touchStartX;
 
