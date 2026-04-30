@@ -407,33 +407,22 @@
       -webkit-user-drag: none;
     }
 
-    .bild.zoom-reveal-ready {
-      transition:
-        clip-path 0.96s cubic-bezier(0.2, 0.85, 0.2, 1),
-        opacity 0.96s cubic-bezier(0.2, 0.85, 0.2, 1),
-        transform 0.96s cubic-bezier(0.2, 0.85, 0.2, 1);
-      clip-path: circle(0% at var(--zoom-origin-x) var(--zoom-origin-y));
-      opacity: 0.82;
-      transform: scale(0.985);
+    #zoomRevealCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      z-index: 9;
+      pointer-events: none;
     }
 
-    .bild.zoom-reveal-active {
-      transition:
-        clip-path 0.96s cubic-bezier(0.2, 0.85, 0.2, 1),
-        opacity 0.96s cubic-bezier(0.2, 0.85, 0.2, 1),
-        transform 0.96s cubic-bezier(0.2, 0.85, 0.2, 1);
-      clip-path: circle(150% at var(--zoom-origin-x) var(--zoom-origin-y));
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    .bild.zoom-reveal-ready #hotspots,
-    .bild.zoom-reveal-active #hotspots {
+    .bild.zoom-canvas-active #bild,
+    .bild.zoom-canvas-active #hotspots {
       opacity: 0;
     }
 
-    .bild.zoom-reveal-ready .hotspot,
-    .bild.zoom-reveal-active .hotspot {
+    .bild.zoom-canvas-active .hotspot {
       pointer-events: none;
     }
 
@@ -769,6 +758,7 @@
 
     <div class="bild" id="bildContainer">
       <img id="bild" src="" alt="Vokabelbild" />
+      <canvas id="zoomRevealCanvas" aria-hidden="true"></canvas>
       <div id="hotspots"></div>
       <div id="label"></div>
     </div>
@@ -800,6 +790,7 @@
     let currentLabelHotspot = null;
     let activeZoomHotspot = null;
     let pendingZoomReveal = null;
+    let zoomRevealFrame = null;
     let zoomRevealTimer = null;
 
     const MIN_REPEAT_DELAY = 3;
@@ -819,6 +810,8 @@
     const lernBtn = document.getElementById("lernBtn");
     const quizBtn = document.getElementById("quizBtn");
     const bild = document.getElementById("bild");
+    const zoomRevealCanvas = document.getElementById("zoomRevealCanvas");
+    const zoomRevealCtx = zoomRevealCanvas.getContext("2d");
     const currentImageTitle = document.getElementById("currentImageTitle");
     const bildContainer = document.getElementById("bildContainer");
     const fullscreenBtn = document.getElementById("fullscreenBtn");
@@ -1035,9 +1028,17 @@
         zoomRevealTimer = null;
       }
 
-      bildContainer.classList.remove("zoom-reveal-ready", "zoom-reveal-active");
+      if (zoomRevealFrame) {
+        cancelAnimationFrame(zoomRevealFrame);
+        zoomRevealFrame = null;
+      }
+
+      bildContainer.classList.remove("zoom-canvas-active");
       bildContainer.style.removeProperty("--zoom-origin-x");
       bildContainer.style.removeProperty("--zoom-origin-y");
+
+      zoomRevealCanvas.style.display = "none";
+      zoomRevealCtx.clearRect(0, 0, zoomRevealCanvas.width, zoomRevealCanvas.height);
 
       if (clearPending) {
         pendingZoomReveal = null;
@@ -1058,10 +1059,6 @@
         originX: `${originX}%`,
         originY: `${originY}%`
       };
-
-      bildContainer.style.setProperty("--zoom-origin-x", pendingZoomReveal.originX);
-      bildContainer.style.setProperty("--zoom-origin-y", pendingZoomReveal.originY);
-      bildContainer.classList.add("zoom-reveal-ready");
     }
 
     function runAfterImageLoad(afterLoadAction) {
@@ -1075,24 +1072,70 @@
       const revealOrigin = pendingZoomReveal;
       pendingZoomReveal = null;
 
-      bildContainer.style.setProperty("--zoom-origin-x", revealOrigin.originX);
-      bildContainer.style.setProperty("--zoom-origin-y", revealOrigin.originY);
+      startZoomReveal(revealOrigin, afterLoadAction);
+    }
 
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          bildContainer.classList.remove("zoom-reveal-ready");
-          void bild.offsetWidth;
-          bildContainer.classList.add("zoom-reveal-active");
+    function drawZoomRevealFrame(originX, originY, radius) {
+      const width = zoomRevealCanvas.width / (window.devicePixelRatio || 1);
+      const height = zoomRevealCanvas.height / (window.devicePixelRatio || 1);
 
-          zoomRevealTimer = setTimeout(() => {
-            clearZoomReveal(false);
+      zoomRevealCtx.clearRect(0, 0, width, height);
+      zoomRevealCtx.save();
+      zoomRevealCtx.beginPath();
+      zoomRevealCtx.arc(originX, originY, radius, 0, Math.PI * 2);
+      zoomRevealCtx.clip();
+      zoomRevealCtx.drawImage(bild, imageDisplay.x, imageDisplay.y, imageDisplay.w, imageDisplay.h);
+      zoomRevealCtx.restore();
+    }
 
-            if (afterLoadAction) {
-              afterLoadAction();
-            }
-          }, ZOOM_REVEAL_DURATION);
-        });
-      });
+    function startZoomReveal(revealOrigin, afterLoadAction) {
+      const rect = bildContainer.getBoundingClientRect();
+      const width = Math.max(1, Math.round(rect.width));
+      const height = Math.max(1, Math.round(rect.height));
+      const devicePixelRatio = window.devicePixelRatio || 1;
+      const originX = (parseFloat(revealOrigin.originX) / 100) * width;
+      const originY = (parseFloat(revealOrigin.originY) / 100) * height;
+      const maxRadius = Math.max(
+        Math.hypot(originX, originY),
+        Math.hypot(width - originX, originY),
+        Math.hypot(originX, height - originY),
+        Math.hypot(width - originX, height - originY)
+      );
+
+      zoomRevealCanvas.width = Math.round(width * devicePixelRatio);
+      zoomRevealCanvas.height = Math.round(height * devicePixelRatio);
+      zoomRevealCtx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+      zoomRevealCanvas.style.display = "block";
+      bildContainer.classList.add("zoom-canvas-active");
+
+      let startTime = null;
+
+      const animate = (timestamp) => {
+        if (startTime === null) {
+          startTime = timestamp;
+        }
+
+        const progress = Math.min(1, (timestamp - startTime) / ZOOM_REVEAL_DURATION);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        drawZoomRevealFrame(originX, originY, maxRadius * easedProgress);
+
+        if (progress < 1) {
+          zoomRevealFrame = requestAnimationFrame(animate);
+          return;
+        }
+
+        zoomRevealFrame = null;
+        zoomRevealTimer = setTimeout(() => {
+          clearZoomReveal(false);
+
+          if (afterLoadAction) {
+            afterLoadAction();
+          }
+        }, 30);
+      };
+
+      drawZoomRevealFrame(originX, originY, 0.1);
+      zoomRevealFrame = requestAnimationFrame(animate);
     }
 
     function updateImageDisplay() {
