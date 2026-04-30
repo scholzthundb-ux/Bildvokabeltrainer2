@@ -349,13 +349,13 @@ window.APP_FOLDERS = {
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18 },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
-          { wort: "la cocina", clickX: 75.8, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
-          { wort: "el baño", clickX: 25.4, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
+          { wort: "la cocina", clickX: 73.9, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
+          { wort: "el baño", clickX: 27.2, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
-          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 31, areaH: 18 },
-          { wort: "el trastero", clickX: 73.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 27, areaH: 18 }
+          { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17 },
+          { wort: "el trastero", clickX: 71.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 23, areaH: 17 }
         ]
       }
     ]
@@ -389,13 +389,13 @@ window.APP_FOLDERS = {
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18 },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
-          { wort: "la cocina", clickX: 75.8, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
-          { wort: "el baño", clickX: 25.4, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
+          { wort: "la cocina", clickX: 73.9, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
+          { wort: "el baño", clickX: 27.2, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
-          { wort: "el sótano", clickX: 25.7, clickY: 86.8, labelX: 18, labelY: 91, areaW: 31, areaH: 18 },
-          { wort: "el trastero", clickX: 73.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 27, areaH: 18 }
+          { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17 },
+          { wort: "el trastero", clickX: 71.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 23, areaH: 17 }
         ]
       }
     ]
