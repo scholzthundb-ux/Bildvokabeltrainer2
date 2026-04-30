@@ -291,14 +291,14 @@ window.APP_FOLDERS = {
         file: "Haus6.png",
         hotspots: [
           { wort: "el ático", clickX: 50.0, clickY: 16.5, labelX: 39, labelY: 11.5, areaW: 48, areaH: 18 },
-          { wort: "el segundo piso", clickX: 20.5, clickY: 31.5, labelX: 31, labelY: 26.5, areaW: 29, areaH: 15 },
-          { wort: "el primer piso", clickX: 20.5, clickY: 47.5, labelX: 31, labelY: 42.5, areaW: 29, areaH: 15 },
-          { wort: "la planta baja", clickX: 20.5, clickY: 63.5, labelX: 31, labelY: 58.5, areaW: 29, areaH: 15 },
-          { wort: "la escalera", clickX: 88.8, clickY: 55.0, labelX: 77.5, labelY: 50.5, areaW: 18, areaH: 36 },
-          { wort: "el ascensor", clickX: 68.8, clickY: 49.5, labelX: 79, labelY: 45, areaW: 14, areaH: 35 },
-          { wort: "el portal", clickX: 35.2, clickY: 84.0, labelX: 43, labelY: 79.5, areaW: 18, areaH: 18 },
+          { wort: "el segundo piso", clickX: 24.0, clickY: 31.5, labelX: 31, labelY: 26.5, areaW: 30, areaH: 15 },
+          { wort: "el primer piso", clickX: 24.0, clickY: 47.5, labelX: 31, labelY: 42.5, areaW: 30, areaH: 15 },
+          { wort: "la planta baja", clickX: 24.0, clickY: 63.5, labelX: 31, labelY: 58.5, areaW: 30, areaH: 15 },
+          { wort: "la escalera", clickX: 85.8, clickY: 53.5, labelX: 77.5, labelY: 50.5, areaW: 22, areaH: 40 },
+          { wort: "el ascensor", clickX: 66.3, clickY: 49.5, labelX: 79, labelY: 45, areaW: 15, areaH: 35 },
+          { wort: "el portal", clickX: 38.0, clickY: 84.0, labelX: 43, labelY: 79.5, areaW: 18, areaH: 18 },
           { wort: "los buzones", clickX: 18.8, clickY: 89.3, labelX: 27.5, labelY: 85, areaW: 13, areaH: 11 },
-          { wort: "el garaje", clickX: 87.8, clickY: 88.8, labelX: 78, labelY: 84, areaW: 26, areaH: 18 }
+          { wort: "el garaje", clickX: 84.0, clickY: 87.5, labelX: 78, labelY: 84, areaW: 31, areaH: 20 }
         ]
       },
       {
