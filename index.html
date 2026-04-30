@@ -399,6 +399,10 @@
       pointer-events: auto;
     }
 
+    .hotspot.circle {
+      border-radius: 50%;
+    }
+
     .hotspot.fehler {
       background: rgba(255,0,0,0.28);
       border: 2px solid red;
@@ -961,6 +965,19 @@
         d.type = "button";
         d.style.left = imagePercentToPixelX(h.clickX) + "px";
         d.style.top = imagePercentToPixelY(h.clickY) + "px";
+
+        if (h.areaW) {
+          d.style.width = (imageDisplay.w * h.areaW) / 100 + "px";
+        }
+
+        if (h.areaH) {
+          d.style.height = (imageDisplay.h * h.areaH) / 100 + "px";
+        }
+
+        if (h.shape === "circle") {
+          d.classList.add("circle");
+        }
+
         d.setAttribute("aria-label", h.wort);
         d.addEventListener("click", () => onHotspotClick(h, d));
 

@@ -246,6 +246,19 @@ window.APP_FOLDERS = {
     images: [
       {
         title: "La casa – Bild 1",
+        file: "Haus2.png",
+        hotspots: [
+          { wort: "el plano", clickX: 11.5, clickY: 10.5, labelX: 14, labelY: 19, areaW: 20.5, areaH: 14.5, shape: "circle" },
+          { wort: "el rascacielos", clickX: 34.5, clickY: 23.5, labelX: 34.5, labelY: 42, areaW: 26, areaH: 39 },
+          { wort: "el bloque de pisos", clickX: 75.5, clickY: 23.5, labelX: 75.5, labelY: 42, areaW: 40, areaH: 38 },
+          { wort: "las casas adosadas", clickX: 25.5, clickY: 53.2, labelX: 25.5, labelY: 66.5, areaW: 47, areaH: 25 },
+          { wort: "la casa pareada", clickX: 75, clickY: 53, labelX: 75, labelY: 66.5, areaW: 41, areaH: 25 },
+          { wort: "la casa unifamiliar", clickX: 25.5, clickY: 84, labelX: 25.5, labelY: 96, areaW: 42, areaH: 24 },
+          { wort: "la urbanización", clickX: 76.5, clickY: 84.5, labelX: 76.5, labelY: 96, areaW: 43, areaH: 24 }
+        ]
+      },
+      {
+        title: "La casa – Bild 2",
         file: "Haus1.png",
         hotspots: [
           { wort: "el ático", clickX: 46.58, clickY: 16.76, labelX: 50, labelY: 12 },
