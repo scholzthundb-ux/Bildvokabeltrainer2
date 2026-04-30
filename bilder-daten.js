@@ -24,19 +24,19 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 1",
         file: "strand-ohne-woerter.png",
         hotspots: [
-          { wort: "el sol", clickX: 67.97, clickY: 25.13, labelX: 74, labelY: 22 },
-          { wort: "la palmera", clickX: 14.36, clickY: 40.76, labelX: 22, labelY: 31 },
+          { wort: "el sol", clickX: 76.4, clickY: 22.9, labelX: 74, labelY: 22, areaW: 17, areaH: 17, shape: "circle" },
+          { wort: "la palmera", clickX: 11.5, clickY: 31.8, labelX: 22, labelY: 31, areaW: 26, areaH: 31 },
           { wort: "el mar", clickX: 36.33, clickY: 47.46, labelX: 42, labelY: 44 },
-          { wort: "el barco", clickX: 53.03, clickY: 45.38, labelX: 56, labelY: 48 },
-          { wort: "la ola", clickX: 76.95, clickY: 58.01, labelX: 72, labelY: 58 },
+          { wort: "el barco", clickX: 53.3, clickY: 45.2, labelX: 56, labelY: 48, areaW: 16, areaH: 13 },
+          { wort: "la ola", clickX: 76.8, clickY: 55.8, labelX: 72, labelY: 58, areaW: 12, areaH: 10 },
           { wort: "la tabla de surf", clickX: 46.58, clickY: 58.59, labelX: 61, labelY: 63 },
-          { wort: "el bañador", clickX: 38.28, clickY: 70.77, labelX: 56, labelY: 68 },
-          { wort: "la sombrilla", clickX: 10.25, clickY: 64.19, labelX: 12, labelY: 69 },
+          { wort: "el bañador", clickX: 35.8, clickY: 70.4, labelX: 56, labelY: 68, areaW: 16, areaH: 18 },
+          { wort: "la sombrilla", clickX: 14.8, clickY: 61.4, labelX: 12, labelY: 69, areaW: 31, areaH: 22 },
           { wort: "la toalla", clickX: 12.21, clickY: 85.87, labelX: 18, labelY: 90 },
-          { wort: "las gafas de sol", clickX: 36.52, clickY: 90.30, labelX: 41, labelY: 92 },
+          { wort: "las gafas de sol", clickX: 39.1, clickY: 88.7, labelX: 41, labelY: 92, areaW: 10, areaH: 8 },
           { wort: "la crema solar", clickX: 59.86, clickY: 86.98, labelX: 66, labelY: 89 },
-          { wort: "la concha", clickX: 91.70, clickY: 90.30, labelX: 86, labelY: 90 },
-          { wort: "el chiringuito", clickX: 93.07, clickY: 52.60, labelX: 79, labelY: 66 }
+          { wort: "la concha", clickX: 95.0, clickY: 84.7, labelX: 86, labelY: 90, areaW: 8, areaH: 9 },
+          { wort: "el chiringuito", clickX: 92.5, clickY: 49.7, labelX: 79, labelY: 66, areaW: 15, areaH: 17 }
         ]
       },
       {
