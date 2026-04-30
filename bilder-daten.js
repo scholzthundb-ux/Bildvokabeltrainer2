@@ -275,6 +275,11 @@ window.APP_FOLDERS = {
       },
       {
         title: "La casa – Bild 3",
+        file: "Haus5.png",
+        hotspots: []
+      },
+      {
+        title: "La casa – Bild 4",
         file: "Haus6.png",
         hotspots: [
           { wort: "el tejado", clickX: 24.2, clickY: 13.6, labelX: 31, labelY: 9.5, areaW: 28, areaH: 12 },
@@ -288,7 +293,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La casa – Bild 4",
+        title: "La casa – Bild 5",
         file: "Haus1.png",
         hotspots: [
           { wort: "el ático", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
