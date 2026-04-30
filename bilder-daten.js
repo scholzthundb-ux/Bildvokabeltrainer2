@@ -397,6 +397,14 @@ window.APP_FOLDERS = {
           { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17 },
           { wort: "el trastero", clickX: 71.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 23, areaH: 17 }
         ]
+      },
+      {
+        title: "Las habitaciones – Bild 3",
+        file: "habitaciones3.png",
+        hotspots: [
+          { wort: "el desván", clickX: 50.0, clickY: 26.0, labelX: 63, labelY: 17, areaW: 92, areaH: 42 },
+          { wort: "la buhardilla", clickX: 50.0, clickY: 75.0, labelX: 64, labelY: 65, areaW: 92, areaH: 40 }
+        ]
       }
     ]
   }
