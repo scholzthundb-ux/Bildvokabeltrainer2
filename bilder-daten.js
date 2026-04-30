@@ -264,13 +264,13 @@ window.APP_FOLDERS = {
           { wort: "la chimenea", clickX: 63.9, clickY: 7.7, labelX: 67, labelY: 4.5 },
           { wort: "el tejado", clickX: 76.1, clickY: 16.0, labelX: 73, labelY: 11.5 },
           { wort: "el canalón", clickX: 92.0, clickY: 28.7, labelX: 84, labelY: 24.5 },
-          { wort: "el balcón", clickX: 13.6, clickY: 36.0, labelX: 21, labelY: 31.5 },
+          { wort: "el balcón", clickX: 28.2, clickY: 39.6, labelX: 21, labelY: 31.5, areaW: 29, areaH: 18 },
           { wort: "la bajante", clickX: 51.3, clickY: 40.6, labelX: 58, labelY: 36.5 },
           { wort: "la fachada", clickX: 86.3, clickY: 44.6, labelX: 77, labelY: 39.5 },
-          { wort: "la puerta", clickX: 38.0, clickY: 60.1, labelX: 31, labelY: 55.5 },
-          { wort: "la ventana", clickX: 67.7, clickY: 57.8, labelX: 72, labelY: 53.3 },
-          { wort: "las escaleras", clickX: 20.3, clickY: 94.3, labelX: 27, labelY: 88.8 },
-          { wort: "la terraza", clickX: 90.8, clickY: 95.7, labelX: 82.5, labelY: 90.5 }
+          { wort: "la puerta", clickX: 30.7, clickY: 67.2, labelX: 31, labelY: 55.5, areaW: 10, areaH: 24 },
+          { wort: "la ventana", clickX: 62.7, clickY: 66.1, labelX: 72, labelY: 53.3, areaW: 12, areaH: 16.5 },
+          { wort: "las escaleras", clickX: 20.1, clickY: 89.6, labelX: 27, labelY: 88.8 },
+          { wort: "la terraza", clickX: 84.3, clickY: 85.6, labelX: 82.5, labelY: 90.5, areaW: 30, areaH: 19 }
         ]
       },
       {
