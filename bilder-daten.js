@@ -343,6 +343,7 @@ window.APP_FOLDERS = {
       {
         title: "La casa – Bild 6",
         file: "Haus8.png",
+        disableWordInLearnMode: true,
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
           { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },
@@ -400,6 +401,7 @@ window.APP_FOLDERS = {
       {
         title: "Las habitaciones – Bild 2",
         file: "Haus8.png",
+        disableWordInLearnMode: true,
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
           { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },

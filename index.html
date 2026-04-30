@@ -877,6 +877,10 @@
       return !!activeZoomHotspot;
     }
 
+    function currentImageDisablesWordsInLearnMode() {
+      return !!getCurrentImageData().disableWordInLearnMode;
+    }
+
     function getDisplayedImageData() {
       if (!activeZoomHotspot) {
         return getCurrentImageData();
@@ -1264,6 +1268,12 @@
 
     function onHotspotClick(h, el) {
       if (mode === "lernen") {
+        if (currentImageDisablesWordsInLearnMode()) {
+          stopSpeech();
+          hideLabel();
+          return;
+        }
+
         if (h.zoomImage && !isZoomOpen()) {
           openZoomImage(h);
           return;
