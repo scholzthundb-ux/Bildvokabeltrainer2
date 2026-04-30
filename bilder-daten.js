@@ -259,6 +259,22 @@ window.APP_FOLDERS = {
       },
       {
         title: "La casa – Bild 2",
+        file: "Haus4.png",
+        hotspots: [
+          { wort: "la chimenea", clickX: 63.9, clickY: 7.7, labelX: 67, labelY: 4.5 },
+          { wort: "el tejado", clickX: 76.1, clickY: 16.0, labelX: 73, labelY: 11.5 },
+          { wort: "el canalón", clickX: 92.0, clickY: 28.7, labelX: 84, labelY: 24.5 },
+          { wort: "el balcón", clickX: 13.6, clickY: 36.0, labelX: 21, labelY: 31.5 },
+          { wort: "la bajante", clickX: 51.3, clickY: 40.6, labelX: 58, labelY: 36.5 },
+          { wort: "la fachada", clickX: 86.3, clickY: 44.6, labelX: 77, labelY: 39.5 },
+          { wort: "la puerta", clickX: 38.0, clickY: 60.1, labelX: 31, labelY: 55.5 },
+          { wort: "la ventana", clickX: 67.7, clickY: 57.8, labelX: 72, labelY: 53.3 },
+          { wort: "las escaleras", clickX: 20.3, clickY: 94.3, labelX: 27, labelY: 88.8 },
+          { wort: "la terraza", clickX: 90.8, clickY: 95.7, labelX: 82.5, labelY: 90.5 }
+        ]
+      },
+      {
+        title: "La casa – Bild 3",
         file: "Haus1.png",
         hotspots: [
           { wort: "el ático", clickX: 46.58, clickY: 16.76, labelX: 50, labelY: 12 },
