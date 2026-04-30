@@ -804,6 +804,13 @@
       handleSwipe();
     }, { passive: true });
 
+    bildContainer.addEventListener("dblclick", (e) => {
+      if (!isZoomOpen()) return;
+
+      e.preventDefault();
+      closeZoomImage();
+    });
+
     document.addEventListener("fullscreenchange", updateFullscreenButtonText);
     document.addEventListener("webkitfullscreenchange", updateFullscreenButtonText);
 
