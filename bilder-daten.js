@@ -32,7 +32,7 @@ window.APP_FOLDERS = {
           { wort: "la tabla de surf", clickX: 46.58, clickY: 58.59, labelX: 61, labelY: 63 },
           { wort: "el bañador", clickX: 35.8, clickY: 70.4, labelX: 56, labelY: 68, areaW: 16, areaH: 18 },
           { wort: "la sombrilla", clickX: 14.8, clickY: 61.4, labelX: 12, labelY: 69, areaW: 31, areaH: 22 },
-          { wort: "la toalla", clickX: 12.21, clickY: 85.87, labelX: 18, labelY: 90 },
+          { wort: "la toalla", clickX: 20.5, clickY: 82.5, labelX: 18, labelY: 90, areaW: 31, areaH: 16 },
           { wort: "las gafas de sol", clickX: 39.1, clickY: 88.7, labelX: 41, labelY: 92, areaW: 10, areaH: 8 },
           { wort: "la crema solar", clickX: 59.86, clickY: 86.98, labelX: 66, labelY: 89 },
           { wort: "la concha", clickX: 95.0, clickY: 84.7, labelX: 86, labelY: 90, areaW: 8, areaH: 9 },
