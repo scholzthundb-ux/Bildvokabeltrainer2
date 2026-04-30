@@ -279,9 +279,9 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: "el timbre", clickX: 10.9, clickY: 18.9, labelX: 18, labelY: 14.5, areaW: 8, areaH: 10 },
           { wort: "el buzón", clickX: 12.0, clickY: 29.4, labelX: 19, labelY: 25.5, areaW: 12, areaH: 13 },
-          { wort: "la puerta", clickX: 25.0, clickY: 28.5, labelX: 35, labelY: 22.5, areaW: 24, areaH: 34 },
-          { wort: "la persiana", clickX: 76.0, clickY: 19.0, labelX: 68, labelY: 14.5, areaW: 29, areaH: 18 },
-          { wort: "la chimenea", clickX: 22.0, clickY: 67.0, labelX: 31, labelY: 62.5, areaW: 16, areaH: 22 },
+          { wort: "la puerta", clickX: 24.5, clickY: 26.8, labelX: 35, labelY: 22.5, areaW: 18, areaH: 28 },
+          { wort: "la persiana", clickX: 73.5, clickY: 19.0, labelX: 68, labelY: 14.5, areaW: 26, areaH: 18 },
+          { wort: "la chimenea", clickX: 21.5, clickY: 66.0, labelX: 31, labelY: 62.5, areaW: 10, areaH: 14 },
           { wort: "la claraboya", clickX: 56.0, clickY: 70.0, labelX: 63, labelY: 65.5, areaW: 24, areaH: 18 },
           { wort: "el canalón", clickX: 49.5, clickY: 82.0, labelX: 57.5, labelY: 77.5, areaW: 28, areaH: 10 },
           { wort: "la bajante", clickX: 28.0, clickY: 93.0, labelX: 37.5, labelY: 88.5, areaW: 16, areaH: 12 },
