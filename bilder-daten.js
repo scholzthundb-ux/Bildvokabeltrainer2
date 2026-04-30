@@ -75,7 +75,7 @@ window.APP_FOLDERS = {
           { wort: "el castillo de arena", clickX: 49.7, clickY: 84.5, labelX: 57, labelY: 81, areaW: 18, areaH: 16 },
           { wort: "la niña", clickX: 83.79, clickY: 74.74, labelX: 88, labelY: 69 },
           { wort: "la pala", clickX: 63.0, clickY: 92.9, labelX: 65, labelY: 90, areaW: 12, areaH: 10 },
-          { wort: "la pelota", clickX: 81.8, clickY: 89.6, labelX: 83, labelY: 89, areaW: 8, areaH: 8, shape: "circle" },
+          { wort: "la pelota", clickX: 81.8, clickY: 89.6, labelX: 83, labelY: 89, areaW: 11, areaH: 11, shape: "circle" },
           { wort: "el flotador", clickX: 83.1, clickY: 62.17, labelX: 82, labelY: 55, areaW: 17, areaH: 17, shape: "circle" }
         ]
       },
