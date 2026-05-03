@@ -399,12 +399,12 @@ window.APP_FOLDERS = {
         title: "Las habitaciones – Bild 3",
         file: "zimmer3.png",
         hotspots: [
-          { wort: "el marco", clickX: 49.8, clickY: 28.2, labelX: 32, labelY: 18.5, areaW: 54, areaH: 58 },
-          { wort: "la veneciana", clickX: 51.0, clickY: 28.0, labelX: 76.5, labelY: 22, areaW: 39, areaH: 17 },
-          { wort: "el cristal", clickX: 49.5, clickY: 54.0, labelX: 31.5, labelY: 44.5, areaW: 33, areaH: 35 },
-          { wort: "la ventana", clickX: 49.8, clickY: 45.0, labelX: 19, labelY: 34.5, areaW: 45, areaH: 48 },
-          { wort: "la manilla", clickX: 28.0, clickY: 50.0, labelX: 14.5, labelY: 46, areaW: 7, areaH: 10 },
-          { wort: "el alféizar", clickX: 38.5, clickY: 85.5, labelX: 24, labelY: 80.5, areaW: 42, areaH: 11 }
+          { wort: "el marco", clickX: 34.0, clickY: 20.5, labelX: 24, labelY: 15, areaW: 57, areaH: 57 },
+          { wort: "la veneciana", clickX: 68.8, clickY: 28.7, labelX: 80, labelY: 22.5, areaW: 39, areaH: 18 },
+          { wort: "el cristal", clickX: 41.0, clickY: 44.0, labelX: 26.5, labelY: 37, areaW: 35, areaH: 33 },
+          { wort: "la ventana", clickX: 76.0, clickY: 56.0, labelX: 82, labelY: 50, areaW: 50, areaH: 62 },
+          { wort: "la manilla", clickX: 26.2, clickY: 48.5, labelX: 15.5, labelY: 44.5, areaW: 6, areaH: 9 },
+          { wort: "el alféizar", clickX: 22.8, clickY: 77.2, labelX: 25, labelY: 72.5, areaW: 43, areaH: 11 }
         ]
       },
       {
