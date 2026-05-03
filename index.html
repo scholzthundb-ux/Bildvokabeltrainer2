@@ -802,6 +802,7 @@
     let quizQueue = [];
     let repeatQueue = [];
     let recentQuestions = [];
+    let folderNavigationStack = [];
     let currentLabelHotspot = null;
     let labelHideTimer = null;
     let activeZoomHotspot = null;
@@ -918,6 +919,18 @@
     }
 
     function openFolder(folderKey) {
+      folderNavigationStack = [];
+      currentFolderKey = folderKey;
+      currentImageIndex = 0;
+      openImage(0);
+    }
+
+    function openNestedFolder(folderKey) {
+      folderNavigationStack.push({
+        folderKey: currentFolderKey,
+        imageIndex: currentImageIndex
+      });
+
       currentFolderKey = folderKey;
       currentImageIndex = 0;
       openImage(0);
@@ -926,6 +939,14 @@
     async function backToStart() {
       if (isZoomOpen()) {
         closeZoomImage();
+        return;
+      }
+
+      if (folderNavigationStack.length > 0) {
+        const previousView = folderNavigationStack.pop();
+        currentFolderKey = previousView.folderKey;
+        currentImageIndex = previousView.imageIndex;
+        openImage(previousView.imageIndex);
         return;
       }
 
@@ -1268,6 +1289,13 @@
 
     function onHotspotClick(h, el) {
       if (mode === "lernen") {
+        if (h.openFolderKey) {
+          stopSpeech();
+          hideLabel();
+          openNestedFolder(h.openFolderKey);
+          return;
+        }
+
         if (currentImageDisablesWordsInLearnMode()) {
           stopSpeech();
           hideLabel();

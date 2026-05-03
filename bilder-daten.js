@@ -387,7 +387,7 @@ window.APP_FOLDERS = {
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
           { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
-          { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18 },
+          { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18, openFolderKey: "salon" },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: "la cocina", clickX: 73.9, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
           { wort: "el baño", clickX: 27.2, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
@@ -404,6 +404,28 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: "el desván", clickX: 50.0, clickY: 26.0, labelX: 63, labelY: 17, areaW: 92, areaH: 42 },
           { wort: "la buhardilla", clickX: 50.0, clickY: 75.0, labelX: 64, labelY: 65, areaW: 92, areaH: 40 }
+        ]
+      }
+    ]
+  },
+
+  salon: {
+    title: "El salón",
+    images: [
+      {
+        title: "El salón – Bild 1",
+        file: "salon1.png",
+        hotspots: [
+          { wort: "la ventana", clickX: 18.0, clickY: 30.5, labelX: 18, labelY: 21.5, areaW: 18, areaH: 26 },
+          { wort: "la cortina", clickX: 28.2, clickY: 29.8, labelX: 33, labelY: 20.5, areaW: 16, areaH: 32 },
+          { wort: "la lámpara", clickX: 44.3, clickY: 33.2, labelX: 51.5, labelY: 24.5, areaW: 16, areaH: 25 },
+          { wort: "el televisor", clickX: 67.0, clickY: 42.8, labelX: 72, labelY: 35, areaW: 19, areaH: 18 },
+          { wort: "la estantería", clickX: 88.8, clickY: 42.0, labelX: 80.5, labelY: 34.5, areaW: 13, areaH: 31 },
+          { wort: "el sofá", clickX: 17.0, clickY: 52.5, labelX: 26, labelY: 45.5, areaW: 31, areaH: 18 },
+          { wort: "el sillón", clickX: 15.3, clickY: 78.0, labelX: 24, labelY: 70.5, areaW: 20, areaH: 27 },
+          { wort: "la mesa de centro", clickX: 48.0, clickY: 76.3, labelX: 55.5, labelY: 68.5, areaW: 27, areaH: 20 },
+          { wort: "la alfombra", clickX: 62.5, clickY: 89.0, labelX: 71.5, labelY: 81.5, areaW: 46, areaH: 20 },
+          { wort: "la puerta", clickX: 90.5, clickY: 77.2, labelX: 81.5, labelY: 70.5, areaW: 16, areaH: 36 }
         ]
       }
     ]
