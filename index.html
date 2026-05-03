@@ -417,6 +417,8 @@
       pointer-events: none;
     }
 
+    .bild.reveal-pending #bild,
+    .bild.reveal-pending #hotspots,
     .bild.zoom-canvas-active #bild,
     .bild.zoom-canvas-active #hotspots {
       opacity: 0;
@@ -813,7 +815,7 @@
 
     const MIN_REPEAT_DELAY = 3;
     const LABEL_AUTO_HIDE_MS = 5000;
-    const ZOOM_REVEAL_DURATION = 960;
+    const ZOOM_REVEAL_DURATION = 1850;
 
     let imageDisplay = { x: 0, y: 0, w: 0, h: 0 };
 
@@ -985,6 +987,12 @@
       activeZoomHotspot = null;
       clearZoomReveal(!preservePendingReveal);
 
+      if (preservePendingReveal) {
+        bildContainer.classList.add("reveal-pending");
+      } else {
+        bildContainer.classList.remove("reveal-pending");
+      }
+
       menu.style.display = "none";
       app.style.display = "block";
 
@@ -1093,6 +1101,7 @@
       }
 
       bildContainer.classList.remove("zoom-canvas-active");
+      bildContainer.classList.remove("reveal-pending");
       bildContainer.style.removeProperty("--zoom-origin-x");
       bildContainer.style.removeProperty("--zoom-origin-y");
 
