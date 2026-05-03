@@ -932,15 +932,22 @@
       openImage(0);
     }
 
-    function openNestedFolder(folderKey) {
+    function openNestedFolder(folderKey, triggerHotspot = null) {
+      clearTimeout(timer);
+      timer = null;
+
       folderNavigationStack.push({
         folderKey: currentFolderKey,
         imageIndex: currentImageIndex
       });
 
+      if (triggerHotspot) {
+        prepareZoomReveal(triggerHotspot);
+      }
+
       currentFolderKey = folderKey;
       currentImageIndex = 0;
-      openImage(0);
+      openImage(0, { preservePendingReveal: !!triggerHotspot });
     }
 
     async function backToStart() {
@@ -971,10 +978,12 @@
       await exitFullscreen();
     }
 
-    async function openImage(index) {
+    async function openImage(index, options = {}) {
+      const preservePendingReveal = !!options.preservePendingReveal;
+
       currentImageIndex = index;
       activeZoomHotspot = null;
-      clearZoomReveal();
+      clearZoomReveal(!preservePendingReveal);
 
       menu.style.display = "none";
       app.style.display = "block";
@@ -1298,9 +1307,15 @@
     function onHotspotClick(h, el) {
       if (mode === "lernen") {
         if (h.openFolderKey) {
-          stopSpeech();
-          hideLabel();
-          openNestedFolder(h.openFolderKey);
+          clearTimeout(timer);
+          timer = null;
+
+          showLabel(h);
+          speakWord(h.wort);
+
+          timer = setTimeout(() => {
+            openNestedFolder(h.openFolderKey, h);
+          }, 650);
           return;
         }
 
