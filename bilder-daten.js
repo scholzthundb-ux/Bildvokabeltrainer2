@@ -415,6 +415,7 @@ window.APP_FOLDERS = {
       {
         title: "El salón – Bild 1",
         file: "salon1.png",
+        openLabel: { wort: "el salón", labelX: 50, labelY: 9 },
         hotspots: [
           { wort: "la ventana", clickX: 18.0, clickY: 30.5, labelX: 18, labelY: 21.5, areaW: 18, areaH: 26 },
           { wort: "la cortina", clickX: 28.2, clickY: 29.8, labelX: 33, labelY: 20.5, areaW: 16, areaH: 32 },

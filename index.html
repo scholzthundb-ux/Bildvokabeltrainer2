@@ -804,6 +804,7 @@
     let recentQuestions = [];
     let folderNavigationStack = [];
     let currentLabelHotspot = null;
+    let currentLabelIsPersistent = false;
     let labelHideTimer = null;
     let activeZoomHotspot = null;
     let pendingZoomReveal = null;
@@ -1051,6 +1052,7 @@
             quizBox.style.display = "none";
             lernInfo.style.display = "block";
             swipeInfo.style.display = folders[currentFolderKey].images.length > 1 && !isZoomOpen() ? "block" : "none";
+            showImageOpenLabelIfNeeded();
           } else {
             quizBox.style.display = "block";
             lernInfo.style.display = "none";
@@ -1352,13 +1354,22 @@
       }
     }
 
-    function showLabel(hotspot) {
+    function showImageOpenLabelIfNeeded() {
+      const imageData = getCurrentImageData();
+
+      if (!imageData.openLabel) return;
+
+      showLabel(imageData.openLabel, { persistent: true });
+    }
+
+    function showLabel(hotspot, options = {}) {
       if (labelHideTimer) {
         clearTimeout(labelHideTimer);
         labelHideTimer = null;
       }
 
       currentLabelHotspot = hotspot;
+      currentLabelIsPersistent = !!options.persistent;
 
       label.textContent = hotspot.wort;
       label.style.left = imagePercentToPixelX(hotspot.labelX) + "px";
@@ -1369,7 +1380,7 @@
       void label.offsetWidth;
       label.classList.add("show");
 
-      if (mode === "lernen") {
+      if (mode === "lernen" && !currentLabelIsPersistent) {
         labelHideTimer = setTimeout(() => {
           hideLabel();
         }, LABEL_AUTO_HIDE_MS);
@@ -1391,6 +1402,7 @@
       }
 
       currentLabelHotspot = null;
+      currentLabelIsPersistent = false;
       label.style.display = "none";
       label.classList.remove("show");
     }
