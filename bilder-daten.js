@@ -427,6 +427,22 @@ window.APP_FOLDERS = {
           { wort: "la alfombra", clickX: 62.5, clickY: 89.0, labelX: 71.5, labelY: 81.5, areaW: 46, areaH: 20 },
           { wort: "la puerta", clickX: 90.5, clickY: 77.2, labelX: 81.5, labelY: 70.5, areaW: 16, areaH: 36 }
         ]
+      },
+      {
+        title: "El salón – Bild 2",
+        file: "salon2.png",
+        hotspots: [
+          { wort: "la ventana", clickX: 18.5, clickY: 29.0, labelX: 18, labelY: 20.5, areaW: 18, areaH: 31 },
+          { wort: "el cuadro", clickX: 43.0, clickY: 23.0, labelX: 49, labelY: 15.5, areaW: 16, areaH: 18 },
+          { wort: "la planta", clickX: 68.5, clickY: 14.5, labelX: 77, labelY: 10.5, areaW: 15, areaH: 17 },
+          { wort: "el estante", clickX: 87.5, clickY: 23.5, labelX: 79, labelY: 18, areaW: 23, areaH: 9 },
+          { wort: "los libros", clickX: 82.8, clickY: 40.2, labelX: 89, labelY: 34, areaW: 20, areaH: 13 },
+          { wort: "el cojín", clickX: 38.2, clickY: 45.0, labelX: 46, labelY: 39, areaW: 14, areaH: 14 },
+          { wort: "el cajón", clickX: 84.5, clickY: 69.0, labelX: 91, labelY: 63, areaW: 16, areaH: 15 },
+          { wort: "el mando a distancia", clickX: 61.8, clickY: 81.2, labelX: 69, labelY: 75.5, areaW: 10, areaH: 11 },
+          { wort: "la taza", clickX: 72.8, clickY: 78.0, labelX: 80, labelY: 72.5, areaW: 10, areaH: 12 },
+          { wort: "la manta", clickX: 20.5, clickY: 92.0, labelX: 28, labelY: 86.5, areaW: 19, areaH: 16 }
+        ]
       }
     ]
   }
