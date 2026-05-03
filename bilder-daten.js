@@ -397,6 +397,18 @@ window.APP_FOLDERS = {
       },
       {
         title: "Las habitaciones – Bild 3",
+        file: "zimmer3.png",
+        hotspots: [
+          { wort: "el marco", clickX: 49.8, clickY: 28.2, labelX: 32, labelY: 18.5, areaW: 54, areaH: 58 },
+          { wort: "la veneciana", clickX: 51.0, clickY: 28.0, labelX: 76.5, labelY: 22, areaW: 39, areaH: 17 },
+          { wort: "el cristal", clickX: 49.5, clickY: 54.0, labelX: 31.5, labelY: 44.5, areaW: 33, areaH: 35 },
+          { wort: "la ventana", clickX: 49.8, clickY: 45.0, labelX: 19, labelY: 34.5, areaW: 45, areaH: 48 },
+          { wort: "la manilla", clickX: 25.0, clickY: 50.0, labelX: 14.5, labelY: 46, areaW: 9, areaH: 13 },
+          { wort: "el alféizar", clickX: 38.5, clickY: 85.5, labelX: 24, labelY: 80.5, areaW: 42, areaH: 11 }
+        ]
+      },
+      {
+        title: "Las habitaciones – Bild 4",
         file: "Haus8.png",
         disableWordInLearnMode: true,
         hotspots: [
@@ -415,7 +427,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "Las habitaciones – Bild 4",
+        title: "Las habitaciones – Bild 5",
         file: "habitaciones3.png",
         hotspots: [
           { wort: "el desván", clickX: 50.0, clickY: 26.0, labelX: 63, labelY: 17, areaW: 92, areaH: 42 },
