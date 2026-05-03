@@ -861,10 +861,16 @@
     }, { passive: true });
 
     bildContainer.addEventListener("dblclick", (e) => {
-      if (!isZoomOpen()) return;
-
       e.preventDefault();
-      closeZoomImage();
+
+      if (isZoomOpen()) {
+        closeZoomImage();
+        return;
+      }
+
+      if (folderNavigationStack.length > 0) {
+        backToStart();
+      }
     });
 
     document.addEventListener("fullscreenchange", updateFullscreenButtonText);
