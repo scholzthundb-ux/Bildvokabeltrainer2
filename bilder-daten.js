@@ -399,10 +399,10 @@ window.APP_FOLDERS = {
         title: "Las habitaciones – Bild 3",
         file: "zimmer3.png",
         hotspots: [
-          { wort: "el marco", clickX: 34.0, clickY: 20.5, labelX: 24, labelY: 15, areaW: 57, areaH: 57 },
-          { wort: "la veneciana", clickX: 68.8, clickY: 28.7, labelX: 80, labelY: 22.5, areaW: 39, areaH: 18 },
+          { wort: "la ventana", clickX: 34.0, clickY: 20.5, labelX: 24, labelY: 15, areaW: 57, areaH: 57 },
+          { wort: "el marco", clickX: 76.0, clickY: 56.0, labelX: 83, labelY: 50, areaW: 16, areaH: 60 },
           { wort: "el cristal", clickX: 41.0, clickY: 44.0, labelX: 26.5, labelY: 37, areaW: 35, areaH: 33 },
-          { wort: "la ventana", clickX: 76.0, clickY: 56.0, labelX: 82, labelY: 50, areaW: 50, areaH: 62 },
+          { wort: "la veneciana", clickX: 68.8, clickY: 28.7, labelX: 80, labelY: 22.5, areaW: 23, areaH: 13 },
           { wort: "la manilla", clickX: 26.2, clickY: 48.5, labelX: 15.5, labelY: 44.5, areaW: 6, areaH: 9 },
           { wort: "el alféizar", clickX: 22.8, clickY: 77.2, labelX: 25, labelY: 72.5, areaW: 43, areaH: 11 }
         ]
