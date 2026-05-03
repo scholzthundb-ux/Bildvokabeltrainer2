@@ -468,7 +468,7 @@ window.APP_FOLDERS = {
           { wort: "los libros", clickX: 82.8, clickY: 35.8, labelX: 89, labelY: 34, areaW: 20, areaH: 13 },
           { wort: "el cojín", clickX: 38.2, clickY: 45.0, labelX: 46, labelY: 39, areaW: 14, areaH: 14 },
           { wort: "el cajón", clickX: 84.5, clickY: 69.0, labelX: 91, labelY: 63, areaW: 16, areaH: 15 },
-          { wort: "el mando a distancia", clickX: 61.8, clickY: 81.2, labelX: 69, labelY: 75.5, areaW: 10, areaH: 11 },
+          { wort: "el mando a distancia", clickX: 61.8, clickY: 78.6, labelX: 69, labelY: 75.5, areaW: 7, areaH: 8 },
           { wort: "la taza", clickX: 72.8, clickY: 78.0, labelX: 80, labelY: 72.5, areaW: 10, areaH: 12 },
           { wort: "la manta", clickX: 20.5, clickY: 92.0, labelX: 28, labelY: 86.5, areaW: 19, areaH: 16 }
         ]
