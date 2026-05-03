@@ -384,14 +384,14 @@ window.APP_FOLDERS = {
         file: "zimmer2.png",
         hotspots: [
           { wort: "el marco", clickX: 18.8, clickY: 17.1, labelX: 25.5, labelY: 11.5, areaW: 14, areaH: 14 },
-          { wort: "la puerta", clickX: 35.4, clickY: 51.0, labelX: 23.5, labelY: 36.5, areaW: 31, areaH: 69 },
+          { wort: "la puerta", clickX: 36.8, clickY: 51.0, labelX: 23.5, labelY: 36.5, areaW: 24, areaH: 60 },
           { wort: "la pared", clickX: 83.3, clickY: 18.1, labelX: 88.5, labelY: 12.5, areaW: 22, areaH: 18 },
           { wort: "la bisagra", clickX: 58.2, clickY: 51.5, labelX: 66, labelY: 28, areaW: 8, areaH: 56 },
-          { wort: "el interruptor", clickX: 6.5, clickY: 46.0, labelX: 13.5, labelY: 41.5, areaW: 9, areaH: 8 },
-          { wort: "el enchufe", clickX: 6.2, clickY: 69.1, labelX: 14.5, labelY: 64.5, areaW: 9, areaH: 8 },
+          { wort: "el interruptor", clickX: 9.4, clickY: 46.0, labelX: 13.5, labelY: 41.5, areaW: 9, areaH: 8 },
+          { wort: "el enchufe", clickX: 9.5, clickY: 69.1, labelX: 14.5, labelY: 64.5, areaW: 9, areaH: 8 },
           { wort: "el umbral", clickX: 42.3, clickY: 86.2, labelX: 51, labelY: 81.5, areaW: 18, areaH: 10 },
           { wort: "la manilla", clickX: 75.9, clickY: 42.4, labelX: 86, labelY: 37.5, areaW: 14, areaH: 12 },
-          { wort: "el ojo de la cerradura", clickX: 69.8, clickY: 52.2, labelX: 85.5, labelY: 48.5, areaW: 10, areaH: 12 },
+          { wort: "el ojo de la cerradura", clickX: 74.5, clickY: 51.8, labelX: 85.5, labelY: 48.5, areaW: 6, areaH: 7 },
           { wort: "la llave", clickX: 80.5, clickY: 61.1, labelX: 88.5, labelY: 57.5, areaW: 14, areaH: 11 }
         ]
       },
