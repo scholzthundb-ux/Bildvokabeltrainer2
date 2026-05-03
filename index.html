@@ -1392,6 +1392,10 @@
       if (!imageData.openLabel) return;
 
       showLabel(imageData.openLabel, { persistent: true });
+
+      if (imageData.speakOpenLabel) {
+        speakWord(imageData.openLabel.wort);
+      }
     }
 
     function showLabel(hotspot, options = {}) {
