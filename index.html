@@ -1335,7 +1335,15 @@
         }
 
         if (h.zoomImage && !isZoomOpen()) {
-          openZoomImage(h);
+          clearTimeout(timer);
+          timer = null;
+
+          showLabel(h);
+          speakWord(h.wort);
+
+          timer = setTimeout(() => {
+            openZoomImage(h);
+          }, 650);
           return;
         }
 
@@ -1446,8 +1454,7 @@
           wort: hotspot.wort,
           labelX: hotspot.zoomLabelX ?? 50,
           labelY: hotspot.zoomLabelY ?? 10
-        });
-        speakWord(hotspot.wort);
+        }, { persistent: true });
       });
     }
 
