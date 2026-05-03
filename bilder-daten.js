@@ -449,7 +449,7 @@ window.APP_FOLDERS = {
           { wort: "la cortina", clickX: 28.2, clickY: 29.8, labelX: 33, labelY: 20.5, areaW: 16, areaH: 32 },
           { wort: "la lámpara", clickX: 44.3, clickY: 33.2, labelX: 51.5, labelY: 24.5, areaW: 16, areaH: 25 },
           { wort: "el televisor", clickX: 67.0, clickY: 42.8, labelX: 72, labelY: 35, areaW: 19, areaH: 18 },
-          { wort: "la estantería", clickX: 88.8, clickY: 42.0, labelX: 80.5, labelY: 34.5, areaW: 13, areaH: 31 },
+          { wort: "la estantería", clickX: 85.5, clickY: 46.0, labelX: 80.5, labelY: 34.5, areaW: 13, areaH: 31 },
           { wort: "el sofá", clickX: 17.0, clickY: 52.5, labelX: 26, labelY: 45.5, areaW: 31, areaH: 18 },
           { wort: "el sillón", clickX: 15.3, clickY: 78.0, labelX: 24, labelY: 70.5, areaW: 20, areaH: 27 },
           { wort: "la mesa de centro", clickX: 52.0, clickY: 74.0, labelX: 55.5, labelY: 68.5, areaW: 22, areaH: 15 },
