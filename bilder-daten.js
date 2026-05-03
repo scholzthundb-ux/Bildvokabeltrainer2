@@ -386,7 +386,7 @@ window.APP_FOLDERS = {
           { wort: "el marco", clickX: 18.8, clickY: 17.1, labelX: 25.5, labelY: 11.5, areaW: 14, areaH: 14 },
           { wort: "la puerta", clickX: 36.8, clickY: 51.0, labelX: 23.5, labelY: 36.5, areaW: 24, areaH: 60 },
           { wort: "la pared", clickX: 83.3, clickY: 18.1, labelX: 88.5, labelY: 12.5, areaW: 22, areaH: 18 },
-          { wort: "la bisagra", clickX: 58.2, clickY: 51.5, labelX: 66, labelY: 28, areaW: 8, areaH: 56 },
+          { wort: "la bisagra", clickX: 56.4, clickY: 51.5, labelX: 66, labelY: 28, areaW: 8, areaH: 56 },
           { wort: "el interruptor", clickX: 9.4, clickY: 46.0, labelX: 13.5, labelY: 41.5, areaW: 9, areaH: 8 },
           { wort: "el enchufe", clickX: 9.5, clickY: 69.1, labelX: 14.5, labelY: 64.5, areaW: 9, areaH: 8 },
           { wort: "el umbral", clickX: 42.3, clickY: 86.2, labelX: 51, labelY: 81.5, areaW: 18, areaH: 10 },
