@@ -403,7 +403,7 @@ window.APP_FOLDERS = {
           { wort: "el marco", clickX: 76.0, clickY: 56.0, labelX: 83, labelY: 50, areaW: 16, areaH: 60 },
           { wort: "el cristal", clickX: 41.0, clickY: 44.0, labelX: 26.5, labelY: 37, areaW: 35, areaH: 33 },
           { wort: "la veneciana", clickX: 68.8, clickY: 28.7, labelX: 80, labelY: 22.5, areaW: 23, areaH: 13 },
-          { wort: "la manilla", clickX: 26.2, clickY: 48.5, labelX: 15.5, labelY: 44.5, areaW: 6, areaH: 9 },
+          { wort: "la manilla", clickX: 28.6, clickY: 48.5, labelX: 15.5, labelY: 44.5, areaW: 6, areaH: 9 },
           { wort: "el alféizar", clickX: 22.8, clickY: 77.2, labelX: 25, labelY: 72.5, areaW: 43, areaH: 11 }
         ]
       },
