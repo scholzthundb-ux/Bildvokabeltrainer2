@@ -390,7 +390,7 @@ window.APP_FOLDERS = {
           { wort: "el interruptor", clickX: 9.4, clickY: 46.0, labelX: 13.5, labelY: 41.5, areaW: 9, areaH: 8 },
           { wort: "el enchufe", clickX: 9.5, clickY: 69.1, labelX: 14.5, labelY: 64.5, areaW: 9, areaH: 8 },
           { wort: "el umbral", clickX: 42.3, clickY: 86.2, labelX: 51, labelY: 81.5, areaW: 18, areaH: 10 },
-          { wort: "la manilla", clickX: 75.9, clickY: 42.4, labelX: 86, labelY: 37.5, areaW: 14, areaH: 12 },
+          { wort: "la manilla", clickX: 78.2, clickY: 42.4, labelX: 86, labelY: 37.5, areaW: 14, areaH: 12 },
           { wort: "el ojo de la cerradura", clickX: 74.5, clickY: 51.8, labelX: 85.5, labelY: 48.5, areaW: 6, areaH: 7 },
           { wort: "la llave", clickX: 80.5, clickY: 61.1, labelX: 88.5, labelY: 57.5, areaW: 14, areaH: 11 }
         ]
