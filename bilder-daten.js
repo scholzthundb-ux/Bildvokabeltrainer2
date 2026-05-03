@@ -461,7 +461,7 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 2",
         file: "salon2.png",
         hotspots: [
-          { wort: "la ventana", clickX: 18.5, clickY: 29.0, labelX: 18, labelY: 20.5, areaW: 18, areaH: 31 },
+          { wort: "el balcón", clickX: 15.5, clickY: 34.0, labelX: 23.5, labelY: 27.5, areaW: 18, areaH: 30 },
           { wort: "el cuadro", clickX: 43.0, clickY: 23.0, labelX: 49, labelY: 15.5, areaW: 16, areaH: 18 },
           { wort: "la planta", clickX: 68.5, clickY: 14.5, labelX: 77, labelY: 10.5, areaW: 15, areaH: 17 },
           { wort: "la balda", clickX: 87.5, clickY: 23.5, labelX: 79, labelY: 18, areaW: 23, areaH: 9 },
