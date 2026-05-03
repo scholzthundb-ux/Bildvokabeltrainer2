@@ -367,6 +367,7 @@ window.APP_FOLDERS = {
       {
         title: "Las habitaciones – Bild 1",
         file: "Haus9.png",
+        openLabel: { wort: "la habitación", labelX: 82, labelY: 9 },
         hotspots: [
           { wort: "la puerta", clickX: 10.8, clickY: 49.5, labelX: 18, labelY: 37, areaW: 17, areaH: 56 },
           { wort: "el interruptor", clickX: 4.9, clickY: 46.5, labelX: 12.5, labelY: 42.5, areaW: 6, areaH: 12 },
