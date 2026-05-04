@@ -166,13 +166,13 @@ window.APP_FOLDERS = {
           { wort: "el bikini", clickX: 83.3, clickY: 20, labelX: 76, labelY: 14, areaW: 24, areaH: 22 },
           { wort: "la gorra de béisbol", clickX: 16.7, clickY: 35, labelX: 26, labelY: 29.5 },
           { wort: "los pantalones cortos", clickX: 50, clickY: 33.5, labelX: 50, labelY: 29.5, areaW: 25, areaH: 18 },
-          { wort: "el bañador", clickX: 18, clickY: 46, labelX: 29.5, labelY: 40 },
+          { wort: "el bañador", clickX: 18, clickY: 46, labelX: 29.5, labelY: 40, areaW: 24, areaH: 20 },
           { wort: "el pareo", clickX: 16, clickY: 63, labelX: 28, labelY: 57 },
           { wort: "las bermudas", clickX: 50, clickY: 57, labelX: 50, labelY: 51 },
           { wort: "el vestido de playa", clickX: 83.3, clickY: 52, labelX: 73.5, labelY: 46, areaW: 24, areaH: 26 },
-          { wort: "las alpargatas", clickX: 16.7, clickY: 86, labelX: 28, labelY: 80 },
+          { wort: "las alpargatas", clickX: 16.7, clickY: 86, labelX: 28, labelY: 80, areaW: 24, areaH: 18 },
           { wort: "las chanclas", clickX: 50, clickY: 73, labelX: 50, labelY: 67 },
-          { wort: "la minifalda", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80 }
+          { wort: "la minifalda", clickX: 83.3, clickY: 86, labelX: 75, labelY: 80, areaW: 24, areaH: 18 }
         ]
       }
     ]
