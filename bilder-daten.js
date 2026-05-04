@@ -474,6 +474,66 @@ window.APP_FOLDERS = {
           { wort: "la taza", clickX: 72.8, clickY: 78.0, labelX: 80, labelY: 72.5, areaW: 10, areaH: 12 },
           { wort: "la manta", clickX: 20.5, clickY: 92.0, labelX: 28, labelY: 86.5, areaW: 19, areaH: 16 }
         ]
+      },
+      {
+        title: "El salón – Bild 3",
+        file: "salon3.png",
+        hotspots: [
+          { wort: "el sofá", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el sofá cama", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el sillón", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la mecedora", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la mesa de centro", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el mueble del televisor", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la estantería", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la balda", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la mesa auxiliar", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El salón – Bild 4",
+        file: "salon4.png",
+        hotspots: [
+          { wort: "el aparador", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la vitrina", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la cómoda", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el taburete", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la alfombra", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "las cortinas", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la lámpara de techo", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la lámpara de pie", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el reloj", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El salón – Bild 5",
+        file: "salon5.png",
+        hotspots: [
+          { wort: "el cojín", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la manta", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el cuadro", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el marco de fotos", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el libro", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el periódico", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la revista", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la planta", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el jarrón", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El salón – Bild 6",
+        file: "salon6.png",
+        hotspots: [
+          { wort: "el altavoz", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el proyector", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el mando a distancia", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "los auriculares", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el equipo de música", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el televisor", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el aire acondicionado", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el ventilador de techo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la consola", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
       }
     ]
   }
