@@ -246,7 +246,7 @@ window.APP_FOLDERS = {
           { wort: "las chanclas", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 27 },
           { wort: "las zapatillas de casa", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 27 },
           { wort: "los tacones", clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 31, areaH: 31 },
-          { wort: "las deportivas", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "las botas de agua", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 31, areaH: 31 },
           { wort: "las botas de montaña", clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 31, areaH: 31 }
         ]
       },
