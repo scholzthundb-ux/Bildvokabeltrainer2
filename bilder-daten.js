@@ -188,9 +188,9 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 10",
         file: "strand4.png",
         hotspots: [
-          { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "jugar al voleibol playa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "hacer snorkel", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "jugar al voleibol playa", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
           { wort: "tomar algo en\nun chiringuito", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 28 },
           { wort: "darse un baño", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 28 },
           { wort: "comer un helado", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 28 },
