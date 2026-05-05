@@ -174,11 +174,11 @@ window.APP_FOLDERS = {
         file: "strand3.png",
         hotspots: [
           { wort: "tomar el sol", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el nadador", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el buceador", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "nadar", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "bucear", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
           { wort: "pasear por la playa", clickX: 16.7, clickY: 51.5, labelX: 28, labelY: 41.5, areaW: 30, areaH: 28 },
           { wort: "hacer castillos de arena", clickX: 50, clickY: 51.5, labelX: 50, labelY: 41.5, areaW: 30, areaH: 28 },
-          { wort: "leer", clickX: 83.3, clickY: 51.5, labelX: 74, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "leer un libro", clickX: 83.3, clickY: 51.5, labelX: 74, labelY: 41.5, areaW: 30, areaH: 28 },
           { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 26 },
           { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 26 },
           { wort: "el surfista", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 26 }
