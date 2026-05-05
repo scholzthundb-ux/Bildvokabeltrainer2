@@ -254,15 +254,15 @@ window.APP_FOLDERS = {
         title: "La ropa – Bild 4",
         file: "ropa4.png",
         hotspots: [
-          { wort: "el sombrero", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el gorro", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "las gafas de sol", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el cinturón", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el bolso", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la mochila", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el reloj", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la bufanda", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "los guantes", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "el sombrero", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "el gorro", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "las gafas de sol", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "el cinturón", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 27 },
+          { wort: "el bolso", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 27 },
+          { wort: "la mochila", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 27 },
+          { wort: "el reloj", clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "la bufanda", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "los guantes", clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 31, areaH: 31 }
         ]
       },
       {
