@@ -300,15 +300,14 @@ window.APP_FOLDERS = {
         title: "La ropa – Bild 6",
         file: "ropa6.png",
         hotspots: [
-          { wort: "el abrigo", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el cortavientos", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el chubasquero", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la chaqueta de cuero", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la chaqueta vaquera", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la parka", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el cárdigan", clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el anorak", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la chaqueta de plumas", clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "el traje", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el traje de chaqueta", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el chándal", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el uniforme", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el disfraz", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el mono", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la americana", clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el vestido de novia", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
