@@ -215,9 +215,9 @@ window.APP_FOLDERS = {
           { wort: "el jersey", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "la sudadera con capucha", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "la chaqueta vaquera", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el chaleco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el top", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la sudadera", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "el chaleco", clickX: 16.7, clickY: 82.5, labelX: 24, labelY: 75, areaW: 30, areaH: 26 },
+          { wort: "el top", clickX: 50, clickY: 82.5, labelX: 50, labelY: 75, areaW: 30, areaH: 26 },
+          { wort: "la sudadera", clickX: 83.3, clickY: 82.5, labelX: 76, labelY: 75, areaW: 30, areaH: 26 }
         ]
       },
       {
