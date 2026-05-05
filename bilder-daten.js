@@ -224,15 +224,15 @@ window.APP_FOLDERS = {
         title: "La ropa – Bild 2",
         file: "ropa2.png",
         hotspots: [
-          { wort: "los vaqueros", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "los pantalones", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "los pantalones cortos", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la falda", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el vestido", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "las mallas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el bañador (de hombre)", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el bikini", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el bañador", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "los vaqueros", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "los pantalones", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "los pantalones cortos", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la falda", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 31, areaH: 31 },
+          { wort: "el vestido", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 31, areaH: 31 },
+          { wort: "las mallas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 31, areaH: 31 },
+          { wort: "el bañador (de hombre)", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "el bikini", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "el bañador", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 31, areaH: 31 }
         ]
       },
       {
