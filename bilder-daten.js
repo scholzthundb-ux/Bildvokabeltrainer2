@@ -126,6 +126,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "La playa – Bild 6",
+        file: "strand8.png",
+        hotspots: [
+          { wort: "el bañador", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el bikini", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "las bermudas", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la camiseta", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "los pantalones cortos", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "las chanclas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "el vestido de playa", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "la gaviota", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "las algas", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "La playa – Bild 7",
         file: "strand3.png",
         hotspots: [
           { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
@@ -140,7 +155,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La playa – Bild 7",
+        title: "La playa – Bild 8",
         file: "strand4.png",
         hotspots: [
           { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
