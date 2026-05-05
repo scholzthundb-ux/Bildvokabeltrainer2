@@ -83,9 +83,9 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 3",
         file: "strand5.png",
         hotspots: [
-          { wort: "la playa", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el mar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la ola", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la playa", clickX: 16.7, clickY: 18.6, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el mar", clickX: 50, clickY: 18.6, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la ola", clickX: 83.3, clickY: 18.6, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
           { wort: "la arena", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "el sol", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "el cielo", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
