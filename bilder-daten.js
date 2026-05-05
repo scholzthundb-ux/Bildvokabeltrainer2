@@ -254,9 +254,9 @@ window.APP_FOLDERS = {
         title: "La ropa – Bild 4",
         file: "ropa4.png",
         hotspots: [
-          { wort: "el sombrero", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 31, areaH: 31 },
-          { wort: "el gorro", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 31, areaH: 31 },
-          { wort: "las gafas de sol", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "el sombrero", clickX: 16.7, clickY: 19.5, labelX: 24, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "el gorro", clickX: 50, clickY: 19.5, labelX: 50, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "las gafas de sol", clickX: 83.3, clickY: 19.5, labelX: 76, labelY: 9.5, areaW: 31, areaH: 31 },
           { wort: "el cinturón", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 27 },
           { wort: "el bolso", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 27 },
           { wort: "la mochila", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 27 },
