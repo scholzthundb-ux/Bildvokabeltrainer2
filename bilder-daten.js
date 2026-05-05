@@ -128,15 +128,15 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 6",
         file: "strand8.png",
         hotspots: [
-          { wort: "el bañador", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el bikini", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el bañador (de hombre)", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la camiseta", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "los pantalones cortos", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "las chanclas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el vestido de playa", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la gaviota", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "las algas", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "el bañador", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el bikini", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el bañador (de hombre)", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la camiseta", clickX: 16.7, clickY: 50.8, labelX: 24, labelY: 42, areaW: 30, areaH: 26 },
+          { wort: "los pantalones cortos", clickX: 50, clickY: 50.8, labelX: 50, labelY: 42, areaW: 30, areaH: 26 },
+          { wort: "las chanclas", clickX: 83.3, clickY: 50.8, labelX: 76, labelY: 42, areaW: 30, areaH: 26 },
+          { wort: "el vestido de playa", clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la gaviota", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "las algas", clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
