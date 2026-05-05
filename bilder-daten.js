@@ -96,6 +96,36 @@ window.APP_FOLDERS = {
       },
       {
         title: "La playa – Bild 4",
+        file: "strand6.png",
+        hotspots: [
+          { wort: "el socorrista", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la familia", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "bucear", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "nadar", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "surfear", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "los peces", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "el barco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "el kayak", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "el colchón hinchable", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "La playa – Bild 5",
+        file: "strand7.png",
+        hotspots: [
+          { wort: "el chiringuito", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la sombrilla", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la tumbona", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la toalla", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "las gafas de sol", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "la crema solar", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "el sombrero de sol", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "el bolso de playa", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "la nevera portátil", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "La playa – Bild 6",
         file: "strand3.png",
         hotspots: [
           { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
@@ -110,7 +140,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La playa – Bild 5",
+        title: "La playa – Bild 7",
         file: "strand4.png",
         hotspots: [
           { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
