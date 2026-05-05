@@ -83,120 +83,120 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 3",
         file: "strand5.png",
         hotspots: [
-          { wort: "la playa", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el mar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la ola", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la arena", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el sol", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el cielo", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "la costa", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la bahía", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la isla", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "la playa", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el mar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la ola", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la arena", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el sol", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el cielo", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la costa", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la bahía", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la isla", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 4",
         file: "strand6.png",
         hotspots: [
-          { wort: "el socorrista", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la familia", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el nadador", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el surfista", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "los peces", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el barco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "el kayak", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "el colchón hinchable", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "el socorrista", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la familia", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el nadador", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el surfista", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "los peces", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el barco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el kayak", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el colchón hinchable", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 5",
         file: "strand7.png",
         hotspots: [
-          { wort: "el chiringuito", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la sombrilla", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la tumbona", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la toalla", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "las gafas de sol", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "la crema solar", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el sombrero de sol", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "el bolso de playa", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la nevera portátil", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "el chiringuito", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la sombrilla", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la tumbona", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la toalla", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "las gafas de sol", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la crema solar", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el sombrero de sol", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el bolso de playa", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la nevera portátil", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 6",
         file: "strand8.png",
         hotspots: [
-          { wort: "el bañador", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el bikini", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el bañador (de hombre)", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la camiseta", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "los pantalones cortos", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "las chanclas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el vestido de playa", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la gaviota", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "las algas", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "el bañador", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el bikini", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el bañador (de hombre)", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la camiseta", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "los pantalones cortos", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "las chanclas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el vestido de playa", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la gaviota", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "las algas", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 7",
         file: "strand9.png",
         hotspots: [
-          { wort: "el salvavidas", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la tabla de surf", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la bandera roja", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la pala", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el cubo", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "la pelota", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el flotador", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la concha", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "el castillo de arena", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "el salvavidas", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la tabla de surf", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la bandera roja", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la pala", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el cubo", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la pelota", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el flotador", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la concha", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el castillo de arena", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 8",
         file: "strand10.png",
         hotspots: [
-          { wort: "los refrescos", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la cerveza", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el cóctel", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el zumo", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el helado", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el picnic", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "el libro", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la revista", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "la cámara", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "los refrescos", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la cerveza", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el cóctel", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el zumo", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el helado", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el picnic", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el libro", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la revista", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la cámara", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 9",
         file: "strand3.png",
         hotspots: [
-          { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el nadador", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "pasear por la playa", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 31 },
-          { wort: "hacer castillos de arena", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 31 },
-          { wort: "leer", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 31 },
-          { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "el surfista", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el nadador", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "pasear por la playa", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "hacer castillos de arena", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "leer", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el surfista", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
         title: "La playa – Bild 10",
         file: "strand4.png",
         hotspots: [
-          { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "jugar al voleibol playa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "tomar algo en\nun chiringuito", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 31 },
-          { wort: "darse un baño", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 31 },
-          { wort: "comer un helado", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 31 },
-          { wort: "jugar con la pelota", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "mirar el mar", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "escuchar música", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "jugar al voleibol playa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "tomar algo en\nun chiringuito", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "darse un baño", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "comer un helado", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 28 },
+          { wort: "jugar con la pelota", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "mirar el mar", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "escuchar música", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 28 }
         ]
       }
     ]
