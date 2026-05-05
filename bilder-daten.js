@@ -209,15 +209,15 @@ window.APP_FOLDERS = {
         title: "La ropa – Bild 1",
         file: "ropa1.png",
         hotspots: [
-          { wort: "la camiseta", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la camisa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la blusa", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el jersey", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la sudadera con capucha", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la chaqueta vaquera", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el chaleco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el top", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la sudadera", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "la camiseta", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "la camisa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "la blusa", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "el jersey", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 31, areaH: 31 },
+          { wort: "la sudadera con capucha", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 31, areaH: 31 },
+          { wort: "la chaqueta vaquera", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 31, areaH: 31 },
+          { wort: "el chaleco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "el top", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 31, areaH: 31 },
+          { wort: "la sudadera", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 31, areaH: 31 }
         ]
       },
       {
