@@ -292,7 +292,7 @@ window.APP_FOLDERS = {
           { wort: "la parka", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "el cárdigan", clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el anorak", clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el plumífero", clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "la chaqueta de plumas", clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       }
     ]
