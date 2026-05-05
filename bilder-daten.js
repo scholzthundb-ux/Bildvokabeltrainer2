@@ -83,30 +83,30 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 3",
         file: "strand3.png",
         hotspots: [
-          { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5 },
-          { wort: "nadar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5 },
-          { wort: "bucear", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5 },
-          { wort: "pasear por la playa", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5 },
-          { wort: "hacer castillos de arena", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5 },
-          { wort: "leer", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5 },
-          { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75 },
-          { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75 },
-          { wort: "surfear", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75 }
+          { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "nadar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "bucear", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "pasear por la playa", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 31 },
+          { wort: "hacer castillos de arena", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 31 },
+          { wort: "leer", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 31 },
+          { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "surfear", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 31 }
         ]
       },
       {
         title: "La playa – Bild 4",
         file: "strand4.png",
         hotspots: [
-          { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5 },
-          { wort: "jugar al voleibol playa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5 },
-          { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5 },
-          { wort: "tomar algo en\nun chiringuito", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5 },
-          { wort: "darse un baño", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5 },
-          { wort: "comer un helado", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5 },
-          { wort: "jugar con la pelota", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75 },
-          { wort: "mirar el mar", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75 },
-          { wort: "escuchar música", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75 }
+          { wort: "hacer snorkel", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "jugar al voleibol playa", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "tumbarse en la toalla", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "tomar algo en\nun chiringuito", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 31 },
+          { wort: "darse un baño", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 31 },
+          { wort: "comer un helado", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 31 },
+          { wort: "jugar con la pelota", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "mirar el mar", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
+          { wort: "escuchar música", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 31 }
         ]
       }
     ]
