@@ -239,9 +239,9 @@ window.APP_FOLDERS = {
         title: "La ropa – Bild 3",
         file: "ropa3.png",
         hotspots: [
-          { wort: "los zapatos", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 31, areaH: 31 },
-          { wort: "las zapatillas", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 31, areaH: 31 },
-          { wort: "las sandalias", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "los zapatos", clickX: 16.7, clickY: 19.5, labelX: 24, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "las zapatillas", clickX: 50, clickY: 19.5, labelX: 50, labelY: 9.5, areaW: 31, areaH: 31 },
+          { wort: "las sandalias", clickX: 83.3, clickY: 19.5, labelX: 76, labelY: 9.5, areaW: 31, areaH: 31 },
           { wort: "las botas", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 27 },
           { wort: "las chanclas", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 27 },
           { wort: "las zapatillas de casa", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 27 },
