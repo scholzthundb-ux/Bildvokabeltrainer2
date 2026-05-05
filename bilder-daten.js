@@ -35,6 +35,22 @@ window.APP_FOLDERS = {
           { wort: "nueve", clickX: 21.0, clickY: 84.0, labelX: 16, labelY: 76, areaW: 25, areaH: 21 },
           { wort: "diez", clickX: 65.5, clickY: 84.5, labelX: 58, labelY: 75.5, areaW: 31, areaH: 23 }
         ]
+      },
+      {
+        title: "Los números – Bild 2",
+        file: "zahlen2.png",
+        hotspots: [
+          { wort: "once", clickX: 20.5, clickY: 18.5, labelX: 26, labelY: 10.5, areaW: 25, areaH: 22 },
+          { wort: "doce", clickX: 50.0, clickY: 18.5, labelX: 56, labelY: 10.5, areaW: 24, areaH: 22 },
+          { wort: "trece", clickX: 79.5, clickY: 18.5, labelX: 84, labelY: 10.5, areaW: 26, areaH: 22 },
+          { wort: "catorce", clickX: 20.5, clickY: 43.0, labelX: 27, labelY: 34.5, areaW: 25, areaH: 24 },
+          { wort: "quince", clickX: 50.0, clickY: 43.0, labelX: 55, labelY: 34.5, areaW: 24, areaH: 24 },
+          { wort: "dieciséis", clickX: 79.5, clickY: 43.0, labelX: 84, labelY: 34.5, areaW: 25, areaH: 24 },
+          { wort: "diecisiete", clickX: 20.5, clickY: 68.0, labelX: 14, labelY: 59.5, areaW: 25, areaH: 23 },
+          { wort: "dieciocho", clickX: 50.0, clickY: 68.0, labelX: 58, labelY: 59.5, areaW: 24, areaH: 23 },
+          { wort: "diecinueve", clickX: 79.5, clickY: 68.0, labelX: 86, labelY: 59.5, areaW: 25, areaH: 23 },
+          { wort: "veinte", clickX: 50.0, clickY: 89.0, labelX: 57, labelY: 80.5, areaW: 39, areaH: 16 }
+        ]
       }
     ]
   },
