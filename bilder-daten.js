@@ -98,12 +98,12 @@ window.APP_FOLDERS = {
         title: "La playa – Bild 4",
         file: "strand6.png",
         hotspots: [
-          { wort: "el socorrista", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la familia", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el nadador", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el surfista", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "los peces", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el socorrista", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la familia", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el buceador", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el nadador", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el surfista", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "los peces", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "el barco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el kayak", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el colchón hinchable", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
