@@ -323,15 +323,46 @@
       background: #5b6b7f;
     }
 
+    .mode-status-area {
+      position: relative;
+      height: clamp(106px, 17vh, 154px);
+      margin: 0 0 10px;
+    }
+
+    .mode-panel {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.18s ease;
+    }
+
+    .mode-panel.is-active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    #learnPanel {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
     .swipe-info {
       font-size: 0.98rem;
       color: var(--text-soft);
-      margin: 4px 0 10px;
+      margin: 4px 0 0;
+    }
+
+    .swipe-info.is-hidden {
+      visibility: hidden;
     }
 
     #quizBox {
-      display: none;
-      margin: 0 0 10px;
+      margin: 0;
       padding: 0;
     }
 
@@ -508,7 +539,7 @@
     #lernInfo {
       font-size: 1.02rem;
       font-weight: 800;
-      margin: 0 0 10px;
+      margin: 0;
       color: #27364a;
     }
 
@@ -677,6 +708,10 @@
         height: min(66vh, calc(100dvh - 300px));
       }
 
+      .mode-status-area {
+        height: clamp(118px, 19vh, 170px);
+      }
+
       .ui-btn.image-number {
         font-size: 1rem;
         min-width: 54px;
@@ -758,19 +793,22 @@
       </div>
     </div>
 
-    <div id="lernInfo">Tippe auf ein markiertes Motiv.</div>
-
-    <div id="quizBox">
-      <div class="quiz-top">
-        <div id="frage"></div>
-        <button id="speakBtn" class="sound-btn" type="button">🔊</button>
+    <div class="mode-status-area">
+      <div id="learnPanel" class="mode-panel is-active">
+        <div id="lernInfo">Tippe auf ein markiertes Motiv.</div>
+        <div id="swipeInfo" class="swipe-info">
+          Zum Bildwechsel nach links oder rechts wischen.
+        </div>
       </div>
 
-      <div id="feedback"></div>
-    </div>
+      <div id="quizBox" class="mode-panel">
+        <div class="quiz-top">
+          <div id="frage"></div>
+          <button id="speakBtn" class="sound-btn" type="button">🔊</button>
+        </div>
 
-    <div id="swipeInfo" class="swipe-info">
-      Zum Bildwechsel nach links oder rechts wischen.
+        <div id="feedback"></div>
+      </div>
     </div>
 
     <div class="bild" id="bildContainer">
@@ -826,6 +864,7 @@
     const frage = document.getElementById("frage");
     const feedback = document.getElementById("feedback");
     const quizBox = document.getElementById("quizBox");
+    const learnPanel = document.getElementById("learnPanel");
     const lernInfo = document.getElementById("lernInfo");
     const swipeInfo = document.getElementById("swipeInfo");
     const lernBtn = document.getElementById("lernBtn");
@@ -885,6 +924,15 @@
 
     function isZoomOpen() {
       return !!activeZoomHotspot;
+    }
+
+    function updateModePanels() {
+      const isLearnMode = mode === "lernen";
+      const showSwipeHint = isLearnMode && folders[currentFolderKey].images.length > 1 && !isZoomOpen();
+
+      learnPanel.classList.toggle("is-active", isLearnMode);
+      quizBox.classList.toggle("is-active", !isLearnMode);
+      swipeInfo.classList.toggle("is-hidden", !showSwipeHint);
     }
 
     function currentImageDisablesWordsInLearnMode() {
@@ -1066,14 +1114,10 @@
           buildHotspots();
 
           if (mode === "lernen") {
-            quizBox.style.display = "none";
-            lernInfo.style.display = "block";
-            swipeInfo.style.display = folders[currentFolderKey].images.length > 1 && !isZoomOpen() ? "block" : "none";
+            updateModePanels();
             showImageOpenLabelIfNeeded();
           } else {
-            quizBox.style.display = "block";
-            lernInfo.style.display = "none";
-            swipeInfo.style.display = "none";
+            updateModePanels();
             resetQuizQueues();
             nextQuestion();
           }
@@ -1299,17 +1343,13 @@
       }
 
       if (neu === "lernen") {
-        quizBox.style.display = "none";
-        lernInfo.style.display = "block";
-        swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
         quizAktiv = false;
         updateLernInfo();
+        updateModePanels();
       } else {
-        quizBox.style.display = "block";
-        lernInfo.style.display = "none";
-        swipeInfo.style.display = "none";
         resetQuizQueues();
         nextQuestion();
+        updateModePanels();
       }
     }
 
@@ -1600,14 +1640,10 @@
             }, 220);
 
             if (mode === "lernen") {
-              quizBox.style.display = "none";
-              lernInfo.style.display = "block";
-              swipeInfo.style.display = folders[currentFolderKey].images.length > 1 ? "block" : "none";
+              updateModePanels();
               updateLernInfo();
             } else {
-              quizBox.style.display = "block";
-              lernInfo.style.display = "none";
-              swipeInfo.style.display = "none";
+              updateModePanels();
               resetQuizQueues();
               nextQuestion();
             }
