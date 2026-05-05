@@ -100,9 +100,9 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: "el socorrista", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
           { wort: "la familia", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "bucear", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "nadar", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "surfear", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el nadador", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "el surfista", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "los peces", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "el barco", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
           { wort: "el kayak", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
@@ -129,14 +129,14 @@ window.APP_FOLDERS = {
         file: "strand3.png",
         hotspots: [
           { wort: "tomar el sol", clickX: 16.7, clickY: 16.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "nadar", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "bucear", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el nadador", clickX: 50, clickY: 16.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el buceador", clickX: 83.3, clickY: 16.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
           { wort: "pasear por la playa", clickX: 16.7, clickY: 50, labelX: 28, labelY: 41.5, areaW: 30, areaH: 31 },
           { wort: "hacer castillos de arena", clickX: 50, clickY: 50, labelX: 50, labelY: 41.5, areaW: 30, areaH: 31 },
           { wort: "leer", clickX: 83.3, clickY: 50, labelX: 74, labelY: 41.5, areaW: 30, areaH: 31 },
           { wort: "recoger conchas", clickX: 16.7, clickY: 83.3, labelX: 25, labelY: 75, areaW: 30, areaH: 31 },
           { wort: "sacar fotos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: "surfear", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: "el surfista", clickX: 83.3, clickY: 83.3, labelX: 74, labelY: 75, areaW: 30, areaH: 31 }
         ]
       },
       {
