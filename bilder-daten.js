@@ -454,7 +454,7 @@ window.APP_FOLDERS = {
           { wort: "la puerta", clickX: 26.0, clickY: 25.5, labelX: 35, labelY: 22.5, areaW: 15, areaH: 24 },
           { wort: "la persiana", clickX: 69.5, clickY: 19.0, labelX: 68, labelY: 14.5, areaW: 24, areaH: 18 },
           { wort: "la chimenea", clickX: 18.5, clickY: 62.5, labelX: 31, labelY: 62.5, areaW: 8, areaH: 10 },
-          { wort: "la claraboya", clickX: 46.8, clickY: 70.5, labelX: 63, labelY: 65.5, areaW: 22, areaH: 17 },
+          { wort: "la ventana de tejado", clickX: 46.8, clickY: 70.5, labelX: 63, labelY: 65.5, areaW: 22, areaH: 17 },
           { wort: "el canalón", clickX: 41.0, clickY: 82.0, labelX: 57.5, labelY: 77.5, areaW: 24, areaH: 8 },
           { wort: "la bajante", clickX: 20.5, clickY: 92.0, labelX: 37.5, labelY: 88.5, areaW: 12, areaH: 12 },
           { wort: "la barandilla del balcón", clickX: 77.5, clickY: 78.0, labelX: 68, labelY: 72.5, areaW: 31, areaH: 25 }
@@ -699,7 +699,7 @@ window.APP_FOLDERS = {
           { wort: "las vigas de madera", clickX: 17.5, clickY: 8.8, labelX: 25, labelY: 6.5, areaW: 11, areaH: 8 },
           { wort: "la telaraña", clickX: 16.0, clickY: 24.5, labelX: 28, labelY: 23, areaW: 16, areaH: 14 },
           { wort: "la lámpara", clickX: 51.0, clickY: 30.8, labelX: 59, labelY: 24.5, areaW: 14, areaH: 13 },
-          { wort: "la claraboya", clickX: 84.0, clickY: 20.0, labelX: 77.5, labelY: 14, areaW: 11, areaH: 10 },
+          { wort: "la ventana de tejado", clickX: 84.0, clickY: 20.0, labelX: 77.5, labelY: 14, areaW: 11, areaH: 10 },
           { wort: "la caja", clickX: 17.0, clickY: 53.3, labelX: 24.5, labelY: 49.5, areaW: 11, areaH: 9 },
           { wort: "la silla plegable", clickX: 86.8, clickY: 60.5, labelX: 78.5, labelY: 55.5, areaW: 11, areaH: 10 },
           { wort: "el baúl", clickX: 50.0, clickY: 77.5, labelX: 51, labelY: 76.5, areaW: 24, areaH: 16 },
@@ -718,7 +718,7 @@ window.APP_FOLDERS = {
           { wort: "la escalera", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
           { wort: "la telaraña", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
           { wort: "la araña", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: "la claraboya", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la ventana de tejado", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "las vigas", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       },
