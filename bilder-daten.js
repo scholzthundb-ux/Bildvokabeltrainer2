@@ -696,7 +696,7 @@ window.APP_FOLDERS = {
         file: "desvan1.png",
         openLabel: { wort: "el desván", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la viga", clickX: 17.5, clickY: 8.8, labelX: 25, labelY: 6.5, areaW: 11, areaH: 8 },
+          { wort: "las vigas de madera", clickX: 17.5, clickY: 8.8, labelX: 25, labelY: 6.5, areaW: 11, areaH: 8 },
           { wort: "la telaraña", clickX: 16.0, clickY: 24.5, labelX: 28, labelY: 23, areaW: 16, areaH: 14 },
           { wort: "la lámpara", clickX: 51.0, clickY: 30.8, labelX: 59, labelY: 24.5, areaW: 14, areaH: 13 },
           { wort: "la claraboya", clickX: 84.0, clickY: 20.0, labelX: 77.5, labelY: 14, areaW: 11, areaH: 10 },
