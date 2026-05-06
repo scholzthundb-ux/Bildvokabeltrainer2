@@ -1402,7 +1402,7 @@
 
           timer = setTimeout(() => {
             openNestedFolder(h.openFolderKey, h);
-          }, 650);
+          }, h.openDelay ?? 650);
           return;
         }
 
