@@ -501,7 +501,7 @@ window.APP_FOLDERS = {
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: "la cocina", clickX: 73.9, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
           { wort: "el baño", clickX: 27.2, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
-          { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
+          { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16, openFolderKey: "pasillo", openDelay: 900 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
           { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17 },
@@ -750,6 +750,28 @@ window.APP_FOLDERS = {
           { wort: "la máquina de escribir", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el reloj de bolsillo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el espejo", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  pasillo: {
+    title: "El pasillo",
+    images: [
+      {
+        title: "El pasillo – Bild 1",
+        file: "pasillo1.png",
+        openLabel: { wort: "el pasillo", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "el espejo", clickX: 7.0, clickY: 34.8, labelX: 18, labelY: 28, areaW: 10, areaH: 9 },
+          { wort: "la puerta", clickX: 40.8, clickY: 31.2, labelX: 49, labelY: 24.5, areaW: 10, areaH: 10 },
+          { wort: "la lámpara", clickX: 60.2, clickY: 10.5, labelX: 68, labelY: 8, areaW: 10, areaH: 9 },
+          { wort: "el perchero", clickX: 81.2, clickY: 21.8, labelX: 88, labelY: 16, areaW: 10, areaH: 10 },
+          { wort: "las llaves", clickX: 95.5, clickY: 35.5, labelX: 87, labelY: 31, areaW: 9, areaH: 9 },
+          { wort: "la planta", clickX: 92.0, clickY: 49.8, labelX: 83, labelY: 45, areaW: 10, areaH: 9 },
+          { wort: "el suelo", clickX: 22.5, clickY: 83.0, labelX: 16, labelY: 77, areaW: 11, areaH: 10 },
+          { wort: "la alfombra", clickX: 63.0, clickY: 89.0, labelX: 71, labelY: 83, areaW: 12, areaH: 10 },
+          { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 11, areaH: 10 }
         ]
       }
     ]
