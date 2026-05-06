@@ -763,15 +763,15 @@ window.APP_FOLDERS = {
         file: "pasillo1.png",
         openLabel: { wort: "el pasillo", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "el espejo", clickX: 7.0, clickY: 34.8, labelX: 18, labelY: 28, areaW: 10, areaH: 9 },
-          { wort: "la puerta", clickX: 40.8, clickY: 31.2, labelX: 49, labelY: 24.5, areaW: 10, areaH: 10 },
-          { wort: "la lámpara", clickX: 60.2, clickY: 10.5, labelX: 68, labelY: 8, areaW: 10, areaH: 9 },
-          { wort: "el perchero", clickX: 81.2, clickY: 21.8, labelX: 88, labelY: 16, areaW: 10, areaH: 10 },
+          { wort: "el espejo", clickX: 9.5, clickY: 35.5, labelX: 18, labelY: 28, areaW: 16, areaH: 28 },
+          { wort: "la puerta", clickX: 40.8, clickY: 39.5, labelX: 49, labelY: 24.5, areaW: 18, areaH: 34 },
+          { wort: "la lámpara", clickX: 55.8, clickY: 10.5, labelX: 64, labelY: 8, areaW: 11, areaH: 9 },
+          { wort: "el perchero", clickX: 76.8, clickY: 31.0, labelX: 84, labelY: 16, areaW: 12, areaH: 28 },
           { wort: "las llaves", clickX: 95.5, clickY: 35.5, labelX: 87, labelY: 31, areaW: 9, areaH: 9 },
-          { wort: "la planta", clickX: 92.0, clickY: 49.8, labelX: 83, labelY: 45, areaW: 10, areaH: 9 },
+          { wort: "la planta", clickX: 88.0, clickY: 55.0, labelX: 81, labelY: 46.5, areaW: 13, areaH: 18 },
           { wort: "el suelo", clickX: 22.5, clickY: 83.0, labelX: 16, labelY: 77, areaW: 11, areaH: 10 },
-          { wort: "la alfombra", clickX: 63.0, clickY: 89.0, labelX: 71, labelY: 83, areaW: 12, areaH: 10 },
-          { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 11, areaH: 10 }
+          { wort: "la alfombra", clickX: 63.0, clickY: 87.5, labelX: 71, labelY: 83, areaW: 28, areaH: 18 },
+          { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 16, areaH: 14 }
         ]
       }
     ]
