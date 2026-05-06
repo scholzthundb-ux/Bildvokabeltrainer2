@@ -700,7 +700,7 @@ window.APP_FOLDERS = {
           { wort: "la telaraña", clickX: 16.0, clickY: 24.5, labelX: 28, labelY: 23, areaW: 16, areaH: 14 },
           { wort: "la lámpara", clickX: 51.0, clickY: 30.8, labelX: 59, labelY: 24.5, areaW: 14, areaH: 13 },
           { wort: "la ventana de tejado", clickX: 84.0, clickY: 20.0, labelX: 77.5, labelY: 14, areaW: 11, areaH: 10 },
-          { wort: "la caja", clickX: 17.0, clickY: 53.3, labelX: 24.5, labelY: 49.5, areaW: 11, areaH: 9 },
+          { wort: "la caja de libros", clickX: 17.0, clickY: 53.3, labelX: 24.5, labelY: 49.5, areaW: 11, areaH: 9 },
           { wort: "la silla plegable", clickX: 86.8, clickY: 60.5, labelX: 78.5, labelY: 55.5, areaW: 11, areaH: 10 },
           { wort: "el baúl", clickX: 50.0, clickY: 77.5, labelX: 51, labelY: 76.5, areaW: 24, areaH: 16 },
           { wort: "la escalera", clickX: 14.5, clickY: 82.5, labelX: 17, labelY: 88, areaW: 22, areaH: 34 },
@@ -711,7 +711,7 @@ window.APP_FOLDERS = {
         title: "El desván – Bild 2",
         file: "desvan2.png",
         hotspots: [
-          { wort: "la caja", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la caja de libros", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: "el baúl", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: "la maleta", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: "la lámpara", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
