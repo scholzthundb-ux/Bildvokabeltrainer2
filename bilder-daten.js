@@ -696,10 +696,10 @@ window.APP_FOLDERS = {
         file: "desvan1.png",
         openLabel: { wort: "el desván", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "las vigas de madera", clickX: 23.0, clickY: 10.0, labelX: 31, labelY: 7.8, areaW: 18, areaH: 8 },
+          { wort: "las vigas de madera", clickX: 26.0, clickY: 10.0, labelX: 34, labelY: 7.8, areaW: 24, areaH: 8 },
           { wort: "la telaraña", clickX: 16.0, clickY: 24.5, labelX: 28, labelY: 23, areaW: 16, areaH: 14 },
           { wort: "la lámpara", clickX: 46.8, clickY: 27.2, labelX: 55, labelY: 21.8, areaW: 14, areaH: 13 },
-          { wort: "la ventana de tejado", clickX: 79.5, clickY: 20.0, labelX: 73.0, labelY: 14, areaW: 16, areaH: 13 },
+          { wort: "la ventana de tejado", clickX: 79.5, clickY: 20.0, labelX: 73.0, labelY: 14, areaW: 21, areaH: 17 },
           { wort: "la caja de ropa vieja", clickX: 18.0, clickY: 60.5, labelX: 26.0, labelY: 56.0, areaW: 17, areaH: 14 },
           { wort: "la silla plegable", clickX: 86.8, clickY: 60.5, labelX: 78.5, labelY: 55.5, areaW: 15, areaH: 14 },
           { wort: "el baúl", clickX: 50.0, clickY: 74.8, labelX: 51, labelY: 73.8, areaW: 24, areaH: 16 },
