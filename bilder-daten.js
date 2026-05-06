@@ -699,12 +699,12 @@ window.APP_FOLDERS = {
           { wort: "las vigas de madera", clickX: 17.5, clickY: 8.8, labelX: 25, labelY: 6.5, areaW: 11, areaH: 8 },
           { wort: "la telaraña", clickX: 16.0, clickY: 24.5, labelX: 28, labelY: 23, areaW: 16, areaH: 14 },
           { wort: "la lámpara", clickX: 51.0, clickY: 30.8, labelX: 59, labelY: 24.5, areaW: 14, areaH: 13 },
-          { wort: "la ventana de tejado", clickX: 84.0, clickY: 20.0, labelX: 77.5, labelY: 14, areaW: 11, areaH: 10 },
+          { wort: "la ventana de tejado", clickX: 79.5, clickY: 20.0, labelX: 73.0, labelY: 14, areaW: 16, areaH: 13 },
           { wort: "la caja de libros", clickX: 17.0, clickY: 53.3, labelX: 24.5, labelY: 49.5, areaW: 11, areaH: 9 },
           { wort: "la silla plegable", clickX: 86.8, clickY: 60.5, labelX: 78.5, labelY: 55.5, areaW: 15, areaH: 14 },
           { wort: "el baúl", clickX: 50.0, clickY: 74.8, labelX: 51, labelY: 73.8, areaW: 24, areaH: 16 },
           { wort: "la escalera", clickX: 14.5, clickY: 82.5, labelX: 17, labelY: 88, areaW: 22, areaH: 34 },
-          { wort: "la maleta", clickX: 74.3, clickY: 94.0, labelX: 82, labelY: 88, areaW: 18, areaH: 15 }
+          { wort: "la maleta", clickX: 74.3, clickY: 87.2, labelX: 82, labelY: 81.5, areaW: 18, areaH: 15 }
         ]
       },
       {
