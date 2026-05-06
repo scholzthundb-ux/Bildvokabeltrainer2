@@ -766,13 +766,13 @@ window.APP_FOLDERS = {
           { wort: "el espejo", clickX: 11.5, clickY: 35.5, labelX: 19.5, labelY: 28, areaW: 16, areaH: 28 },
           { wort: "la puerta", clickX: 49.0, clickY: 39.5, labelX: 57, labelY: 24.5, areaW: 18, areaH: 34 },
           { wort: "la lámpara", clickX: 51.5, clickY: 14.5, labelX: 60, labelY: 10.5, areaW: 11, areaH: 9 },
-          { wort: "el perchero", clickX: 76.8, clickY: 31.0, labelX: 84, labelY: 16, areaW: 12, areaH: 28 },
+          { wort: "el perchero", clickX: 72.8, clickY: 36.0, labelX: 81, labelY: 16, areaW: 13, areaH: 36 },
           { wort: "las llaves", clickX: 95.5, clickY: 35.5, labelX: 87, labelY: 31, areaW: 9, areaH: 9 },
-          { wort: "la pared", clickX: 14.5, clickY: 60.0, labelX: 24, labelY: 55.0, areaW: 20, areaH: 30 },
+          { wort: "la pared", clickX: 21.5, clickY: 58.5, labelX: 29, labelY: 53.5, areaW: 34, areaH: 16 },
           { wort: "la planta", clickX: 88.0, clickY: 55.0, labelX: 81, labelY: 46.5, areaW: 13, areaH: 18 },
-          { wort: "el suelo", clickX: 22.5, clickY: 83.0, labelX: 16, labelY: 77, areaW: 11, areaH: 10 },
-          { wort: "la alfombra", clickX: 63.0, clickY: 87.5, labelX: 71, labelY: 83, areaW: 28, areaH: 18 },
-          { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 16, areaH: 14 }
+          { wort: "el suelo", clickX: 22.5, clickY: 85.5, labelX: 16, labelY: 77, areaW: 11, areaH: 15 },
+          { wort: "la alfombra", clickX: 58.0, clickY: 85.0, labelX: 66, labelY: 80.5, areaW: 32, areaH: 22 },
+          { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 20, areaH: 18 }
         ]
       }
     ]
