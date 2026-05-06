@@ -494,7 +494,7 @@ window.APP_FOLDERS = {
         title: "La casa – Bild 6",
         file: "Haus8.png",
         hotspots: [
-          { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
+          { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20, openFolderKey: "desvan" },
           { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18 },
@@ -683,6 +683,73 @@ window.APP_FOLDERS = {
           { wort: "el aire acondicionado", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el ventilador de techo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "la consola", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  desvan: {
+    title: "El desván",
+    images: [
+      {
+        title: "El desván – Bild 1",
+        file: "desvan1.png",
+        openLabel: { wort: "el desván", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "la viga", clickX: 17.5, clickY: 8.8, labelX: 25, labelY: 6.5, areaW: 11, areaH: 8 },
+          { wort: "la telaraña", clickX: 19.3, clickY: 27.3, labelX: 28, labelY: 23, areaW: 10, areaH: 9 },
+          { wort: "la lámpara", clickX: 51.0, clickY: 30.8, labelX: 59, labelY: 24.5, areaW: 10, areaH: 9 },
+          { wort: "la claraboya", clickX: 84.0, clickY: 20.0, labelX: 77.5, labelY: 14, areaW: 11, areaH: 10 },
+          { wort: "la caja", clickX: 17.0, clickY: 53.3, labelX: 24.5, labelY: 49.5, areaW: 11, areaH: 9 },
+          { wort: "la silla plegable", clickX: 86.8, clickY: 60.5, labelX: 78.5, labelY: 55.5, areaW: 11, areaH: 10 },
+          { wort: "el baúl", clickX: 42.3, clickY: 81.3, labelX: 51, labelY: 76.5, areaW: 12, areaH: 10 },
+          { wort: "la escalera", clickX: 24.0, clickY: 94.0, labelX: 17, labelY: 88, areaW: 12, areaH: 10 },
+          { wort: "la maleta", clickX: 74.3, clickY: 94.0, labelX: 82, labelY: 88, areaW: 12, areaH: 10 }
+        ]
+      },
+      {
+        title: "El desván – Bild 2",
+        file: "desvan2.png",
+        hotspots: [
+          { wort: "la caja", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el baúl", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la maleta", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la lámpara", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la escalera", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la telaraña", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la araña", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la claraboya", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "las vigas", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El desván – Bild 3",
+        file: "desvan3.png",
+        hotspots: [
+          { wort: "la linterna", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el polvo", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "los juguetes", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "los adornos de Navidad", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el armario", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "las herramientas", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la ropa", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la manta", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el fantasma", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El desván – Bild 4",
+        file: "desvan4.png",
+        hotspots: [
+          { wort: "la silla plegable", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el sofá", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "los cuadros", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el gramófono", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "los álbumes de fotos", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "las cartas", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la máquina de escribir", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el reloj de bolsillo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el espejo", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       }
     ]
