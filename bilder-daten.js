@@ -958,7 +958,7 @@ window.APP_FOLDERS = {
           { wort: "los pósteres", clickX: 37.5, clickY: 17.5, labelX: 51.0, labelY: 12.5, areaW: 33, areaH: 22 },
           { wort: "la balda", clickX: 83.0, clickY: 27.5, labelX: 75.5, labelY: 25.0, areaW: 27, areaH: 9 },
           { wort: "la consola", clickX: 45.0, clickY: 39.2, labelX: 52.0, labelY: 35.0, areaW: 13, areaH: 7 },
-          { wort: "el mando", clickX: 58.0, clickY: 43.0, labelX: 65.0, labelY: 38.0, areaW: 9, areaH: 8 },
+          { wort: "el mando", clickX: 55.5, clickY: 43.0, labelX: 62.5, labelY: 38.0, areaW: 9, areaH: 8 },
           { wort: "el altavoz", clickX: 65.5, clickY: 49.5, labelX: 71.5, labelY: 47.0, areaW: 8, areaH: 9 },
           { wort: "el ordenador", clickX: 86.0, clickY: 46.5, labelX: 78.0, labelY: 41.0, areaW: 22, areaH: 18 },
           { wort: "el teclado", clickX: 72.5, clickY: 60.2, labelX: 65.5, labelY: 58.0, areaW: 20, areaH: 7 },
