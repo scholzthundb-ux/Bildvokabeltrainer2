@@ -957,15 +957,15 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: "los pósteres", clickX: 37.5, clickY: 17.5, labelX: 51.0, labelY: 12.5, areaW: 33, areaH: 22 },
           { wort: "la balda", clickX: 83.0, clickY: 27.5, labelX: 75.5, labelY: 25.0, areaW: 27, areaH: 9 },
-          { wort: "la consola", clickX: 47.0, clickY: 40.5, labelX: 54.0, labelY: 35.0, areaW: 15, areaH: 8 },
+          { wort: "la consola", clickX: 47.0, clickY: 39.2, labelX: 54.0, labelY: 35.0, areaW: 13, areaH: 7 },
           { wort: "el mando", clickX: 58.0, clickY: 43.0, labelX: 65.0, labelY: 38.0, areaW: 11, areaH: 10 },
           { wort: "el altavoz", clickX: 67.5, clickY: 50.5, labelX: 73.5, labelY: 47.0, areaW: 9, areaH: 11 },
           { wort: "el ordenador", clickX: 88.0, clickY: 46.5, labelX: 80.0, labelY: 41.0, areaW: 22, areaH: 18 },
-          { wort: "el teclado", clickX: 76.5, clickY: 63.5, labelX: 69.5, labelY: 58.0, areaW: 24, areaH: 10 },
-          { wort: "los auriculares", clickX: 90.5, clickY: 77.5, labelX: 81.5, labelY: 72.0, areaW: 16, areaH: 13 },
+          { wort: "el teclado", clickX: 76.5, clickY: 61.8, labelX: 69.5, labelY: 58.0, areaW: 22, areaH: 8 },
+          { wort: "los auriculares", clickX: 90.5, clickY: 77.5, labelX: 81.5, labelY: 72.0, areaW: 18, areaH: 15 },
           { wort: "la silla giratoria", clickX: 73.0, clickY: 79.5, labelX: 62.5, labelY: 88.0, areaW: 19, areaH: 27 },
           { wort: "el móvil", clickX: 7.5, clickY: 54.5, labelX: 14.0, labelY: 49.5, areaW: 9, areaH: 8 },
-          { wort: "la cama", clickX: 20.5, clickY: 46.0, labelX: 28.0, labelY: 41.0, areaW: 34, areaH: 24 },
+          { wort: "la cama", clickX: 20.5, clickY: 43.8, labelX: 28.0, labelY: 41.0, areaW: 34, areaH: 19 },
           { wort: "la alfombra", clickX: 40.0, clickY: 76.0, labelX: 48.0, labelY: 70.0, areaW: 39, areaH: 31 },
           { wort: "la mochila escolar", clickX: 14.0, clickY: 93.0, labelX: 24.0, labelY: 87.0, areaW: 17, areaH: 18 }
         ]
