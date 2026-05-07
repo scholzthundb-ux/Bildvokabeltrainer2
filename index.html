@@ -1203,7 +1203,6 @@
 
           if (mode === "lernen") {
             updateModePanels();
-            showImageOpenLabelIfNeeded();
           } else {
             updateModePanels();
             resetQuizQueues();
@@ -1214,7 +1213,15 @@
           updateMuteButton();
           updateImageNavButtons();
 
-          runAfterImageLoad(afterLoadAction);
+          runAfterImageLoad(() => {
+            if (mode === "lernen" && !isZoomOpen()) {
+              showImageOpenLabelIfNeeded();
+            }
+
+            if (afterLoadAction) {
+              afterLoadAction();
+            }
+          });
         }, 60);
       };
 
@@ -1515,6 +1522,8 @@
     }
 
     function showImageOpenLabelIfNeeded() {
+      if (isZoomOpen()) return;
+
       const imageData = getCurrentImageData();
 
       if (!imageData.openLabel) return;
