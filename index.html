@@ -1003,8 +1003,8 @@
       }
     });
 
-    document.addEventListener("fullscreenchange", updateFullscreenButtonText);
-    document.addEventListener("webkitfullscreenchange", updateFullscreenButtonText);
+    document.addEventListener("fullscreenchange", handleViewportChange);
+    document.addEventListener("webkitfullscreenchange", handleViewportChange);
 
     function getCurrentImageData() {
       return folders[currentFolderKey].images[currentImageIndex];
@@ -1021,6 +1021,25 @@
       learnPanel.classList.toggle("is-active", isLearnMode);
       quizBox.classList.toggle("is-active", !isLearnMode);
       swipeInfo.classList.toggle("is-hidden", !showSwipeHint);
+    }
+
+    function refreshDisplayedLayout() {
+      if (app.style.display === "none") return;
+      if (!bild.src) return;
+
+      setTimeout(() => {
+        updateImageDisplay();
+        buildHotspots();
+
+        if (mode === "lernen" && !isZoomOpen() && !currentLabelHotspot) {
+          showImageOpenLabelIfNeeded();
+        }
+      }, 60);
+    }
+
+    function handleViewportChange() {
+      updateFullscreenButtonText();
+      refreshDisplayedLayout();
     }
 
     function currentImageDisablesWordsInLearnMode() {
@@ -1942,15 +1961,7 @@
       playTone(180, 0.22, "square", 0.06, 0.10);
     }
 
-    window.addEventListener("resize", () => {
-      if (app.style.display === "none") return;
-      if (!bild.src) return;
-
-      setTimeout(() => {
-        updateImageDisplay();
-        buildHotspots();
-      }, 60);
-    });
+    window.addEventListener("resize", refreshDisplayedLayout);
 
     updateMuteButton();
     updateImageNavButtons();
