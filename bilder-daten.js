@@ -492,6 +492,51 @@ window.APP_FOLDERS = {
       },
       {
         title: "La casa – Bild 6",
+        file: "Haus9.png",
+        openLabel: { wort: "la habitación", labelX: 82, labelY: 9 },
+        speakOpenLabel: true,
+        hotspots: [
+          { wort: "la puerta", clickX: 10.8, clickY: 49.5, labelX: 18, labelY: 37, areaW: 17, areaH: 56 },
+          { wort: "el interruptor", clickX: 4.9, clickY: 46.5, labelX: 12.5, labelY: 42.5, areaW: 6, areaH: 12 },
+          { wort: "el techo", clickX: 50.0, clickY: 13.5, labelX: 57, labelY: 8.5, areaW: 62, areaH: 22 },
+          { wort: "la pared", clickX: 52.5, clickY: 43.5, labelX: 61, labelY: 38.5, areaW: 42, areaH: 30 },
+          { wort: "la ventana", clickX: 88.0, clickY: 40.0, labelX: 79.5, labelY: 34.5, areaW: 17, areaH: 27 },
+          { wort: "el alféizar", clickX: 86.0, clickY: 51.0, labelX: 79.5, labelY: 56.5, areaW: 18, areaH: 8 },
+          { wort: "el enchufe", clickX: 26.0, clickY: 60.0, labelX: 18.5, labelY: 65, areaW: 7, areaH: 8 },
+          { wort: "la esquina", clickX: 72.8, clickY: 61.5, labelX: 80, labelY: 66, areaW: 8, areaH: 8, shape: "circle" },
+          { wort: "el suelo", clickX: 57.0, clickY: 80.5, labelX: 65.5, labelY: 74.5, areaW: 62, areaH: 38 }
+        ]
+      },
+      {
+        title: "La casa – Bild 7",
+        file: "zimmer2.png",
+        hotspots: [
+          { wort: "el marco", clickX: 18.8, clickY: 17.1, labelX: 25.5, labelY: 11.5, areaW: 14, areaH: 14 },
+          { wort: "la puerta", clickX: 36.8, clickY: 51.0, labelX: 23.5, labelY: 36.5, areaW: 24, areaH: 60 },
+          { wort: "la pared", clickX: 83.3, clickY: 18.1, labelX: 88.5, labelY: 12.5, areaW: 22, areaH: 18 },
+          { wort: "la bisagra", clickX: 56.4, clickY: 51.5, labelX: 66, labelY: 28, areaW: 8, areaH: 56 },
+          { wort: "el interruptor", clickX: 9.4, clickY: 46.0, labelX: 13.5, labelY: 41.5, areaW: 9, areaH: 8 },
+          { wort: "el enchufe", clickX: 9.5, clickY: 69.1, labelX: 14.5, labelY: 64.5, areaW: 9, areaH: 8 },
+          { wort: "el umbral", clickX: 42.3, clickY: 86.2, labelX: 51, labelY: 81.5, areaW: 18, areaH: 10 },
+          { wort: "la manilla", clickX: 78.2, clickY: 42.4, labelX: 86, labelY: 37.5, areaW: 14, areaH: 12 },
+          { wort: "el ojo de la cerradura", clickX: 74.5, clickY: 51.8, labelX: 85.5, labelY: 48.5, areaW: 6, areaH: 7 },
+          { wort: "la llave", clickX: 80.5, clickY: 61.1, labelX: 88.5, labelY: 57.5, areaW: 14, areaH: 11 }
+        ]
+      },
+      {
+        title: "La casa – Bild 8",
+        file: "zimmer3.png",
+        hotspots: [
+          { wort: "la ventana", clickX: 34.0, clickY: 20.5, labelX: 24, labelY: 15, areaW: 57, areaH: 57 },
+          { wort: "el marco", clickX: 76.0, clickY: 56.0, labelX: 83, labelY: 50, areaW: 16, areaH: 60 },
+          { wort: "el cristal", clickX: 41.0, clickY: 44.0, labelX: 26.5, labelY: 37, areaW: 35, areaH: 33 },
+          { wort: "la veneciana", clickX: 68.8, clickY: 28.7, labelX: 80, labelY: 22.5, areaW: 23, areaH: 13 },
+          { wort: "la manilla", clickX: 28.6, clickY: 48.5, labelX: 15.5, labelY: 44.5, areaW: 6, areaH: 9 },
+          { wort: "el alféizar", clickX: 22.8, clickY: 77.2, labelX: 25, labelY: 72.5, areaW: 43, areaH: 11 }
+        ]
+      },
+      {
+        title: "La casa – Bild 9",
         file: "Haus8.png",
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
@@ -516,51 +561,6 @@ window.APP_FOLDERS = {
     images: [
       {
         title: "Las habitaciones – Bild 1",
-        file: "Haus9.png",
-        openLabel: { wort: "la habitación", labelX: 82, labelY: 9 },
-        speakOpenLabel: true,
-        hotspots: [
-          { wort: "la puerta", clickX: 10.8, clickY: 49.5, labelX: 18, labelY: 37, areaW: 17, areaH: 56 },
-          { wort: "el interruptor", clickX: 4.9, clickY: 46.5, labelX: 12.5, labelY: 42.5, areaW: 6, areaH: 12 },
-          { wort: "el techo", clickX: 50.0, clickY: 13.5, labelX: 57, labelY: 8.5, areaW: 62, areaH: 22 },
-          { wort: "la pared", clickX: 52.5, clickY: 43.5, labelX: 61, labelY: 38.5, areaW: 42, areaH: 30 },
-          { wort: "la ventana", clickX: 88.0, clickY: 40.0, labelX: 79.5, labelY: 34.5, areaW: 17, areaH: 27 },
-          { wort: "el alféizar", clickX: 86.0, clickY: 51.0, labelX: 79.5, labelY: 56.5, areaW: 18, areaH: 8 },
-          { wort: "el enchufe", clickX: 26.0, clickY: 60.0, labelX: 18.5, labelY: 65, areaW: 7, areaH: 8 },
-          { wort: "la esquina", clickX: 72.8, clickY: 61.5, labelX: 80, labelY: 66, areaW: 8, areaH: 8, shape: "circle" },
-          { wort: "el suelo", clickX: 57.0, clickY: 80.5, labelX: 65.5, labelY: 74.5, areaW: 62, areaH: 38 }
-        ]
-      },
-      {
-        title: "Las habitaciones – Bild 2",
-        file: "zimmer2.png",
-        hotspots: [
-          { wort: "el marco", clickX: 18.8, clickY: 17.1, labelX: 25.5, labelY: 11.5, areaW: 14, areaH: 14 },
-          { wort: "la puerta", clickX: 36.8, clickY: 51.0, labelX: 23.5, labelY: 36.5, areaW: 24, areaH: 60 },
-          { wort: "la pared", clickX: 83.3, clickY: 18.1, labelX: 88.5, labelY: 12.5, areaW: 22, areaH: 18 },
-          { wort: "la bisagra", clickX: 56.4, clickY: 51.5, labelX: 66, labelY: 28, areaW: 8, areaH: 56 },
-          { wort: "el interruptor", clickX: 9.4, clickY: 46.0, labelX: 13.5, labelY: 41.5, areaW: 9, areaH: 8 },
-          { wort: "el enchufe", clickX: 9.5, clickY: 69.1, labelX: 14.5, labelY: 64.5, areaW: 9, areaH: 8 },
-          { wort: "el umbral", clickX: 42.3, clickY: 86.2, labelX: 51, labelY: 81.5, areaW: 18, areaH: 10 },
-          { wort: "la manilla", clickX: 78.2, clickY: 42.4, labelX: 86, labelY: 37.5, areaW: 14, areaH: 12 },
-          { wort: "el ojo de la cerradura", clickX: 74.5, clickY: 51.8, labelX: 85.5, labelY: 48.5, areaW: 6, areaH: 7 },
-          { wort: "la llave", clickX: 80.5, clickY: 61.1, labelX: 88.5, labelY: 57.5, areaW: 14, areaH: 11 }
-        ]
-      },
-      {
-        title: "Las habitaciones – Bild 3",
-        file: "zimmer3.png",
-        hotspots: [
-          { wort: "la ventana", clickX: 34.0, clickY: 20.5, labelX: 24, labelY: 15, areaW: 57, areaH: 57 },
-          { wort: "el marco", clickX: 76.0, clickY: 56.0, labelX: 83, labelY: 50, areaW: 16, areaH: 60 },
-          { wort: "el cristal", clickX: 41.0, clickY: 44.0, labelX: 26.5, labelY: 37, areaW: 35, areaH: 33 },
-          { wort: "la veneciana", clickX: 68.8, clickY: 28.7, labelX: 80, labelY: 22.5, areaW: 23, areaH: 13 },
-          { wort: "la manilla", clickX: 28.6, clickY: 48.5, labelX: 15.5, labelY: 44.5, areaW: 6, areaH: 9 },
-          { wort: "el alféizar", clickX: 22.8, clickY: 77.2, labelX: 25, labelY: 72.5, areaW: 43, areaH: 11 }
-        ]
-      },
-      {
-        title: "Las habitaciones – Bild 4",
         file: "Haus8.png",
         disableWordInLearnMode: true,
         hotspots: [
@@ -579,7 +579,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "Las habitaciones – Bild 5",
+        title: "Las habitaciones – Bild 2",
         file: "habitaciones3.png",
         hotspots: [
           { wort: "el desván", clickX: 50.0, clickY: 26.0, labelX: 63, labelY: 17, areaW: 92, areaH: 42 },
