@@ -921,16 +921,17 @@ window.APP_FOLDERS = {
         file: "ninos1.png",
         openLabel: { wort: "el cuarto de los niños", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la ventana", clickX: 12.0, clickY: 28.5, labelX: 19, labelY: 22.5, areaW: 12, areaH: 32 },
+          { wort: "la ventana", clickX: 7.0, clickY: 26.5, labelX: 19, labelY: 22.5, areaW: 14, areaH: 28 },
           { wort: "la lámpara", clickX: 6.8, clickY: 48.8, labelX: 14.5, labelY: 44.0, areaW: 11, areaH: 16 },
           { wort: "el armario", clickX: 52.5, clickY: 31.5, labelX: 61, labelY: 25.0, areaW: 22, areaH: 31 },
           { wort: "la estantería", clickX: 86.0, clickY: 25.0, labelX: 79.0, labelY: 19.0, areaW: 18, areaH: 22 },
           { wort: "el peluche", clickX: 29.0, clickY: 47.5, labelX: 39.0, labelY: 42.0, areaW: 11, areaH: 14 },
           { wort: "la cama", clickX: 33.5, clickY: 57.0, labelX: 40.0, labelY: 63.0, areaW: 33, areaH: 21 },
-          { wort: "el escritorio", clickX: 77.0, clickY: 50.5, labelX: 81.5, labelY: 45.0, areaW: 28, areaH: 18 },
-          { wort: "la silla", clickX: 65.0, clickY: 67.5, labelX: 72.0, labelY: 73.0, areaW: 16, areaH: 20 },
-          { wort: "la mochila escolar", clickX: 93.0, clickY: 75.5, labelX: 86.5, labelY: 70.5, areaW: 12, areaH: 17 },
-          { wort: "la casa de muñecas", clickX: 27.0, clickY: 85.5, labelX: 23.0, labelY: 79.0, areaW: 22, areaH: 22 },
+          { wort: "el escritorio", clickX: 77.0, clickY: 48.5, labelX: 81.5, labelY: 45.0, areaW: 28, areaH: 14 },
+          { wort: "la silla", clickX: 69.0, clickY: 64.5, labelX: 72.0, labelY: 73.0, areaW: 16, areaH: 20 },
+          { wort: "la mochila escolar", clickX: 93.0, clickY: 70.5, labelX: 86.5, labelY: 70.5, areaW: 12, areaH: 17 },
+          { wort: "la casa de muñecas", clickX: 33.0, clickY: 80.5, labelX: 23.0, labelY: 79.0, areaW: 22, areaH: 22 },
+          { wort: "las muñecas", clickX: 56.0, clickY: 83.8, labelX: 70.5, labelY: 79.0, areaW: 14, areaH: 15 },
         ]
       },
       {
