@@ -685,7 +685,7 @@ window.APP_FOLDERS = {
         disableWordInLearnMode: true,
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20, openFolderKey: "desvan", openDelay: 900 },
-          { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },
+          { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18, openFolderKey: "salon" },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
@@ -908,6 +908,46 @@ window.APP_FOLDERS = {
           { wort: "el suelo", clickX: 22.5, clickY: 85.5, labelX: 16, labelY: 77, areaW: 11, areaH: 15 },
           { wort: "la alfombra", clickX: 58.0, clickY: 85.0, labelX: 66, labelY: 80.5, areaW: 32, areaH: 22 },
           { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 20, areaH: 18 }
+        ]
+      }
+    ]
+  },
+
+  cuartoNinos: {
+    title: "El cuarto de los niños",
+    images: [
+      {
+        title: "El cuarto de los niños – Bild 1",
+        file: "ninos1.png",
+        openLabel: { wort: "el cuarto de los niños", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "la cortina", clickX: 12.0, clickY: 28.5, labelX: 19, labelY: 22.5, areaW: 12, areaH: 32 },
+          { wort: "la lámpara", clickX: 6.8, clickY: 48.8, labelX: 14.5, labelY: 44.0, areaW: 11, areaH: 16 },
+          { wort: "el armario", clickX: 52.5, clickY: 31.5, labelX: 61, labelY: 25.0, areaW: 22, areaH: 31 },
+          { wort: "la estantería", clickX: 86.0, clickY: 25.0, labelX: 79.0, labelY: 19.0, areaW: 18, areaH: 22 },
+          { wort: "el osito de peluche", clickX: 29.0, clickY: 47.5, labelX: 39.0, labelY: 42.0, areaW: 11, areaH: 14 },
+          { wort: "la cama", clickX: 33.5, clickY: 57.0, labelX: 40.0, labelY: 63.0, areaW: 33, areaH: 21 },
+          { wort: "el escritorio", clickX: 77.0, clickY: 50.5, labelX: 81.5, labelY: 45.0, areaW: 28, areaH: 18 },
+          { wort: "la silla", clickX: 65.0, clickY: 67.5, labelX: 72.0, labelY: 73.0, areaW: 16, areaH: 20 },
+          { wort: "la mochila", clickX: 93.0, clickY: 75.5, labelX: 86.5, labelY: 70.5, areaW: 12, areaH: 17 },
+          { wort: "la casa de muñecas", clickX: 27.0, clickY: 85.5, labelX: 23.0, labelY: 79.0, areaW: 22, areaH: 22 },
+          { wort: "las muñecas", clickX: 63.0, clickY: 83.8, labelX: 70.5, labelY: 79.0, areaW: 14, areaH: 15 }
+        ]
+      },
+      {
+        title: "El cuarto de los niños – Bild 2",
+        file: "ninos2.png",
+        hotspots: [
+          { wort: "la cortina", clickX: 11.0, clickY: 24.5, labelX: 17.5, labelY: 18.5, areaW: 13, areaH: 30 },
+          { wort: "la cuna", clickX: 31.0, clickY: 37.0, labelX: 40.0, labelY: 30.5, areaW: 27, areaH: 25 },
+          { wort: "la balda", clickX: 83.0, clickY: 15.5, labelX: 75.5, labelY: 10.0, areaW: 20, areaH: 10 },
+          { wort: "el cambiador", clickX: 69.0, clickY: 36.0, labelX: 77.5, labelY: 29.5, areaW: 24, areaH: 20 },
+          { wort: "la trona", clickX: 90.0, clickY: 54.0, labelX: 82.5, labelY: 48.0, areaW: 18, areaH: 25 },
+          { wort: "los bloques", clickX: 23.0, clickY: 64.5, labelX: 29.5, labelY: 59.0, areaW: 24, areaH: 16 },
+          { wort: "el libro", clickX: 61.5, clickY: 63.5, labelX: 68.5, labelY: 58.0, areaW: 18, areaH: 14 },
+          { wort: "el chupete", clickX: 19.0, clickY: 77.0, labelX: 26.0, labelY: 72.0, areaW: 10, areaH: 10 },
+          { wort: "el sonajero", clickX: 44.0, clickY: 84.0, labelX: 50.5, labelY: 88.0, areaW: 16, areaH: 15 },
+          { wort: "el osito de peluche", clickX: 70.5, clickY: 81.0, labelX: 78.5, labelY: 76.0, areaW: 15, areaH: 18 }
         ]
       }
     ]
