@@ -697,14 +697,6 @@ window.APP_FOLDERS = {
           { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17 },
           { wort: "el trastero", clickX: 71.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 23, areaH: 17 }
         ]
-      },
-      {
-        title: "Las habitaciones – Bild 2",
-        file: "habitaciones3.png",
-        hotspots: [
-          { wort: "el desván", clickX: 50.0, clickY: 26.0, labelX: 63, labelY: 17, areaW: 92, areaH: 42 },
-          { wort: "la buhardilla", clickX: 50.0, clickY: 75.0, labelX: 64, labelY: 65, areaW: 92, areaH: 40 }
-        ]
       }
     ]
   },
@@ -844,6 +836,14 @@ window.APP_FOLDERS = {
       },
       {
         title: "El desván – Bild 2",
+        file: "habitaciones3.png",
+        hotspots: [
+          { wort: "el desván", clickX: 50.0, clickY: 26.0, labelX: 63, labelY: 17, areaW: 92, areaH: 42 },
+          { wort: "la buhardilla", clickX: 50.0, clickY: 75.0, labelX: 64, labelY: 65, areaW: 92, areaH: 40 }
+        ]
+      },
+      {
+        title: "El desván – Bild 3",
         file: "desvan2.png",
         hotspots: [
           { wort: "la caja de libros", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
@@ -858,7 +858,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "El desván – Bild 3",
+        title: "El desván – Bild 4",
         file: "desvan3.png",
         hotspots: [
           { wort: "la linterna", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
@@ -873,7 +873,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "El desván – Bild 4",
+        title: "El desván – Bild 5",
         file: "desvan4.png",
         hotspots: [
           { wort: "la silla plegable", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
