@@ -937,13 +937,13 @@ window.APP_FOLDERS = {
         title: "El cuarto de los niños – Bild 2",
         file: "ninos2.png",
         hotspots: [
-          { wort: "la cortina", clickX: 11.0, clickY: 24.5, labelX: 17.5, labelY: 18.5, areaW: 13, areaH: 30 },
+          { wort: "el móvil", clickX: 11.0, clickY: 24.5, labelX: 17.5, labelY: 18.5, areaW: 13, areaH: 30 },
           { wort: "la cuna", clickX: 31.0, clickY: 37.0, labelX: 40.0, labelY: 30.5, areaW: 27, areaH: 25 },
           { wort: "la balda", clickX: 83.0, clickY: 15.5, labelX: 75.5, labelY: 10.0, areaW: 20, areaH: 10 },
           { wort: "el cambiador", clickX: 69.0, clickY: 36.0, labelX: 77.5, labelY: 29.5, areaW: 24, areaH: 20 },
           { wort: "la trona", clickX: 90.0, clickY: 54.0, labelX: 82.5, labelY: 48.0, areaW: 18, areaH: 25 },
-          { wort: "los bloques", clickX: 23.0, clickY: 64.5, labelX: 29.5, labelY: 59.0, areaW: 24, areaH: 16 },
-          { wort: "el libro", clickX: 61.5, clickY: 63.5, labelX: 68.5, labelY: 58.0, areaW: 18, areaH: 14 },
+          { wort: "los bloques de construcción", clickX: 23.0, clickY: 64.5, labelX: 29.5, labelY: 59.0, areaW: 24, areaH: 16 },
+          { wort: "el libro infantil", clickX: 61.5, clickY: 63.5, labelX: 68.5, labelY: 58.0, areaW: 18, areaH: 14 },
           { wort: "el chupete", clickX: 19.0, clickY: 77.0, labelX: 26.0, labelY: 72.0, areaW: 10, areaH: 10 },
           { wort: "el sonajero", clickX: 44.0, clickY: 84.0, labelX: 50.5, labelY: 88.0, areaW: 16, areaH: 15 },
           { wort: "el osito de peluche", clickX: 70.5, clickY: 81.0, labelX: 78.5, labelY: 76.0, areaW: 15, areaH: 18 }
