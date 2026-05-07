@@ -928,7 +928,7 @@ window.APP_FOLDERS = {
           { wort: "el peluche", clickX: 29.0, clickY: 47.5, labelX: 39.0, labelY: 42.0, areaW: 11, areaH: 14 },
           { wort: "la cama", clickX: 33.5, clickY: 58.5, labelX: 40.0, labelY: 63.0, areaW: 33, areaH: 18 },
           { wort: "el escritorio", clickX: 77.0, clickY: 48.5, labelX: 81.5, labelY: 45.0, areaW: 28, areaH: 14 },
-          { wort: "la silla", clickX: 69.0, clickY: 64.5, labelX: 72.0, labelY: 73.0, areaW: 16, areaH: 20 },
+          { wort: "la silla", clickX: 69.0, clickY: 61.5, labelX: 72.0, labelY: 73.0, areaW: 16, areaH: 20 },
           { wort: "la mochila escolar", clickX: 93.0, clickY: 70.5, labelX: 86.5, labelY: 70.5, areaW: 12, areaH: 17 },
           { wort: "la casa de muñecas", clickX: 33.0, clickY: 80.5, labelX: 23.0, labelY: 79.0, areaW: 22, areaH: 22 },
           { wort: "las muñecas", clickX: 56.0, clickY: 83.8, labelX: 70.5, labelY: 79.0, areaW: 14, areaH: 15 },
