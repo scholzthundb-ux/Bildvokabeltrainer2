@@ -949,6 +949,22 @@ window.APP_FOLDERS = {
           { wort: "el sonajero", clickX: 39.0, clickY: 80.0, labelX: 50.5, labelY: 88.0, areaW: 16, areaH: 15 },
           { wort: "el osito de peluche", clickX: 63.5, clickY: 81.0, labelX: 78.5, labelY: 76.0, areaW: 15, areaH: 18 }
         ]
+      },
+      {
+        title: "El cuarto de los niños – Bild 3",
+        file: "ninos3.png",
+        openLabel: { wort: "el cuarto juvenil", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "los pósteres", clickX: 42.0, clickY: 17.5, labelX: 51.0, labelY: 12.5, areaW: 24, areaH: 22 },
+          { wort: "la consola", clickX: 47.0, clickY: 40.5, labelX: 54.0, labelY: 35.0, areaW: 18, areaH: 10 },
+          { wort: "el mando", clickX: 58.0, clickY: 43.0, labelX: 65.0, labelY: 38.0, areaW: 11, areaH: 10 },
+          { wort: "el altavoz", clickX: 67.5, clickY: 52.0, labelX: 73.5, labelY: 47.0, areaW: 9, areaH: 14 },
+          { wort: "el ordenador", clickX: 88.0, clickY: 46.5, labelX: 80.0, labelY: 41.0, areaW: 22, areaH: 18 },
+          { wort: "el teclado", clickX: 76.0, clickY: 63.0, labelX: 69.5, labelY: 58.0, areaW: 22, areaH: 10 },
+          { wort: "los auriculares", clickX: 90.5, clickY: 77.0, labelX: 81.5, labelY: 72.0, areaW: 14, areaH: 12 },
+          { wort: "la silla giratoria", clickX: 69.0, clickY: 83.5, labelX: 62.5, labelY: 88.0, areaW: 19, areaH: 19 },
+          { wort: "el móvil", clickX: 7.5, clickY: 54.5, labelX: 14.0, labelY: 49.5, areaW: 9, areaH: 8 }
+        ]
       }
     ]
   }
