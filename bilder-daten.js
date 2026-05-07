@@ -909,6 +909,36 @@ window.APP_FOLDERS = {
           { wort: "la alfombra", clickX: 58.0, clickY: 85.0, labelX: 66, labelY: 80.5, areaW: 32, areaH: 22 },
           { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 20, areaH: 18 }
         ]
+      },
+      {
+        title: "El pasillo – Bild 2",
+        file: "pasillo2.png",
+        hotspots: [
+          { wort: "la mirilla", clickX: 16.7, clickY: 22.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el suelo", clickX: 50, clickY: 22.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el espejo", clickX: 83.3, clickY: 22.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el perchero", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la alfombra", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la cómoda", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el cuelgallaves", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "las llaves", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el felpudo", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "El pasillo – Bild 3",
+        file: "pasillo3.png",
+        hotspots: [
+          { wort: "el paragüero", clickX: 16.7, clickY: 22.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el zapatero", clickX: 50, clickY: 22.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el cuadro", clickX: 83.3, clickY: 22.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la planta", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el interruptor", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el enchufe", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el teléfono fijo", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el reloj de pared", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el portero automático", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
       }
     ]
   },
