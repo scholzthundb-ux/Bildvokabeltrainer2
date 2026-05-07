@@ -597,6 +597,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "La casa – Bild 13",
+        file: "haus14.png",
+        hotspots: [
+          { wort: "el portal", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "el timbre", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "el portero automático", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "el umbral", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "la manilla", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "el pomo", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "el ojo de la cerradura", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "la bisagra", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "el marco", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+        ]
+      },
+      {
+        title: "La casa – Bild 14",
         file: "Haus8.png",
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
