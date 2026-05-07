@@ -953,7 +953,7 @@ window.APP_FOLDERS = {
       {
         title: "El cuarto de los niños – Bild 3",
         file: "ninos3.png",
-        openLabel: { wort: "el cuarto juvenil", labelX: 50, labelY: 9 },
+        openLabel: { wort: "el cuarto de joven", labelX: 50, labelY: 9 },
         hotspots: [
           { wort: "los pósteres", clickX: 42.0, clickY: 17.5, labelX: 51.0, labelY: 12.5, areaW: 24, areaH: 22 },
           { wort: "la consola", clickX: 47.0, clickY: 40.5, labelX: 54.0, labelY: 35.0, areaW: 18, areaH: 10 },
