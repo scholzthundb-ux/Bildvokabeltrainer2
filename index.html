@@ -571,11 +571,13 @@
       transform: translate(-50%, -50%);
       display: none;
       z-index: 20;
-      white-space: pre-line;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: normal;
       text-align: center;
       box-shadow: 0 10px 22px rgba(0,0,0,0.24);
       pointer-events: none;
-      max-width: min(320px, 70vw);
+      max-width: min(260px, 58vw);
     }
 
     @keyframes bubbleIn {
@@ -1596,6 +1598,28 @@
       specialImageLabel.textContent = "";
     }
 
+    function positionLabelElement(el, hotspot) {
+      let left = imagePercentToPixelX(hotspot.labelX);
+      let top = imagePercentToPixelY(hotspot.labelY);
+
+      el.style.left = left + "px";
+      el.style.top = top + "px";
+      el.style.display = "block";
+
+      const halfWidth = el.offsetWidth / 2;
+      const halfHeight = el.offsetHeight / 2;
+      const minX = imageDisplay.x + halfWidth + 8;
+      const maxX = imageDisplay.x + imageDisplay.w - halfWidth - 8;
+      const minY = imageDisplay.y + halfHeight + 8;
+      const maxY = imageDisplay.y + imageDisplay.h - halfHeight - 8;
+
+      left = Math.max(minX, Math.min(maxX, left));
+      top = Math.max(minY, Math.min(maxY, top));
+
+      el.style.left = left + "px";
+      el.style.top = top + "px";
+    }
+
     function showLabel(hotspot, options = {}) {
       if (labelHideTimer) {
         clearTimeout(labelHideTimer);
@@ -1608,9 +1632,7 @@
       currentLabelIsPersistent = !!options.persistent;
 
       label.textContent = hotspot.wort;
-      label.style.left = imagePercentToPixelX(hotspot.labelX) + "px";
-      label.style.top = imagePercentToPixelY(hotspot.labelY) + "px";
-      label.style.display = "block";
+      positionLabelElement(label, hotspot);
 
       label.classList.remove("show");
       void label.offsetWidth;
@@ -1626,9 +1648,7 @@
     function repositionCurrentLabel() {
       if (!currentLabelHotspot) return;
 
-      label.style.left = imagePercentToPixelX(currentLabelHotspot.labelX) + "px";
-      label.style.top = imagePercentToPixelY(currentLabelHotspot.labelY) + "px";
-      label.style.display = "block";
+      positionLabelElement(label, currentLabelHotspot);
     }
 
     function hideLabel() {
