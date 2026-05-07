@@ -1222,6 +1222,7 @@
 
           if (mode === "lernen") {
             updateModePanels();
+            showImageOpenLabelIfNeeded();
           } else {
             updateModePanels();
             resetQuizQueues();
@@ -1232,15 +1233,7 @@
           updateMuteButton();
           updateImageNavButtons();
 
-          runAfterImageLoad(() => {
-            if (mode === "lernen" && !isZoomOpen()) {
-              showImageOpenLabelIfNeeded();
-            }
-
-            if (afterLoadAction) {
-              afterLoadAction();
-            }
-          });
+          runAfterImageLoad(afterLoadAction);
         }, 60);
       };
 
