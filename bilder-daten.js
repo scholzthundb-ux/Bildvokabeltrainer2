@@ -660,7 +660,7 @@ window.APP_FOLDERS = {
         file: "Haus8.png",
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20 },
-          { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },
+          { wort: "la habitación infantil", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18 },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
@@ -685,7 +685,7 @@ window.APP_FOLDERS = {
         disableWordInLearnMode: true,
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 18.5, labelX: 50, labelY: 12, areaW: 47, areaH: 20, openFolderKey: "desvan", openDelay: 900 },
-          { wort: "el cuarto de los niños", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
+          { wort: "la habitación infantil", clickX: 29.8, clickY: 35, labelX: 28, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
           { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18, openFolderKey: "salon" },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
@@ -914,12 +914,12 @@ window.APP_FOLDERS = {
   },
 
   cuartoNinos: {
-    title: "El cuarto de los niños",
+    title: "La habitación infantil",
     images: [
       {
-        title: "El cuarto de los niños – Bild 1",
+        title: "La habitación infantil – Bild 1",
         file: "ninos1.png",
-        openLabel: { wort: "el cuarto de los niños", labelX: 50, labelY: 9 },
+        openLabel: { wort: "la habitación infantil", labelX: 50, labelY: 9 },
         hotspots: [
           { wort: "la ventana", clickX: 7.0, clickY: 26.5, labelX: 19, labelY: 22.5, areaW: 14, areaH: 28 },
           { wort: "la lámpara", clickX: 6.8, clickY: 48.8, labelX: 14.5, labelY: 44.0, areaW: 11, areaH: 16 },
@@ -935,7 +935,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "El cuarto de los niños – Bild 2",
+        title: "La habitación infantil – Bild 2",
         file: "ninos2.png",
         hotspots: [
           { wort: "el móvil", clickX: 25.5, clickY: 17.5, labelX: 17.5, labelY: 18.5, areaW: 20, areaH: 16 },
@@ -951,7 +951,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "El cuarto de los niños – Bild 3",
+        title: "La habitación infantil – Bild 3",
         file: "ninos3.png",
         openLabel: { wort: "la habitación juvenil", labelX: 50, labelY: 9 },
         hotspots: [
