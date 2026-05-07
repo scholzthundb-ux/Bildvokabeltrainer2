@@ -1164,6 +1164,15 @@
 
       setTimeout(async () => {
         await enterFullscreen();
+
+        const currentImageData = getCurrentImageData();
+        if (mode === "lernen" && currentImageData.forceOpenLabelAfterEnter) {
+          setTimeout(() => {
+            if (mode === "lernen" && getCurrentImageData() === currentImageData && !isZoomOpen()) {
+              showImageOpenLabelIfNeeded();
+            }
+          }, 180);
+        }
       }, 120);
     }
 

@@ -954,6 +954,7 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 3",
         file: "ninos3.png",
         openLabel: { wort: "la habitación juvenil", labelX: 50, labelY: 22 },
+        forceOpenLabelAfterEnter: true,
         hotspots: [
           { wort: "los pósteres", clickX: 37.5, clickY: 17.5, labelX: 51.0, labelY: 12.5, areaW: 33, areaH: 22 },
           { wort: "la balda", clickX: 83.0, clickY: 27.5, labelX: 75.5, labelY: 25.0, areaW: 27, areaH: 9 },
