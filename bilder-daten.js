@@ -938,8 +938,8 @@ window.APP_FOLDERS = {
         title: "El cuarto de los niños – Bild 2",
         file: "ninos2.png",
         hotspots: [
-          { wort: "el móvil", clickX: 15.5, clickY: 22.0, labelX: 17.5, labelY: 18.5, areaW: 18, areaH: 16 },
-          { wort: "la cuna", clickX: 31.0, clickY: 37.0, labelX: 40.0, labelY: 30.5, areaW: 27, areaH: 25 },
+          { wort: "el móvil", clickX: 25.5, clickY: 17.5, labelX: 17.5, labelY: 18.5, areaW: 20, areaH: 16 },
+          { wort: "la cuna", clickX: 31.0, clickY: 37.0, labelX: 40.0, labelY: 30.5, areaW: 33, areaH: 25 },
           { wort: "la balda", clickX: 77.5, clickY: 12.5, labelX: 75.5, labelY: 10.0, areaW: 28, areaH: 11 },
           { wort: "el cambiador", clickX: 69.0, clickY: 36.0, labelX: 77.5, labelY: 29.5, areaW: 24, areaH: 20 },
           { wort: "la trona", clickX: 84.5, clickY: 58.0, labelX: 82.5, labelY: 48.0, areaW: 18, areaH: 25 },
