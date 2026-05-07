@@ -1052,6 +1052,7 @@
       setTimeout(() => {
         updateImageDisplay();
         buildHotspots();
+        updateSpecialImageLabel();
 
         if (mode === "lernen" && !isZoomOpen() && !currentLabelHotspot) {
           showImageOpenLabelIfNeeded();
@@ -1792,6 +1793,7 @@
             updateImageDisplay();
             buildHotspots();
             hideLabel();
+            updateSpecialImageLabel();
 
             bild.classList.add(inClass);
 
