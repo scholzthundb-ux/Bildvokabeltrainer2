@@ -503,27 +503,6 @@
       pointer-events: none;
     }
 
-    #imageOpenLabel {
-      position: absolute;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 19;
-      display: none;
-      max-width: min(360px, 78vw);
-      padding: 10px 18px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(247,247,247,0.94) 100%);
-      border: 3px solid #172334;
-      color: #172334;
-      font-size: clamp(20px, 3.8vw, 29px);
-      font-weight: 800;
-      line-height: 1.15;
-      text-align: center;
-      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
-      pointer-events: none;
-    }
-
     .hotspot {
       position: absolute;
       transform: translate(-50%, -50%);
@@ -923,7 +902,6 @@
     <div class="bild" id="bildContainer">
       <img id="bild" src="" alt="Vokabelbild" />
       <canvas id="zoomRevealCanvas" aria-hidden="true"></canvas>
-      <div id="imageOpenLabel"></div>
       <div id="hotspots"></div>
       <div id="label"></div>
     </div>
@@ -970,7 +948,6 @@
     const menu = document.getElementById("menu");
     const app = document.getElementById("app");
     const hotspotsLayer = document.getElementById("hotspots");
-    const imageOpenLabel = document.getElementById("imageOpenLabel");
     const label = document.getElementById("label");
     const frage = document.getElementById("frage");
     const feedback = document.getElementById("feedback");
@@ -1151,7 +1128,6 @@
       timer = null;
 
       hideLabel();
-      hideImageOpenLabel();
       feedback.textContent = "";
       feedback.className = "";
 
@@ -1188,15 +1164,6 @@
 
       setTimeout(async () => {
         await enterFullscreen();
-
-        const currentImageData = getCurrentImageData();
-        if (mode === "lernen" && currentImageData.forceOpenLabelAfterEnter) {
-          setTimeout(() => {
-            if (mode === "lernen" && getCurrentImageData() === currentImageData && !isZoomOpen()) {
-              showImageOpenLabelIfNeeded();
-            }
-          }, 180);
-        }
       }, 120);
     }
 
@@ -1246,7 +1213,6 @@
       feedback.className = "";
 
       hideLabel();
-      hideImageOpenLabel();
       updateLernInfo();
 
       bild.onload = () => {
@@ -1472,7 +1438,6 @@
       stopSpeech();
       updateModeButtons();
       hideLabel();
-      hideImageOpenLabel();
 
       feedback.textContent = "";
       feedback.className = "";
@@ -1569,29 +1534,17 @@
     }
 
     function showImageOpenLabelIfNeeded() {
-      if (mode !== "lernen" || isZoomOpen()) {
-        hideImageOpenLabel();
-        return;
-      }
+      if (isZoomOpen()) return;
 
       const imageData = getCurrentImageData();
 
-      if (!imageData.openLabel) {
-        hideImageOpenLabel();
-        return;
-      }
+      if (!imageData.openLabel) return;
 
-      imageOpenLabel.textContent = imageData.openLabel.wort;
-      imageOpenLabel.style.display = "block";
+      showLabel(imageData.openLabel, { persistent: true });
 
       if (imageData.speakOpenLabel) {
         speakWord(imageData.openLabel.wort);
       }
-    }
-
-    function hideImageOpenLabel() {
-      imageOpenLabel.style.display = "none";
-      imageOpenLabel.textContent = "";
     }
 
     function showLabel(hotspot, options = {}) {
@@ -1645,7 +1598,6 @@
 
       stopSpeech();
       hideLabel();
-      hideImageOpenLabel();
       prepareZoomReveal(hotspot);
       bildContainer.classList.add("reveal-pending");
 
@@ -1764,7 +1716,6 @@
       feedback.className = "";
 
       hideLabel();
-      hideImageOpenLabel();
       quizAktiv = true;
     }
 
