@@ -1003,11 +1003,11 @@ window.APP_FOLDERS = {
           { wort: "el biberón", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
           { wort: "el chupete", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
           { wort: "el termómetro", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el oso de peluche", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el rompecabezas", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el libro ilustrado", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "el libro para colorear", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la caja de juguetes", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "la bañera para bebés", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el orinal", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el cubo para pañales", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el vigilabebés", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la luz nocturna", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
