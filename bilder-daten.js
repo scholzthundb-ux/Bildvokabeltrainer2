@@ -1023,12 +1023,12 @@ window.APP_FOLDERS = {
           { wort: "la ducha", clickX: 35.0, clickY: 30.5, labelX: 46, labelY: 25, areaW: 14, areaH: 22 },
           { wort: "el espejo", clickX: 57.0, clickY: 25.5, labelX: 68, labelY: 13, areaW: 22, areaH: 18 },
           { wort: "el armario del baño", clickX: 79.5, clickY: 25.5, labelX: 76.5, labelY: 25.5, areaW: 14, areaH: 22 },
-          { wort: "el lavabo", clickX: 52.5, clickY: 52.0, labelX: 56.0, labelY: 48.0, areaW: 28, areaH: 11 },
+          { wort: "el lavabo", clickX: 56.0, clickY: 52.0, labelX: 56.0, labelY: 48.0, areaW: 28, areaH: 11 },
           { wort: "la toalla", clickX: 92.0, clickY: 47.5, labelX: 82.5, labelY: 45.5, areaW: 11, areaH: 18 },
-          { wort: "la bañera", clickX: 14.5, clickY: 74.0, labelX: 27.0, labelY: 64.0, areaW: 21, areaH: 24 },
-          { wort: "el váter", clickX: 80.5, clickY: 76.5, labelX: 72.5, labelY: 71.0, areaW: 17, areaH: 16 },
+          { wort: "la bañera", clickX: 12.0, clickY: 69.5, labelX: 27.0, labelY: 64.0, areaW: 26, areaH: 32 },
+          { wort: "el váter", clickX: 80.5, clickY: 73.5, labelX: 72.5, labelY: 71.0, areaW: 17, areaH: 16 },
           { wort: "la alfombrilla", clickX: 53.5, clickY: 85.5, labelX: 63.0, labelY: 86.5, areaW: 34, areaH: 15 },
-          { wort: "el cesto de la ropa sucia", clickX: 91.5, clickY: 95.0, labelX: 84.0, labelY: 88.5, areaW: 18, areaH: 13 }
+          { wort: "el cesto de la ropa sucia", clickX: 91.5, clickY: 91.5, labelX: 84.0, labelY: 88.5, areaW: 18, areaH: 13 }
         ]
       },
       {
