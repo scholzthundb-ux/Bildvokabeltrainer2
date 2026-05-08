@@ -984,9 +984,9 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 3",
         file: "ninos4.png",
         hotspots: [
-          { wort: "el armario", clickX: 16.7, clickY: 18.6, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la cómoda", clickX: 50, clickY: 18.6, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: "la cuna", clickX: 83.3, clickY: 18.6, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el armario", clickX: 16.7, clickY: 17.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la cómoda", clickX: 50, clickY: 17.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la cuna", clickX: 83.3, clickY: 17.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
           { wort: "la cuna mecedora", clickX: 16.7, clickY: 52.2, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "el parque para bebés", clickX: 50, clickY: 52.2, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "el cambiador", clickX: 83.3, clickY: 52.2, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
