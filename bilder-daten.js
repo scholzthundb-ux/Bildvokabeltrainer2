@@ -1057,6 +1057,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "La habitación infantil – Bild 8",
+        file: "ninos9.png",
+        hotspots: [
+          { wort: "calmar al bebé", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "empujar el carrito", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "pesar al bebé", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "medir la temperatura", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "cambiar los pañales", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "bañar al bebé", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "peinar al bebé", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "dar de comer al bebé", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "ir al orinal", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 9",
         file: "ninos3.png",
         specialTopLabel: "la habitación juvenil",
         hotspots: [
