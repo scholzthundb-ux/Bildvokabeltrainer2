@@ -1014,12 +1014,12 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 5",
         file: "ninos6.png",
         hotspots: [
-          { wort: "el oso de peluche", clickX: 16.7, clickY: 20.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 30 },
-          { wort: "la muñeca", clickX: 50, clickY: 20.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 30 },
-          { wort: "la pelota", clickX: 83.3, clickY: 20.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 30 },
-          { wort: "el sonajero", clickX: 16.7, clickY: 50.5, labelX: 24, labelY: 42, areaW: 30, areaH: 30 },
-          { wort: "el pato de goma", clickX: 50, clickY: 50.5, labelX: 50, labelY: 42, areaW: 30, areaH: 30 },
-          { wort: "el tren de juguete", clickX: 83.3, clickY: 50.5, labelX: 76, labelY: 42, areaW: 30, areaH: 30 },
+          { wort: "el oso de peluche", clickX: 16.7, clickY: 19.6, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la muñeca", clickX: 50, clickY: 19.6, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "la pelota", clickX: 83.3, clickY: 19.6, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el sonajero", clickX: 16.7, clickY: 51.2, labelX: 24, labelY: 42, areaW: 30, areaH: 30 },
+          { wort: "el pato de goma", clickX: 50, clickY: 51.2, labelX: 50, labelY: 42, areaW: 30, areaH: 30 },
+          { wort: "el tren de juguete", clickX: 83.3, clickY: 51.2, labelX: 76, labelY: 42, areaW: 30, areaH: 30 },
           { wort: "el coche de juguete", clickX: 16.7, clickY: 82.3, labelX: 24, labelY: 75, areaW: 30, areaH: 30 },
           { wort: "los bloques", clickX: 50, clickY: 82.3, labelX: 50, labelY: 75, areaW: 30, areaH: 30 },
           { wort: "la casa de muñecas", clickX: 83.3, clickY: 82.3, labelX: 76, labelY: 75, areaW: 30, areaH: 30 }
