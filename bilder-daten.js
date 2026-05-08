@@ -1014,12 +1014,12 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 5",
         file: "ninos11.png",
         hotspots: [
-          { wort: "la báscula para bebés", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "las toallitas húmedas", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el babero", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el mordedor", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la ropa de bebé", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la manta de bebé", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la báscula para bebés", clickX: 16.7, clickY: 19.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "las toallitas húmedas", clickX: 50, clickY: 19.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el babero", clickX: 83.3, clickY: 19.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
+          { wort: "el mordedor", clickX: 16.7, clickY: 50.2, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "la ropa de bebé", clickX: 50, clickY: 50.2, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "la manta de bebé", clickX: 83.3, clickY: 50.2, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "el vaso con asas", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "la crema para bebés", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el portabebés", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
