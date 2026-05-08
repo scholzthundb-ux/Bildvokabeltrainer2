@@ -982,6 +982,66 @@ window.APP_FOLDERS = {
       },
       {
         title: "La habitación infantil – Bild 3",
+        file: "ninos4.png",
+        hotspots: [
+          { wort: "el armario", clickX: 16.7, clickY: 22.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la cómoda", clickX: 50, clickY: 22.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la cuna", clickX: 83.3, clickY: 22.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la cuna mecedora", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el parque para bebés", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el cambiador", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la trona", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el capazo", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la litera", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 4",
+        file: "ninos5.png",
+        hotspots: [
+          { wort: "el pañal", clickX: 16.7, clickY: 22.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el biberón", clickX: 50, clickY: 22.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el chupete", clickX: 83.3, clickY: 22.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el termómetro", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el oso de peluche", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el rompecabezas", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el libro ilustrado", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el libro para colorear", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la caja de juguetes", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 5",
+        file: "ninos6.png",
+        hotspots: [
+          { wort: "el móvil de cuna", clickX: 16.7, clickY: 22.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el caballito balancín", clickX: 50, clickY: 22.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "los juguetes", clickX: 83.3, clickY: 22.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "los lápices de colores", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el papel", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la muñeca", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la pelota", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el sonajero", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el pato de goma", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 6",
+        file: "ninos7.png",
+        hotspots: [
+          { wort: "el tren de juguete", clickX: 16.7, clickY: 22.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el coche de juguete", clickX: 50, clickY: 22.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "los bloques", clickX: 83.3, clickY: 22.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la casa de muñecas", clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la bañera para bebés", clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el orinal", clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el cubo para pañales", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el vigilabebés", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la luz nocturna", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 7",
         file: "ninos3.png",
         specialTopLabel: "la habitación juvenil",
         hotspots: [
