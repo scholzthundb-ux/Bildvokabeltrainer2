@@ -1018,16 +1018,16 @@ window.APP_FOLDERS = {
         file: "bano1.png",
         openLabel: { wort: "el baño", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la ventana", clickX: 6.0, clickY: 12.0, labelX: 15, labelY: 11, areaW: 9, areaH: 13 },
-          { wort: "la cortina de ducha", clickX: 19.0, clickY: 23.5, labelX: 28, labelY: 20, areaW: 11, areaH: 14 },
+          { wort: "la ventana", clickX: 6.0, clickY: 18.0, labelX: 15, labelY: 11, areaW: 9, areaH: 26 },
+          { wort: "la cortina de ducha", clickX: 21.0, clickY: 29.5, labelX: 28, labelY: 20, areaW: 11, areaH: 28 },
           { wort: "la ducha", clickX: 37.5, clickY: 30.5, labelX: 46, labelY: 25, areaW: 13, areaH: 16 },
-          { wort: "el espejo", clickX: 60.5, clickY: 18.0, labelX: 68, labelY: 13, areaW: 16, areaH: 12 },
-          { wort: "el armario del baño", clickX: 85.5, clickY: 31.5, labelX: 76.5, labelY: 25.5, areaW: 13, areaH: 17 },
+          { wort: "el espejo", clickX: 60.5, clickY: 23.5, labelX: 68, labelY: 13, areaW: 16, areaH: 24 },
+          { wort: "el armario del baño", clickX: 82.5, clickY: 28.5, labelX: 76.5, labelY: 25.5, areaW: 13, areaH: 17 },
           { wort: "el lavabo", clickX: 47.0, clickY: 52.0, labelX: 56.0, labelY: 48.0, areaW: 18, areaH: 11 },
           { wort: "la toalla", clickX: 92.0, clickY: 50.0, labelX: 82.5, labelY: 45.5, areaW: 11, areaH: 14 },
           { wort: "la bañera", clickX: 17.5, clickY: 70.5, labelX: 27.0, labelY: 64.0, areaW: 21, areaH: 17 },
           { wort: "el váter", clickX: 80.5, clickY: 76.5, labelX: 72.5, labelY: 71.0, areaW: 17, areaH: 16 },
-          { wort: "la alfombrilla", clickX: 53.5, clickY: 91.5, labelX: 63.0, labelY: 86.5, areaW: 27, areaH: 11 },
+          { wort: "la alfombrilla", clickX: 53.5, clickY: 88.5, labelX: 63.0, labelY: 86.5, areaW: 34, areaH: 15 },
           { wort: "el cesto de la ropa sucia", clickX: 95.0, clickY: 93.0, labelX: 84.0, labelY: 88.5, areaW: 11, areaH: 13 }
         ]
       },
