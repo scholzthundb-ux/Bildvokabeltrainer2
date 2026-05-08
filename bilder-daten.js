@@ -1119,6 +1119,21 @@ window.APP_FOLDERS = {
           { wort: "la lámpara de escritorio", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el armario", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
+      },
+      {
+        title: "La habitación infantil – Bild 12",
+        file: "ninos12.png",
+        hotspots: [
+          { wort: "el ordenador", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el teclado", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el ratón", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el ordenador portátil", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la tableta", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "el altavoz", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "los auriculares", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el móvil", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la radio", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
       }
     ]
   }
