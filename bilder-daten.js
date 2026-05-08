@@ -1089,6 +1089,20 @@ window.APP_FOLDERS = {
           { wort: "la alfombra", clickX: 40.0, clickY: 76.0, labelX: 48.0, labelY: 70.0, areaW: 39, areaH: 31 },
           { wort: "la mochila escolar", clickX: 14.0, clickY: 93.0, labelX: 24.0, labelY: 87.0, areaW: 17, areaH: 18 }
         ]
+      },
+      {
+        title: "La habitación infantil – Bild 10",
+        file: "ninos10.png",
+        hotspots: [
+          { wort: "la cama", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el escritorio", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la silla", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "la estantería", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la balda", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la alfombra", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
+          { wort: "la lámpara de escritorio", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "el armario", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 }
+        ]
       }
     ]
   }
