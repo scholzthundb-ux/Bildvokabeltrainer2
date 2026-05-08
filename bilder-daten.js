@@ -669,7 +669,7 @@ window.APP_FOLDERS = {
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
-          { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17 },
+          { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17, openFolderKey: "sotano", openDelay: 900 },
           { wort: "el trastero", clickX: 71.8, clickY: 86.8, labelX: 73, labelY: 91, areaW: 23, areaH: 17 }
         ]
       }
@@ -938,6 +938,28 @@ window.APP_FOLDERS = {
           { wort: "el teléfono fijo", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el reloj de pared", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
           { wort: "el portero automático", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      }
+    ]
+  },
+
+  sotano: {
+    title: "El sótano",
+    images: [
+      {
+        title: "El sótano – Bild 1",
+        file: "sotano1.png",
+        openLabel: { wort: "el sótano", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "las tuberías", clickX: 23.5, clickY: 14.4, labelX: 31.5, labelY: 11.5, areaW: 18, areaH: 10 },
+          { wort: "la bombilla", clickX: 55.6, clickY: 10.5, labelX: 64, labelY: 8.2, areaW: 11, areaH: 10 },
+          { wort: "la rejilla de ventilación", clickX: 77.0, clickY: 20.7, labelX: 71.5, labelY: 16.5, areaW: 13, areaH: 11 },
+          { wort: "el cuadro eléctrico", clickX: 12.4, clickY: 38.4, labelX: 22, labelY: 34.5, areaW: 16, areaH: 18 },
+          { wort: "el calentador de agua", clickX: 43.2, clickY: 53.4, labelX: 52, labelY: 48.5, areaW: 14, areaH: 17 },
+          { wort: "la barandilla", clickX: 88.4, clickY: 46.1, labelX: 80.5, labelY: 40.5, areaW: 16, areaH: 18 },
+          { wort: "la caldera", clickX: 7.7, clickY: 75.9, labelX: 15, labelY: 71.5, areaW: 16, areaH: 18 },
+          { wort: "la escalera", clickX: 77.8, clickY: 72.2, labelX: 70.5, labelY: 67.5, areaW: 16, areaH: 18 },
+          { wort: "el desagüe", clickX: 51.1, clickY: 93.1, labelX: 59, labelY: 88.5, areaW: 14, areaH: 10 }
         ]
       }
     ]
