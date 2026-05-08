@@ -665,7 +665,7 @@ window.APP_FOLDERS = {
           { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18 },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: "la cocina", clickX: 73.9, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
-          { wort: "el baño", clickX: 27.2, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
+          { wort: "el baño", clickX: 27.2, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16, openFolderKey: "bano", openDelay: 900 },
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
@@ -1005,6 +1005,75 @@ window.APP_FOLDERS = {
           { wort: "el grifo", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el contador de agua", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "la llave de paso", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  bano: {
+    title: "El baño",
+    images: [
+      {
+        title: "El baño – Bild 1",
+        file: "bano1.png",
+        openLabel: { wort: "el baño", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "la ventana", clickX: 6.5, clickY: 12.5, labelX: 15, labelY: 11, areaW: 10, areaH: 14 },
+          { wort: "la cortina de ducha", clickX: 18.5, clickY: 23.0, labelX: 28, labelY: 20, areaW: 12, areaH: 14 },
+          { wort: "la ducha", clickX: 37.0, clickY: 30.0, labelX: 46, labelY: 25, areaW: 14, areaH: 17 },
+          { wort: "el espejo", clickX: 60.0, clickY: 18.5, labelX: 68, labelY: 13, areaW: 17, areaH: 13 },
+          { wort: "el armario", clickX: 85.0, clickY: 31.5, labelX: 76.5, labelY: 25.5, areaW: 14, areaH: 18 },
+          { wort: "el lavabo", clickX: 47.0, clickY: 52.5, labelX: 56.0, labelY: 48.0, areaW: 19, areaH: 12 },
+          { wort: "la toalla", clickX: 92.0, clickY: 49.5, labelX: 82.5, labelY: 45.5, areaW: 12, areaH: 15 },
+          { wort: "la bañera", clickX: 17.0, clickY: 70.0, labelX: 27.0, labelY: 64.0, areaW: 22, areaH: 18 },
+          { wort: "el inodoro", clickX: 80.5, clickY: 76.5, labelX: 72.5, labelY: 71.0, areaW: 18, areaH: 17 },
+          { wort: "la alfombra", clickX: 53.5, clickY: 91.5, labelX: 63.0, labelY: 86.5, areaW: 28, areaH: 12 },
+          { wort: "el cesto de la ropa", clickX: 95.0, clickY: 93.0, labelX: 84.0, labelY: 88.5, areaW: 12, areaH: 14 }
+        ]
+      },
+      {
+        title: "El baño – Bild 2",
+        file: "bano2.png",
+        hotspots: [
+          { wort: "el lavabo", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el grifo", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el desagüe", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el tapón", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el agua fría", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el agua caliente", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el mueble del lavabo", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el armario", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el espejo", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El baño – Bild 3",
+        file: "bano3.png",
+        hotspots: [
+          { wort: "la cabina de ducha", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la alcachofa de ducha", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el grifo termostático", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la mampara", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la cortina de ducha", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el inodoro", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la tapa del váter", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la cisterna", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el botón de descarga", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "El baño – Bild 4",
+        file: "bano4.png",
+        hotspots: [
+          { wort: "el bidé", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la bañera", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la estantería", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el cesto de la ropa", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el armario del baño", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el radiador", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el toallero", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el toallero calefactable", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la alfombrilla de baño", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       }
     ]
