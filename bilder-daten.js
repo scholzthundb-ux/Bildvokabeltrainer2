@@ -1139,15 +1139,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 13",
         file: "ninos13.png",
         hotspots: [
-          { wort: "el televisor", clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el teclado musical", clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "la guitarra", clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "los pósteres", clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "las gafas de realidad virtual", clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "la consola", clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: "el mando", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "los videojuegos", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "la mochila escolar", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "el televisor", clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "el teclado musical", clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "la guitarra", clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "los pósteres", clickX: 16.7, clickY: 52.8, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "las gafas de realidad virtual", clickX: 50, clickY: 52.8, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "la consola", clickX: 83.3, clickY: 52.8, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "el mando", clickX: 16.7, clickY: 84.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "los videojuegos", clickX: 50, clickY: 84.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "la mochila escolar", clickX: 83.3, clickY: 84.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
       },
       {
