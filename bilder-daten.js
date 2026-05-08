@@ -1019,8 +1019,8 @@ window.APP_FOLDERS = {
         openLabel: { wort: "el baño", labelX: 50, labelY: 9 },
         hotspots: [
           { wort: "la ventana", clickX: 6.0, clickY: 18.0, labelX: 15, labelY: 11, areaW: 9, areaH: 26 },
-          { wort: "la cortina de ducha", clickX: 21.0, clickY: 29.5, labelX: 28, labelY: 20, areaW: 11, areaH: 28 },
-          { wort: "la ducha", clickX: 35.0, clickY: 30.5, labelX: 46, labelY: 25, areaW: 14, areaH: 22 },
+          { wort: "la cortina de ducha", clickX: 21.0, clickY: 32.5, labelX: 28, labelY: 20, areaW: 11, areaH: 34 },
+          { wort: "la ducha", clickX: 35.0, clickY: 33.5, labelX: 46, labelY: 25, areaW: 14, areaH: 28 },
           { wort: "el espejo", clickX: 57.0, clickY: 25.5, labelX: 68, labelY: 13, areaW: 22, areaH: 18 },
           { wort: "el armario del baño", clickX: 79.5, clickY: 25.5, labelX: 76.5, labelY: 25.5, areaW: 14, areaH: 22 },
           { wort: "el lavabo", clickX: 56.0, clickY: 52.0, labelX: 56.0, labelY: 48.0, areaW: 28, areaH: 11 },
