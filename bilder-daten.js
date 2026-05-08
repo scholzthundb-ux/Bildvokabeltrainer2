@@ -949,7 +949,7 @@ window.APP_FOLDERS = {
       {
         title: "El sótano – Bild 1",
         file: "sotano1.png",
-        openLabel: { wort: "el sótano", labelX: 50, labelY: 9 },
+        specialTopLabel: "el sótano",
         hotspots: [
           { wort: "las tuberías", clickX: 23.5, clickY: 14.4, labelX: 31.5, labelY: 11.5, areaW: 18, areaH: 10 },
           { wort: "la bombilla", clickX: 55.6, clickY: 10.5, labelX: 64, labelY: 8.2, areaW: 11, areaH: 10 },
