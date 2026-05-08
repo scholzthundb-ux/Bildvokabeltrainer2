@@ -685,16 +685,16 @@ window.APP_FOLDERS = {
         disableWordInLearnMode: true,
         hotspots: [
           { wort: "el desván", clickX: 50, clickY: 17.5, labelX: 50, labelY: 12, areaW: 47, areaH: 18, openFolderKey: "desvan", openDelay: 900 },
-          { wort: "la habitación infantil", clickX: 31.5, clickY: 33.5, labelX: 28, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
-          { wort: "el dormitorio", clickX: 69.2, clickY: 35, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
-          { wort: "el salón", clickX: 28.7, clickY: 52.2, labelX: 22, labelY: 56, areaW: 25, areaH: 18, openFolderKey: "salon" },
+          { wort: "la habitación infantil", clickX: 33.2, clickY: 33.5, labelX: 28, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
+          { wort: "el dormitorio", clickX: 67.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
+          { wort: "el salón", clickX: 29.5, clickY: 52.2, labelX: 22, labelY: 56, areaW: 23, areaH: 18, openFolderKey: "salon" },
           { wort: "el comedor", clickX: 51.5, clickY: 52.5, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
-          { wort: "la cocina", clickX: 73.9, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
+          { wort: "la cocina", clickX: 72.0, clickY: 52.5, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
           { wort: "el baño", clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16, openFolderKey: "bano", openDelay: 900 },
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16, openFolderKey: "pasillo", openDelay: 900 },
-          { wort: "el despacho", clickX: 61.8, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
-          { wort: "el lavadero", clickX: 77.3, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
-          { wort: "el sótano", clickX: 28.0, clickY: 86.8, labelX: 18, labelY: 91, areaW: 26, areaH: 17, openFolderKey: "sotano", openDelay: 900 },
+          { wort: "el despacho", clickX: 60.0, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
+          { wort: "el lavadero", clickX: 76.0, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
+          { wort: "el sótano", clickX: 30.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15, openFolderKey: "sotano", openDelay: 900 },
           { wort: "el trastero", clickX: 69.8, clickY: 86.0, labelX: 73, labelY: 91, areaW: 26, areaH: 15 }
         ]
       }
