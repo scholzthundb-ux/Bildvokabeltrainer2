@@ -991,6 +991,21 @@ window.APP_FOLDERS = {
           { wort: "la rejilla de ventilación", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el desagüe", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
+      },
+      {
+        title: "El sótano – Bild 4",
+        file: "sotano4.png",
+        hotspots: [
+          { wort: "el cable", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el fusible", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la linterna", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el manómetro", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el radiador", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la válvula", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el grifo", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el contador de agua", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la llave de paso", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
       }
     ]
   },
