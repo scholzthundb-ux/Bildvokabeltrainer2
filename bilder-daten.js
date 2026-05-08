@@ -999,9 +999,9 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 4",
         file: "ninos5.png",
         hotspots: [
-          { wort: "el pañal", clickX: 16.7, clickY: 20.0, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el biberón", clickX: 50, clickY: 20.0, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: "el chupete", clickX: 83.3, clickY: 20.0, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el pañal", clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el biberón", clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
+          { wort: "el chupete", clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
           { wort: "el termómetro", clickX: 16.7, clickY: 50.0, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "la bañera para bebés", clickX: 50, clickY: 50.0, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
           { wort: "el orinal", clickX: 83.3, clickY: 50.0, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
