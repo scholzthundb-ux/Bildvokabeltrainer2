@@ -1053,9 +1053,9 @@ window.APP_FOLDERS = {
           { wort: "la ducha", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: "la alcachofa de la ducha", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: "la grifería de la ducha", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: "la mampara", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: "la cortina de ducha", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: "el váter", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la mampara", clickX: 16.8, clickY: 48.5, labelX: 16.8, labelY: 41.0, areaW: 30, areaH: 31 },
+          { wort: "la cortina de ducha", clickX: 50.0, clickY: 48.5, labelX: 50.0, labelY: 41.0, areaW: 30, areaH: 31 },
+          { wort: "el váter", clickX: 83.2, clickY: 48.5, labelX: 83.2, labelY: 41.0, areaW: 30, areaH: 31 },
           { wort: "la tapa del váter", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "la cisterna", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el botón de descarga", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
