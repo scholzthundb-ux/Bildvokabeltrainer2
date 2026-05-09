@@ -1155,15 +1155,15 @@ window.APP_FOLDERS = {
         title: "El baño – Bild 10",
         file: "bano10.png",
         hotspots: [
-          { wort: "la maquinilla de afeitar", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 36 },
-          { wort: "la espuma de afeitar", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 36 },
-          { wort: "la afeitadora eléctrica", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 36 },
-          { wort: "las pinzas", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: "las tijeras de uñas", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: "el cortauñas", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: "la lima de uñas", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: "la compresa", clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: "los tampones", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
+          { wort: "la maquinilla de afeitar", clickX: 16.8, clickY: 19.8, labelX: 16.8, labelY: 12.3, areaW: 31, areaH: 36 },
+          { wort: "la espuma de afeitar", clickX: 50.0, clickY: 19.8, labelX: 50.0, labelY: 12.3, areaW: 31, areaH: 36 },
+          { wort: "la afeitadora eléctrica", clickX: 83.2, clickY: 19.8, labelX: 83.2, labelY: 12.3, areaW: 31, areaH: 36 },
+          { wort: "las pinzas", clickX: 16.8, clickY: 53.0, labelX: 16.8, labelY: 45.5, areaW: 31, areaH: 29 },
+          { wort: "las tijeras de uñas", clickX: 50.0, clickY: 53.0, labelX: 50.0, labelY: 45.5, areaW: 31, areaH: 29 },
+          { wort: "el cortauñas", clickX: 83.2, clickY: 53.0, labelX: 83.2, labelY: 45.5, areaW: 31, areaH: 29 },
+          { wort: "la lima de uñas", clickX: 16.8, clickY: 84.2, labelX: 16.8, labelY: 76.8, areaW: 31, areaH: 29 },
+          { wort: "la compresa", clickX: 50.0, clickY: 84.2, labelX: 50.0, labelY: 76.8, areaW: 31, areaH: 29 },
+          { wort: "los tampones", clickX: 83.2, clickY: 84.2, labelX: 83.2, labelY: 76.8, areaW: 31, areaH: 29 }
         ]
       }
     ]
