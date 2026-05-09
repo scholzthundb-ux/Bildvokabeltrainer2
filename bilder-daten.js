@@ -1113,12 +1113,12 @@ window.APP_FOLDERS = {
           { wort: "el dispensador de jabón", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
           { wort: "el cepillo de dientes", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
           { wort: "la pasta de dientes", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "el cepillo de dientes eléctrico", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "el hilo dental", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "el enjuague bucal", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "el algodón", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "los bastoncillos", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "la crema facial", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: "el cepillo de dientes eléctrico", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "el hilo dental", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "el enjuague bucal", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "el algodón", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "los bastoncillos", clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "la crema facial", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
         ]
       },
       {
