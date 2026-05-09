@@ -1182,8 +1182,8 @@ window.APP_FOLDERS = {
           { wort: "el detergente", clickX: 30.0, clickY: 38.5, labelX: 36.0, labelY: 34.0, areaW: 10, areaH: 15 },
           { wort: "el suavizante", clickX: 37.8, clickY: 40.5, labelX: 43.5, labelY: 36.0, areaW: 9, areaH: 13 },
           { wort: "el tendedero", clickX: 58.0, clickY: 42.5, labelX: 64.0, labelY: 38.5, areaW: 28, areaH: 18 },
-          { wort: "el fregadero", clickX: 88.0, clickY: 51.0, labelX: 80.0, labelY: 47.0, areaW: 20, areaH: 12 },
-          { wort: "la plancha", clickX: 81.0, clickY: 63.5, labelX: 74.0, labelY: 60.0, areaW: 12, areaH: 14 },
+          { wort: "el fregadero", clickX: 88.0, clickY: 49.0, labelX: 80.0, labelY: 45.5, areaW: 20, areaH: 10 },
+          { wort: "la plancha", clickX: 78.5, clickY: 61.0, labelX: 72.0, labelY: 57.5, areaW: 12, areaH: 14 },
           { wort: "la tabla de planchar", clickX: 59.0, clickY: 72.5, labelX: 55.0, labelY: 68.5, areaW: 35, areaH: 13 },
           { wort: "el cesto de la ropa", clickX: 55.0, clickY: 86.5, labelX: 46.0, labelY: 82.5, areaW: 22, areaH: 15 }
         ]
