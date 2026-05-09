@@ -1176,7 +1176,17 @@ window.APP_FOLDERS = {
         title: "El lavadero – Bild 1",
         file: "lavadero1.png",
         openLabel: { wort: "el lavadero", labelX: 50, labelY: 9 },
-        hotspots: []
+        hotspots: [
+          { wort: "la secadora", clickX: 12.7, clickY: 35.0, labelX: 20.5, labelY: 30.5, areaW: 18, areaH: 20 },
+          { wort: "la lavadora", clickX: 10.8, clickY: 70.2, labelX: 18.5, labelY: 66.0, areaW: 20, areaH: 20 },
+          { wort: "el detergente", clickX: 30.0, clickY: 38.5, labelX: 36.0, labelY: 34.0, areaW: 10, areaH: 18 },
+          { wort: "el suavizante", clickX: 37.8, clickY: 40.5, labelX: 43.5, labelY: 36.0, areaW: 9, areaH: 16 },
+          { wort: "el tendedero", clickX: 58.0, clickY: 42.5, labelX: 64.0, labelY: 38.5, areaW: 28, areaH: 18 },
+          { wort: "el fregadero", clickX: 88.0, clickY: 51.0, labelX: 80.0, labelY: 47.0, areaW: 20, areaH: 12 },
+          { wort: "la plancha", clickX: 81.0, clickY: 63.5, labelX: 74.0, labelY: 60.0, areaW: 12, areaH: 14 },
+          { wort: "la tabla de planchar", clickX: 59.0, clickY: 72.5, labelX: 55.0, labelY: 68.5, areaW: 35, areaH: 13 },
+          { wort: "el cesto de la ropa", clickX: 51.5, clickY: 88.5, labelX: 43.0, labelY: 84.5, areaW: 22, areaH: 15 }
+        ]
       }
     ]
   },
