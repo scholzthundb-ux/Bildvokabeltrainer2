@@ -1192,9 +1192,9 @@ window.APP_FOLDERS = {
         title: "El lavadero – Bild 2",
         file: "lavadero2.png",
         hotspots: [
-          { wort: "la lavadora", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 34 },
-          { wort: "la secadora", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 34 },
-          { wort: "el tendedero", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "la lavadora", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "la secadora", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "el tendedero", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
           { wort: "la cuerda de tender", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
           { wort: "las pinzas de la ropa", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
           { wort: "la tabla de planchar", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
