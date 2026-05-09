@@ -1184,7 +1184,7 @@ window.APP_FOLDERS = {
           { wort: "el tendedero", clickX: 58.0, clickY: 42.5, labelX: 64.0, labelY: 38.5, areaW: 28, areaH: 18 },
           { wort: "el fregadero", clickX: 88.0, clickY: 49.0, labelX: 80.0, labelY: 45.5, areaW: 20, areaH: 10 },
           { wort: "la plancha", clickX: 76.0, clickY: 59.0, labelX: 70.0, labelY: 55.5, areaW: 12, areaH: 14 },
-          { wort: "la tabla de planchar", clickX: 61.5, clickY: 70.5, labelX: 57.0, labelY: 66.5, areaW: 31, areaH: 13 },
+          { wort: "la tabla de planchar", clickX: 59.0, clickY: 68.5, labelX: 55.0, labelY: 64.5, areaW: 24, areaH: 11 },
           { wort: "el cesto de la ropa", clickX: 55.0, clickY: 86.5, labelX: 46.0, labelY: 82.5, areaW: 22, areaH: 15 }
         ]
       },
