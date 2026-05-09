@@ -1125,30 +1125,30 @@ window.APP_FOLDERS = {
         title: "El baño – Bild 8",
         file: "bano8.png",
         hotspots: [
-          { wort: "el peine", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "el cepillo del pelo", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "el cepillo redondo", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "el secador", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "la plancha del pelo", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "el rizador", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "los rulos", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "la goma del pelo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "la horquilla", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: "el peine", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "el cepillo del pelo", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "el cepillo redondo", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "el secador", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "la plancha del pelo", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "el rizador", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "los rulos", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "la goma del pelo", clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "la horquilla", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
         ]
       },
       {
         title: "El baño – Bild 9",
         file: "bano9.png",
         hotspots: [
-          { wort: "el maquillaje", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "la máscara de pestañas", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "la barra de labios", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "el perfume", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "el desodorante", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "el espejo de mano", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "la diadema", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "el esmalte de uñas", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "el rizador de pestañas", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: "el maquillaje", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "la máscara de pestañas", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "la barra de labios", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 34 },
+          { wort: "el perfume", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "el desodorante", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "el espejo de mano", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "la diadema", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "el esmalte de uñas", clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "el rizador de pestañas", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
         ]
       },
       {
