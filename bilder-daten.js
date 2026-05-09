@@ -1116,9 +1116,9 @@ window.APP_FOLDERS = {
           { wort: "el cepillo de dientes eléctrico", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
           { wort: "el hilo dental", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
           { wort: "el enjuague bucal", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: "el algodón", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: "los bastoncillos", clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: "la crema facial", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
+          { wort: "el algodón", clickX: 16.8, clickY: 84.0, labelX: 16.8, labelY: 76.5, areaW: 31, areaH: 29 },
+          { wort: "los bastoncillos", clickX: 50.0, clickY: 84.0, labelX: 50.0, labelY: 76.5, areaW: 31, areaH: 29 },
+          { wort: "la crema facial", clickX: 83.2, clickY: 84.0, labelX: 83.2, labelY: 76.5, areaW: 31, areaH: 29 }
         ]
       },
       {
@@ -1131,9 +1131,9 @@ window.APP_FOLDERS = {
           { wort: "el secador", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
           { wort: "la plancha del pelo", clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
           { wort: "el rizador", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: "los rulos", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: "la goma del pelo", clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: "la horquilla", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
+          { wort: "los rulos", clickX: 16.8, clickY: 84.0, labelX: 16.8, labelY: 76.5, areaW: 31, areaH: 29 },
+          { wort: "la goma del pelo", clickX: 50.0, clickY: 84.0, labelX: 50.0, labelY: 76.5, areaW: 31, areaH: 29 },
+          { wort: "la horquilla", clickX: 83.2, clickY: 84.0, labelX: 83.2, labelY: 76.5, areaW: 31, areaH: 29 }
         ]
       },
       {
