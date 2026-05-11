@@ -1552,15 +1552,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 17",
         file: "ninos17.png",
         hotspots: [
-          { wort: "hacer la cama", clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: "ordenar la habitación", clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: "guardar la ropa", clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "hacer la cama", clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 35 },
+          { wort: "ordenar la habitación", clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 35 },
+          { wort: "guardar la ropa", clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 35 },
           { wort: "limpiar el escritorio", clickX: 16.7, clickY: 52.8, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "estudiar", clickX: 50, clickY: 52.8, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
           { wort: "hacer los deberes", clickX: 83.3, clickY: 52.8, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: "descansar", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "preparar la mochila", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: "dormir", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: "descansar", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 32 },
+          { wort: "preparar la mochila", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 32 },
+          { wort: "dormir", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 32 }
         ]
       }
     ]
