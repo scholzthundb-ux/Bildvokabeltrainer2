@@ -1520,6 +1520,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "La habitación infantil – Bild 15",
+        file: "ninos16.png",
+        hotspots: [
+          { wort: "tocar la guitarra", clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "tocar el teclado", clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "cantar", clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 32 },
+          { wort: "dibujar", clickX: 16.7, clickY: 52.8, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "pintar", clickX: 50, clickY: 52.8, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "escribir un diario", clickX: 83.3, clickY: 52.8, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
+          { wort: "leer", clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "escuchar música", clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: "hacer una fiesta con amigos", clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 16",
         file: "ninos15.png",
         hotspots: [
           { wort: "jugar a videojuegos", clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 32 },
