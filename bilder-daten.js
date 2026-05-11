@@ -1165,6 +1165,21 @@ window.APP_FOLDERS = {
           { wort: "la compresa", clickX: 50.0, clickY: 84.2, labelX: 50.0, labelY: 76.8, areaW: 31, areaH: 29 },
           { wort: "los tampones", clickX: 83.2, clickY: 84.2, labelX: 83.2, labelY: 76.8, areaW: 31, areaH: 29 }
         ]
+      },
+      {
+        title: "El baño – Bild 11",
+        file: "bano11.png",
+        hotspots: [
+          { wort: "ducharse", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "bañarse", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "lavarse la cara", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "enjabonarse", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "lavarse el pelo", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "secarse", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "ponerse pasta de dientes", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "cepillarse los dientes", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "usar hilo dental", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+        ]
       }
     ]
   },
