@@ -1200,15 +1200,15 @@ window.APP_FOLDERS = {
         title: "El baño – Bild 13",
         file: "bano13.png",
         hotspots: [
-          { wort: "teñirse el pelo", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "cortarse el pelo", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "maquillarse", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: "ponerse rímel", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "pintarse los labios", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "desmaquillarse", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: "cortarse las uñas", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "pintarse las uñas", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: "pesarse", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: "teñirse el pelo", clickX: 16.8, clickY: 17.0, labelX: 16.8, labelY: 9.5, areaW: 31, areaH: 34 },
+          { wort: "cortarse el pelo", clickX: 51.5, clickY: 17.0, labelX: 51.5, labelY: 9.5, areaW: 34, areaH: 34 },
+          { wort: "maquillarse", clickX: 83.2, clickY: 17.0, labelX: 83.2, labelY: 9.5, areaW: 31, areaH: 34 },
+          { wort: "ponerse rímel", clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "pintarse los labios", clickX: 51.5, clickY: 51.5, labelX: 51.5, labelY: 44.0, areaW: 34, areaH: 31 },
+          { wort: "desmaquillarse", clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
+          { wort: "cortarse las uñas", clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
+          { wort: "pintarse las uñas", clickX: 51.5, clickY: 83.0, labelX: 51.5, labelY: 75.5, areaW: 34, areaH: 31 },
+          { wort: "pesarse", clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
         ]
       }
     ]
