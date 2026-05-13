@@ -1306,7 +1306,7 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: "la lámpara de escritorio", clickX: 15.0, clickY: 31.5, labelX: 24.0, labelY: 28.0, areaW: 16, areaH: 22 },
           { wort: "el tablón de anuncios", clickX: 39.2, clickY: 17.5, labelX: 48.0, labelY: 14.0, areaW: 18, areaH: 14 },
-          { wort: "la pantalla", clickX: 49.5, clickY: 30.0, labelX: 57.0, labelY: 26.0, areaW: 20, areaH: 16 },
+          { wort: "el ordenador", clickX: 49.5, clickY: 30.0, labelX: 57.0, labelY: 26.0, areaW: 20, areaH: 16 },
           { wort: "la estantería", clickX: 88.0, clickY: 8.5, labelX: 79.0, labelY: 12.0, areaW: 20, areaH: 16 },
           { wort: "el archivador", clickX: 70.0, clickY: 24.5, labelX: 79.0, labelY: 22.0, areaW: 20, areaH: 17 },
           { wort: "la impresora", clickX: 92.0, clickY: 39.0, labelX: 83.0, labelY: 36.0, areaW: 16, areaH: 14 },
