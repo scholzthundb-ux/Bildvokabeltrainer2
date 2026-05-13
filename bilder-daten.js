@@ -1329,6 +1329,21 @@ window.APP_FOLDERS = {
           { wort: "la memoria USB", clickX: 59.5, clickY: 74.0, labelX: 68.0, labelY: 71.5, areaW: 12, areaH: 8 },
           { wort: "la alfombrilla", clickX: 88.0, clickY: 67.5, labelX: 78.5, labelY: 64.5, areaW: 19, areaH: 17 }
         ]
+      },
+      {
+        title: "El despacho – Bild 3",
+        file: "despacho3.png",
+        hotspots: [
+          { wort: "el escritorio", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "la silla de oficina", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "la lámpara de escritorio", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "la estantería", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "el archivador", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "la papelera", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "la bandeja de documentos", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "el tablón de anuncios", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "el ordenador", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+        ]
       }
     ]
   },
