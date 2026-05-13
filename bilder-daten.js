@@ -1317,6 +1317,18 @@ window.APP_FOLDERS = {
           { wort: "la bandeja de documentos", clickX: 73.5, clickY: 61.0, labelX: 81.0, labelY: 58.0, areaW: 15, areaH: 13 },
           { wort: "el destructor de documentos", clickX: 88.0, clickY: 82.0, labelX: 78.0, labelY: 78.5, areaW: 14, areaH: 17 }
         ]
+      },
+      {
+        title: "El despacho – Bild 2",
+        file: "despacho2.png",
+        hotspots: [
+          { wort: "la torre del ordenador", clickX: 7.5, clickY: 42.0, labelX: 20.0, labelY: 39.0, areaW: 16, areaH: 26 },
+          { wort: "la pantalla", clickX: 58.0, clickY: 17.0, labelX: 67.0, labelY: 13.5, areaW: 30, areaH: 16 },
+          { wort: "los auriculares", clickX: 11.0, clickY: 68.5, labelX: 19.0, labelY: 66.0, areaW: 16, areaH: 16 },
+          { wort: "el teclado", clickX: 44.0, clickY: 58.0, labelX: 51.0, labelY: 55.5, areaW: 22, areaH: 9 },
+          { wort: "la memoria USB", clickX: 59.5, clickY: 74.0, labelX: 68.0, labelY: 71.5, areaW: 12, areaH: 8 },
+          { wort: "la alfombrilla", clickX: 88.0, clickY: 67.5, labelX: 78.5, labelY: 64.5, areaW: 19, areaH: 17 }
+        ]
       }
     ]
   },
