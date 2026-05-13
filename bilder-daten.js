@@ -692,7 +692,7 @@ window.APP_FOLDERS = {
           { wort: "la cocina", clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
           { wort: "el baño", clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16, openFolderKey: "bano", openDelay: 900 },
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16, openFolderKey: "pasillo", openDelay: 900 },
-          { wort: "el despacho", clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
+          { wort: "el despacho", clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16, openFolderKey: "despacho" },
           { wort: "el lavadero", clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16, openFolderKey: "lavadero", openDelay: 900 },
           { wort: "el sótano", clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15, openFolderKey: "sotano", openDelay: 900 },
           { wort: "el trastero", clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15 }
@@ -1291,6 +1291,31 @@ window.APP_FOLDERS = {
           { wort: "planchar la ropa", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
           { wort: "doblar la ropa", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
           { wort: "guardar la ropa", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  despacho: {
+    title: "El despacho",
+    images: [
+      {
+        title: "El despacho – Bild 1",
+        file: "despacho1.png",
+        openLabel: { wort: "el despacho", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "la lámpara de escritorio", clickX: 15.0, clickY: 31.5, labelX: 24.0, labelY: 28.0, areaW: 16, areaH: 22 },
+          { wort: "el tablón de anuncios", clickX: 39.2, clickY: 17.5, labelX: 48.0, labelY: 14.0, areaW: 18, areaH: 14 },
+          { wort: "la pantalla", clickX: 49.5, clickY: 30.0, labelX: 57.0, labelY: 26.0, areaW: 20, areaH: 16 },
+          { wort: "la estantería", clickX: 88.0, clickY: 8.5, labelX: 79.0, labelY: 12.0, areaW: 20, areaH: 16 },
+          { wort: "el archivador", clickX: 70.0, clickY: 24.5, labelX: 79.0, labelY: 22.0, areaW: 20, areaH: 17 },
+          { wort: "la impresora", clickX: 92.0, clickY: 39.0, labelX: 83.0, labelY: 36.0, areaW: 16, areaH: 14 },
+          { wort: "el teclado", clickX: 36.0, clickY: 49.5, labelX: 43.0, labelY: 47.5, areaW: 18, areaH: 8 },
+          { wort: "el ratón", clickX: 49.5, clickY: 50.5, labelX: 57.0, labelY: 48.5, areaW: 8, areaH: 8 },
+          { wort: "la carpeta", clickX: 66.5, clickY: 49.5, labelX: 73.5, labelY: 47.0, areaW: 15, areaH: 9 },
+          { wort: "la silla de oficina", clickX: 8.2, clickY: 67.0, labelX: 19.0, labelY: 63.0, areaW: 16, areaH: 19 },
+          { wort: "la bandeja de documentos", clickX: 73.5, clickY: 61.0, labelX: 81.0, labelY: 58.0, areaW: 15, areaH: 13 },
+          { wort: "el destructor de documentos", clickX: 88.0, clickY: 82.0, labelX: 78.0, labelY: 78.5, areaW: 14, areaH: 17 }
         ]
       }
     ]
