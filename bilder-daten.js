@@ -1359,6 +1359,21 @@ window.APP_FOLDERS = {
           { wort: "el escáner", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
           { wort: "el destructor de documentos", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
         ]
+      },
+      {
+        title: "El despacho – Bild 5",
+        file: "despacho5.png",
+        hotspots: [
+          { wort: "la calculadora", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "la tableta", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "los auriculares", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
+          { wort: "el micrófono", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "el altavoz", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "la webcam", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: "el cargador", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "la memoria USB", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
+          { wort: "la máquina de escribir", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+        ]
       }
     ]
   },
