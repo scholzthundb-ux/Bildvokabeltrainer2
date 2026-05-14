@@ -844,10 +844,32 @@ window.APP_FOLDERS = {
         title: "La cocina – Bild 2",
         file: "cocina2.png",
         hotspots: [
-          { wort: "Los muebles y partes de la cocina", clickX: 25.0, clickY: 25.0, labelX: 25.0, labelY: 18.0, areaW: 46, areaH: 46 },
+          { wort: "Los muebles y partes de la cocina", clickX: 25.0, clickY: 25.0, labelX: 25.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaMuebles" },
           { wort: "Los utensilios de la cocina", clickX: 75.0, clickY: 25.0, labelX: 75.0, labelY: 18.0, areaW: 46, areaH: 46 },
           { wort: "La vajilla", clickX: 25.0, clickY: 75.0, labelX: 25.0, labelY: 68.0, areaW: 46, areaH: 46 },
           { wort: "Los electrodomésticos de la cocina", clickX: 75.0, clickY: 75.0, labelX: 75.0, labelY: 68.0, areaW: 46, areaH: 46 }
+        ]
+      }
+    ]
+  },
+
+  cocinaMuebles: {
+    title: "Los muebles y partes de la cocina",
+    images: [
+      {
+        title: "Los muebles y partes de la cocina – Bild 1",
+        file: "cocina3.png",
+        openLabel: { wort: "los muebles y partes de la cocina", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "la lámpara", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la isla", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la banqueta", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el taburete", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el armario alto", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el armario bajo", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la estantería", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la mesa", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la silla", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       }
     ]
