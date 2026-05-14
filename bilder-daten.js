@@ -1322,13 +1322,13 @@ window.APP_FOLDERS = {
         title: "El despacho – Bild 2",
         file: "despacho2.png",
         hotspots: [
-          { wort: "la pantalla", clickX: 58.0, clickY: 19.5, labelX: 67.0, labelY: 13.0, areaW: 58, areaH: 31 },
+          { wort: "la pantalla", clickX: 58.0, clickY: 24.5, labelX: 67.0, labelY: 13.0, areaW: 58, areaH: 31 },
           { wort: "la torre del ordenador", clickX: 10.5, clickY: 47.5, labelX: 21.5, labelY: 42.0, areaW: 19, areaH: 32 },
           { wort: "los auriculares", clickX: 14.0, clickY: 74.0, labelX: 22.5, labelY: 71.0, areaW: 18, areaH: 18 },
           { wort: "el teclado", clickX: 47.5, clickY: 69.5, labelX: 56.0, labelY: 66.5, areaW: 36, areaH: 13 },
           { wort: "la memoria USB", clickX: 54.5, clickY: 82.0, labelX: 64.5, labelY: 79.0, areaW: 16, areaH: 10 },
-          { wort: "el ratón", clickX: 77.5, clickY: 74.0, labelX: 69.0, labelY: 71.0, areaW: 15, areaH: 15 },
-          { wort: "la alfombrilla", clickX: 85.5, clickY: 79.0, labelX: 77.0, labelY: 86.0, areaW: 17, areaH: 19 }
+          { wort: "el ratón", clickX: 81.0, clickY: 71.5, labelX: 72.5, labelY: 68.5, areaW: 11, areaH: 11 },
+          { wort: "la alfombrilla", clickX: 89.5, clickY: 76.5, labelX: 81.5, labelY: 84.0, areaW: 13, areaH: 17 }
         ]
       },
       {
