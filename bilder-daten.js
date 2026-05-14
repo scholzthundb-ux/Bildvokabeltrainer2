@@ -846,7 +846,7 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: "Los muebles y partes de la cocina", clickX: 25.0, clickY: 25.0, labelX: 25.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaMuebles" },
           { wort: "Los utensilios de la cocina", clickX: 75.0, clickY: 25.0, labelX: 75.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaUtensilios" },
-          { wort: "La vajilla", clickX: 25.0, clickY: 75.0, labelX: 25.0, labelY: 68.0, areaW: 46, areaH: 46 },
+          { wort: "La vajilla", clickX: 25.0, clickY: 75.0, labelX: 25.0, labelY: 68.0, areaW: 46, areaH: 46, openFolderKey: "cocinaVajilla" },
           { wort: "Los electrodomésticos de la cocina", clickX: 75.0, clickY: 75.0, labelX: 75.0, labelY: 68.0, areaW: 46, areaH: 46 }
         ]
       }
@@ -922,6 +922,28 @@ window.APP_FOLDERS = {
           { wort: "el bol para mezclar", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el cucharón", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "la espátula", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  cocinaVajilla: {
+    title: "La vajilla",
+    images: [
+      {
+        title: "La vajilla – Bild 1",
+        file: "cocina7.png",
+        openLabel: { wort: "la vajilla", labelX: 50, labelY: 14 },
+        hotspots: [
+          { wort: "los cubiertos", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el tenedor", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la cuchara", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la cucharilla", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el cuchillo", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el plato", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el plato pequeño", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el plato hondo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el plato llano", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       }
     ]
