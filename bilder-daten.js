@@ -1304,7 +1304,7 @@ window.APP_FOLDERS = {
         file: "despacho1.png",
         openLabel: { wort: "el despacho", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la lámpara de escritorio", clickX: 18.0, clickY: 34.0, labelX: 26.5, labelY: 30.5, areaW: 16, areaH: 22 },
+          { wort: "la lámpara de escritorio", clickX: 21.0, clickY: 34.0, labelX: 29.5, labelY: 30.5, areaW: 16, areaH: 22 },
           { wort: "el tablón de anuncios", clickX: 43.5, clickY: 19.5, labelX: 52.0, labelY: 15.0, areaW: 26, areaH: 20 },
           { wort: "el ordenador", clickX: 44.0, clickY: 37.0, labelX: 52.0, labelY: 32.0, areaW: 22, areaH: 16 },
           { wort: "la estantería", clickX: 78.0, clickY: 11.5, labelX: 70.0, labelY: 10.5, areaW: 38, areaH: 15 },
@@ -1314,7 +1314,7 @@ window.APP_FOLDERS = {
           { wort: "el ratón", clickX: 49.5, clickY: 52.0, labelX: 57.0, labelY: 49.5, areaW: 8, areaH: 6 },
           { wort: "la carpeta", clickX: 62.0, clickY: 53.0, labelX: 70.0, labelY: 49.5, areaW: 15, areaH: 9 },
           { wort: "la silla de oficina", clickX: 24.0, clickY: 74.0, labelX: 34.0, labelY: 67.0, areaW: 32, areaH: 38 },
-          { wort: "la bandeja de documentos", clickX: 78.0, clickY: 65.0, labelX: 85.0, labelY: 61.0, areaW: 15, areaH: 13 },
+          { wort: "la bandeja de documentos", clickX: 80.0, clickY: 63.0, labelX: 86.5, labelY: 59.0, areaW: 18, areaH: 16 },
           { wort: "el destructor de documentos", clickX: 91.0, clickY: 82.0, labelX: 82.0, labelY: 78.5, areaW: 14, areaH: 17 }
         ]
       },
