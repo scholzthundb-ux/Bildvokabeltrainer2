@@ -664,7 +664,7 @@ window.APP_FOLDERS = {
           { wort: "el dormitorio", clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: "el salón", clickX: 30.0, clickY: 52.2, labelX: 22, labelY: 56, areaW: 21, areaH: 18 },
           { wort: "el comedor", clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
-          { wort: "la cocina", clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
+          { wort: "la cocina", clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18, openFolderKey: "cocina" },
           { wort: "el baño", clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
           { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16 },
           { wort: "el despacho", clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
@@ -810,6 +810,34 @@ window.APP_FOLDERS = {
           { wort: "regar una planta", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
           { wort: "pasar la aspiradora", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
           { wort: "correr las cortinas", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  cocina: {
+    title: "La cocina",
+    images: [
+      {
+        title: "La cocina – Bild 1",
+        file: "cocina1.png",
+        openLabel: { wort: "la cocina", labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: "el frigorífico", clickX: 7.5, clickY: 25.0, labelX: 17.5, labelY: 18.0, areaW: 15, areaH: 29 },
+          { wort: "el congelador", clickX: 10.0, clickY: 67.0, labelX: 20.0, labelY: 61.5, areaW: 16, areaH: 28 },
+          { wort: "el armario alto", clickX: 30.0, clickY: 21.0, labelX: 38.0, labelY: 15.5, areaW: 18, areaH: 18 },
+          { wort: "la campana extractora", clickX: 54.5, clickY: 19.5, labelX: 62.0, labelY: 13.5, areaW: 24, areaH: 18 },
+          { wort: "el grifo", clickX: 38.5, clickY: 41.5, labelX: 46.5, labelY: 37.0, areaW: 10, areaH: 14 },
+          { wort: "el fregadero", clickX: 36.5, clickY: 55.0, labelX: 46.0, labelY: 51.5, areaW: 26, areaH: 12 },
+          { wort: "la vitrocerámica", clickX: 56.0, clickY: 48.5, labelX: 62.5, labelY: 44.5, areaW: 24, areaH: 12 },
+          { wort: "el horno", clickX: 53.5, clickY: 68.5, labelX: 60.0, labelY: 64.0, areaW: 18, areaH: 18 },
+          { wort: "los utensilios de cocina", clickX: 73.5, clickY: 41.5, labelX: 82.0, labelY: 36.5, areaW: 12, areaH: 18 },
+          { wort: "la ventana", clickX: 86.0, clickY: 31.5, labelX: 78.0, labelY: 24.5, areaW: 12, areaH: 28 },
+          { wort: "la puerta", clickX: 97.0, clickY: 44.0, labelX: 88.5, labelY: 44.0, areaW: 6, areaH: 28 },
+          { wort: "el lavavajillas", clickX: 80.5, clickY: 65.5, labelX: 86.5, labelY: 60.5, areaW: 16, areaH: 24 },
+          { wort: "la mesa", clickX: 88.0, clickY: 80.5, labelX: 79.5, labelY: 86.5, areaW: 24, areaH: 18 },
+          { wort: "la silla", clickX: 69.5, clickY: 91.0, labelX: 74.5, labelY: 96.0, areaW: 18, areaH: 24 },
+          { wort: "la alfombra", clickX: 33.5, clickY: 88.0, labelX: 43.0, labelY: 83.0, areaW: 42, areaH: 16 }
         ]
       }
     ]
