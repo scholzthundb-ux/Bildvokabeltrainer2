@@ -1305,17 +1305,17 @@ window.APP_FOLDERS = {
         openLabel: { wort: "el despacho", labelX: 50, labelY: 9 },
         hotspots: [
           { wort: "la lámpara de escritorio", clickX: 15.0, clickY: 31.5, labelX: 24.0, labelY: 28.0, areaW: 16, areaH: 22 },
-          { wort: "el tablón de anuncios", clickX: 39.2, clickY: 17.5, labelX: 48.0, labelY: 14.0, areaW: 18, areaH: 14 },
-          { wort: "el ordenador", clickX: 49.5, clickY: 30.0, labelX: 57.0, labelY: 26.0, areaW: 20, areaH: 16 },
-          { wort: "la estantería", clickX: 88.0, clickY: 8.5, labelX: 79.0, labelY: 12.0, areaW: 20, areaH: 16 },
-          { wort: "el archivador", clickX: 70.0, clickY: 24.5, labelX: 79.0, labelY: 22.0, areaW: 20, areaH: 17 },
-          { wort: "la impresora", clickX: 92.0, clickY: 39.0, labelX: 83.0, labelY: 36.0, areaW: 16, areaH: 14 },
-          { wort: "el teclado", clickX: 36.0, clickY: 49.5, labelX: 43.0, labelY: 47.5, areaW: 18, areaH: 8 },
-          { wort: "el ratón", clickX: 49.5, clickY: 50.5, labelX: 57.0, labelY: 48.5, areaW: 8, areaH: 8 },
-          { wort: "la carpeta", clickX: 66.5, clickY: 49.5, labelX: 73.5, labelY: 47.0, areaW: 15, areaH: 9 },
-          { wort: "la silla de oficina", clickX: 8.2, clickY: 67.0, labelX: 19.0, labelY: 63.0, areaW: 16, areaH: 19 },
-          { wort: "la bandeja de documentos", clickX: 73.5, clickY: 61.0, labelX: 81.0, labelY: 58.0, areaW: 15, areaH: 13 },
-          { wort: "el destructor de documentos", clickX: 88.0, clickY: 82.0, labelX: 78.0, labelY: 78.5, areaW: 14, areaH: 17 }
+          { wort: "el tablón de anuncios", clickX: 43.5, clickY: 19.5, labelX: 52.0, labelY: 15.0, areaW: 26, areaH: 20 },
+          { wort: "el ordenador", clickX: 44.0, clickY: 34.0, labelX: 52.0, labelY: 29.5, areaW: 22, areaH: 16 },
+          { wort: "la estantería", clickX: 82.0, clickY: 13.0, labelX: 74.0, labelY: 11.5, areaW: 38, areaH: 20 },
+          { wort: "el archivador", clickX: 70.0, clickY: 26.5, labelX: 79.0, labelY: 22.5, areaW: 20, areaH: 14 },
+          { wort: "la impresora", clickX: 92.0, clickY: 46.0, labelX: 83.0, labelY: 42.0, areaW: 16, areaH: 14 },
+          { wort: "el teclado", clickX: 36.0, clickY: 51.5, labelX: 43.0, labelY: 48.5, areaW: 18, areaH: 6 },
+          { wort: "el ratón", clickX: 49.5, clickY: 52.0, labelX: 57.0, labelY: 49.5, areaW: 8, areaH: 6 },
+          { wort: "la carpeta", clickX: 62.0, clickY: 53.0, labelX: 70.0, labelY: 49.5, areaW: 15, areaH: 9 },
+          { wort: "la silla de oficina", clickX: 18.0, clickY: 67.0, labelX: 28.0, labelY: 63.0, areaW: 16, areaH: 19 },
+          { wort: "la bandeja de documentos", clickX: 78.0, clickY: 65.0, labelX: 85.0, labelY: 61.0, areaW: 15, areaH: 13 },
+          { wort: "el destructor de documentos", clickX: 91.0, clickY: 82.0, labelX: 82.0, labelY: 78.5, areaW: 14, areaH: 17 }
         ]
       },
       {
