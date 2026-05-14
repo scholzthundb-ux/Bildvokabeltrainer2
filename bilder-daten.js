@@ -823,7 +823,7 @@ window.APP_FOLDERS = {
         file: "cocina1.png",
         openLabel: { wort: "la cocina", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "el frigorífico", clickX: 7.5, clickY: 25.0, labelX: 17.5, labelY: 18.0, areaW: 15, areaH: 29 },
+          { wort: "la nevera", clickX: 7.5, clickY: 25.0, labelX: 17.5, labelY: 18.0, areaW: 15, areaH: 29 },
           { wort: "el congelador", clickX: 10.0, clickY: 67.0, labelX: 20.0, labelY: 61.5, areaW: 16, areaH: 28 },
           { wort: "el armario alto", clickX: 30.0, clickY: 21.0, labelX: 38.0, labelY: 15.5, areaW: 18, areaH: 18 },
           { wort: "la campana extractora", clickX: 54.5, clickY: 19.5, labelX: 62.0, labelY: 13.5, areaW: 24, areaH: 18 },
