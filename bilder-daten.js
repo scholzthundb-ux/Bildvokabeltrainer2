@@ -1304,7 +1304,7 @@ window.APP_FOLDERS = {
         file: "despacho1.png",
         openLabel: { wort: "el despacho", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la lámpara de escritorio", clickX: 21.0, clickY: 34.0, labelX: 29.5, labelY: 30.5, areaW: 16, areaH: 22 },
+          { wort: "la lámpara de escritorio", clickX: 23.0, clickY: 36.0, labelX: 31.5, labelY: 32.5, areaW: 16, areaH: 22 },
           { wort: "el tablón de anuncios", clickX: 43.5, clickY: 19.5, labelX: 52.0, labelY: 15.0, areaW: 26, areaH: 20 },
           { wort: "el ordenador", clickX: 44.0, clickY: 37.0, labelX: 52.0, labelY: 32.0, areaW: 22, areaH: 16 },
           { wort: "la estantería", clickX: 78.0, clickY: 11.5, labelX: 70.0, labelY: 10.5, areaW: 38, areaH: 15 },
