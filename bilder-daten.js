@@ -859,7 +859,7 @@ window.APP_FOLDERS = {
       {
         title: "Los muebles y partes de la cocina – Bild 1",
         file: "cocina3.png",
-        openLabel: { wort: "los muebles y partes de la cocina", labelX: 50, labelY: 9 },
+        openLabel: { wort: "los muebles y partes de la cocina", labelX: 50, labelY: 14 },
         hotspots: [
           { wort: "la lámpara", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: "la isla", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
