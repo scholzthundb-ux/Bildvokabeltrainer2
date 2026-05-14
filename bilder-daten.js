@@ -839,6 +839,16 @@ window.APP_FOLDERS = {
           { wort: "la silla", clickX: 69.5, clickY: 91.0, labelX: 74.5, labelY: 96.0, areaW: 18, areaH: 24 },
           { wort: "la alfombra", clickX: 33.5, clickY: 88.0, labelX: 43.0, labelY: 83.0, areaW: 42, areaH: 16 }
         ]
+      },
+      {
+        title: "La cocina – Bild 2",
+        file: "cocina2.png",
+        hotspots: [
+          { wort: "Los muebles y partes de la cocina", clickX: 25.0, clickY: 25.0, labelX: 25.0, labelY: 18.0, areaW: 46, areaH: 46 },
+          { wort: "Los utensilios de la cocina", clickX: 75.0, clickY: 25.0, labelX: 75.0, labelY: 18.0, areaW: 46, areaH: 46 },
+          { wort: "La vajilla", clickX: 25.0, clickY: 75.0, labelX: 25.0, labelY: 68.0, areaW: 46, areaH: 46 },
+          { wort: "Los electrodomésticos de la cocina", clickX: 75.0, clickY: 75.0, labelX: 75.0, labelY: 68.0, areaW: 46, areaH: 46 }
+        ]
       }
     ]
   },
