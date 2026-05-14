@@ -845,7 +845,7 @@ window.APP_FOLDERS = {
         file: "cocina2.png",
         hotspots: [
           { wort: "Los muebles y partes de la cocina", clickX: 25.0, clickY: 25.0, labelX: 25.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaMuebles" },
-          { wort: "Los utensilios de la cocina", clickX: 75.0, clickY: 25.0, labelX: 75.0, labelY: 18.0, areaW: 46, areaH: 46 },
+          { wort: "Los utensilios de la cocina", clickX: 75.0, clickY: 25.0, labelX: 75.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaUtensilios" },
           { wort: "La vajilla", clickX: 25.0, clickY: 75.0, labelX: 25.0, labelY: 68.0, areaW: 46, areaH: 46 },
           { wort: "Los electrodomésticos de la cocina", clickX: 75.0, clickY: 75.0, labelX: 75.0, labelY: 68.0, areaW: 46, areaH: 46 }
         ]
@@ -900,6 +900,28 @@ window.APP_FOLDERS = {
           { wort: "la barra para utensilios", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el portarrollos de cocina", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "el escurreplatos", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  cocinaUtensilios: {
+    title: "Los utensilios de la cocina",
+    images: [
+      {
+        title: "Los utensilios de la cocina – Bild 1",
+        file: "cocina6.png",
+        openLabel: { wort: "los utensilios de la cocina", labelX: 50, labelY: 14 },
+        hotspots: [
+          { wort: "la olla", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la cazuela", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la sartén", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la olla exprés", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el colador", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el escurridor", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el bol para mezclar", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el cucharón", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la espátula", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       }
     ]
