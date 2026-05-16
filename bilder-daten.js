@@ -847,7 +847,7 @@ window.APP_FOLDERS = {
           { wort: "Los muebles y partes de la cocina", clickX: 25.0, clickY: 25.0, labelX: 25.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaMuebles" },
           { wort: "Los utensilios de la cocina", clickX: 75.0, clickY: 25.0, labelX: 75.0, labelY: 18.0, areaW: 46, areaH: 46, openFolderKey: "cocinaUtensilios" },
           { wort: "La vajilla", clickX: 25.0, clickY: 75.0, labelX: 25.0, labelY: 68.0, areaW: 46, areaH: 46, openFolderKey: "cocinaVajilla" },
-          { wort: "Los electrodomésticos de la cocina", clickX: 75.0, clickY: 75.0, labelX: 75.0, labelY: 68.0, areaW: 46, areaH: 46 }
+          { wort: "Los electrodomésticos de la cocina", clickX: 75.0, clickY: 75.0, labelX: 75.0, labelY: 68.0, areaW: 46, areaH: 46, openFolderKey: "cocinaElectrodomesticos" }
         ]
       }
     ]
@@ -1049,6 +1049,28 @@ window.APP_FOLDERS = {
           { wort: "la sopera", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "la salsera", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: "la quesera", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      }
+    ]
+  },
+
+  cocinaElectrodomesticos: {
+    title: "Los electrodomésticos de la cocina",
+    images: [
+      {
+        title: "Los electrodomésticos de la cocina – Bild 1",
+        file: "cocina15.png",
+        openLabel: { wort: "los electrodomésticos de la cocina", labelX: 50, labelY: 14 },
+        hotspots: [
+          { wort: "la nevera", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el congelador", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el lavavajillas", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la cocina con horno", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el microondas", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la tostadora", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "la cafetera eléctrica", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la arrocera", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "la sandwichera", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       }
     ]
