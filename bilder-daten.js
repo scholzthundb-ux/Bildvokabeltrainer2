@@ -926,6 +926,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "Los utensilios de la cocina – Bild 2",
+        file: "cocina11.png",
+        hotspots: [
+          { wort: "la espátula", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la cuchara de madera", clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "el cuchillo de cocina", clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
+          { wort: "la espumadera", clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "las pinzas de cocina", clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "el mazo para carne", clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: "las varillas", clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el rodillo", clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
+          { wort: "el pelador", clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+        ]
+      },
+      {
+        title: "Los utensilios de la cocina – Bild 3",
         file: "cocina9.png",
         hotspots: [
           { wort: "el abrebotellas", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
@@ -940,7 +955,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "Los utensilios de la cocina – Bild 3",
+        title: "Los utensilios de la cocina – Bild 4",
         file: "cocina10.png",
         hotspots: [
           { wort: "el temporizador", clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
