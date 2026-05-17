@@ -612,6 +612,7 @@
       font-weight: 800;
       margin: 0;
       color: #27364a;
+      white-space: pre-line;
     }
 
     .richtig {
@@ -1229,6 +1230,14 @@
       return UI_STRINGS[currentLanguage]?.[key] ?? UI_STRINGS.es[key] ?? key;
     }
 
+    function formatLearnInfoText(text) {
+      return currentLanguage === "es" ? text : `${text}\n\u00A0`;
+    }
+
+    function setLearnInfoText(text) {
+      lernInfo.textContent = formatLearnInfoText(text);
+    }
+
     function getHotspotText(hotspot) {
       return resolveLocalizedText(hotspot?.wort);
     }
@@ -1513,28 +1522,28 @@
 
     function updateLernInfo() {
       if (currentFolderKey === "ropa") {
-        lernInfo.textContent = getUi("learnInfoClothes");
+        setLearnInfoText(getUi("learnInfoClothes"));
         return;
       }
 
       if (currentFolderKey === "rutina") {
-        lernInfo.textContent = getUi("learnInfoRoutine");
+        setLearnInfoText(getUi("learnInfoRoutine"));
         return;
       }
 
       if (currentFolderKey === "casa") {
-        lernInfo.textContent = isZoomOpen()
+        setLearnInfoText(isZoomOpen()
           ? ""
-          : getUi("learnInfoHouse");
+          : getUi("learnInfoHouse"));
         return;
       }
 
       if (currentFolderKey === "playa" && (currentImageIndex === 2 || currentImageIndex === 3)) {
-        lernInfo.textContent = getUi("learnInfoActivity");
+        setLearnInfoText(getUi("learnInfoActivity"));
         return;
       }
 
-      lernInfo.textContent = getUi("learnInfoDefault");
+      setLearnInfoText(getUi("learnInfoDefault"));
     }
 
     function loadCurrentImage(afterLoadAction = null) {
