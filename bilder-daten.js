@@ -825,21 +825,21 @@ window.APP_FOLDERS = {
         file: "cocina1.png",
         openLabel: { wort: "la cocina", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 10.5, clickY: 39.5, labelX: 18.5, labelY: 34.0, areaW: 18, areaH: 44 },
+          { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 13.5, clickY: 32.0, labelX: 21.0, labelY: 26.5, areaW: 18, areaH: 28 },
           { wort: { es: "el congelador", de: "der Gefrierschrank", en: "the freezer", ru: "морозильник" }, clickX: 10.5, clickY: 64.5, labelX: 20.5, labelY: 59.5, areaW: 18, areaH: 26 },
           { wort: { es: "el armario alto", de: "der Hängeschrank", en: "the wall cabinet", ru: "навесной шкаф" }, clickX: 29.0, clickY: 22.0, labelX: 37.5, labelY: 16.5, areaW: 18, areaH: 18 },
-          { wort: { es: "la campana extractora", de: "die Dunstabzugshaube", en: "the extractor hood", ru: "вытяжка" }, clickX: 50.5, clickY: 28.0, labelX: 58.5, labelY: 22.5, areaW: 24, areaH: 18 },
+          { wort: { es: "la campana extractora", de: "die Dunstabzugshaube", en: "the extractor hood", ru: "вытяжка" }, clickX: 47.0, clickY: 23.5, labelX: 55.0, labelY: 18.5, areaW: 14, areaH: 15 },
           { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 73.5, clickY: 46.5, labelX: 80.5, labelY: 42.0, areaW: 11, areaH: 17 },
           { wort: { es: "el fregadero", de: "das Spülbecken", en: "the sink", ru: "раковина" }, clickX: 72.5, clickY: 52.0, labelX: 80.0, labelY: 47.5, areaW: 15, areaH: 8 },
           { wort: { es: "la vitrocerámica", de: "das Cerankochfeld", en: "the ceramic hob", ru: "стеклокерамическая плита" }, clickX: 44.0, clickY: 49.0, labelX: 51.0, labelY: 44.5, areaW: 24, areaH: 11 },
           { wort: { es: "el horno", de: "der Backofen", en: "the oven", ru: "духовка" }, clickX: 48.5, clickY: 62.5, labelX: 56.0, labelY: 58.0, areaW: 18, areaH: 19 },
           { wort: { es: "los utensilios de cocina", de: "die Küchenutensilien", en: "the kitchen utensils", ru: "кухонные принадлежности" }, clickX: 27.5, clickY: 45.0, labelX: 35.5, labelY: 40.5, areaW: 12, areaH: 15 },
-          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 74.0, clickY: 29.0, labelX: 81.0, labelY: 24.0, areaW: 17, areaH: 15 },
+          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 71.0, clickY: 29.0, labelX: 78.0, labelY: 24.0, areaW: 23, areaH: 15 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 92.0, clickY: 18.5, labelX: 84.0, labelY: 18.5, areaW: 16, areaH: 17 },
           { wort: { es: "el lavavajillas", de: "der Geschirrspüler", en: "the dishwasher", ru: "посудомоечная машина" }, clickX: 75.0, clickY: 63.5, labelX: 82.5, labelY: 59.0, areaW: 14, areaH: 24 },
           { wort: { es: "la mesa", de: "der Tisch", en: "the table", ru: "стол" }, clickX: 22.0, clickY: 83.0, labelX: 29.5, labelY: 78.0, areaW: 24, areaH: 18 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 48.0, clickY: 94.5, labelX: 54.5, labelY: 89.5, areaW: 20, areaH: 18 },
-          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 68.5, clickY: 85.5, labelX: 75.5, labelY: 81.0, areaW: 35, areaH: 18 }
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 41.5, clickY: 87.0, labelX: 48.0, labelY: 82.0, areaW: 20, areaH: 18 },
+          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 67.0, clickY: 81.5, labelX: 74.0, labelY: 77.0, areaW: 42, areaH: 22 }
         ]
       },
       {
