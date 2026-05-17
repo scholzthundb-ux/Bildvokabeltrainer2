@@ -1212,7 +1212,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 16.7, clickY: 50, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
           { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 50, clickY: 50, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
           { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 83.3, clickY: 50, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "el cuelgallaves", de: "der Schlüsselhalter", en: "the key holder", ru: "ключница" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
+          { wort: { es: "el cuelgallaves", de: "das Schlüsselbrett", en: "the key holder", ru: "ключница" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
           { wort: { es: "las llaves", de: "die Schlüssel (Pl.)", en: "the keys", ru: "ключи" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
           { wort: { es: "el felpudo", de: "die Fußmatte", en: "the doormat", ru: "коврик у двери" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
         ]
