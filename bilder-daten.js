@@ -839,6 +839,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el lavavajillas", de: "der Geschirrspüler", en: "the dishwasher", ru: "посудомоечная машина" }, clickX: 75.0, clickY: 58.5, labelX: 82.5, labelY: 54.0, areaW: 14, areaH: 18 },
           { wort: { es: "la mesa", de: "der Tisch", en: "the table", ru: "стол" }, clickX: 14.0, clickY: 77.5, labelX: 24.5, labelY: 72.5, areaW: 30, areaH: 18 },
           { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 36.5, clickY: 91.5, labelX: 43.0, labelY: 86.5, areaW: 20, areaH: 18 },
+          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 46.0, clickY: 82.0, labelX: 55.0, labelY: 77.5, areaW: 24, areaH: 21 },
           { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 71.5, clickY: 81.5, labelX: 78.0, labelY: 77.0, areaW: 33, areaH: 22 }
         ]
       },
