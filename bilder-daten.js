@@ -684,18 +684,18 @@ window.APP_FOLDERS = {
         file: "Haus8.png",
         disableWordInLearnMode: true,
         hotspots: [
-          { wort: "el desván", clickX: 50, clickY: 16.5, labelX: 50, labelY: 12, areaW: 47, areaH: 18, openFolderKey: "desvan", openDelay: 900 },
-          { wort: "la habitación infantil", clickX: 34.2, clickY: 33.5, labelX: 28, labelY: 38, areaW: 28, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
-          { wort: "el dormitorio", clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
-          { wort: "el salón", clickX: 30.0, clickY: 52.2, labelX: 22, labelY: 56, areaW: 21, areaH: 18, openFolderKey: "salon" },
-          { wort: "el comedor", clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
-          { wort: "la cocina", clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18, openFolderKey: "cocina", openDelay: 900 },
-          { wort: "el baño", clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16, openFolderKey: "bano", openDelay: 900 },
-          { wort: "el pasillo", clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16, openFolderKey: "pasillo", openDelay: 900 },
-          { wort: "el despacho", clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16, openFolderKey: "despacho" },
-          { wort: "el lavadero", clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16, openFolderKey: "lavadero", openDelay: 900 },
-          { wort: "el sótano", clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15, openFolderKey: "sotano", openDelay: 900 },
-          { wort: "el trastero", clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15 }
+          { wort: { es: "el desván", de: "der Dachboden", en: "the loft", ru: "чердак" }, clickX: 50, clickY: 16.5, labelX: 50, labelY: 12, areaW: 47, areaH: 18, openFolderKey: "desvan", openDelay: 900 },
+          { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, clickX: 34.2, clickY: 33.5, labelX: 28, labelY: 38, areaW: 28, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
+          { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
+          { wort: { es: "el salón", de: "das Wohnzimmer", en: "the living room", ru: "гостиная" }, clickX: 30.0, clickY: 52.2, labelX: 22, labelY: 56, areaW: 21, areaH: 18, openFolderKey: "salon" },
+          { wort: { es: "el comedor", de: "das Esszimmer", en: "the dining room", ru: "столовая" }, clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
+          { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18, openFolderKey: "cocina", openDelay: 900 },
+          { wort: { es: "el baño", de: "das Badezimmer", en: "the bathroom", ru: "ванная комната" }, clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16, openFolderKey: "bano", openDelay: 900 },
+          { wort: { es: "el pasillo", de: "der Flur", en: "the hallway", ru: "прихожая" }, clickX: 43.8, clickY: 70, labelX: 44, labelY: 70, areaW: 14, areaH: 16, openFolderKey: "pasillo", openDelay: 900 },
+          { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16, openFolderKey: "despacho" },
+          { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16, openFolderKey: "lavadero", openDelay: 900 },
+          { wort: { es: "el sótano", de: "der Keller", en: "the basement", ru: "подвал" }, clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15, openFolderKey: "sotano", openDelay: 900 },
+          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15 }
         ]
       }
     ]
