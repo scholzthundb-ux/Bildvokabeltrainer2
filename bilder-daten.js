@@ -666,7 +666,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el comedor", de: "das Esszimmer", en: "the dining room", ru: "столовая" }, clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
           { wort: { es: "el baño", de: "das Badezimmer", en: "the bathroom", ru: "ванная комната" }, clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16 },
-          { wort: { es: "el pasillo", de: "der Flur", en: "the hallway", ru: "прихожая" }, clickX: 40.5, clickY: 66.0, labelX: 40.5, labelY: 66.5, areaW: 8, areaH: 24 },
+          { wort: { es: "el pasillo", de: "der Flur", en: "the hallway", ru: "прихожая" }, clickX: 38.5, clickY: 60.0, labelX: 39.0, labelY: 60.0, areaW: 4, areaH: 42 },
           { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
           { wort: { es: "el sótano", de: "der Keller", en: "the basement", ru: "подвал" }, clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15 },
@@ -691,7 +691,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el comedor", de: "das Esszimmer", en: "the dining room", ru: "столовая" }, clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18, openFolderKey: "cocina", openDelay: 900 },
           { wort: { es: "el baño", de: "das Badezimmer", en: "the bathroom", ru: "ванная комната" }, clickX: 29.5, clickY: 70, labelX: 16.5, labelY: 74, areaW: 17, areaH: 16, openFolderKey: "bano", openDelay: 900 },
-          { wort: { es: "el pasillo", de: "der Flur", en: "the hallway", ru: "прихожая" }, clickX: 40.5, clickY: 66.0, labelX: 40.5, labelY: 66.5, areaW: 8, areaH: 24, openFolderKey: "pasillo", openDelay: 900 },
+          { wort: { es: "el pasillo", de: "der Flur", en: "the hallway", ru: "прихожая" }, clickX: 38.5, clickY: 60.0, labelX: 39.0, labelY: 60.0, areaW: 4, areaH: 42, openFolderKey: "pasillo", openDelay: 900 },
           { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16, openFolderKey: "despacho" },
           { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16, openFolderKey: "lavadero", openDelay: 900 },
           { wort: { es: "el sótano", de: "der Keller", en: "the basement", ru: "подвал" }, clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15, openFolderKey: "sotano", openDelay: 900 },
@@ -1197,11 +1197,11 @@ window.APP_FOLDERS = {
           { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 11.0, clickY: 84.0, labelX: 20.0, labelY: 78.0, areaW: 22, areaH: 33 },
           { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 54.0, clickY: 11.0, labelX: 62.0, labelY: 9.0, areaW: 10, areaH: 8 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 52.5, clickY: 41.0, labelX: 60.0, labelY: 29.0, areaW: 18, areaH: 36 },
-          { wort: { es: "la pared", de: "die Wand", en: "the wall", ru: "стена" }, clickX: 91.0, clickY: 12.0, labelX: 83.0, labelY: 12.0, areaW: 24, areaH: 24 },
-          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 87.5, clickY: 36.5, labelX: 80.5, labelY: 24.0, areaW: 18, areaH: 52 },
-          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 86.5, clickY: 75.0, labelX: 79.0, labelY: 67.0, areaW: 18, areaH: 31 },
+          { wort: { es: "la pared", de: "die Wand", en: "the wall", ru: "стена" }, clickX: 79.0, clickY: 12.0, labelX: 71.0, labelY: 12.0, areaW: 48, areaH: 12 },
+          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 82.0, clickY: 36.5, labelX: 74.5, labelY: 25.0, areaW: 29, areaH: 36 },
+          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 81.5, clickY: 75.0, labelX: 74.0, labelY: 67.0, areaW: 28, areaH: 31 },
           { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 58.0, clickY: 87.0, labelX: 66.0, labelY: 80.0, areaW: 38, areaH: 33 },
-          { wort: { es: "el suelo", de: "der Fußboden", en: "the floor", ru: "пол" }, clickX: 94.0, clickY: 97.0, labelX: 87.0, labelY: 90.0, areaW: 12, areaH: 10 }
+          { wort: { es: "el suelo", de: "der Fußboden", en: "the floor", ru: "пол" }, clickX: 88.0, clickY: 92.0, labelX: 81.0, labelY: 85.0, areaW: 24, areaH: 20 }
         ]
       },
       {
