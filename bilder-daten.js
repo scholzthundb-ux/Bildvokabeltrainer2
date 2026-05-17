@@ -743,15 +743,15 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 3",
         file: "salon3.png",
         hotspots: [
-          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el sofá cama", de: "das Schlafsofa", en: "the sofa bed", ru: "диван-кровать" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la mecedora", de: "der Schaukelstuhl", en: "the rocking chair", ru: "кресло-качалка" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el mueble del televisor", de: "das TV-Möbel", en: "the TV unit", ru: "тумба под телевизор" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la mesa auxiliar", de: "der Beistelltisch", en: "the side table", ru: "приставной столик" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 18.0, clickY: 24.5, labelX: 18.0, labelY: 10.8, areaW: 31.2, areaH: 25.5 },
+          { wort: { es: "el sofá cama", de: "das Schlafsofa", en: "the sofa bed", ru: "диван-кровать" }, clickX: 50.0, clickY: 24.5, labelX: 50.0, labelY: 10.8, areaW: 31.0, areaH: 25.5 },
+          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 82.0, clickY: 24.5, labelX: 82.0, labelY: 10.8, areaW: 31.3, areaH: 25.5 },
+          { wort: { es: "la mecedora", de: "der Schaukelstuhl", en: "the rocking chair", ru: "кресло-качалка" }, clickX: 18.0, clickY: 50.7, labelX: 18.0, labelY: 42.5, areaW: 31.2, areaH: 25.8 },
+          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 50.0, clickY: 50.7, labelX: 50.0, labelY: 42.5, areaW: 31.0, areaH: 25.8 },
+          { wort: { es: "el mueble del televisor", de: "das TV-Möbel", en: "the TV unit", ru: "тумба под телевизор" }, clickX: 82.0, clickY: 50.7, labelX: 82.0, labelY: 42.5, areaW: 31.3, areaH: 25.8 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 18.0, clickY: 76.6, labelX: 18.0, labelY: 74.2, areaW: 31.2, areaH: 24.9 },
+          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 50.0, clickY: 76.6, labelX: 50.0, labelY: 74.2, areaW: 31.0, areaH: 24.9 },
+          { wort: { es: "la mesa auxiliar", de: "der Beistelltisch", en: "the side table", ru: "приставной столик" }, clickX: 82.0, clickY: 76.6, labelX: 82.0, labelY: 74.2, areaW: 31.3, areaH: 24.9 }
         ]
       },
       {
