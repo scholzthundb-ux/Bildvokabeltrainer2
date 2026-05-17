@@ -732,10 +732,10 @@ window.APP_FOLDERS = {
           { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 82.5, clickY: 24.0, labelX: 74.5, labelY: 18.5, areaW: 35, areaH: 10 },
           { wort: { es: "los libros", de: "die Bücher", en: "the books", ru: "книги" }, clickX: 58.5, clickY: 22.0, labelX: 66.5, labelY: 16.0, areaW: 10, areaH: 8 },
           { wort: { es: "el cojín", de: "das Kissen", en: "the cushion", ru: "подушка" }, clickX: 6.5, clickY: 69.0, labelX: 14.5, labelY: 62.5, areaW: 14, areaH: 14 },
-          { wort: { es: "el cajón", de: "die Schublade", en: "the drawer", ru: "ящик" }, clickX: 69.5, clickY: 66.5, labelX: 76.5, labelY: 61.5, areaW: 17, areaH: 7 },
-          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 55.0, clickY: 85.0, labelX: 63.0, labelY: 81.0, areaW: 22, areaH: 10 },
+          { wort: { es: "el cajón", de: "die Schublade", en: "the drawer", ru: "ящик" }, clickX: 65.0, clickY: 66.5, labelX: 72.5, labelY: 61.5, areaW: 26, areaH: 7 },
+          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 49.0, clickY: 85.0, labelX: 58.0, labelY: 81.0, areaW: 34, areaH: 10 },
           { wort: { es: "la taza", de: "die Tasse", en: "the cup", ru: "чашка" }, clickX: 58.5, clickY: 76.5, labelX: 65.5, labelY: 71.0, areaW: 10, areaH: 6 },
-          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 14.0, clickY: 84.0, labelX: 22.0, labelY: 77.0, areaW: 22, areaH: 16 },
+          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 14.0, clickY: 88.0, labelX: 22.0, labelY: 79.0, areaW: 22, areaH: 24 },
           { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 88.0, clickY: 48.5, labelX: 81.0, labelY: 43.5, areaW: 18, areaH: 33 }
         ]
       },
