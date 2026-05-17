@@ -1243,6 +1243,31 @@
       return resolveLocalizedText(hotspot?.wort);
     }
 
+    function getHotspotQuizKey(hotspot) {
+      const baseText = resolveLocalizedText(hotspot?.wort, "es");
+
+      return baseText
+        .normalize("NFC")
+        .trim()
+        .toLowerCase();
+    }
+
+    function getUniqueQuizHotspots(imageData) {
+      const seenKeys = new Set();
+      const uniqueHotspots = [];
+
+      (imageData?.hotspots || []).forEach((hotspot) => {
+        const key = getHotspotQuizKey(hotspot);
+
+        if (!key || seenKeys.has(key)) return;
+
+        seenKeys.add(key);
+        uniqueHotspots.push(hotspot);
+      });
+
+      return uniqueHotspots;
+    }
+
     function getFolderDisplayTitle(folderKey) {
       const translatedTitle = FOLDER_TITLE_TRANSLATIONS[folderKey];
 
@@ -1846,7 +1871,7 @@
 
       if (!quizAktiv) return;
 
-      if (h === currentQuestionHotspot) {
+      if (getHotspotQuizKey(h) === getHotspotQuizKey(currentQuestionHotspot)) {
         playCorrectSound();
 
         feedback.className = "";
@@ -2024,7 +2049,7 @@
     }
 
     function refillQuizQueue() {
-      const alleHotspots = getCurrentImageData().hotspots;
+      const alleHotspots = getUniqueQuizHotspots(getCurrentImageData());
       const rest = alleHotspots.filter(
         (hotspot) => !quizQueue.includes(hotspot) && !repeatQueue.includes(hotspot)
       );
