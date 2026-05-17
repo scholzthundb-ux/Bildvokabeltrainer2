@@ -1190,16 +1190,16 @@ window.APP_FOLDERS = {
         file: "pasillo1.png",
         openLabel: { wort: "el pasillo", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "el espejo", clickX: 11.5, clickY: 35.5, labelX: 19.5, labelY: 28, areaW: 16, areaH: 28 },
-          { wort: "la puerta", clickX: 49.0, clickY: 39.5, labelX: 57, labelY: 24.5, areaW: 18, areaH: 34 },
-          { wort: "la lámpara", clickX: 51.5, clickY: 14.5, labelX: 60, labelY: 10.5, areaW: 11, areaH: 9 },
-          { wort: "el perchero", clickX: 72.8, clickY: 36.0, labelX: 81, labelY: 16, areaW: 13, areaH: 36 },
-          { wort: "el cuelgallaves", clickX: 92.5, clickY: 32.8, labelX: 84, labelY: 28.5, areaW: 14, areaH: 14 },
-          { wort: "la pared", clickX: 17.5, clickY: 67.5, labelX: 25, labelY: 62.5, areaW: 34, areaH: 16 },
-          { wort: "la planta", clickX: 88.0, clickY: 55.0, labelX: 81, labelY: 46.5, areaW: 13, areaH: 18 },
-          { wort: "el suelo", clickX: 22.5, clickY: 85.5, labelX: 16, labelY: 77, areaW: 11, areaH: 15 },
-          { wort: "la alfombra", clickX: 58.0, clickY: 85.0, labelX: 66, labelY: 80.5, areaW: 32, areaH: 22 },
-          { wort: "la cómoda", clickX: 87.0, clickY: 79.0, labelX: 78, labelY: 74, areaW: 20, areaH: 18 }
+          { wort: "el espejo", clickX: 11.0, clickY: 35.5, labelX: 18.5, labelY: 27.5, areaW: 16, areaH: 28 },
+          { wort: "la pared", clickX: 10.5, clickY: 68.0, labelX: 18.5, labelY: 62.0, areaW: 20, areaH: 20 },
+          { wort: "el suelo", clickX: 20.5, clickY: 92.0, labelX: 15.0, labelY: 84.0, areaW: 18, areaH: 15 },
+          { wort: "la puerta", clickX: 47.0, clickY: 38.5, labelX: 55.0, labelY: 24.0, areaW: 18, areaH: 35 },
+          { wort: "la lámpara", clickX: 59.0, clickY: 11.5, labelX: 67.0, labelY: 8.0, areaW: 13, areaH: 10 },
+          { wort: "el perchero", clickX: 78.5, clickY: 27.5, labelX: 85.5, labelY: 17.5, areaW: 15, areaH: 34 },
+          { wort: "las llaves", clickX: 93.5, clickY: 36.5, labelX: 85.5, labelY: 31.0, areaW: 12, areaH: 13 },
+          { wort: "la planta", clickX: 93.0, clickY: 58.5, labelX: 86.0, labelY: 50.0, areaW: 15, areaH: 19 },
+          { wort: "la cómoda", clickX: 87.5, clickY: 82.5, labelX: 78.5, labelY: 77.0, areaW: 21, areaH: 23 },
+          { wort: "la alfombra", clickX: 58.0, clickY: 92.0, labelX: 66.0, labelY: 86.5, areaW: 34, areaH: 22 }
         ]
       },
       {
