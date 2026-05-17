@@ -1197,13 +1197,13 @@ window.APP_FOLDERS = {
           { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 11.5, clickY: 27.5, labelX: 19.0, labelY: 20.0, areaW: 14, areaH: 36 },
           { wort: { es: "las llaves", de: "die Schlüssel (Pl.)", en: "the keys", ru: "ключи" }, clickX: 16.5, clickY: 64.0, labelX: 24.5, labelY: 59.5, areaW: 15, areaH: 5.5 },
           { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 11.0, clickY: 84.0, labelX: 20.0, labelY: 78.0, areaW: 22, areaH: 33 },
-          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 47.5, clickY: 16.5, labelX: 57.0, labelY: 15.0, areaW: 16, areaH: 13 },
+          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 49.0, clickY: 16.5, labelX: 57.0, labelY: 15.0, areaW: 14, areaH: 13 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 52.5, clickY: 41.0, labelX: 60.0, labelY: 29.0, areaW: 18, areaH: 36 },
           { wort: { es: "la pared", de: "die Wand", en: "the wall", ru: "стена" }, clickX: 82.0, clickY: 8.5, labelX: 71.0, labelY: 12.0, areaW: 36, areaH: 12 },
-          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 86.0, clickY: 30.0, labelX: 74.5, labelY: 25.0, areaW: 17, areaH: 33 },
+          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 86.0, clickY: 30.0, labelX: 74.5, labelY: 25.0, areaW: 17, areaH: 39 },
           { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 81.5, clickY: 75.0, labelX: 74.0, labelY: 67.0, areaW: 28, areaH: 31 },
           { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 56.0, clickY: 87.0, labelX: 66.0, labelY: 80.0, areaW: 33, areaH: 33 },
-          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 52.0, clickY: 66.0, labelX: 66.0, labelY: 80.0, areaW: 18, areaH: 18 },
+          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 52.0, clickY: 71.0, labelX: 66.0, labelY: 80.0, areaW: 18, areaH: 18 },
           { wort: { es: "el suelo", de: "der Fußboden", en: "the floor", ru: "пол" }, clickX: 88.0, clickY: 94.0, labelX: 81.0, labelY: 85.0, areaW: 24, areaH: 16 }
         ]
       },
