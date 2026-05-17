@@ -715,7 +715,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 57.0, clickY: 29.5, labelX: 64.0, labelY: 21.5, areaW: 17, areaH: 19 },
           { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 59.0, clickY: 49.0, labelX: 65.0, labelY: 42.0, areaW: 29, areaH: 11 },
           { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 82.0, clickY: 56.0, labelX: 76.0, labelY: 49.0, areaW: 14, areaH: 28 },
-          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 9.0, clickY: 63.0, labelX: 18.0, labelY: 56.0, areaW: 34, areaH: 20 },
+          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 12.0, clickY: 63.0, labelX: 21.0, labelY: 56.0, areaW: 40, areaH: 20 },
           { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 84.0, clickY: 79.0, labelX: 76.5, labelY: 71.5, areaW: 26, areaH: 31 },
           { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 49.0, clickY: 79.0, labelX: 53.5, labelY: 72.0, areaW: 30, areaH: 22 },
           { wort: { es: "la alfombra", de: "der Teppich / Läufer", en: "the carpet / the runner rug", ru: "ковёр / дорожка" }, clickX: 44.0, clickY: 95.0, labelX: 52.0, labelY: 89.0, areaW: 62, areaH: 16 },
