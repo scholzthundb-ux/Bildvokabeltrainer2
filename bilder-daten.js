@@ -1195,8 +1195,8 @@ window.APP_FOLDERS = {
           { wort: "la cómoda", clickX: 11.0, clickY: 84.0, labelX: 20.0, labelY: 78.0, areaW: 22, areaH: 33 },
           { wort: "la lámpara", clickX: 56.0, clickY: 13.5, labelX: 64.0, labelY: 9.0, areaW: 14, areaH: 12 },
           { wort: "la puerta", clickX: 57.0, clickY: 41.0, labelX: 64.5, labelY: 29.0, areaW: 18, areaH: 36 },
-          { wort: "la pared", clickX: 93.0, clickY: 8.0, labelX: 85.0, labelY: 12.0, areaW: 16, areaH: 16 },
-          { wort: "el perchero", clickX: 89.0, clickY: 17.5, labelX: 81.5, labelY: 18.0, areaW: 18, areaH: 34 },
+          { wort: "la pared", clickX: 91.0, clickY: 12.0, labelX: 83.0, labelY: 12.0, areaW: 24, areaH: 24 },
+          { wort: "el perchero", clickX: 87.5, clickY: 31.5, labelX: 80.5, labelY: 24.0, areaW: 18, areaH: 42 },
           { wort: "la planta", clickX: 91.0, clickY: 71.5, labelX: 83.0, labelY: 64.5, areaW: 18, areaH: 23 },
           { wort: "la alfombra", clickX: 65.0, clickY: 92.0, labelX: 73.0, labelY: 86.5, areaW: 38, areaH: 24 },
           { wort: "el suelo", clickX: 94.0, clickY: 97.0, labelX: 87.0, labelY: 90.0, areaW: 12, areaH: 10 }
