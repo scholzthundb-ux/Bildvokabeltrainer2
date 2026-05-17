@@ -833,7 +833,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el fregadero", de: "das Spülbecken", en: "the sink", ru: "раковина" }, clickX: 67.5, clickY: 46.5, labelX: 80.0, labelY: 47.5, areaW: 10, areaH: 6 },
           { wort: { es: "la vitrocerámica", de: "das Cerankochfeld", en: "the ceramic hob", ru: "стеклокерамическая плита" }, clickX: 47.5, clickY: 42.0, labelX: 51.0, labelY: 41.5, areaW: 18, areaH: 5.5 },
           { wort: { es: "el horno", de: "der Backofen", en: "the oven", ru: "духовка" }, clickX: 48.5, clickY: 54.0, labelX: 56.0, labelY: 58.0, areaW: 18, areaH: 19 },
-          { wort: { es: "los utensilios de cocina", de: "die Küchenutensilien", en: "the kitchen utensils", ru: "кухонные принадлежности" }, clickX: 21.5, clickY: 41.5, labelX: 31.5, labelY: 37.5, areaW: 8, areaH: 7.5 },
+          { wort: { es: "los utensilios de cocina", de: "die Küchenutensilien", en: "the kitchen utensils", ru: "кухонные принадлежности" }, clickX: 24.5, clickY: 41.5, labelX: 31.5, labelY: 37.5, areaW: 8, areaH: 7.5 },
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 71.0, clickY: 29.0, labelX: 78.0, labelY: 24.0, areaW: 23, areaH: 15 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 92.0, clickY: 51.0, labelX: 84.0, labelY: 34.0, areaW: 16, areaH: 56 },
           { wort: { es: "el lavavajillas", de: "der Geschirrspüler", en: "the dishwasher", ru: "посудомоечная машина" }, clickX: 75.0, clickY: 58.5, labelX: 82.5, labelY: 54.0, areaW: 14, areaH: 18 },
