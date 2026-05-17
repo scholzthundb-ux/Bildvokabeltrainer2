@@ -709,16 +709,16 @@ window.APP_FOLDERS = {
         file: "salon1.png",
         openLabel: { wort: "el salón", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la ventana", clickX: 18.5, clickY: 31.5, labelX: 18.5, labelY: 22.0, areaW: 18, areaH: 26 },
-          { wort: "la cortina", clickX: 30.5, clickY: 29.0, labelX: 35.0, labelY: 20.0, areaW: 15, areaH: 33 },
-          { wort: "la lámpara", clickX: 46.5, clickY: 36.0, labelX: 52.0, labelY: 27.0, areaW: 16, areaH: 25 },
-          { wort: "el televisor", clickX: 65.5, clickY: 44.2, labelX: 71.0, labelY: 36.0, areaW: 19, areaH: 18 },
-          { wort: "la estantería", clickX: 81.5, clickY: 46.5, labelX: 76.5, labelY: 34.0, areaW: 15, areaH: 35 },
-          { wort: "el sofá", clickX: 14.8, clickY: 52.8, labelX: 23.5, labelY: 46.0, areaW: 33, areaH: 18 },
-          { wort: "el sillón", clickX: 17.0, clickY: 76.0, labelX: 24.5, labelY: 70.0, areaW: 21, areaH: 28 },
-          { wort: "la mesa de centro", clickX: 48.5, clickY: 71.0, labelX: 53.5, labelY: 66.5, areaW: 24, areaH: 16 },
-          { wort: "la alfombra", clickX: 62.0, clickY: 81.5, labelX: 69.5, labelY: 81.5, areaW: 41, areaH: 18 },
-          { wort: "la puerta", clickX: 91.5, clickY: 64.0, labelX: 82.0, labelY: 70.0, areaW: 13, areaH: 45 }
+          { wort: "la ventana", clickX: 14.5, clickY: 31.5, labelX: 17.5, labelY: 22.0, areaW: 16, areaH: 30 },
+          { wort: "la cortina", clickX: 30.0, clickY: 28.5, labelX: 34.5, labelY: 20.5, areaW: 14, areaH: 38 },
+          { wort: "la lámpara", clickX: 42.0, clickY: 37.0, labelX: 48.5, labelY: 29.0, areaW: 15, areaH: 24 },
+          { wort: "el televisor", clickX: 67.5, clickY: 49.0, labelX: 72.0, labelY: 42.0, areaW: 20, areaH: 19 },
+          { wort: "la estantería", clickX: 82.0, clickY: 62.0, labelX: 76.0, labelY: 54.0, areaW: 14, areaH: 28 },
+          { wort: "el sofá", clickX: 9.0, clickY: 63.0, labelX: 18.0, labelY: 56.0, areaW: 34, areaH: 20 },
+          { wort: "el sillón", clickX: 88.0, clickY: 84.0, labelX: 80.0, labelY: 76.5, areaW: 18, areaH: 23 },
+          { wort: "la mesa de centro", clickX: 58.5, clickY: 75.0, labelX: 60.5, labelY: 69.0, areaW: 24, areaH: 14 },
+          { wort: "la alfombra", clickX: 50.5, clickY: 95.0, labelX: 58.0, labelY: 89.0, areaW: 62, areaH: 16 },
+          { wort: "la puerta", clickX: 97.0, clickY: 48.0, labelX: 88.0, labelY: 55.0, areaW: 6, areaH: 40 }
         ]
       },
       {
