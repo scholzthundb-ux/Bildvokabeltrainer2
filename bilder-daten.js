@@ -1259,45 +1259,45 @@ window.APP_FOLDERS = {
         title: "El sótano – Bild 2",
         file: "sotano3.png",
         hotspots: [
-          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el pasamanos", de: "der Handlauf", en: "the banister", ru: "поручень" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el techo bajo", de: "die niedrige Decke", en: "the low ceiling", ru: "низкий потолок" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el escalón", de: "die Stufe", en: "the step", ru: "ступенька" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la grieta", de: "der Riss", en: "the crack", ru: "трещина" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la columna", de: "die Säule", en: "the pillar", ru: "колонна" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la puerta metálica", de: "die Metalltür", en: "the metal door", ru: "металлическая дверь" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la ventana pequeña", de: "das kleine Fenster", en: "the small window", ru: "маленькое окно" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el tubo", de: "das Rohr", en: "the pipe", ru: "труба" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 16.5, clickY: 17.7, labelX: 16.8, labelY: 10.8, areaW: 30.5, areaH: 33.7 },
+          { wort: { es: "el pasamanos", de: "der Handlauf", en: "the banister", ru: "поручень" }, clickX: 47.6, clickY: 17.7, labelX: 50.0, labelY: 10.8, areaW: 30.6, areaH: 33.7 },
+          { wort: { es: "el techo bajo", de: "die niedrige Decke", en: "the low ceiling", ru: "низкий потолок" }, clickX: 81.0, clickY: 17.7, labelX: 83.2, labelY: 10.8, areaW: 35.4, areaH: 33.7 },
+          { wort: { es: "el escalón", de: "die Stufe", en: "the step", ru: "ступенька" }, clickX: 16.5, clickY: 50.9, labelX: 16.8, labelY: 42.5, areaW: 30.5, areaH: 32.1 },
+          { wort: { es: "la grieta", de: "der Riss", en: "the crack", ru: "трещина" }, clickX: 47.6, clickY: 50.9, labelX: 50.0, labelY: 42.5, areaW: 30.6, areaH: 32.1 },
+          { wort: { es: "la columna", de: "die Säule", en: "the pillar", ru: "колонна" }, clickX: 81.0, clickY: 50.9, labelX: 83.2, labelY: 42.5, areaW: 35.4, areaH: 32.1 },
+          { wort: { es: "la puerta metálica", de: "die Metalltür", en: "the metal door", ru: "металлическая дверь" }, clickX: 16.5, clickY: 83.2, labelX: 16.8, labelY: 74.2, areaW: 30.5, areaH: 31.7 },
+          { wort: { es: "la ventana pequeña", de: "das kleine Fenster", en: "the small window", ru: "маленькое окно" }, clickX: 47.6, clickY: 83.2, labelX: 50.0, labelY: 74.2, areaW: 30.6, areaH: 31.7 },
+          { wort: { es: "el tubo", de: "das Rohr", en: "the pipe", ru: "труба" }, clickX: 81.0, clickY: 83.2, labelX: 83.2, labelY: 74.2, areaW: 35.4, areaH: 31.7 }
         ]
       },
       {
         title: "El sótano – Bild 3",
         file: "sotano2.png",
         hotspots: [
-          { wort: { es: "la tubería", de: "die Leitung", en: "the pipework", ru: "трубопровод" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el cuadro eléctrico", de: "der Sicherungskasten", en: "the electrical panel", ru: "электрощиток" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la caldera", de: "der Heizkessel", en: "the boiler", ru: "котёл" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el calentador", de: "der Heizkörper", en: "the heater", ru: "нагреватель" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la bombilla", de: "die Glühbirne", en: "the light bulb", ru: "лампочка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la rejilla de ventilación", de: "das Lüftungsgitter", en: "the air vent", ru: "вентиляционная решётка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el desagüe", de: "der Abfluss", en: "the drain", ru: "слив" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la tubería", de: "die Leitung", en: "the pipework", ru: "трубопровод" }, clickX: 17.2, clickY: 18.6, labelX: 16.8, labelY: 10.8, areaW: 31.2, areaH: 35.0 },
+          { wort: { es: "el cuadro eléctrico", de: "der Sicherungskasten", en: "the electrical panel", ru: "электрощиток" }, clickX: 49.0, clickY: 18.6, labelX: 50.0, labelY: 10.8, areaW: 31.8, areaH: 35.0 },
+          { wort: { es: "la caldera", de: "der Heizkessel", en: "the boiler", ru: "котёл" }, clickX: 81.8, clickY: 18.6, labelX: 83.2, labelY: 10.8, areaW: 33.0, areaH: 35.0 },
+          { wort: { es: "el calentador", de: "der Heizkörper", en: "the heater", ru: "нагреватель" }, clickX: 17.2, clickY: 51.9, labelX: 16.8, labelY: 42.5, areaW: 31.2, areaH: 31.1 },
+          { wort: { es: "la bombilla", de: "die Glühbirne", en: "the light bulb", ru: "лампочка" }, clickX: 49.0, clickY: 51.9, labelX: 50.0, labelY: 42.5, areaW: 31.8, areaH: 31.1 },
+          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 81.8, clickY: 51.9, labelX: 83.2, labelY: 42.5, areaW: 33.0, areaH: 31.1 },
+          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 17.2, clickY: 83.3, labelX: 16.8, labelY: 74.2, areaW: 31.2, areaH: 31.1 },
+          { wort: { es: "la rejilla de ventilación", de: "das Lüftungsgitter", en: "the air vent", ru: "вентиляционная решётка" }, clickX: 49.0, clickY: 83.3, labelX: 50.0, labelY: 74.2, areaW: 31.8, areaH: 31.1 },
+          { wort: { es: "el desagüe", de: "der Abfluss", en: "the drain", ru: "слив" }, clickX: 81.8, clickY: 83.3, labelX: 83.2, labelY: 74.2, areaW: 33.0, areaH: 31.1 }
         ]
       },
       {
         title: "El sótano – Bild 4",
         file: "sotano4.png",
         hotspots: [
-          { wort: { es: "el cable", de: "das Kabel", en: "the cable", ru: "кабель" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el fusible", de: "die Sicherung", en: "the fuse", ru: "предохранитель" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la linterna", de: "die Taschenlampe", en: "the torch", ru: "фонарик" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el manómetro", de: "das Manometer", en: "the pressure gauge", ru: "манометр" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el radiador", de: "der Heizkörper", en: "the radiator", ru: "радиатор" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la válvula", de: "das Ventil", en: "the valve", ru: "клапан" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el contador de agua", de: "der Wasserzähler", en: "the water meter", ru: "счётчик воды" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la llave de paso", de: "der Absperrhahn", en: "the shut-off valve", ru: "запорный кран" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el cable", de: "das Kabel", en: "the cable", ru: "кабель" }, clickX: 17.2, clickY: 17.0, labelX: 16.8, labelY: 10.8, areaW: 32.7, areaH: 32.6 },
+          { wort: { es: "el fusible", de: "die Sicherung", en: "the fuse", ru: "предохранитель" }, clickX: 50.0, clickY: 17.0, labelX: 50.0, labelY: 10.8, areaW: 32.6, areaH: 32.6 },
+          { wort: { es: "la linterna", de: "die Taschenlampe", en: "the torch", ru: "фонарик" }, clickX: 82.9, clickY: 17.0, labelX: 83.2, labelY: 10.8, areaW: 32.4, areaH: 32.6 },
+          { wort: { es: "el manómetro", de: "das Manometer", en: "the pressure gauge", ru: "манометр" }, clickX: 17.2, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 32.7, areaH: 32.8 },
+          { wort: { es: "el radiador", de: "der Heizkörper", en: "the radiator", ru: "радиатор" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 32.6, areaH: 32.8 },
+          { wort: { es: "la válvula", de: "das Ventil", en: "the valve", ru: "клапан" }, clickX: 82.9, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 32.4, areaH: 32.8 },
+          { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 17.2, clickY: 83.3, labelX: 16.8, labelY: 74.2, areaW: 32.7, areaH: 33.3 },
+          { wort: { es: "el contador de agua", de: "der Wasserzähler", en: "the water meter", ru: "счётчик воды" }, clickX: 50.0, clickY: 83.3, labelX: 50.0, labelY: 74.2, areaW: 32.6, areaH: 33.3 },
+          { wort: { es: "la llave de paso", de: "der Absperrhahn", en: "the shut-off valve", ru: "запорный кран" }, clickX: 82.9, clickY: 83.3, labelX: 83.2, labelY: 74.2, areaW: 32.4, areaH: 33.3 }
         ]
       }
     ]
