@@ -455,6 +455,11 @@
       transform: scale(0.95);
     }
 
+    .sound-btn.is-off {
+      opacity: 0.6;
+      box-shadow: 0 6px 14px rgba(47, 95, 207, 0.14);
+    }
+
     #feedback {
       font-size: clamp(1.5rem, 4.4vw, 2.1rem);
       font-weight: 800;
@@ -971,6 +976,7 @@
     let isAnimating = false;
     let audioCtx = null;
     let isMuted = false;
+    let quizSpeechEnabled = false;
     let currentLanguage = loadSavedLanguage();
 
     let quizQueue = [];
@@ -1017,7 +1023,9 @@
         of: "de",
         prevImage: "Imagen anterior",
         nextImage: "Imagen siguiente",
-        speak: "Escuchar palabra"
+        speak: "Escuchar palabra",
+        quizSoundOn: "Activar sonido del quiz",
+        quizSoundOff: "Desactivar sonido del quiz"
       },
       de: {
         appTitle: "Vokabeltrainer",
@@ -1044,7 +1052,9 @@
         of: "von",
         prevImage: "Vorheriges Bild",
         nextImage: "Nächstes Bild",
-        speak: "Wort anhören"
+        speak: "Wort anhören",
+        quizSoundOn: "Quizton einschalten",
+        quizSoundOff: "Quizton ausschalten"
       },
       en: {
         appTitle: "Vocabulary trainer",
@@ -1071,7 +1081,9 @@
         of: "of",
         prevImage: "Previous image",
         nextImage: "Next image",
-        speak: "Listen to word"
+        speak: "Listen to word",
+        quizSoundOn: "Turn quiz sound on",
+        quizSoundOff: "Turn quiz sound off"
       },
       ru: {
         appTitle: "Тренажёр слов",
@@ -1098,7 +1110,9 @@
         of: "из",
         prevImage: "Предыдущее изображение",
         nextImage: "Следующее изображение",
-        speak: "Прослушать слово"
+        speak: "Прослушать слово",
+        quizSoundOn: "Включить звук теста",
+        quizSoundOff: "Выключить звук теста"
       }
     };
     const FOLDER_TITLE_TRANSLATIONS = {
@@ -1150,7 +1164,7 @@
     lernBtn.addEventListener("click", () => setMode("lernen"));
     quizBtn.addEventListener("click", () => setMode("quiz"));
     fullscreenBtn.addEventListener("click", toggleFullscreen);
-    speakBtn.addEventListener("click", speakCurrentQuestion);
+    speakBtn.addEventListener("click", toggleQuizSpeech);
     muteBtn.addEventListener("click", toggleMute);
     prevImageBtn.addEventListener("click", showPrevImage);
     nextImageBtn.addEventListener("click", showNextImage);
@@ -1323,7 +1337,7 @@
       swipeInfo.textContent = getUi("swipeInfo");
       prevImageBtn.setAttribute("aria-label", getUi("prevImage"));
       nextImageBtn.setAttribute("aria-label", getUi("nextImage"));
-      speakBtn.setAttribute("aria-label", getUi("speak"));
+      updateSpeakButton();
       updateFolderButtons();
       updateLanguageButtons();
       updateBackButtonText();
@@ -1331,6 +1345,7 @@
 
     function updateLocalizedRuntimeTexts() {
       updateMuteButton();
+      updateSpeakButton();
       updateFullscreenButtonText();
 
       if (window.getComputedStyle(app).display === "none") {
@@ -1425,6 +1440,15 @@
     function updateMuteButton() {
       muteBtn.textContent = isMuted ? getUi("unmute") : getUi("mute");
       muteBtn.classList.toggle("is-muted", isMuted);
+    }
+
+    function updateSpeakButton() {
+      speakBtn.textContent = quizSpeechEnabled ? "🔊" : "🔇";
+      speakBtn.classList.toggle("is-off", !quizSpeechEnabled);
+
+      const label = quizSpeechEnabled ? getUi("quizSoundOff") : getUi("quizSoundOn");
+      speakBtn.setAttribute("aria-label", label);
+      speakBtn.title = label;
     }
 
     function toggleMute() {
@@ -2132,6 +2156,10 @@
       hideLabel();
       hideSpecialImageLabel();
       quizAktiv = true;
+
+      if (quizSpeechEnabled) {
+        speakCurrentQuestion();
+      }
     }
 
     function animateImageChange(direction, updateImageCallback) {
@@ -2337,6 +2365,18 @@
       } else {
         speakWord(gesucht);
       }
+    }
+
+    function toggleQuizSpeech() {
+      quizSpeechEnabled = !quizSpeechEnabled;
+
+      if (!quizSpeechEnabled) {
+        stopSpeech();
+      } else if (mode === "quiz" && quizAktiv) {
+        speakCurrentQuestion();
+      }
+
+      updateSpeakButton();
     }
 
     function ensureAudioContext() {
