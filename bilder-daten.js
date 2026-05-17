@@ -825,7 +825,7 @@ window.APP_FOLDERS = {
         file: "cocina1.png",
         openLabel: { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 13.5, clickY: 32.0, labelX: 21.0, labelY: 26.5, areaW: 18, areaH: 28 },
+          { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 13.5, clickY: 35.0, labelX: 21.0, labelY: 26.5, areaW: 18, areaH: 28 },
           { wort: { es: "el congelador", de: "der Gefrierschrank", en: "the freezer", ru: "морозильник" }, clickX: 13.5, clickY: 58.0, labelX: 22.5, labelY: 53.5, areaW: 16, areaH: 16 },
           { wort: { es: "el armario alto", de: "der Hängeschrank", en: "the wall cabinet", ru: "навесной шкаф" }, clickX: 29.0, clickY: 22.0, labelX: 37.5, labelY: 16.5, areaW: 18, areaH: 18 },
           { wort: { es: "la campana extractora", de: "die Dunstabzugshaube", en: "the extractor hood", ru: "вытяжка" }, clickX: 44.0, clickY: 20.0, labelX: 52.0, labelY: 15.0, areaW: 20, areaH: 18 },
@@ -837,7 +837,7 @@ window.APP_FOLDERS = {
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 71.0, clickY: 29.0, labelX: 78.0, labelY: 24.0, areaW: 23, areaH: 15 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 92.0, clickY: 45.0, labelX: 84.0, labelY: 34.0, areaW: 16, areaH: 56 },
           { wort: { es: "el lavavajillas", de: "der Geschirrspüler", en: "the dishwasher", ru: "посудомоечная машина" }, clickX: 75.0, clickY: 58.5, labelX: 82.5, labelY: 54.0, areaW: 14, areaH: 18 },
-          { wort: { es: "la mesa", de: "der Tisch", en: "the table", ru: "стол" }, clickX: 17.0, clickY: 77.5, labelX: 24.5, labelY: 72.5, areaW: 24, areaH: 18 },
+          { wort: { es: "la mesa", de: "der Tisch", en: "the table", ru: "стол" }, clickX: 14.0, clickY: 77.5, labelX: 24.5, labelY: 72.5, areaW: 30, areaH: 18 },
           { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 36.5, clickY: 91.5, labelX: 43.0, labelY: 86.5, areaW: 20, areaH: 18 },
           { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 71.5, clickY: 81.5, labelX: 78.0, labelY: 77.0, areaW: 33, areaH: 22 }
         ]
