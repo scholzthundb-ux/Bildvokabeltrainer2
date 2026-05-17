@@ -135,6 +135,16 @@
       width: 100%;
     }
 
+    .menu-utility-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 16px;
+    }
+
+    .menu-utility-row .ui-btn {
+      width: auto;
+    }
+
     .folder-title {
       font-size: clamp(1.8rem, 4.8vw, 2.8rem);
       margin-bottom: 18px;
@@ -307,7 +317,7 @@
     }
 
     #backToFolderBtn::after {
-      content: "Menü";
+      content: attr(data-label);
       font-size: 0.84rem;
       font-weight: 800;
       letter-spacing: 0.01em;
@@ -337,7 +347,8 @@
     }
 
     .fullscreen-btn,
-    .mute-btn {
+    .mute-btn,
+    .lang-toggle-btn {
       background: linear-gradient(180deg, #3d71e4 0%, var(--accent-dark) 100%);
       color: white;
       border: none;
@@ -352,7 +363,8 @@
     }
 
     .fullscreen-btn:active,
-    .mute-btn:active {
+    .mute-btn:active,
+    .lang-toggle-btn:active {
       transform: scale(0.97);
     }
 
@@ -684,7 +696,8 @@
       }
 
       .mute-btn,
-      .fullscreen-btn {
+      .fullscreen-btn,
+      .lang-toggle-btn {
         flex: 0 0 auto;
       }
 
@@ -745,7 +758,8 @@
       }
 
       .fullscreen-btn,
-      .mute-btn {
+      .mute-btn,
+      .lang-toggle-btn {
         font-size: 0.8rem;
         padding: 8px 11px;
         min-height: 36px;
@@ -837,7 +851,8 @@
       }
 
       .mute-btn,
-      .fullscreen-btn {
+      .fullscreen-btn,
+      .lang-toggle-btn {
         width: auto;
         min-width: 0;
         flex: 0 0 auto;
@@ -865,9 +880,12 @@
 <body>
   <div id="menu">
     <div class="card">
+      <div class="menu-utility-row">
+        <button class="ui-btn secondary small" id="menuLanguageBtn" type="button"></button>
+      </div>
       <div class="start-icon">🧠</div>
-      <h1>Vokabeltrainer</h1>
-      <div class="subtitle">Lerne spanische Wörter direkt am Bild.</div>
+      <h1 id="menuTitle">Vokabeltrainer</h1>
+      <div class="subtitle" id="menuSubtitle">Lerne spanische Wörter direkt am Bild.</div>
 
       <div class="menu-actions">
         <button class="ui-btn folder-open-btn" data-folder="zahlen">Los números</button>
@@ -894,7 +912,8 @@
 
     <div class="nav-row">
       <div class="nav-left">
-        <button class="nav-arrow-btn" id="backToFolderBtn" aria-label="Zurück zum Menü"></button>
+        <button class="nav-arrow-btn" id="backToFolderBtn" data-label="Menü" aria-label="Zurück zum Menü"></button>
+        <button class="lang-toggle-btn" id="appLanguageBtn" type="button"></button>
       </div>
 
       <div class="nav-right">
@@ -942,6 +961,7 @@
     let currentImageIndex = 0;
     let mode = "lernen";
     let gesucht = "";
+    let currentQuestionHotspot = null;
     let quizAktiv = false;
     let timer = null;
     let touchStartX = 0;
@@ -949,6 +969,7 @@
     let isAnimating = false;
     let audioCtx = null;
     let isMuted = false;
+    let currentLanguage = loadSavedLanguage();
 
     let quizQueue = [];
     let repeatQueue = [];
@@ -965,11 +986,137 @@
     const MIN_REPEAT_DELAY = 3;
     const LABEL_AUTO_HIDE_MS = 5000;
     const ZOOM_REVEAL_DURATION = 1850;
+    const LANGUAGE_ORDER = ["es", "de", "en", "ru"];
+    const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN", ru: "RU" };
+    const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-US", ru: "ru-RU" };
+    const UI_STRINGS = {
+      es: {
+        appTitle: "Entrenador de vocabulario",
+        subtitle: "Aprende palabras directamente en la imagen.",
+        learnMode: "Aprender",
+        quizMode: "Quiz",
+        menuButton: "Menú",
+        backToMenu: "Volver al menú",
+        mute: "Silencio",
+        unmute: "Sonido",
+        fullscreen: "Pantalla completa",
+        fullscreenOff: "Salir pantalla",
+        language: "Idioma",
+        switchLanguage: "Cambiar idioma",
+        swipeInfo: "Desliza a izquierda o derecha para cambiar de imagen.",
+        learnInfoDefault: "Toca un motivo marcado.",
+        learnInfoClothes: "Toca una prenda de ropa.",
+        learnInfoRoutine: "Toca una actividad o la línea del tiempo.",
+        learnInfoHouse: "Toca una habitación o una zona de la casa.",
+        learnInfoActivity: "Toca una actividad.",
+        correct: "👍 Correcto",
+        wrong: "👎 Incorrecto",
+        image: "Imagen",
+        of: "de",
+        prevImage: "Imagen anterior",
+        nextImage: "Imagen siguiente",
+        speak: "Escuchar palabra"
+      },
+      de: {
+        appTitle: "Vokabeltrainer",
+        subtitle: "Lerne Wörter direkt am Bild.",
+        learnMode: "Lernen",
+        quizMode: "Quiz",
+        menuButton: "Menü",
+        backToMenu: "Zurück zum Menü",
+        mute: "Stumm",
+        unmute: "Ton an",
+        fullscreen: "Vollbild",
+        fullscreenOff: "Vollbild aus",
+        language: "Sprache",
+        switchLanguage: "Sprache wechseln",
+        swipeInfo: "Zum Bildwechsel nach links oder rechts wischen.",
+        learnInfoDefault: "Tippe auf ein markiertes Motiv.",
+        learnInfoClothes: "Tippe auf ein Kleidungsstück.",
+        learnInfoRoutine: "Tippe auf eine Tätigkeit oder auf die Zeitleiste.",
+        learnInfoHouse: "Tippe auf einen Raum oder Bereich im Haus.",
+        learnInfoActivity: "Tippe auf eine Tätigkeit.",
+        correct: "👍 Richtig",
+        wrong: "👎 Falsch",
+        image: "Bild",
+        of: "von",
+        prevImage: "Vorheriges Bild",
+        nextImage: "Nächstes Bild",
+        speak: "Wort anhören"
+      },
+      en: {
+        appTitle: "Vocabulary trainer",
+        subtitle: "Learn words directly from the picture.",
+        learnMode: "Learn",
+        quizMode: "Quiz",
+        menuButton: "Menu",
+        backToMenu: "Back to menu",
+        mute: "Mute",
+        unmute: "Sound on",
+        fullscreen: "Fullscreen",
+        fullscreenOff: "Exit fullscreen",
+        language: "Language",
+        switchLanguage: "Switch language",
+        swipeInfo: "Swipe left or right to change the picture.",
+        learnInfoDefault: "Tap a highlighted object.",
+        learnInfoClothes: "Tap an item of clothing.",
+        learnInfoRoutine: "Tap an activity or the timeline.",
+        learnInfoHouse: "Tap a room or area in the house.",
+        learnInfoActivity: "Tap an activity.",
+        correct: "👍 Correct",
+        wrong: "👎 Wrong",
+        image: "Image",
+        of: "of",
+        prevImage: "Previous image",
+        nextImage: "Next image",
+        speak: "Listen to word"
+      },
+      ru: {
+        appTitle: "Тренажёр слов",
+        subtitle: "Изучайте слова прямо по картинке.",
+        learnMode: "Учить",
+        quizMode: "Тест",
+        menuButton: "Меню",
+        backToMenu: "Назад в меню",
+        mute: "Без звука",
+        unmute: "Со звуком",
+        fullscreen: "Во весь экран",
+        fullscreenOff: "Выйти из экрана",
+        language: "Язык",
+        switchLanguage: "Сменить язык",
+        swipeInfo: "Листайте влево или вправо, чтобы сменить картинку.",
+        learnInfoDefault: "Нажмите на отмеченный объект.",
+        learnInfoClothes: "Нажмите на предмет одежды.",
+        learnInfoRoutine: "Нажмите на действие или на линию времени.",
+        learnInfoHouse: "Нажмите на комнату или часть дома.",
+        learnInfoActivity: "Нажмите на действие.",
+        correct: "👍 Верно",
+        wrong: "👎 Неверно",
+        image: "Изображение",
+        of: "из",
+        prevImage: "Предыдущее изображение",
+        nextImage: "Следующее изображение",
+        speak: "Прослушать слово"
+      }
+    };
+    const FOLDER_TITLE_TRANSLATIONS = {
+      zahlen: { es: "Los números", de: "Die Zahlen", en: "Numbers", ru: "Числа" },
+      playa: { es: "La playa", de: "Der Strand", en: "The beach", ru: "Пляж" },
+      ropa: { es: "La ropa", de: "Die Kleidung", en: "Clothing", ru: "Одежда" },
+      rutina: { es: "Rutina diaria", de: "Tagesablauf", en: "Daily routine", ru: "Распорядок дня" },
+      casa: { es: "La casa", de: "Das Haus", en: "The house", ru: "Дом" },
+      habitaciones: { es: "Las habitaciones", de: "Die Zimmer", en: "The rooms", ru: "Комнаты" },
+      pasillo: { es: "El pasillo", de: "Der Flur", en: "The hallway", ru: "Прихожая" }
+    };
 
     let imageDisplay = { x: 0, y: 0, w: 0, h: 0 };
 
     const menu = document.getElementById("menu");
     const app = document.getElementById("app");
+    const menuTitle = document.getElementById("menuTitle");
+    const menuSubtitle = document.getElementById("menuSubtitle");
+    const menuLanguageBtn = document.getElementById("menuLanguageBtn");
+    const appLanguageBtn = document.getElementById("appLanguageBtn");
     const hotspotsLayer = document.getElementById("hotspots");
     const specialImageLabel = document.getElementById("specialImageLabel");
     const label = document.getElementById("label");
@@ -991,19 +1138,22 @@
     const muteBtn = document.getElementById("muteBtn");
     const prevImageBtn = document.getElementById("prevImageBtn");
     const nextImageBtn = document.getElementById("nextImageBtn");
+    const backToFolderBtn = document.getElementById("backToFolderBtn");
     document.querySelectorAll(".folder-open-btn").forEach((btn) => {
       btn.addEventListener("click", () => openFolder(btn.dataset.folder));
     });
 
-    document.getElementById("backToFolderBtn").addEventListener("click", backToStart);
+    backToFolderBtn.addEventListener("click", backToStart);
 
     lernBtn.addEventListener("click", () => setMode("lernen"));
     quizBtn.addEventListener("click", () => setMode("quiz"));
     fullscreenBtn.addEventListener("click", toggleFullscreen);
-    speakBtn.addEventListener("click", () => speakWord(gesucht));
+    speakBtn.addEventListener("click", speakCurrentQuestion);
     muteBtn.addEventListener("click", toggleMute);
     prevImageBtn.addEventListener("click", showPrevImage);
     nextImageBtn.addEventListener("click", showNextImage);
+    menuLanguageBtn.addEventListener("click", cycleLanguage);
+    appLanguageBtn.addEventListener("click", cycleLanguage);
 
     bildContainer.addEventListener("touchstart", (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -1030,6 +1180,162 @@
     document.addEventListener("fullscreenchange", handleViewportChange);
     document.addEventListener("webkitfullscreenchange", handleViewportChange);
 
+    function loadSavedLanguage() {
+      try {
+        const savedLanguage = localStorage.getItem("trainerLanguage");
+        return LANGUAGE_ORDER.includes(savedLanguage) ? savedLanguage : "es";
+      } catch (err) {
+        return "es";
+      }
+    }
+
+    function saveCurrentLanguage() {
+      try {
+        localStorage.setItem("trainerLanguage", currentLanguage);
+      } catch (err) {
+        // Lokales Speichern ist optional.
+      }
+    }
+
+    function resolveLocalizedEntry(value, lang = currentLanguage) {
+      if (value == null) {
+        return { text: "", lang: "es" };
+      }
+
+      if (typeof value === "string") {
+        return { text: value, lang: "es" };
+      }
+
+      if (typeof value === "object") {
+        for (const candidate of [lang, "es", "de", "en", "ru"]) {
+          if (typeof value[candidate] === "string") {
+            return { text: value[candidate], lang: candidate };
+          }
+        }
+
+        const fallbackEntry = Object.entries(value).find(([, entry]) => typeof entry === "string");
+
+        if (fallbackEntry) {
+          return { text: fallbackEntry[1], lang: fallbackEntry[0] };
+        }
+      }
+
+      return { text: String(value), lang };
+    }
+
+    function resolveLocalizedText(value, lang = currentLanguage) {
+      return resolveLocalizedEntry(value, lang).text;
+    }
+
+    function getUi(key) {
+      return UI_STRINGS[currentLanguage]?.[key] ?? UI_STRINGS.es[key] ?? key;
+    }
+
+    function getHotspotText(hotspot) {
+      return resolveLocalizedText(hotspot?.wort);
+    }
+
+    function getFolderDisplayTitle(folderKey) {
+      const translatedTitle = FOLDER_TITLE_TRANSLATIONS[folderKey];
+
+      if (translatedTitle) {
+        return resolveLocalizedText(translatedTitle);
+      }
+
+      return resolveLocalizedText(folders[folderKey]?.title ?? "");
+    }
+
+    function getLanguageButtonText() {
+      return `🌐 ${LANGUAGE_LABELS[currentLanguage]}`;
+    }
+
+    function cycleLanguage() {
+      const currentIndex = LANGUAGE_ORDER.indexOf(currentLanguage);
+      currentLanguage = LANGUAGE_ORDER[(currentIndex + 1) % LANGUAGE_ORDER.length];
+      saveCurrentLanguage();
+      applyLanguage();
+    }
+
+    function updateLanguageButtons() {
+      const buttonText = getLanguageButtonText();
+      const ariaLabel = getUi("switchLanguage");
+
+      menuLanguageBtn.textContent = buttonText;
+      menuLanguageBtn.setAttribute("aria-label", ariaLabel);
+      menuLanguageBtn.title = ariaLabel;
+
+      appLanguageBtn.textContent = buttonText;
+      appLanguageBtn.setAttribute("aria-label", ariaLabel);
+      appLanguageBtn.title = ariaLabel;
+    }
+
+    function updateBackButtonText() {
+      backToFolderBtn.dataset.label = getUi("menuButton");
+      backToFolderBtn.setAttribute("aria-label", getUi("backToMenu"));
+    }
+
+    function updateFolderButtons() {
+      document.querySelectorAll(".folder-open-btn").forEach((btn) => {
+        btn.textContent = getFolderDisplayTitle(btn.dataset.folder);
+      });
+    }
+
+    function updateStaticUiTexts() {
+      document.documentElement.lang = currentLanguage;
+      document.title = getUi("appTitle");
+      menuTitle.textContent = getUi("appTitle");
+      menuSubtitle.textContent = getUi("subtitle");
+      lernBtn.textContent = getUi("learnMode");
+      quizBtn.textContent = getUi("quizMode");
+      swipeInfo.textContent = getUi("swipeInfo");
+      prevImageBtn.setAttribute("aria-label", getUi("prevImage"));
+      nextImageBtn.setAttribute("aria-label", getUi("nextImage"));
+      speakBtn.setAttribute("aria-label", getUi("speak"));
+      updateFolderButtons();
+      updateLanguageButtons();
+      updateBackButtonText();
+    }
+
+    function updateLocalizedRuntimeTexts() {
+      updateMuteButton();
+      updateFullscreenButtonText();
+
+      if (window.getComputedStyle(app).display === "none") {
+        return;
+      }
+
+      updateCurrentTitle();
+      updateLernInfo();
+      updateModePanels();
+      buildHotspots();
+      updateSpecialImageLabel();
+
+      if (currentLabelHotspot) {
+        label.textContent = getHotspotText(currentLabelHotspot);
+        positionLabelElement(label, currentLabelHotspot);
+      }
+
+      if (currentQuestionHotspot) {
+        gesucht = getHotspotText(currentQuestionHotspot);
+        frage.textContent = gesucht;
+      }
+
+      if (feedback.classList.contains("richtig")) {
+        feedback.textContent = getUi("correct");
+      } else if (feedback.classList.contains("falsch")) {
+        feedback.textContent = getUi("wrong");
+      }
+
+      if (mode === "lernen" && !isZoomOpen() && !currentLabelHotspot) {
+        showImageOpenLabelIfNeeded();
+      }
+    }
+
+    function applyLanguage() {
+      updateStaticUiTexts();
+      updateLocalizedRuntimeTexts();
+    }
+
     function getCurrentImageData() {
       return folders[currentFolderKey].images[currentImageIndex];
     }
@@ -1045,10 +1351,11 @@
       learnPanel.classList.toggle("is-active", isLearnMode);
       quizBox.classList.toggle("is-active", !isLearnMode);
       swipeInfo.classList.toggle("is-hidden", !showSwipeHint);
+      swipeInfo.textContent = getUi("swipeInfo");
     }
 
     function refreshDisplayedLayout() {
-      if (app.style.display === "none") return;
+      if (window.getComputedStyle(app).display === "none") return;
       if (!bild.src) return;
 
       setTimeout(() => {
@@ -1083,7 +1390,7 @@
     }
 
     function updateMuteButton() {
-      muteBtn.textContent = isMuted ? "Ton an" : "Stumm";
+      muteBtn.textContent = isMuted ? getUi("unmute") : getUi("mute");
       muteBtn.classList.toggle("is-muted", isMuted);
     }
 
@@ -1094,9 +1401,8 @@
     }
 
     function updateCurrentTitle() {
-      const imageData = getCurrentImageData();
       const total = folders[currentFolderKey].images.length;
-      currentImageTitle.textContent = `${imageData.title} von ${total}`;
+      currentImageTitle.textContent = `${getFolderDisplayTitle(currentFolderKey)} · ${getUi("image")} ${currentImageIndex + 1} ${getUi("of")} ${total}`;
     }
 
     function updateImageNavButtons() {
@@ -1178,6 +1484,8 @@
       app.style.display = "block";
 
       mode = "lernen";
+      currentQuestionHotspot = null;
+      gesucht = "";
       quizAktiv = false;
 
       clearTimeout(timer);
@@ -1207,28 +1515,28 @@
 
     function updateLernInfo() {
       if (currentFolderKey === "ropa") {
-        lernInfo.textContent = "Tippe auf ein Kleidungsstück.";
+        lernInfo.textContent = getUi("learnInfoClothes");
         return;
       }
 
       if (currentFolderKey === "rutina") {
-        lernInfo.textContent = "Tippe auf eine Tätigkeit oder auf die Zeitleiste.";
+        lernInfo.textContent = getUi("learnInfoRoutine");
         return;
       }
 
       if (currentFolderKey === "casa") {
         lernInfo.textContent = isZoomOpen()
           ? ""
-          : "Tippe auf einen Raum oder Bereich im Haus.";
+          : getUi("learnInfoHouse");
         return;
       }
 
       if (currentFolderKey === "playa" && (currentImageIndex === 2 || currentImageIndex === 3)) {
-        lernInfo.textContent = "Tippe auf eine Tätigkeit.";
+        lernInfo.textContent = getUi("learnInfoActivity");
         return;
       }
 
-      lernInfo.textContent = "Tippe auf ein markiertes Motiv.";
+      lernInfo.textContent = getUi("learnInfoDefault");
     }
 
     function loadCurrentImage(afterLoadAction = null) {
@@ -1446,7 +1754,7 @@
           d.classList.add("circle");
         }
 
-        d.setAttribute("aria-label", h.wort);
+        d.setAttribute("aria-label", getHotspotText(h));
         d.addEventListener("click", () => onHotspotClick(h, d));
 
         hotspotsLayer.appendChild(d);
@@ -1530,13 +1838,13 @@
 
       if (!quizAktiv) return;
 
-      if (h.wort === gesucht) {
+      if (h === currentQuestionHotspot) {
         playCorrectSound();
 
         feedback.className = "";
         void feedback.offsetWidth;
 
-        feedback.textContent = "👍 Richtig";
+        feedback.textContent = getUi("correct");
         feedback.className = "richtig feedback-anim";
 
         timer = setTimeout(nextQuestion, 650);
@@ -1546,14 +1854,14 @@
         feedback.className = "";
         void feedback.offsetWidth;
 
-        feedback.textContent = "👎 Falsch";
+        feedback.textContent = getUi("wrong");
         feedback.className = "falsch feedback-anim";
 
         if (navigator.vibrate) {
           navigator.vibrate([120, 70, 170]);
         }
 
-        scheduleRepeat(gesucht);
+        scheduleRepeat(currentQuestionHotspot);
 
         el.classList.add("fehler");
         setTimeout(() => {
@@ -1589,7 +1897,7 @@
         return;
       }
 
-      specialImageLabel.textContent = imageData.specialTopLabel;
+      specialImageLabel.textContent = resolveLocalizedText(imageData.specialTopLabel);
       specialImageLabel.style.display = "block";
     }
 
@@ -1631,7 +1939,7 @@
       currentLabelHotspot = hotspot;
       currentLabelIsPersistent = !!options.persistent;
 
-      label.textContent = hotspot.wort;
+      label.textContent = getHotspotText(hotspot);
       positionLabelElement(label, hotspot);
 
       label.classList.remove("show");
@@ -1708,39 +2016,39 @@
     }
 
     function refillQuizQueue() {
-      const alleWoerter = getCurrentImageData().hotspots.map((h) => h.wort);
-      const rest = alleWoerter.filter(
-        (w) => !quizQueue.includes(w) && !repeatQueue.includes(w)
+      const alleHotspots = getCurrentImageData().hotspots;
+      const rest = alleHotspots.filter(
+        (hotspot) => !quizQueue.includes(hotspot) && !repeatQueue.includes(hotspot)
       );
 
       quizQueue.push(...shuffleArray(rest));
     }
 
-    function markAsked(word) {
-      recentQuestions.push(word);
+    function markAsked(hotspot) {
+      recentQuestions.push(hotspot);
 
       if (recentQuestions.length > MIN_REPEAT_DELAY) {
         recentQuestions.shift();
       }
     }
 
-    function canRepeatNow(word) {
-      return !recentQuestions.includes(word);
+    function canRepeatNow(hotspot) {
+      return !recentQuestions.includes(hotspot);
     }
 
-    function scheduleRepeat(word) {
-      if (word && !repeatQueue.includes(word)) {
-        repeatQueue.push(word);
+    function scheduleRepeat(hotspot) {
+      if (hotspot && !repeatQueue.includes(hotspot)) {
+        repeatQueue.push(hotspot);
       }
     }
 
     function getNextRepeatWord() {
       for (let i = 0; i < repeatQueue.length; i++) {
-        const word = repeatQueue[i];
+        const hotspot = repeatQueue[i];
 
-        if (canRepeatNow(word)) {
+        if (canRepeatNow(hotspot)) {
           repeatQueue.splice(i, 1);
-          return word;
+          return hotspot;
         }
       }
 
@@ -1753,11 +2061,11 @@
       }
 
       for (let i = 0; i < quizQueue.length; i++) {
-        const word = quizQueue[i];
+        const hotspot = quizQueue[i];
 
-        if (canRepeatNow(word)) {
+        if (canRepeatNow(hotspot)) {
           quizQueue.splice(i, 1);
-          return word;
+          return hotspot;
         }
       }
 
@@ -1769,19 +2077,20 @@
         refillQuizQueue();
       }
 
-      let nextWord = getNextRepeatWord();
+      let nextHotspot = getNextRepeatWord();
 
-      if (!nextWord) {
-        nextWord = getNextNormalWord();
+      if (!nextHotspot) {
+        nextHotspot = getNextNormalWord();
       }
 
-      if (!nextWord) {
+      if (!nextHotspot) {
         refillQuizQueue();
-        nextWord = getNextNormalWord();
+        nextHotspot = getNextNormalWord();
       }
 
-      gesucht = nextWord;
-      markAsked(gesucht);
+      currentQuestionHotspot = nextHotspot;
+      gesucht = getHotspotText(nextHotspot);
+      markAsked(nextHotspot);
 
       frage.textContent = gesucht;
       feedback.textContent = "";
@@ -1933,7 +2242,7 @@
     }
 
     function updateFullscreenButtonText() {
-      fullscreenBtn.textContent = isFullscreenActive() ? "Vollbild aus" : "Vollbild";
+      fullscreenBtn.textContent = isFullscreenActive() ? getUi("fullscreenOff") : getUi("fullscreen");
     }
 
     function stopSpeech() {
@@ -1942,40 +2251,59 @@
       }
     }
 
-    function getSpanishVoice() {
+    function getSpeechLangCodeForEntry(entry) {
+      const resolvedLanguage = resolveLocalizedEntry(entry).lang;
+      return SPEECH_LANG_CODES[resolvedLanguage] ?? SPEECH_LANG_CODES.es;
+    }
+
+    function getPreferredVoice(entry) {
       if (!("speechSynthesis" in window)) return null;
 
       const voices = speechSynthesis.getVoices();
 
       if (!voices || !voices.length) return null;
 
+      const speechLangCode = getSpeechLangCodeForEntry(entry);
+      const preferredPrefix = speechLangCode.toLowerCase();
+      const shortPrefix = preferredPrefix.split("-")[0];
+
       return (
-        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("es-es")) ||
-        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("es")) ||
+        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith(preferredPrefix)) ||
+        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith(shortPrefix)) ||
         null
       );
     }
 
-    function speakWord(text) {
+    function speakWord(entryOrText) {
       if (isMuted) return;
-      if (!text || !("speechSynthesis" in window)) return;
+      const resolvedEntry = resolveLocalizedEntry(entryOrText);
+
+      if (!resolvedEntry.text || !("speechSynthesis" in window)) return;
 
       stopSpeech();
 
-      const utterance = new SpeechSynthesisUtterance(text.replace(/\n/g, " "));
+      const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
 
-      utterance.lang = "es-ES";
+      utterance.lang = getSpeechLangCodeForEntry(entryOrText);
       utterance.rate = 0.9;
       utterance.pitch = 1.0;
       utterance.volume = 1.0;
 
-      const voice = getSpanishVoice();
+      const voice = getPreferredVoice(entryOrText);
 
       if (voice) {
         utterance.voice = voice;
       }
 
       speechSynthesis.speak(utterance);
+    }
+
+    function speakCurrentQuestion() {
+      if (currentQuestionHotspot) {
+        speakWord(currentQuestionHotspot.wort);
+      } else {
+        speakWord(gesucht);
+      }
     }
 
     function ensureAudioContext() {
@@ -2030,7 +2358,7 @@
 
     window.addEventListener("resize", refreshDisplayedLayout);
 
-    updateMuteButton();
+    applyLanguage();
     updateImageNavButtons();
   </script>
 </body>
