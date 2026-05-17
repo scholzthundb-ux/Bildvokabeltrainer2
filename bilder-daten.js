@@ -1195,7 +1195,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 11.5, clickY: 27.5, labelX: 19.0, labelY: 20.0, areaW: 14, areaH: 36 },
           { wort: { es: "las llaves", de: "die Schlüssel (Pl.)", en: "the keys", ru: "ключи" }, clickX: 16.5, clickY: 64.0, labelX: 24.5, labelY: 59.5, areaW: 15, areaH: 5.5 },
           { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 11.0, clickY: 84.0, labelX: 20.0, labelY: 78.0, areaW: 22, areaH: 33 },
-          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 54.0, clickY: 11.0, labelX: 62.0, labelY: 9.0, areaW: 10, areaH: 8 },
+          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 49.0, clickY: 20.0, labelX: 57.0, labelY: 15.0, areaW: 10, areaH: 8 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 52.5, clickY: 41.0, labelX: 60.0, labelY: 29.0, areaW: 18, areaH: 36 },
           { wort: { es: "la pared", de: "die Wand", en: "the wall", ru: "стена" }, clickX: 79.0, clickY: 12.0, labelX: 71.0, labelY: 12.0, areaW: 48, areaH: 12 },
           { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 82.0, clickY: 36.5, labelX: 74.5, labelY: 25.0, areaW: 29, areaH: 36 },
