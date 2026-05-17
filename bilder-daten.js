@@ -468,7 +468,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el segundo piso", de: "der zweite Stock", en: "the second floor", ru: "третий этаж" }, clickX: 34.5, clickY: 31.5, labelX: 31, labelY: 26.5, areaW: 31, areaH: 15 },
           { wort: { es: "el primer piso", de: "der erste Stock", en: "the first floor", ru: "второй этаж" }, clickX: 34.5, clickY: 47.5, labelX: 31, labelY: 42.5, areaW: 31, areaH: 15 },
           { wort: { es: "la planta baja", de: "das Erdgeschoss", en: "the ground floor", ru: "первый этаж" }, clickX: 34.5, clickY: 63.5, labelX: 31, labelY: 58.5, areaW: 31, areaH: 15 },
-          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 83.6, clickY: 52.0, labelX: 77.5, labelY: 50.5, areaW: 19, areaH: 43 },
+          { wort: { es: "la escalera", de: "die Leiter", en: "the stairs", ru: "лестница" }, clickX: 83.6, clickY: 52.0, labelX: 77.5, labelY: 50.5, areaW: 19, areaH: 43 },
           { wort: { es: "el ascensor", de: "der Aufzug", en: "the lift", ru: "лифт" }, clickX: 62.8, clickY: 49.5, labelX: 79, labelY: 45, areaW: 12, areaH: 35 },
           { wort: { es: "el portal", de: "der Hausflur", en: "the entrance hall", ru: "подъезд" }, clickX: 41.5, clickY: 84.0, labelX: 43, labelY: 79.5, areaW: 17, areaH: 18 },
           { wort: { es: "los buzones", de: "die Briefkästen", en: "the letterboxes", ru: "почтовые ящики" }, clickX: 21.0, clickY: 87.7, labelX: 27.5, labelY: 85, areaW: 13, areaH: 11 },
@@ -557,7 +557,7 @@ window.APP_FOLDERS = {
           { wort: { es: "la terraza", de: "die Terrasse", en: "the terrace", ru: "терраса" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
           { wort: { es: "la piscina", de: "der Pool", en: "the pool", ru: "бассейн" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
           { wort: { es: "la fachada", de: "die Fassade", en: "the façade", ru: "фасад" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
+          { wort: { es: "la escalera", de: "die Leiter", en: "the stairs", ru: "лестница" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
           { wort: { es: "el porche", de: "die Veranda", en: "the porch", ru: "крыльцо" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
           { wort: { es: "la barandilla", de: "das Geländer", en: "the handrail", ru: "перила" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
           { wort: { es: "la luz exterior", de: "die Außenlampe", en: "the outdoor light", ru: "уличный светильник" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
@@ -1255,7 +1255,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el calentador de agua", de: "der Warmwasserbereiter", en: "the water heater", ru: "водонагреватель" }, clickX: 43.2, clickY: 53.4, labelX: 52, labelY: 48.5, areaW: 14, areaH: 17 },
           { wort: { es: "la barandilla", de: "das Geländer", en: "the handrail", ru: "перила" }, clickX: 88.4, clickY: 46.1, labelX: 80.5, labelY: 40.5, areaW: 16, areaH: 18 },
           { wort: { es: "la caldera", de: "der Heizkessel", en: "the boiler", ru: "котёл" }, clickX: 7.7, clickY: 75.9, labelX: 15, labelY: 71.5, areaW: 16, areaH: 18 },
-          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 77.8, clickY: 72.2, labelX: 70.5, labelY: 67.5, areaW: 16, areaH: 18 },
+          { wort: { es: "la escalera", de: "die Leiter", en: "the stairs", ru: "лестница" }, clickX: 77.8, clickY: 72.2, labelX: 70.5, labelY: 67.5, areaW: 16, areaH: 18 },
           { wort: { es: "el desagüe", de: "der Abfluss", en: "the drain", ru: "слив" }, clickX: 51.1, clickY: 93.1, labelX: 59, labelY: 88.5, areaW: 14, areaH: 10 }
         ]
       },
@@ -1263,7 +1263,7 @@ window.APP_FOLDERS = {
         title: "El sótano – Bild 2",
         file: "sotano3.png",
         hotspots: [
-          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 16.5, clickY: 17.7, labelX: 16.8, labelY: 10.8, areaW: 30.5, areaH: 33.7 },
+          { wort: { es: "la escalera", de: "die Leiter", en: "the stairs", ru: "лестница" }, clickX: 16.5, clickY: 17.7, labelX: 16.8, labelY: 10.8, areaW: 30.5, areaH: 33.7 },
           { wort: { es: "el pasamanos", de: "der Handlauf", en: "the banister", ru: "поручень" }, clickX: 47.6, clickY: 17.7, labelX: 50.0, labelY: 10.8, areaW: 30.6, areaH: 33.7 },
           { wort: { es: "el techo bajo", de: "die niedrige Decke", en: "the low ceiling", ru: "низкий потолок" }, clickX: 81.0, clickY: 17.7, labelX: 83.2, labelY: 10.8, areaW: 35.4, areaH: 33.7 },
           { wort: { es: "el escalón", de: "die Stufe", en: "the step", ru: "ступенька" }, clickX: 16.5, clickY: 50.9, labelX: 16.8, labelY: 42.5, areaW: 30.5, areaH: 32.1 },
