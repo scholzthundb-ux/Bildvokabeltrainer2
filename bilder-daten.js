@@ -710,16 +710,16 @@ window.APP_FOLDERS = {
         openLabel: { wort: { es: "el salón", de: "das Wohnzimmer", en: "the living room", ru: "гостиная" }, labelX: 50, labelY: 9 },
         hotspots: [
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 14.5, clickY: 31.5, labelX: 17.5, labelY: 22.0, areaW: 16, areaH: 30 },
-          { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 30.0, clickY: 28.5, labelX: 34.5, labelY: 20.5, areaW: 14, areaH: 38 },
-          { wort: { es: "la lámpara de pie", de: "die Stehlampe", en: "the floor lamp", ru: "торшер" }, clickX: 42.0, clickY: 37.0, labelX: 48.5, labelY: 29.0, areaW: 15, areaH: 24 },
-          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 58.5, clickY: 31.5, labelX: 66.0, labelY: 25.0, areaW: 17, areaH: 22 },
-          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 67.5, clickY: 49.0, labelX: 72.0, labelY: 42.0, areaW: 20, areaH: 19 },
+          { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 28.0, clickY: 34.0, labelX: 33.0, labelY: 26.0, areaW: 8, areaH: 38 },
+          { wort: { es: "la lámpara de pie", de: "die Stehlampe", en: "the floor lamp", ru: "торшер" }, clickX: 40.0, clickY: 40.0, labelX: 47.0, labelY: 31.5, areaW: 15, areaH: 24 },
+          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 57.0, clickY: 29.5, labelX: 64.0, labelY: 23.5, areaW: 17, areaH: 11 },
+          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 63.5, clickY: 49.0, labelX: 69.0, labelY: 42.0, areaW: 20, areaH: 11 },
           { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 82.0, clickY: 62.0, labelX: 76.0, labelY: 54.0, areaW: 14, areaH: 28 },
           { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 9.0, clickY: 63.0, labelX: 18.0, labelY: 56.0, areaW: 34, areaH: 20 },
-          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 88.0, clickY: 84.0, labelX: 80.0, labelY: 76.5, areaW: 18, areaH: 23 },
-          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 58.5, clickY: 75.0, labelX: 60.5, labelY: 69.0, areaW: 24, areaH: 14 },
-          { wort: { es: "la alfombra", de: "der Teppich / Läufer", en: "the carpet / the runner rug", ru: "ковёр / дорожка" }, clickX: 50.5, clickY: 95.0, labelX: 58.0, labelY: 89.0, areaW: 62, areaH: 16 },
-          { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 97.0, clickY: 48.0, labelX: 88.0, labelY: 55.0, areaW: 6, areaH: 40 }
+          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 84.0, clickY: 79.0, labelX: 76.5, labelY: 71.5, areaW: 26, areaH: 31 },
+          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 54.0, clickY: 79.0, labelX: 57.5, labelY: 72.0, areaW: 30, areaH: 22 },
+          { wort: { es: "la alfombra", de: "der Teppich / Läufer", en: "the carpet / the runner rug", ru: "ковёр / дорожка" }, clickX: 44.0, clickY: 95.0, labelX: 52.0, labelY: 89.0, areaW: 62, areaH: 16 },
+          { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 97.0, clickY: 43.0, labelX: 88.0, labelY: 50.0, areaW: 6, areaH: 50 }
         ]
       },
       {
