@@ -758,15 +758,15 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 4",
         file: "salon4.png",
         hotspots: [
-          { wort: { es: "el aparador", de: "das Sideboard", en: "the sideboard", ru: "сервант" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la vitrina", de: "die Vitrine", en: "the display cabinet", ru: "витрина" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el taburete", de: "der Hocker", en: "the stool", ru: "табурет" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la alfombra", de: "der Teppich / Läufer", en: "the carpet / the runner rug", ru: "ковёр / дорожка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la lámpara de techo", de: "die Deckenlampe", en: "the ceiling lamp", ru: "потолочная лампа" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la lámpara de pie", de: "die Stehlampe", en: "the floor lamp", ru: "торшер" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el reloj", de: "die Uhr", en: "the clock", ru: "часы" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el aparador", de: "das Sideboard", en: "the sideboard", ru: "сервант" }, clickX: 16.9, clickY: 17.2, labelX: 16.8, labelY: 10.8, areaW: 32.3, areaH: 33.7 },
+          { wort: { es: "la vitrina", de: "die Vitrine", en: "the display cabinet", ru: "витрина" }, clickX: 49.9, clickY: 17.2, labelX: 50.0, labelY: 10.8, areaW: 32.5, areaH: 33.7 },
+          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 83.0, clickY: 17.2, labelX: 83.2, labelY: 10.8, areaW: 32.4, areaH: 33.7 },
+          { wort: { es: "el taburete", de: "der Hocker", en: "the stool", ru: "табурет" }, clickX: 16.9, clickY: 50.8, labelX: 16.8, labelY: 42.5, areaW: 32.3, areaH: 32.5 },
+          { wort: { es: "la alfombra", de: "der Teppich / Läufer", en: "the carpet / the runner rug", ru: "ковёр / дорожка" }, clickX: 49.9, clickY: 50.8, labelX: 50.0, labelY: 42.5, areaW: 32.5, areaH: 32.5 },
+          { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 83.0, clickY: 50.8, labelX: 83.2, labelY: 42.5, areaW: 32.4, areaH: 32.5 },
+          { wort: { es: "la lámpara de techo", de: "die Deckenlampe", en: "the ceiling lamp", ru: "потолочная лампа" }, clickX: 16.9, clickY: 83.5, labelX: 16.8, labelY: 74.2, areaW: 32.3, areaH: 32.1 },
+          { wort: { es: "la lámpara de pie", de: "die Stehlampe", en: "the floor lamp", ru: "торшер" }, clickX: 49.9, clickY: 83.5, labelX: 50.0, labelY: 74.2, areaW: 32.5, areaH: 32.1 },
+          { wort: { es: "el reloj", de: "die Uhr", en: "the clock", ru: "часы" }, clickX: 83.0, clickY: 83.5, labelX: 83.2, labelY: 74.2, areaW: 32.4, areaH: 32.1 }
         ]
       },
       {
@@ -803,15 +803,15 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 7",
         file: "salon7.png",
         hotspots: [
-          { wort: { es: "ver la televisión", de: "fernsehen", en: "to watch television", ru: "смотреть телевизор" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "sentarse en el sofá", de: "sich aufs Sofa setzen", en: "to sit on the sofa", ru: "садиться на диван" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "leer un libro", de: "ein Buch lesen", en: "to read a book", ru: "читать книгу" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "encender la luz", de: "das Licht einschalten", en: "to switch on the light", ru: "включать свет" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "abrir la ventana", de: "das Fenster öffnen", en: "to open the window", ru: "открывать окно" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "escuchar música", de: "Musik hören", en: "to listen to music", ru: "слушать музыку" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "regar la planta", de: "die Pflanze gießen", en: "to water the plant", ru: "поливать растение" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "pasar la aspiradora", de: "staubsaugen", en: "to vacuum", ru: "пылесосить" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "cerrar la cortina", de: "den Vorhang schließen", en: "to close the curtain", ru: "закрывать штору" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "ver la televisión", de: "fernsehen", en: "to watch television", ru: "смотреть телевизор" }, clickX: 16.8, clickY: 16.8, labelX: 16.8, labelY: 10.8, areaW: 32.4, areaH: 32.7 },
+          { wort: { es: "sentarse en el sofá", de: "sich aufs Sofa setzen", en: "to sit on the sofa", ru: "садиться на диван" }, clickX: 49.9, clickY: 16.8, labelX: 50.0, labelY: 10.8, areaW: 32.5, areaH: 32.7 },
+          { wort: { es: "leer un libro", de: "ein Buch lesen", en: "to read a book", ru: "читать книгу" }, clickX: 83.1, clickY: 16.8, labelX: 83.2, labelY: 10.8, areaW: 32.5, areaH: 32.7 },
+          { wort: { es: "encender la luz", de: "das Licht einschalten", en: "to switch on the light", ru: "включать свет" }, clickX: 16.8, clickY: 50.3, labelX: 16.8, labelY: 42.5, areaW: 32.4, areaH: 33.3 },
+          { wort: { es: "abrir la ventana", de: "das Fenster öffnen", en: "to open the window", ru: "открывать окно" }, clickX: 49.9, clickY: 50.3, labelX: 50.0, labelY: 42.5, areaW: 32.5, areaH: 33.3 },
+          { wort: { es: "escuchar música", de: "Musik hören", en: "to listen to music", ru: "слушать музыку" }, clickX: 83.1, clickY: 50.3, labelX: 83.2, labelY: 42.5, areaW: 32.5, areaH: 33.3 },
+          { wort: { es: "regar la planta", de: "die Pflanze gießen", en: "to water the plant", ru: "поливать растение" }, clickX: 16.8, clickY: 83.4, labelX: 16.8, labelY: 74.2, areaW: 32.4, areaH: 32.1 },
+          { wort: { es: "pasar la aspiradora", de: "staubsaugen", en: "to vacuum", ru: "пылесосить" }, clickX: 49.9, clickY: 83.4, labelX: 50.0, labelY: 74.2, areaW: 32.5, areaH: 32.1 },
+          { wort: { es: "cerrar la cortina", de: "den Vorhang schließen", en: "to close the curtain", ru: "закрывать штору" }, clickX: 83.1, clickY: 83.4, labelX: 83.2, labelY: 74.2, areaW: 32.5, areaH: 32.1 }
         ]
       }
     ]
