@@ -1913,15 +1913,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 12",
         file: "ninos12.png",
         hotspots: [
-          { wort: { es: "el ordenador", de: "der Computer", en: "the computer", ru: "компьютер" }, clickX: 16.7, clickY: 21.2, labelX: 24, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: { es: "el teclado", de: "die Tastatur", en: "the keyboard", ru: "клавиатура" }, clickX: 50, clickY: 21.2, labelX: 50, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: { es: "el ratón", de: "die Maus", en: "the mouse", ru: "мышь" }, clickX: 83.3, clickY: 21.2, labelX: 76, labelY: 9.5, areaW: 30, areaH: 28 },
-          { wort: { es: "el ordenador portátil", de: "der Laptop", en: "the laptop", ru: "ноутбук" }, clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "la tableta", de: "das Tablet", en: "the tablet", ru: "планшет" }, clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка" }, clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la radio", de: "das Radio", en: "the radio", ru: "радио" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "el ordenador", de: "der Computer", en: "the computer", ru: "компьютер" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el teclado", de: "die Tastatur", en: "the keyboard", ru: "клавиатура" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el ratón", de: "die Maus", en: "the mouse", ru: "мышь" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el ordenador portátil", de: "der Laptop", en: "the laptop", ru: "ноутбук" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la tableta", de: "das Tablet", en: "the tablet", ru: "планшет" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la radio", de: "das Radio", en: "the radio", ru: "радио" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
@@ -1943,15 +1943,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 14",
         file: "ninos14.png",
         hotspots: [
-          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: { es: "el papel", de: "das Papier", en: "the paper", ru: "бумага" }, clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: { es: "el bolígrafo", de: "der Kugelschreiber", en: "the pen", ru: "шариковая ручка" }, clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: { es: "el cuaderno", de: "das Heft", en: "the notebook", ru: "тетрадь" }, clickX: 16.7, clickY: 52.8, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "los rotuladores", de: "die Filzstifte", en: "the felt-tip pens", ru: "фломастеры" }, clickX: 50, clickY: 52.8, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "el estuche", de: "das Mäppchen", en: "the pencil case", ru: "пенал" }, clickX: 83.3, clickY: 52.8, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "la regla", de: "das Lineal", en: "the ruler", ru: "линейка" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "las tijeras", de: "die Schere", en: "the scissors", ru: "ножницы" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la calculadora", de: "der Taschenrechner", en: "the calculator", ru: "калькулятор" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el papel", de: "das Papier", en: "the paper", ru: "бумага" }, clickX: 49.8, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.3, areaH: 33.5 },
+          { wort: { es: "el bolígrafo", de: "der Kugelschreiber", en: "the pen", ru: "шариковая ручка" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el cuaderno", de: "das Heft", en: "the notebook", ru: "тетрадь" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "los rotuladores", de: "die Filzstifte", en: "the felt-tip pens", ru: "фломастеры" }, clickX: 49.8, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.3, areaH: 32.2 },
+          { wort: { es: "el estuche", de: "das Mäppchen", en: "the pencil case", ru: "пенал" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la regla", de: "das Lineal", en: "the ruler", ru: "линейка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "las tijeras", de: "die Schere", en: "the scissors", ru: "ножницы" }, clickX: 49.8, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.3, areaH: 31.8 },
+          { wort: { es: "la calculadora", de: "der Taschenrechner", en: "the calculator", ru: "калькулятор" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
