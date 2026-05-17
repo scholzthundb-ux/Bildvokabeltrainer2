@@ -1198,7 +1198,7 @@ window.APP_FOLDERS = {
           { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 54.0, clickY: 11.0, labelX: 62.0, labelY: 9.0, areaW: 10, areaH: 8 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 52.5, clickY: 41.0, labelX: 60.0, labelY: 29.0, areaW: 18, areaH: 36 },
           { wort: { es: "la pared", de: "die Wand", en: "the wall", ru: "стена" }, clickX: 91.0, clickY: 12.0, labelX: 83.0, labelY: 12.0, areaW: 24, areaH: 24 },
-          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 87.5, clickY: 31.5, labelX: 80.5, labelY: 24.0, areaW: 18, areaH: 42 },
+          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 87.5, clickY: 36.5, labelX: 80.5, labelY: 24.0, areaW: 18, areaH: 52 },
           { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 86.5, clickY: 75.0, labelX: 79.0, labelY: 67.0, areaW: 18, areaH: 31 },
           { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 58.0, clickY: 87.0, labelX: 66.0, labelY: 80.0, areaW: 38, areaH: 33 },
           { wort: { es: "el suelo", de: "der Fußboden", en: "the floor", ru: "пол" }, clickX: 94.0, clickY: 97.0, labelX: 87.0, labelY: 90.0, areaW: 12, areaH: 10 }
