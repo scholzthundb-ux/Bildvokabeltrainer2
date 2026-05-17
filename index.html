@@ -1172,9 +1172,7 @@
         return;
       }
 
-      if (folderNavigationStack.length > 0) {
-        backToStart();
-      }
+      backToStart();
     });
 
     document.addEventListener("fullscreenchange", handleViewportChange);
