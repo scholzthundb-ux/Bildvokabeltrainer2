@@ -730,11 +730,12 @@ window.APP_FOLDERS = {
           { wort: "la planta", clickX: 43.0, clickY: 18.5, labelX: 50.0, labelY: 13.0, areaW: 15, areaH: 20 },
           { wort: "la balda / el estante", clickX: 82.5, clickY: 24.0, labelX: 74.5, labelY: 18.5, areaW: 35, areaH: 10 },
           { wort: "los libros", clickX: 61.5, clickY: 19.0, labelX: 68.5, labelY: 13.5, areaW: 20, areaH: 15 },
-          { wort: "el cojín", clickX: 39.0, clickY: 49.0, labelX: 45.5, labelY: 43.0, areaW: 14, areaH: 14 },
+          { wort: "el cojín", clickX: 12.0, clickY: 74.0, labelX: 20.0, labelY: 67.5, areaW: 14, areaH: 14 },
           { wort: "el cajón", clickX: 77.0, clickY: 71.0, labelX: 83.5, labelY: 65.0, areaW: 17, areaH: 14 },
           { wort: "la mesa de centro", clickX: 60.5, clickY: 85.0, labelX: 68.0, labelY: 81.0, areaW: 11, areaH: 10 },
-          { wort: "la taza", clickX: 72.0, clickY: 80.0, labelX: 79.0, labelY: 74.5, areaW: 10, areaH: 11 },
-          { wort: "la manta", clickX: 14.0, clickY: 96.0, labelX: 22.0, labelY: 89.0, areaW: 22, areaH: 16 }
+          { wort: "la taza", clickX: 66.0, clickY: 76.5, labelX: 73.0, labelY: 71.0, areaW: 10, areaH: 11 },
+          { wort: "la manta", clickX: 14.0, clickY: 96.0, labelX: 22.0, labelY: 89.0, areaW: 22, areaH: 16 },
+          { wort: "la planta", clickX: 88.0, clickY: 48.5, labelX: 81.0, labelY: 43.5, areaW: 18, areaH: 33 }
         ]
       },
       {
