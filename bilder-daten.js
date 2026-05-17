@@ -709,34 +709,34 @@ window.APP_FOLDERS = {
         file: "salon1.png",
         openLabel: { wort: "el salón", labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: "la ventana", clickX: 14.5, clickY: 31.5, labelX: 17.5, labelY: 22.0, areaW: 16, areaH: 30 },
-          { wort: "la cortina", clickX: 30.0, clickY: 28.5, labelX: 34.5, labelY: 20.5, areaW: 14, areaH: 38 },
-          { wort: "la lámpara", clickX: 42.0, clickY: 37.0, labelX: 48.5, labelY: 29.0, areaW: 15, areaH: 24 },
-          { wort: "el cuadro", clickX: 58.5, clickY: 31.5, labelX: 66.0, labelY: 25.0, areaW: 17, areaH: 22 },
-          { wort: "el televisor", clickX: 67.5, clickY: 49.0, labelX: 72.0, labelY: 42.0, areaW: 20, areaH: 19 },
-          { wort: "la estantería", clickX: 82.0, clickY: 62.0, labelX: 76.0, labelY: 54.0, areaW: 14, areaH: 28 },
-          { wort: "el sofá", clickX: 9.0, clickY: 63.0, labelX: 18.0, labelY: 56.0, areaW: 34, areaH: 20 },
-          { wort: "el sillón", clickX: 88.0, clickY: 84.0, labelX: 80.0, labelY: 76.5, areaW: 18, areaH: 23 },
-          { wort: "la mesa de centro", clickX: 58.5, clickY: 75.0, labelX: 60.5, labelY: 69.0, areaW: 24, areaH: 14 },
-          { wort: "la alfombra", clickX: 50.5, clickY: 95.0, labelX: 58.0, labelY: 89.0, areaW: 62, areaH: 16 },
-          { wort: "la puerta", clickX: 97.0, clickY: 48.0, labelX: 88.0, labelY: 55.0, areaW: 6, areaH: 40 }
+          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 14.5, clickY: 31.5, labelX: 17.5, labelY: 22.0, areaW: 16, areaH: 30 },
+          { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 30.0, clickY: 28.5, labelX: 34.5, labelY: 20.5, areaW: 14, areaH: 38 },
+          { wort: { es: "la lámpara de pie", de: "die Stehlampe", en: "the floor lamp", ru: "торшер" }, clickX: 42.0, clickY: 37.0, labelX: 48.5, labelY: 29.0, areaW: 15, areaH: 24 },
+          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 58.5, clickY: 31.5, labelX: 66.0, labelY: 25.0, areaW: 17, areaH: 22 },
+          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 67.5, clickY: 49.0, labelX: 72.0, labelY: 42.0, areaW: 20, areaH: 19 },
+          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 82.0, clickY: 62.0, labelX: 76.0, labelY: 54.0, areaW: 14, areaH: 28 },
+          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 9.0, clickY: 63.0, labelX: 18.0, labelY: 56.0, areaW: 34, areaH: 20 },
+          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 88.0, clickY: 84.0, labelX: 80.0, labelY: 76.5, areaW: 18, areaH: 23 },
+          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 58.5, clickY: 75.0, labelX: 60.5, labelY: 69.0, areaW: 24, areaH: 14 },
+          { wort: { es: "la alfombra", de: "der Teppich / Läufer", en: "the carpet / the runner rug", ru: "ковёр / дорожка" }, clickX: 50.5, clickY: 95.0, labelX: 58.0, labelY: 89.0, areaW: 62, areaH: 16 },
+          { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 97.0, clickY: 48.0, labelX: 88.0, labelY: 55.0, areaW: 6, areaH: 40 }
         ]
       },
       {
         title: "El salón – Bild 2",
         file: "salon2.png",
         hotspots: [
-          { wort: "el balcón", clickX: 16.0, clickY: 33.0, labelX: 23.5, labelY: 27.0, areaW: 17, areaH: 33 },
-          { wort: "el cuadro", clickX: 59.0, clickY: 40.0, labelX: 65.0, labelY: 34.0, areaW: 17, areaH: 17 },
-          { wort: "la planta", clickX: 43.0, clickY: 18.5, labelX: 50.0, labelY: 13.0, areaW: 15, areaH: 20 },
-          { wort: "la balda", clickX: 82.5, clickY: 24.0, labelX: 74.5, labelY: 18.5, areaW: 35, areaH: 10 },
-          { wort: "los libros", clickX: 61.5, clickY: 19.0, labelX: 68.5, labelY: 13.5, areaW: 20, areaH: 15 },
-          { wort: "el cojín", clickX: 12.0, clickY: 74.0, labelX: 20.0, labelY: 67.5, areaW: 14, areaH: 14 },
-          { wort: "el cajón", clickX: 77.0, clickY: 71.0, labelX: 83.5, labelY: 65.0, areaW: 17, areaH: 14 },
-          { wort: "la mesa de centro", clickX: 60.5, clickY: 85.0, labelX: 68.0, labelY: 81.0, areaW: 11, areaH: 10 },
-          { wort: "la taza", clickX: 66.0, clickY: 76.5, labelX: 73.0, labelY: 71.0, areaW: 10, areaH: 11 },
-          { wort: "la manta", clickX: 14.0, clickY: 96.0, labelX: 22.0, labelY: 89.0, areaW: 22, areaH: 16 },
-          { wort: "la planta", clickX: 88.0, clickY: 48.5, labelX: 81.0, labelY: 43.5, areaW: 18, areaH: 33 }
+          { wort: { es: "el balcón", de: "der Balkon", en: "the balcony", ru: "балкон" }, clickX: 16.0, clickY: 33.0, labelX: 23.5, labelY: 27.0, areaW: 17, areaH: 33 },
+          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 59.0, clickY: 40.0, labelX: 65.0, labelY: 34.0, areaW: 17, areaH: 17 },
+          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 43.0, clickY: 18.5, labelX: 50.0, labelY: 13.0, areaW: 15, areaH: 20 },
+          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 82.5, clickY: 24.0, labelX: 74.5, labelY: 18.5, areaW: 35, areaH: 10 },
+          { wort: { es: "los libros", de: "die Bücher", en: "the books", ru: "книги" }, clickX: 61.5, clickY: 19.0, labelX: 68.5, labelY: 13.5, areaW: 20, areaH: 15 },
+          { wort: { es: "el cojín", de: "das Kissen", en: "the cushion", ru: "подушка" }, clickX: 12.0, clickY: 74.0, labelX: 20.0, labelY: 67.5, areaW: 14, areaH: 14 },
+          { wort: { es: "el cajón", de: "die Schublade", en: "the drawer", ru: "ящик" }, clickX: 77.0, clickY: 71.0, labelX: 83.5, labelY: 65.0, areaW: 17, areaH: 14 },
+          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 60.5, clickY: 85.0, labelX: 68.0, labelY: 81.0, areaW: 11, areaH: 10 },
+          { wort: { es: "la taza", de: "die Tasse", en: "the cup", ru: "чашка" }, clickX: 66.0, clickY: 76.5, labelX: 73.0, labelY: 71.0, areaW: 10, areaH: 11 },
+          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 14.0, clickY: 96.0, labelX: 22.0, labelY: 89.0, areaW: 22, areaH: 16 },
+          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 88.0, clickY: 48.5, labelX: 81.0, labelY: 43.5, areaW: 18, areaH: 33 }
         ]
       },
       {
