@@ -743,15 +743,15 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 3",
         file: "salon3.png",
         hotspots: [
-          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 18.0, clickY: 24.5, labelX: 18.0, labelY: 10.8, areaW: 31.2, areaH: 25.5 },
-          { wort: { es: "el sofá cama", de: "das Schlafsofa", en: "the sofa bed", ru: "диван-кровать" }, clickX: 50.0, clickY: 24.5, labelX: 50.0, labelY: 10.8, areaW: 31.0, areaH: 25.5 },
-          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 82.0, clickY: 24.5, labelX: 82.0, labelY: 10.8, areaW: 31.3, areaH: 25.5 },
-          { wort: { es: "la mecedora", de: "der Schaukelstuhl", en: "the rocking chair", ru: "кресло-качалка" }, clickX: 18.0, clickY: 50.7, labelX: 18.0, labelY: 42.5, areaW: 31.2, areaH: 25.8 },
-          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 50.0, clickY: 50.7, labelX: 50.0, labelY: 42.5, areaW: 31.0, areaH: 25.8 },
-          { wort: { es: "el mueble del televisor", de: "das TV-Möbel", en: "the TV unit", ru: "тумба под телевизор" }, clickX: 82.0, clickY: 50.7, labelX: 82.0, labelY: 42.5, areaW: 31.3, areaH: 25.8 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 18.0, clickY: 76.6, labelX: 18.0, labelY: 74.2, areaW: 31.2, areaH: 24.9 },
-          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 50.0, clickY: 76.6, labelX: 50.0, labelY: 74.2, areaW: 31.0, areaH: 24.9 },
-          { wort: { es: "la mesa auxiliar", de: "der Beistelltisch", en: "the side table", ru: "приставной столик" }, clickX: 82.0, clickY: 76.6, labelX: 82.0, labelY: 74.2, areaW: 31.3, areaH: 24.9 }
+          { wort: { es: "el sofá", de: "das Sofa", en: "the sofa", ru: "диван" }, clickX: 16.8, clickY: 16.8, labelX: 18.0, labelY: 10.8, areaW: 32.5, areaH: 32.9 },
+          { wort: { es: "el sofá cama", de: "das Schlafsofa", en: "the sofa bed", ru: "диван-кровать" }, clickX: 49.9, clickY: 16.8, labelX: 50.0, labelY: 10.8, areaW: 32.5, areaH: 32.9 },
+          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 83.1, clickY: 16.8, labelX: 82.0, labelY: 10.8, areaW: 32.5, areaH: 32.9 },
+          { wort: { es: "la mecedora", de: "der Schaukelstuhl", en: "the rocking chair", ru: "кресло-качалка" }, clickX: 16.8, clickY: 50.1, labelX: 18.0, labelY: 42.5, areaW: 32.5, areaH: 32.7 },
+          { wort: { es: "la mesa de centro", de: "der Couchtisch", en: "the coffee table", ru: "журнальный столик" }, clickX: 49.9, clickY: 50.1, labelX: 50.0, labelY: 42.5, areaW: 32.5, areaH: 32.7 },
+          { wort: { es: "el mueble del televisor", de: "das TV-Möbel", en: "the TV unit", ru: "тумба под телевизор" }, clickX: 83.1, clickY: 50.1, labelX: 82.0, labelY: 42.5, areaW: 32.5, areaH: 32.7 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 16.8, clickY: 83.2, labelX: 18.0, labelY: 74.2, areaW: 32.5, areaH: 32.5 },
+          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 49.9, clickY: 83.2, labelX: 50.0, labelY: 74.2, areaW: 32.5, areaH: 32.5 },
+          { wort: { es: "la mesa auxiliar", de: "der Beistelltisch", en: "the side table", ru: "приставной столик" }, clickX: 83.1, clickY: 83.2, labelX: 82.0, labelY: 74.2, areaW: 32.5, areaH: 32.5 }
         ]
       },
       {
@@ -773,30 +773,30 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 5",
         file: "salon5.png",
         hotspots: [
-          { wort: { es: "el cojín", de: "das Kissen", en: "the cushion", ru: "подушка" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el marco de fotos", de: "der Bilderrahmen", en: "the photo frame", ru: "рамка для фотографии" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el periódico", de: "die Zeitung", en: "the newspaper", ru: "газета" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la revista", de: "die Zeitschrift", en: "the magazine", ru: "журнал" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el jarrón", de: "die Vase", en: "the vase", ru: "ваза" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el cojín", de: "das Kissen", en: "the cushion", ru: "подушка" }, clickX: 16.8, clickY: 16.7, labelX: 16.8, labelY: 10.8, areaW: 32.6, areaH: 32.7 },
+          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 49.9, clickY: 16.7, labelX: 50.0, labelY: 10.8, areaW: 32.5, areaH: 32.7 },
+          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 83.1, clickY: 16.7, labelX: 83.2, labelY: 10.8, areaW: 32.7, areaH: 32.7 },
+          { wort: { es: "el marco de fotos", de: "der Bilderrahmen", en: "the photo frame", ru: "рамка для фотографии" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 32.6, areaH: 32.9 },
+          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 49.9, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 32.5, areaH: 32.9 },
+          { wort: { es: "el periódico", de: "die Zeitung", en: "the newspaper", ru: "газета" }, clickX: 83.1, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 32.7, areaH: 32.9 },
+          { wort: { es: "la revista", de: "die Zeitschrift", en: "the magazine", ru: "журнал" }, clickX: 16.8, clickY: 83.2, labelX: 16.8, labelY: 74.2, areaW: 32.6, areaH: 32.6 },
+          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 49.9, clickY: 83.2, labelX: 50.0, labelY: 74.2, areaW: 32.5, areaH: 32.6 },
+          { wort: { es: "el jarrón", de: "die Vase", en: "the vase", ru: "ваза" }, clickX: 83.1, clickY: 83.2, labelX: 83.2, labelY: 74.2, areaW: 32.7, areaH: 32.6 }
         ]
       },
       {
         title: "El salón – Bild 6",
         file: "salon6.png",
         hotspots: [
-          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка / динамик" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el proyector", de: "der Projektor", en: "the projector", ru: "проектор" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el mando a distancia", de: "die Fernbedienung", en: "the remote control", ru: "пульт дистанционного управления" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el equipo de música", de: "die Musikanlage", en: "the stereo system", ru: "музыкальная Anlage / стереосистема" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el aire acondicionado", de: "die Klimaanlage", en: "the air conditioner", ru: "кондиционер" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el ventilador de techo", de: "der Deckenventilator", en: "the ceiling fan", ru: "потолочный вентилятор" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la consola", de: "die Spielkonsole", en: "the game console", ru: "игровая приставка" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка / динамик" }, clickX: 16.8, clickY: 17.8, labelX: 16.8, labelY: 10.8, areaW: 32.4, areaH: 34.7 },
+          { wort: { es: "el proyector", de: "der Projektor", en: "the projector", ru: "проектор" }, clickX: 49.9, clickY: 17.8, labelX: 50.0, labelY: 10.8, areaW: 32.5, areaH: 34.7 },
+          { wort: { es: "el mando a distancia", de: "die Fernbedienung", en: "the remote control", ru: "пульт дистанционного управления" }, clickX: 83.0, clickY: 17.8, labelX: 83.2, labelY: 10.8, areaW: 32.6, areaH: 34.7 },
+          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 16.8, clickY: 51.4, labelX: 16.8, labelY: 42.5, areaW: 32.4, areaH: 31.6 },
+          { wort: { es: "el equipo de música", de: "die Musikanlage", en: "the stereo system", ru: "музыкальная Anlage / стереосистема" }, clickX: 49.9, clickY: 51.4, labelX: 50.0, labelY: 42.5, areaW: 32.5, areaH: 31.6 },
+          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 83.0, clickY: 51.4, labelX: 83.2, labelY: 42.5, areaW: 32.6, areaH: 31.6 },
+          { wort: { es: "el aire acondicionado", de: "die Klimaanlage", en: "the air conditioner", ru: "кондиционер" }, clickX: 16.8, clickY: 83.6, labelX: 16.8, labelY: 74.2, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el ventilador de techo", de: "der Deckenventilator", en: "the ceiling fan", ru: "потолочный вентилятор" }, clickX: 49.9, clickY: 83.6, labelX: 50.0, labelY: 74.2, areaW: 32.5, areaH: 31.8 },
+          { wort: { es: "la consola", de: "die Spielkonsole", en: "the game console", ru: "игровая приставка" }, clickX: 83.0, clickY: 83.6, labelX: 83.2, labelY: 74.2, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
