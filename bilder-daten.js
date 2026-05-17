@@ -725,16 +725,16 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 2",
         file: "salon2.png",
         hotspots: [
-          { wort: "el balcón", clickX: 17.5, clickY: 38.5, labelX: 25.0, labelY: 31.5, areaW: 19, areaH: 28 },
-          { wort: "el cuadro", clickX: 43.5, clickY: 22.5, labelX: 49.0, labelY: 16.0, areaW: 16, areaH: 18 },
-          { wort: "la planta", clickX: 69.0, clickY: 16.0, labelX: 76.5, labelY: 11.0, areaW: 16, areaH: 19 },
-          { wort: "la balda", clickX: 91.0, clickY: 25.5, labelX: 83.0, labelY: 19.0, areaW: 24, areaH: 10 },
-          { wort: "los libros", clickX: 85.5, clickY: 35.5, labelX: 91.0, labelY: 32.0, areaW: 22, areaH: 14 },
-          { wort: "el cojín", clickX: 40.0, clickY: 45.0, labelX: 46.5, labelY: 39.0, areaW: 15, areaH: 15 },
-          { wort: "el cajón", clickX: 84.0, clickY: 57.5, labelX: 90.0, labelY: 51.5, areaW: 15, areaH: 15 },
-          { wort: "el mando a distancia", clickX: 60.0, clickY: 68.5, labelX: 67.5, labelY: 65.0, areaW: 8, areaH: 8 },
-          { wort: "la taza", clickX: 71.5, clickY: 65.0, labelX: 78.5, labelY: 60.0, areaW: 11, areaH: 12 },
-          { wort: "la manta", clickX: 22.0, clickY: 87.0, labelX: 29.0, labelY: 82.0, areaW: 20, areaH: 18 }
+          { wort: "el balcón", clickX: 16.0, clickY: 33.0, labelX: 23.5, labelY: 27.0, areaW: 17, areaH: 33 },
+          { wort: "el cuadro", clickX: 59.0, clickY: 40.0, labelX: 65.0, labelY: 34.0, areaW: 17, areaH: 17 },
+          { wort: "la planta", clickX: 43.0, clickY: 18.5, labelX: 50.0, labelY: 13.0, areaW: 15, areaH: 20 },
+          { wort: "la balda", clickX: 82.5, clickY: 24.0, labelX: 74.5, labelY: 18.5, areaW: 35, areaH: 10 },
+          { wort: "los libros", clickX: 61.5, clickY: 19.0, labelX: 68.5, labelY: 13.5, areaW: 20, areaH: 15 },
+          { wort: "el cojín", clickX: 39.0, clickY: 49.0, labelX: 45.5, labelY: 43.0, areaW: 14, areaH: 14 },
+          { wort: "el cajón", clickX: 77.0, clickY: 71.0, labelX: 83.5, labelY: 65.0, areaW: 17, areaH: 14 },
+          { wort: "el mando a distancia", clickX: 60.5, clickY: 85.0, labelX: 68.0, labelY: 81.0, areaW: 11, areaH: 10 },
+          { wort: "la taza", clickX: 72.0, clickY: 80.0, labelX: 79.0, labelY: 74.5, areaW: 10, areaH: 11 },
+          { wort: "la manta", clickX: 14.0, clickY: 96.0, labelX: 22.0, labelY: 89.0, areaW: 22, areaH: 16 }
         ]
       },
       {
