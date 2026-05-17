@@ -766,7 +766,7 @@ window.APP_FOLDERS = {
           { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
           { wort: { es: "la lámpara de techo", de: "die Deckenlampe", en: "the ceiling lamp", ru: "потолочная лампа" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
           { wort: { es: "la lámpara de pie", de: "die Stehlampe", en: "the floor lamp", ru: "торшер" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el reloj de pared", de: "die Wanduhr", en: "the wall clock", ru: "настенные часы" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el reloj", de: "die Uhr", en: "the clock", ru: "часы" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
         ]
       },
       {
@@ -776,7 +776,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el cojín", de: "das Kissen", en: "the cushion", ru: "подушка" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
           { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la foto", de: "das Foto", en: "the photo", ru: "фотография" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
+          { wort: { es: "el marco de fotos", de: "der Bilderrahmen", en: "the photo frame", ru: "рамка для фотографии" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
           { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
           { wort: { es: "el periódico", de: "die Zeitung", en: "the newspaper", ru: "газета" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
           { wort: { es: "la revista", de: "die Zeitschrift", en: "the magazine", ru: "журнал" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
