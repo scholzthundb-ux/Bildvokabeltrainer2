@@ -671,7 +671,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
           { wort: { es: "el sótano", de: "der Keller", en: "the basement", ru: "подвал" }, clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15 },
-          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15 }
+          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15, openFolderKey: "trastero", openDelay: 900 }
         ]
       }
     ]
@@ -838,6 +838,31 @@ window.APP_FOLDERS = {
           { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 54.0, clickY: 72.0, labelX: 63.0, labelY: 67.0, areaW: 48, areaH: 28 },
           { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 88.0, clickY: 66.5, labelX: 79.0, labelY: 62.5, areaW: 19, areaH: 24 },
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 38.0, clickY: 88.0, labelX: 48.0, labelY: 82.0, areaW: 57, areaH: 22 }
+        ]
+      }
+    ]
+  },
+
+  trastero: {
+    title: "El trastero",
+    images: [
+      {
+        title: "El trastero – Bild 1",
+        file: "trastero1.png",
+        openLabel: { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, labelX: 50, labelY: 9 },
+        hotspots: [
+          { wort: { es: "la caja", de: "der Karton", en: "the cardboard box", ru: "картонная коробка" }, clickX: 18.5, clickY: 14.5, labelX: 26.0, labelY: 12.0, areaW: 19, areaH: 20 },
+          { wort: { es: "la caja de plástico", de: "die Plastikbox", en: "the plastic box", ru: "пластиковый контейнер" }, clickX: 45.0, clickY: 16.0, labelX: 52.5, labelY: 13.0, areaW: 24, areaH: 15 },
+          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница-стремянка" }, clickX: 74.0, clickY: 24.0, labelX: 80.5, labelY: 20.0, areaW: 14, areaH: 36 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 15.0, clickY: 40.0, labelX: 24.0, labelY: 36.0, areaW: 17, areaH: 16 },
+          { wort: { es: "el taladro", de: "die Bohrmaschine", en: "the drill", ru: "дрель" }, clickX: 49.5, clickY: 39.0, labelX: 57.5, labelY: 35.0, areaW: 12, areaH: 14 },
+          { wort: { es: "la bicicleta", de: "das Fahrrad", en: "the bicycle", ru: "велосипед" }, clickX: 88.0, clickY: 51.0, labelX: 80.0, labelY: 46.5, areaW: 24, areaH: 31 },
+          { wort: { es: "la herramienta", de: "das Werkzeug", en: "the tool", ru: "инструмент" }, clickX: 19.5, clickY: 40.5, labelX: 28.5, labelY: 36.5, areaW: 19, areaH: 11 },
+          { wort: { es: "la maleta", de: "der Koffer", en: "the suitcase", ru: "чемодан" }, clickX: 17.0, clickY: 63.5, labelX: 25.0, labelY: 59.5, areaW: 16, areaH: 25 },
+          { wort: { es: "la aspiradora", de: "der Staubsauger", en: "the vacuum cleaner", ru: "пылесос" }, clickX: 49.5, clickY: 55.0, labelX: 58.0, labelY: 51.0, areaW: 18, areaH: 24 },
+          { wort: { es: "el cubo", de: "der Eimer", en: "the bucket", ru: "ведро" }, clickX: 9.5, clickY: 84.5, labelX: 17.5, labelY: 79.0, areaW: 12, areaH: 18 },
+          { wort: { es: "la fregona", de: "der Wischmopp", en: "the mop", ru: "швабра" }, clickX: 23.5, clickY: 93.0, labelX: 31.0, labelY: 88.0, areaW: 18, areaH: 12 },
+          { wort: { es: "las luces de navidad", de: "die Weihnachtslichter", en: "the Christmas lights", ru: "рождественские гирлянды" }, clickX: 74.0, clickY: 94.0, labelX: 65.5, labelY: 88.5, areaW: 28, areaH: 15 }
         ]
       }
     ]
