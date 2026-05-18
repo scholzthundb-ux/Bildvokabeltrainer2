@@ -915,45 +915,45 @@ window.APP_FOLDERS = {
         file: "cocina3.png",
         openLabel: { wort: { es: "los muebles y partes de la cocina", de: "Küchenmöbel und Küchenteile", en: "kitchen furniture and parts", ru: "кухонная мебель и части кухни" }, labelX: 50, labelY: 14 },
         hotspots: [
-          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la isla", de: "die Insel", en: "the island", ru: "остров" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la banqueta", de: "die Bank", en: "the bench", ru: "скамья" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el taburete", de: "der Hocker", en: "the stool", ru: "табурет" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el armario alto", de: "der Hängeschrank", en: "the wall cabinet", ru: "навесной шкаф" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el armario bajo", de: "der Unterschrank", en: "the base cabinet", ru: "напольный шкаф" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la mesa", de: "der Tisch", en: "the table", ru: "стол" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la isla", de: "die Insel", en: "the island", ru: "остров" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la banqueta", de: "die Bank", en: "the bench", ru: "скамья" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el taburete", de: "der Hocker", en: "the stool", ru: "табурет" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el armario alto", de: "der Hängeschrank", en: "the wall cabinet", ru: "навесной шкаф" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el armario bajo", de: "der Unterschrank", en: "the base cabinet", ru: "напольный шкаф" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la mesa", de: "der Tisch", en: "the table", ru: "стол" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "Los muebles y partes de la cocina – Bild 2",
         file: "cocina4.png",
         hotspots: [
-          { wort: { es: "el cajón", de: "die Schublade", en: "the drawer", ru: "ящик" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la encimera", de: "die Arbeitsplatte", en: "the countertop", ru: "столешница" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la campana extractora", de: "die Dunstabzugshaube", en: "the extractor hood", ru: "вытяжка" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la cocina de gas", de: "der Gasherd", en: "the gas stove", ru: "газовая плита" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cocina eléctrica", de: "der Elektroherd", en: "the electric stove", ru: "электрическая плита" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la vitrocerámica", de: "das Cerankochfeld", en: "the ceramic hob", ru: "стеклокерамическая плита" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la placa de inducción", de: "das Induktionskochfeld", en: "the induction hob", ru: "индукционная плита" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el horno", de: "der Backofen", en: "the oven", ru: "духовка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la estufa", de: "der Herd", en: "the stove", ru: "печь" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el cajón", de: "die Schublade", en: "the drawer", ru: "ящик" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la encimera", de: "die Arbeitsplatte", en: "the countertop", ru: "столешница" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la campana extractora", de: "die Dunstabzugshaube", en: "the extractor hood", ru: "вытяжка" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cocina de gas", de: "der Gasherd", en: "the gas stove", ru: "газовая плита" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cocina eléctrica", de: "der Elektroherd", en: "the electric stove", ru: "электрическая плита" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la vitrocerámica", de: "das Cerankochfeld", en: "the ceramic hob", ru: "стеклокерамическая плита" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la placa de inducción", de: "das Induktionskochfeld", en: "the induction hob", ru: "индукционная плита" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el horno", de: "der Backofen", en: "the oven", ru: "духовка" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la estufa", de: "der Herd", en: "the stove", ru: "печь" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "Los muebles y partes de la cocina – Bild 3",
         file: "cocina5.png",
         hotspots: [
-          { wort: { es: "el fregadero", de: "das Spülbecken", en: "the sink", ru: "раковина" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la despensa", de: "die Speisekammer", en: "the pantry", ru: "кладовая" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el cubo de basura", de: "der Mülleimer", en: "the bin", ru: "мусорное ведро" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la papelera", de: "der Papierkorb", en: "the waste bin", ru: "мусорная корзина" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el especiero", de: "das Gewürzregal", en: "the spice rack", ru: "полка для специй" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la barra para utensilios", de: "die Utensilienleiste", en: "the utensil rail", ru: "рейлинг для кухонных принадлежностей" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el portarrollos de cocina", de: "der Küchenrollenhalter", en: "the kitchen roll holder", ru: "держатель для кухонного полотенца" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el escurreplatos", de: "der Geschirrabtropfer", en: "the dish drainer", ru: "сушилка для посуды" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el fregadero", de: "das Spülbecken", en: "the sink", ru: "раковина" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la despensa", de: "die Speisekammer", en: "the pantry", ru: "кладовая" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el cubo de basura", de: "der Mülleimer", en: "the bin", ru: "мусорное ведро" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la papelera", de: "der Papierkorb", en: "the waste bin", ru: "мусорная корзина" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el especiero", de: "das Gewürzregal", en: "the spice rack", ru: "полка для специй" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la barra para utensilios", de: "die Utensilienleiste", en: "the utensil rail", ru: "рейлинг для кухонных принадлежностей" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el portarrollos de cocina", de: "der Küchenrollenhalter", en: "the kitchen roll holder", ru: "держатель для кухонного полотенца" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el escurreplatos", de: "der Geschirrabtropfer", en: "the dish drainer", ru: "сушилка для посуды" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       }
     ]
