@@ -826,17 +826,17 @@ window.APP_FOLDERS = {
         file: "dormitorio1.png",
         openLabel: { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 13.0, clickY: 27.0, labelX: 20.5, labelY: 22.0, areaW: 17, areaH: 34 },
+          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 15.0, clickY: 27.0, labelX: 20.5, labelY: 22.0, areaW: 21, areaH: 34 },
           { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 28.0, clickY: 27.0, labelX: 35.0, labelY: 22.0, areaW: 12, areaH: 44 },
-          { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "шкаф" }, clickX: 68.5, clickY: 29.0, labelX: 77.0, labelY: 24.0, areaW: 22, areaH: 38 },
-          { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 88.5, clickY: 31.0, labelX: 81.0, labelY: 26.0, areaW: 16, areaH: 25 },
+          { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "шкаф" }, clickX: 68.5, clickY: 32.0, labelX: 77.0, labelY: 24.0, areaW: 22, areaH: 38 },
+          { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 88.5, clickY: 33.0, labelX: 81.0, labelY: 26.0, areaW: 16, areaH: 21 },
           { wort: { es: "la lámpara de noche", de: "die Nachttischlampe", en: "the bedside lamp", ru: "прикроватная лампа" }, clickX: 6.0, clickY: 57.5, labelX: 13.5, labelY: 53.0, areaW: 8, areaH: 17 },
-          { wort: { es: "la mesita de noche", de: "der Nachttisch", en: "the bedside table", ru: "прикроватная тумбочка" }, clickX: 8.5, clickY: 71.0, labelX: 17.5, labelY: 66.5, areaW: 13, areaH: 20 },
-          { wort: { es: "el despertador", de: "der Wecker", en: "the alarm clock", ru: "будильник" }, clickX: 15.5, clickY: 60.5, labelX: 23.0, labelY: 57.0, areaW: 8, areaH: 8 },
+          { wort: { es: "la mesita de noche", de: "der Nachttisch", en: "the bedside table", ru: "прикроватная тумбочка" }, clickX: 10.0, clickY: 69.0, labelX: 17.5, labelY: 66.5, areaW: 16, areaH: 16 },
+          { wort: { es: "el despertador", de: "der Wecker", en: "the alarm clock", ru: "будильник" }, clickX: 13.5, clickY: 58.5, labelX: 23.0, labelY: 57.0, areaW: 8, areaH: 8 },
           { wort: { es: "la almohada", de: "das Kopfkissen", en: "the pillow", ru: "подушка" }, clickX: 34.0, clickY: 52.5, labelX: 42.0, labelY: 48.0, areaW: 20, areaH: 12 },
           { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 44.0, clickY: 66.0, labelX: 52.0, labelY: 61.5, areaW: 30, areaH: 12 },
-          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 67.0, clickY: 77.0, labelX: 69.0, labelY: 72.0, areaW: 12, areaH: 36 },
-          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 88.0, clickY: 66.5, labelX: 79.0, labelY: 62.5, areaW: 19, areaH: 24 },
+          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 70.0, clickY: 72.0, labelX: 69.0, labelY: 72.0, areaW: 18, areaH: 18 },
+          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 88.0, clickY: 63.5, labelX: 79.0, labelY: 62.5, areaW: 19, areaH: 24 },
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 38.0, clickY: 88.0, labelX: 48.0, labelY: 82.0, areaW: 57, areaH: 22 }
         ]
       }
