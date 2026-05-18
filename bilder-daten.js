@@ -1744,17 +1744,17 @@ window.APP_FOLDERS = {
         file: "ninos1.png",
         openLabel: { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 7.0, clickY: 26.5, labelX: 19, labelY: 22.5, areaW: 14, areaH: 28 },
-          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 6.8, clickY: 48.8, labelX: 14.5, labelY: 44.0, areaW: 11, areaH: 16 },
-          { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 52.5, clickY: 31.5, labelX: 61, labelY: 25.0, areaW: 22, areaH: 31 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 86.0, clickY: 25.0, labelX: 79.0, labelY: 19.0, areaW: 18, areaH: 22 },
-          { wort: { es: "el peluche", de: "das Kuscheltier", en: "the cuddly toy", ru: "плюшевая игрушка" }, clickX: 29.0, clickY: 47.5, labelX: 39.0, labelY: 42.0, areaW: 11, areaH: 14 },
-          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 33.5, clickY: 58.5, labelX: 40.0, labelY: 63.0, areaW: 33, areaH: 18 },
-          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 77.0, clickY: 48.5, labelX: 81.5, labelY: 45.0, areaW: 28, areaH: 14 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 69.0, clickY: 61.5, labelX: 72.0, labelY: 73.0, areaW: 16, areaH: 20 },
-          { wort: { es: "la mochila escolar", de: "der Schulrucksack", en: "the school rucksack", ru: "школьный рюкзак" }, clickX: 93.0, clickY: 70.5, labelX: 86.5, labelY: 70.5, areaW: 12, areaH: 17 },
-          { wort: { es: "la casa de muñecas", de: "das Puppenhaus", en: "the doll's house", ru: "кукольный домик" }, clickX: 33.0, clickY: 80.5, labelX: 23.0, labelY: 79.0, areaW: 22, areaH: 22 },
-          { wort: { es: "las muñecas", de: "die Puppen", en: "the dolls", ru: "куклы" }, clickX: 56.0, clickY: 83.8, labelX: 70.5, labelY: 79.0, areaW: 14, areaH: 15 },
+          { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 59.5, clickY: 17.5, labelX: 68.0, labelY: 14.0, areaW: 22, areaH: 16 },
+          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 57.0, clickY: 38.0, labelX: 47.0, labelY: 33.0, areaW: 28, areaH: 30 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 18.5, clickY: 43.0, labelX: 12.0, labelY: 38.0, areaW: 16, areaH: 25 },
+          { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 92.5, clickY: 47.0, labelX: 86.0, labelY: 41.0, areaW: 15, areaH: 52 },
+          { wort: { es: "el peluche", de: "das Kuscheltier", en: "the cuddly toy", ru: "плюшевая игрушка" }, clickX: 6.5, clickY: 57.0, labelX: 13.5, labelY: 52.0, areaW: 11, areaH: 15 },
+          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 77.0, clickY: 57.0, labelX: 84.0, labelY: 53.5, areaW: 27, areaH: 12 },
+          { wort: { es: "la casa de muñecas", de: "das Puppenhaus", en: "the doll's house", ru: "кукольный домик" }, clickX: 41.5, clickY: 61.5, labelX: 33.0, labelY: 56.5, areaW: 16, areaH: 17 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 63.0, clickY: 70.0, labelX: 69.0, labelY: 74.0, areaW: 11, areaH: 18 },
+          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 18.0, clickY: 74.5, labelX: 26.0, labelY: 80.0, areaW: 32, areaH: 22 },
+          { wort: { es: "las muñecas", de: "die Puppen", en: "the dolls", ru: "куклы" }, clickX: 55.0, clickY: 80.0, labelX: 64.0, labelY: 86.0, areaW: 16, areaH: 14 },
+          { wort: { es: "la mochila escolar", de: "der Schulrucksack", en: "the school rucksack", ru: "школьный рюкзак" }, clickX: 89.0, clickY: 80.5, labelX: 81.0, labelY: 86.5, areaW: 12, areaH: 16 }
         ]
       },
       {
