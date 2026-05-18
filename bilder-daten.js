@@ -1796,13 +1796,13 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 61.5, clickY: 16.5, labelX: 68.0, labelY: 14.0, areaW: 16, areaH: 13 },
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 57.0, clickY: 38.0, labelX: 47.0, labelY: 33.0, areaW: 36, areaH: 22 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 23.5, clickY: 37.5, labelX: 12.0, labelY: 38.0, areaW: 16, areaH: 20 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 25.0, clickY: 37.5, labelX: 12.0, labelY: 38.0, areaW: 19, areaH: 20 },
           { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 92.5, clickY: 47.0, labelX: 86.0, labelY: 41.0, areaW: 15, areaH: 52 },
           { wort: { es: "el peluche", de: "das Kuscheltier", en: "the cuddly toy", ru: "плюшевая игрушка" }, clickX: 6.5, clickY: 57.0, labelX: 13.5, labelY: 52.0, areaW: 11, areaH: 15 },
-          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 77.0, clickY: 58.5, labelX: 84.0, labelY: 53.5, areaW: 21, areaH: 16 },
+          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 77.0, clickY: 58.5, labelX: 84.0, labelY: 53.5, areaW: 17, areaH: 16 },
           { wort: { es: "la casa de muñecas", de: "das Puppenhaus", en: "the doll's house", ru: "кукольный домик" }, clickX: 41.5, clickY: 61.5, labelX: 33.0, labelY: 56.5, areaW: 16, areaH: 17 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 63.0, clickY: 64.0, labelX: 69.0, labelY: 74.0, areaW: 11, areaH: 18 },
-          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 18.0, clickY: 74.5, labelX: 26.0, labelY: 80.0, areaW: 32, areaH: 22 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 63.0, clickY: 61.0, labelX: 69.0, labelY: 74.0, areaW: 11, areaH: 18 },
+          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 18.0, clickY: 71.5, labelX: 26.0, labelY: 80.0, areaW: 32, areaH: 22 },
           { wort: { es: "las muñecas", de: "die Puppen", en: "the dolls", ru: "куклы" }, clickX: 59.0, clickY: 80.0, labelX: 64.0, labelY: 86.0, areaW: 24, areaH: 14 },
           { wort: { es: "la mochila escolar", de: "der Schulrucksack", en: "the school rucksack", ru: "школьный рюкзак" }, clickX: 84.0, clickY: 77.5, labelX: 81.0, labelY: 86.5, areaW: 16, areaH: 16 }
         ]
