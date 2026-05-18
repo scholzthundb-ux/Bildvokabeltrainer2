@@ -1761,16 +1761,16 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 2",
         file: "ninos2.png",
         hotspots: [
-          { wort: { es: "el móvil de cuna", de: "das Mobile über dem Bettchen", en: "the cot mobile", ru: "мобиль для кроватки" }, clickX: 25.5, clickY: 17.5, labelX: 17.5, labelY: 18.5, areaW: 20, areaH: 16 },
-          { wort: { es: "la cuna", de: "das Kinderbett", en: "the cot", ru: "детская кроватка" }, clickX: 31.0, clickY: 37.0, labelX: 40.0, labelY: 30.5, areaW: 33, areaH: 25 },
-          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 77.5, clickY: 12.5, labelX: 75.5, labelY: 10.0, areaW: 28, areaH: 11 },
-          { wort: { es: "el cambiador", de: "der Wickeltisch", en: "the changing table", ru: "пеленальный столик" }, clickX: 69.0, clickY: 36.0, labelX: 77.5, labelY: 29.5, areaW: 24, areaH: 20 },
-          { wort: { es: "la trona", de: "der Hochstuhl", en: "the high chair", ru: "детский стульчик" }, clickX: 84.5, clickY: 58.0, labelX: 82.5, labelY: 48.0, areaW: 18, areaH: 25 },
-          { wort: { es: "los bloques de construcción", de: "die Bausteine", en: "the building blocks", ru: "строительные кубики" }, clickX: 28.0, clickY: 61.5, labelX: 29.5, labelY: 59.0, areaW: 24, areaH: 16 },
-          { wort: { es: "el libro infantil", de: "das Kinderbuch", en: "the children's book", ru: "детская книга" }, clickX: 56.0, clickY: 63.5, labelX: 68.5, labelY: 58.0, areaW: 18, areaH: 14 },
-          { wort: { es: "el chupete", de: "der Schnuller", en: "the dummy", ru: "пустышка" }, clickX: 23.0, clickY: 73.0, labelX: 26.0, labelY: 72.0, areaW: 10, areaH: 10 },
-          { wort: { es: "el sonajero", de: "die Rassel", en: "the rattle", ru: "погремушка" }, clickX: 39.0, clickY: 80.0, labelX: 50.5, labelY: 88.0, areaW: 16, areaH: 15 },
-          { wort: { es: "el osito de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый мишка" }, clickX: 63.5, clickY: 81.0, labelX: 78.5, labelY: 76.0, areaW: 15, areaH: 18 }
+          { wort: { es: "el móvil para bebés", de: "das Baby-Mobile", en: "the baby mobile", ru: "мобиль для малышей" }, clickX: 15.5, clickY: 29.5, labelX: 24.0, labelY: 23.5, areaW: 24, areaH: 26 },
+          { wort: { es: "la estantería de pared", de: "das Wandregal", en: "the wall shelf", ru: "настенная полка" }, clickX: 45.5, clickY: 34.0, labelX: 50.5, labelY: 27.5, areaW: 26, areaH: 16 },
+          { wort: { es: "la cuna", de: "das Babybett", en: "the cot", ru: "детская кроватка" }, clickX: 19.0, clickY: 53.0, labelX: 11.0, labelY: 46.0, areaW: 35, areaH: 35 },
+          { wort: { es: "la cómoda con cambiador", de: "die Wickelkommode", en: "the changing dresser", ru: "комод с пеленальным столиком" }, clickX: 56.0, clickY: 58.0, labelX: 46.0, labelY: 52.5, areaW: 30, areaH: 24 },
+          { wort: { es: "la trona", de: "der Hochstuhl", en: "the high chair", ru: "детский стульчик" }, clickX: 87.0, clickY: 66.0, labelX: 92.0, labelY: 60.0, areaW: 16, areaH: 28 },
+          { wort: { es: "los bloques de construcción", de: "die Bausteine", en: "the building blocks", ru: "строительные кубики" }, clickX: 22.5, clickY: 86.5, labelX: 24.0, labelY: 79.0, areaW: 20, areaH: 12 },
+          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 52.0, clickY: 84.0, labelX: 59.5, labelY: 78.5, areaW: 16, areaH: 10 },
+          { wort: { es: "el osito de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый мишка" }, clickX: 75.5, clickY: 82.0, labelX: 82.0, labelY: 76.0, areaW: 17, areaH: 18 },
+          { wort: { es: "el chupete", de: "der Schnuller", en: "the dummy", ru: "пустышка" }, clickX: 52.0, clickY: 95.0, labelX: 59.5, labelY: 89.5, areaW: 10, areaH: 9 },
+          { wort: { es: "el sonajero", de: "die Rassel", en: "the rattle", ru: "погремушка" }, clickX: 77.5, clickY: 92.5, labelX: 84.0, labelY: 87.0, areaW: 13, areaH: 10 }
         ]
       },
       {
