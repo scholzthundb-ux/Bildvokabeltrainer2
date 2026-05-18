@@ -851,7 +851,7 @@ window.APP_FOLDERS = {
         file: "trastero1.png",
         openLabel: { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, labelX: 50, labelY: 9 },
         hotspots: [
-          { wort: { es: "la caja", de: "der Karton", en: "the cardboard box", ru: "картонная коробка" }, clickX: 21.0, clickY: 14.5, labelX: 26.0, labelY: 12.0, areaW: 19, areaH: 12 },
+          { wort: { es: "la caja", de: "der Karton", en: "the cardboard box", ru: "картонная коробка" }, clickX: 23.0, clickY: 16.0, labelX: 26.0, labelY: 12.0, areaW: 19, areaH: 12 },
           { wort: { es: "la caja de plástico", de: "die Plastikbox", en: "the plastic box", ru: "пластиковый контейнер" }, clickX: 47.0, clickY: 17.0, labelX: 52.5, labelY: 13.0, areaW: 20, areaH: 12 },
           { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница-стремянка" }, clickX: 69.0, clickY: 31.0, labelX: 80.5, labelY: 20.0, areaW: 14, areaH: 36 },
           { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 15.0, clickY: 40.0, labelX: 24.0, labelY: 36.0, areaW: 17, areaH: 16 },
@@ -862,7 +862,7 @@ window.APP_FOLDERS = {
           { wort: { es: "la aspiradora", de: "der Staubsauger", en: "the vacuum cleaner", ru: "пылесос" }, clickX: 43.5, clickY: 55.0, labelX: 58.0, labelY: 51.0, areaW: 18, areaH: 24 },
           { wort: { es: "el cubo", de: "der Eimer", en: "the bucket", ru: "ведро" }, clickX: 13.5, clickY: 77.0, labelX: 17.5, labelY: 79.0, areaW: 20, areaH: 18 },
           { wort: { es: "la fregona", de: "der Wischmopp", en: "the mop", ru: "швабра" }, clickX: 20.5, clickY: 89.5, labelX: 31.0, labelY: 88.0, areaW: 18, areaH: 12 },
-          { wort: { es: "las luces de navidad", de: "die Weihnachtslichter", en: "the Christmas lights", ru: "рождественские гирлянды" }, clickX: 74.0, clickY: 86.0, labelX: 65.5, labelY: 88.5, areaW: 28, areaH: 15 }
+          { wort: { es: "las luces de navidad", de: "die Weihnachtslichter", en: "the Christmas lights", ru: "рождественские гирлянды" }, clickX: 69.0, clickY: 82.0, labelX: 65.5, labelY: 88.5, areaW: 28, areaH: 15 }
         ]
       }
     ]
