@@ -860,8 +860,8 @@ window.APP_FOLDERS = {
           { wort: { es: "la herramienta", de: "das Werkzeug", en: "the tool", ru: "инструмент" }, clickX: 19.5, clickY: 40.5, labelX: 28.5, labelY: 36.5, areaW: 19, areaH: 11 },
           { wort: { es: "la maleta", de: "der Koffer", en: "the suitcase", ru: "чемодан" }, clickX: 19.5, clickY: 60.5, labelX: 25.0, labelY: 59.5, areaW: 16, areaH: 14 },
           { wort: { es: "la aspiradora", de: "der Staubsauger", en: "the vacuum cleaner", ru: "пылесос" }, clickX: 49.5, clickY: 55.0, labelX: 58.0, labelY: 51.0, areaW: 18, areaH: 24 },
-          { wort: { es: "el cubo", de: "der Eimer", en: "the bucket", ru: "ведро" }, clickX: 9.5, clickY: 84.5, labelX: 17.5, labelY: 79.0, areaW: 12, areaH: 18 },
-          { wort: { es: "la fregona", de: "der Wischmopp", en: "the mop", ru: "швабра" }, clickX: 23.5, clickY: 93.0, labelX: 31.0, labelY: 88.0, areaW: 18, areaH: 12 },
+          { wort: { es: "el cubo", de: "der Eimer", en: "the bucket", ru: "ведро" }, clickX: 13.5, clickY: 77.0, labelX: 17.5, labelY: 79.0, areaW: 20, areaH: 18 },
+          { wort: { es: "la fregona", de: "der Wischmopp", en: "the mop", ru: "швабра" }, clickX: 20.5, clickY: 89.5, labelX: 31.0, labelY: 88.0, areaW: 18, areaH: 12 },
           { wort: { es: "las luces de navidad", de: "die Weihnachtslichter", en: "the Christmas lights", ru: "рождественские гирлянды" }, clickX: 74.0, clickY: 86.0, labelX: 65.5, labelY: 88.5, areaW: 28, areaH: 15 }
         ]
       }
