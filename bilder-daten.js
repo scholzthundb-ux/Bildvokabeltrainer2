@@ -1662,30 +1662,30 @@ window.APP_FOLDERS = {
         title: "El despacho – Bild 5",
         file: "despacho5.png",
         hotspots: [
-          { wort: { es: "la calculadora", de: "der Taschenrechner", en: "the calculator", ru: "калькулятор" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la tableta", de: "das Tablet", en: "the tablet", ru: "планшет" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el micrófono", de: "das Mikrofon", en: "the microphone", ru: "микрофон" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la webcam", de: "die Webcam", en: "the webcam", ru: "веб-камера" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el cargador", de: "das Ladegerät", en: "the charger", ru: "зарядное устройство" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "la memoria USB", de: "der USB-Stick", en: "the USB stick", ru: "флешка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "la máquina de escribir", de: "die Schreibmaschine", en: "the typewriter", ru: "печатная машинка" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "la calculadora", de: "der Taschenrechner", en: "the calculator", ru: "калькулятор" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la tableta", de: "das Tablet", en: "the tablet", ru: "планшет" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el micrófono", de: "das Mikrofon", en: "the microphone", ru: "микрофон" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la webcam", de: "die Webcam", en: "the webcam", ru: "веб-камера" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el cargador", de: "das Ladegerät", en: "the charger", ru: "зарядное устройство" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la memoria USB", de: "der USB-Stick", en: "the USB stick", ru: "флешка" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la máquina de escribir", de: "die Schreibmaschine", en: "the typewriter", ru: "печатная машинка" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El despacho – Bild 6",
         file: "despacho6.png",
         hotspots: [
-          { wort: { es: "la perforadora", de: "der Locher", en: "the hole punch", ru: "дырокол" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la grapadora", de: "der Hefter", en: "the stapler", ru: "степлер" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el quitagrapas", de: "der Klammerentferner", en: "the staple remover", ru: "антистеплер" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el sacapuntas", de: "der Anspitzer", en: "the pencil sharpener", ru: "точилка" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el sello", de: "der Stempel", en: "the stamp", ru: "штамп" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la almohadilla para sellos", de: "das Stempelkissen", en: "the stamp pad", ru: "штемпельная подушка" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el portarrollos de cinta adhesiva", de: "der Abroller für Klebeband", en: "the tape dispenser", ru: "диспенсер для клейкой ленты" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "la cinta adhesiva", de: "das Klebeband", en: "the sticky tape", ru: "клейкая лента" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el sujetapapeles", de: "die Büroklammer", en: "the paper clip", ru: "скрепка" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "la perforadora", de: "der Locher", en: "the hole punch", ru: "дырокол" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la grapadora", de: "der Hefter", en: "the stapler", ru: "степлер" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el quitagrapas", de: "der Klammerentferner", en: "the staple remover", ru: "антистеплер" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el sacapuntas", de: "der Anspitzer", en: "the pencil sharpener", ru: "точилка" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el sello", de: "der Stempel", en: "the stamp", ru: "штамп" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la almohadilla para sellos", de: "das Stempelkissen", en: "the stamp pad", ru: "штемпельная подушка" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el portarrollos de cinta adhesiva", de: "der Abroller für Klebeband", en: "the tape dispenser", ru: "диспенсер для клейкой ленты" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cinta adhesiva", de: "das Klebeband", en: "the sticky tape", ru: "клейкая лента" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el sujetapapeles", de: "die Büroklammer", en: "the paper clip", ru: "скрепка" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
