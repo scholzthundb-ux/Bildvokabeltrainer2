@@ -671,7 +671,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16 },
           { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16 },
           { wort: { es: "el sótano", de: "der Keller", en: "the basement", ru: "подвал" }, clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15 },
-          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15, openFolderKey: "trastero", openDelay: 900 }
+          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15 }
         ]
       }
     ]
@@ -696,7 +696,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, clickX: 58.5, clickY: 70, labelX: 63.5, labelY: 75, areaW: 16, areaH: 16, openFolderKey: "despacho" },
           { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, clickX: 74.5, clickY: 70, labelX: 84, labelY: 74, areaW: 13, areaH: 16, openFolderKey: "lavadero", openDelay: 900 },
           { wort: { es: "el sótano", de: "der Keller", en: "the basement", ru: "подвал" }, clickX: 35.0, clickY: 86.0, labelX: 18, labelY: 91, areaW: 26, areaH: 15, openFolderKey: "sotano", openDelay: 900 },
-          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15 }
+          { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, clickX: 65.5, clickY: 86.0, labelX: 73, labelY: 91, areaW: 31, areaH: 15, openFolderKey: "trastero", openDelay: 900 }
         ]
       }
     ]
