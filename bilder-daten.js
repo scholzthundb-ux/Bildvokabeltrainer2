@@ -1807,15 +1807,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 5",
         file: "ninos11.png",
         hotspots: [
-          { wort: { es: "la báscula para bebés", de: "die Babywaage", en: "the baby scales", ru: "детские весы" }, clickX: 16.7, clickY: 19.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "las toallitas húmedas", de: "die Feuchttücher", en: "the baby wipes", ru: "влажные салфетки" }, clickX: 50, clickY: 19.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el babero", de: "das Lätzchen", en: "the bib", ru: "слюнявчик" }, clickX: 83.3, clickY: 19.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el mordedor", de: "der Beißring", en: "the teether", ru: "прорезыватель" }, clickX: 16.7, clickY: 50.2, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "la ropa de bebé", de: "die Babykleidung", en: "the baby clothes", ru: "детская одежда" }, clickX: 50, clickY: 50.2, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "la manta de bebé", de: "die Babydecke", en: "the baby blanket", ru: "детское одеяло" }, clickX: 83.3, clickY: 50.2, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "el vaso con asas", de: "der Trinklernbecher", en: "the sippy cup", ru: "чашка-непроливайка" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la crema para bebés", de: "die Babycreme", en: "the baby cream", ru: "детский крем" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "el portabebés", de: "die Babytrage", en: "the baby carrier", ru: "переноска для ребёнка" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "la báscula para bebés", de: "die Babywaage", en: "the baby scales", ru: "детские весы" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "las toallitas húmedas", de: "die Feuchttücher", en: "the baby wipes", ru: "влажные салфетки" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el babero", de: "das Lätzchen", en: "the bib", ru: "слюнявчик" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el mordedor", de: "der Beißring", en: "the teether", ru: "прорезыватель" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la ropa de bebé", de: "die Babykleidung", en: "the baby clothes", ru: "детская одежда" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la manta de bebé", de: "die Babydecke", en: "the baby blanket", ru: "детское одеяло" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el vaso con asas", de: "der Trinklernbecher", en: "the sippy cup", ru: "чашка-непроливайка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "la crema para bebés", de: "die Babycreme", en: "the baby cream", ru: "детский крем" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el portabebés", de: "die Babytrage", en: "the baby carrier", ru: "переноска для ребёнка" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
@@ -1867,15 +1867,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 9",
         file: "ninos9.png",
         hotspots: [
-          { wort: { es: "calmar al bebé", de: "das Baby beruhigen", en: "to calm the baby", ru: "успокаивать малыша" }, clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "empujar el carrito", de: "den Kinderwagen schieben", en: "to push the pram", ru: "катить коляску" }, clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "pesar al bebé", de: "das Baby wiegen", en: "to weigh the baby", ru: "взвешивать малыша" }, clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "medir la temperatura", de: "die Temperatur messen", en: "to take the temperature", ru: "измерять температуру" }, clickX: 16.7, clickY: 50.0, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "cambiar los pañales", de: "die Windeln wechseln", en: "to change the nappies", ru: "менять подгузники" }, clickX: 50, clickY: 50.0, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "bañar al bebé", de: "das Baby baden", en: "to bathe the baby", ru: "купать малыша" }, clickX: 83.3, clickY: 50.0, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "peinar al bebé", de: "das Baby kämmen", en: "to comb the baby's hair", ru: "причёсывать малыша" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "dar de comer al bebé", de: "das Baby füttern", en: "to feed the baby", ru: "кормить малыша" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "ir al orinal", de: "aufs Töpfchen gehen", en: "to use the potty", ru: "ходить на горшок" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "calmar al bebé", de: "das Baby beruhigen", en: "to calm the baby", ru: "успокаивать малыша" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "empujar el carrito", de: "den Kinderwagen schieben", en: "to push the pram", ru: "катить коляску" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "pesar al bebé", de: "das Baby wiegen", en: "to weigh the baby", ru: "взвешивать малыша" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "medir la temperatura", de: "die Temperatur messen", en: "to take the temperature", ru: "измерять температуру" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "cambiar los pañales", de: "die Windeln wechseln", en: "to change the nappies", ru: "менять подгузники" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "bañar al bebé", de: "das Baby baden", en: "to bathe the baby", ru: "купать малыша" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "peinar al bebé", de: "das Baby kämmen", en: "to comb the baby's hair", ru: "причёсывать малыша" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "dar de comer al bebé", de: "das Baby füttern", en: "to feed the baby", ru: "кормить малыша" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "ir al orinal", de: "aufs Töpfchen gehen", en: "to use the potty", ru: "ходить на горшок" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
@@ -1902,15 +1902,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 11",
         file: "ninos10.png",
         hotspots: [
-          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 16.7, clickY: 19.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cama alta", de: "das Hochbett", en: "the loft bed", ru: "кровать-чердак" }, clickX: 50, clickY: 19.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 83.3, clickY: 19.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la silla giratoria", de: "der Drehstuhl", en: "the swivel chair", ru: "вращающееся кресло" }, clickX: 16.7, clickY: 50.2, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 50, clickY: 50.2, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 83.3, clickY: 50.2, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la lámpara de escritorio", de: "die Schreibtischlampe", en: "the desk lamp", ru: "настольная лампа" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la cama alta", de: "das Hochbett", en: "the loft bed", ru: "кровать-чердак" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la silla giratoria", de: "der Drehstuhl", en: "the swivel chair", ru: "вращающееся кресло" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "la lámpara de escritorio", de: "die Schreibtischlampe", en: "the desk lamp", ru: "настольная лампа" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
