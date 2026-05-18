@@ -1852,15 +1852,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 8",
         file: "ninos8.png",
         hotspots: [
-          { wort: { es: "llorar", de: "weinen", en: "to cry", ru: "плакать" }, clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "mecer al bebé", de: "das Baby wiegen", en: "to rock the baby", ru: "укачивать малыша" }, clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "dar el biberón", de: "das Fläschchen geben", en: "to feed the baby with a bottle", ru: "кормить из бутылочки" }, clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "amamantar al bebé", de: "das Baby stillen", en: "to breastfeed the baby", ru: "кормить грудью" }, clickX: 16.7, clickY: 50.0, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "jugar", de: "spielen", en: "to play", ru: "играть" }, clickX: 50, clickY: 50.0, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "leer un cuento", de: "eine Geschichte vorlesen", en: "to read a story", ru: "читать сказку" }, clickX: 83.3, clickY: 50.0, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "acostar al niño", de: "das Kind ins Bett bringen", en: "to put the child to bed", ru: "укладывать ребёнка спать" }, clickX: 16.7, clickY: 82.0, labelX: 24, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: { es: "cantar una nana", de: "ein Schlaflied singen", en: "to sing a lullaby", ru: "петь колыбельную" }, clickX: 50, clickY: 82.0, labelX: 50, labelY: 75, areaW: 30, areaH: 31 },
-          { wort: { es: "dormir", de: "schlafen", en: "to sleep", ru: "спать" }, clickX: 83.3, clickY: 82.0, labelX: 76, labelY: 75, areaW: 30, areaH: 31 }
+          { wort: { es: "llorar", de: "weinen", en: "to cry", ru: "плакать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "mecer al bebé", de: "das Baby wiegen", en: "to rock the baby", ru: "укачивать малыша" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "dar el biberón", de: "das Fläschchen geben", en: "to feed the baby with a bottle", ru: "кормить из бутылочки" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "amamantar al bebé", de: "das Baby stillen", en: "to breastfeed the baby", ru: "кормить грудью" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "jugar", de: "spielen", en: "to play", ru: "играть" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "leer un cuento", de: "eine Geschichte vorlesen", en: "to read a story", ru: "читать сказку" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "acostar al niño", de: "das Kind ins Bett bringen", en: "to put the child to bed", ru: "укладывать ребёнка спать" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "cantar una nana", de: "ein Schlaflied singen", en: "to sing a lullaby", ru: "петь колыбельную" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "dormir", de: "schlafen", en: "to sleep", ru: "спать" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
@@ -1932,15 +1932,15 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 13",
         file: "ninos13.png",
         hotspots: [
-          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 16.7, clickY: 18.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: { es: "el teclado musical", de: "das Keyboard", en: "the keyboard", ru: "клавишный инструмент" }, clickX: 50, clickY: 18.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: { es: "la guitarra", de: "die Gitarre", en: "the guitar", ru: "гитара" }, clickX: 83.3, clickY: 18.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 32 },
-          { wort: { es: "los pósteres", de: "die Poster", en: "the posters", ru: "постеры" }, clickX: 16.7, clickY: 54.0, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "las gafas de realidad virtual", de: "die VR-Brille", en: "the VR goggles", ru: "очки виртуальной реальности" }, clickX: 50, clickY: 54.0, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "la consola", de: "die Spielkonsole", en: "the game console", ru: "игровая приставка" }, clickX: 83.3, clickY: 54.0, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "el mando", de: "der Controller", en: "the controller", ru: "геймпад" }, clickX: 16.7, clickY: 84.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "los videojuegos", de: "die Videospiele", en: "the video games", ru: "видеоигры" }, clickX: 50, clickY: 84.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la mochila escolar", de: "der Schulrucksack", en: "the school rucksack", ru: "школьный рюкзак" }, clickX: 83.3, clickY: 84.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el teclado musical", de: "das Keyboard", en: "the keyboard", ru: "клавишный инструмент" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la guitarra", de: "die Gitarre", en: "the guitar", ru: "гитара" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "los pósteres", de: "die Poster", en: "the posters", ru: "постеры" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "las gafas de realidad virtual", de: "die VR-Brille", en: "the VR goggles", ru: "очки виртуальной реальности" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la consola", de: "die Spielkonsole", en: "the game console", ru: "игровая приставка" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el mando", de: "der Controller", en: "the controller", ru: "геймпад" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "los videojuegos", de: "die Videospiele", en: "the video games", ru: "видеоигры" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la mochila escolar", de: "der Schulrucksack", en: "the school rucksack", ru: "школьный рюкзак" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
