@@ -1883,19 +1883,18 @@ window.APP_FOLDERS = {
         file: "ninos3.png",
         specialTopLabel: {"es":"la habitación juvenil","de":"das Jugendzimmer","en":"the teenager's room","ru":"комната подростка"},
         hotspots: [
-          { wort: { es: "los pósteres", de: "die Poster", en: "the posters", ru: "постеры" }, clickX: 37.5, clickY: 17.5, labelX: 51.0, labelY: 12.5, areaW: 33, areaH: 22 },
-          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 83.0, clickY: 27.5, labelX: 75.5, labelY: 25.0, areaW: 27, areaH: 9 },
-          { wort: { es: "la consola", de: "die Spielkonsole", en: "the game console", ru: "игровая приставка" }, clickX: 45.0, clickY: 39.2, labelX: 52.0, labelY: 35.0, areaW: 13, areaH: 7 },
-          { wort: { es: "el mando", de: "der Controller", en: "the controller", ru: "геймпад" }, clickX: 55.5, clickY: 43.0, labelX: 62.5, labelY: 38.0, areaW: 9, areaH: 8 },
-          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка" }, clickX: 65.5, clickY: 49.5, labelX: 71.5, labelY: 47.0, areaW: 8, areaH: 9 },
-          { wort: { es: "el ordenador", de: "der Computer", en: "the computer", ru: "компьютер" }, clickX: 86.0, clickY: 46.5, labelX: 78.0, labelY: 41.0, areaW: 22, areaH: 18 },
-          { wort: { es: "el teclado", de: "die Tastatur", en: "the keyboard", ru: "клавиатура" }, clickX: 72.5, clickY: 60.2, labelX: 65.5, labelY: 58.0, areaW: 20, areaH: 7 },
-          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 90.5, clickY: 66.0, labelX: 81.5, labelY: 64.0, areaW: 16, areaH: 10 },
-          { wort: { es: "la silla giratoria", de: "der Drehstuhl", en: "the swivel chair", ru: "вращающееся кресло" }, clickX: 73.0, clickY: 79.5, labelX: 62.5, labelY: 88.0, areaW: 19, areaH: 27 },
-          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 7.5, clickY: 54.5, labelX: 14.0, labelY: 49.5, areaW: 9, areaH: 8 },
-          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 20.5, clickY: 42.8, labelX: 28.0, labelY: 41.0, areaW: 34, areaH: 17 },
-          { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 40.0, clickY: 76.0, labelX: 48.0, labelY: 70.0, areaW: 39, areaH: 31 },
-          { wort: { es: "la mochila escolar", de: "der Schulrucksack", en: "the school rucksack", ru: "школьный рюкзак" }, clickX: 14.0, clickY: 93.0, labelX: 24.0, labelY: 87.0, areaW: 17, areaH: 18 }
+          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 14.5, clickY: 56.0, labelX: 24.0, labelY: 50.0, areaW: 26, areaH: 31 },
+          { wort: { es: "la consola", de: "die Spielkonsole", en: "the game console", ru: "игровая приставка" }, clickX: 51.5, clickY: 47.0, labelX: 42.5, labelY: 43.0, areaW: 10, areaH: 16 },
+          { wort: { es: "el mando", de: "der Controller", en: "the controller", ru: "геймпад" }, clickX: 47.0, clickY: 55.0, labelX: 56.0, labelY: 51.0, areaW: 8, areaH: 8 },
+          { wort: { es: "la balda", de: "das Regalbrett", en: "the shelf", ru: "полка" }, clickX: 58.0, clickY: 29.5, labelX: 48.5, labelY: 25.5, areaW: 39, areaH: 9 },
+          { wort: { es: "el altavoz", de: "der Lautsprecher", en: "the speaker", ru: "колонка" }, clickX: 84.5, clickY: 55.0, labelX: 90.5, labelY: 50.5, areaW: 9, areaH: 15 },
+          { wort: { es: "el monitor", de: "der Monitor", en: "the monitor", ru: "монитор" }, clickX: 67.5, clickY: 49.0, labelX: 74.5, labelY: 44.0, areaW: 21, areaH: 17 },
+          { wort: { es: "el teclado", de: "die Tastatur", en: "the keyboard", ru: "клавиатура" }, clickX: 62.0, clickY: 58.0, labelX: 69.0, labelY: 55.5, areaW: 16, areaH: 6 },
+          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 90.0, clickY: 63.5, labelX: 82.0, labelY: 61.0, areaW: 13, areaH: 8 },
+          { wort: { es: "la silla de escritorio", de: "der Schreibtischstuhl", en: "the desk chair", ru: "рабочий стул" }, clickX: 62.0, clickY: 76.5, labelX: 72.0, labelY: 83.5, areaW: 24, areaH: 27 },
+          { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 54.0, clickY: 86.0, labelX: 45.0, labelY: 79.0, areaW: 52, areaH: 24 },
+          { wort: { es: "la mochila", de: "der Rucksack", en: "the rucksack", ru: "рюкзак" }, clickX: 15.0, clickY: 88.0, labelX: 23.0, labelY: 84.0, areaW: 16, areaH: 19 },
+          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 80.5, clickY: 90.0, labelX: 87.5, labelY: 85.0, areaW: 11, areaH: 10 }
         ]
       },
       {
