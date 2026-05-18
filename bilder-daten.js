@@ -1777,30 +1777,30 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 3",
         file: "ninos4.png",
         hotspots: [
-          { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 16.7, clickY: 17.8, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 50, clickY: 17.8, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cuna", de: "das Kinderbett", en: "the cot", ru: "детская кроватка" }, clickX: 83.3, clickY: 17.8, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cuna mecedora", de: "die Wiege", en: "the rocking crib", ru: "колыбель-качалка" }, clickX: 16.7, clickY: 52.2, labelX: 24, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "el parque para bebés", de: "der Laufstall", en: "the playpen", ru: "манеж" }, clickX: 50, clickY: 52.2, labelX: 50, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "el cambiador", de: "der Wickeltisch", en: "the changing table", ru: "пеленальный столик" }, clickX: 83.3, clickY: 52.2, labelX: 76, labelY: 42, areaW: 30, areaH: 31 },
-          { wort: { es: "la trona", de: "der Hochstuhl", en: "the high chair", ru: "детский стульчик" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "el capazo", de: "die Babywanne", en: "the carrycot", ru: "люлька" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la litera", de: "das Etagenbett", en: "the bunk bed", ru: "двухъярусная кровать" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la cuna", de: "das Kinderbett", en: "the cot", ru: "детская кроватка" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la cuna mecedora", de: "die Wiege", en: "the rocking crib", ru: "колыбель-качалка" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el parque para bebés", de: "der Laufstall", en: "the playpen", ru: "манеж" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el cambiador", de: "der Wickeltisch", en: "the changing table", ru: "пеленальный столик" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la trona", de: "der Hochstuhl", en: "the high chair", ru: "детский стульчик" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el capazo", de: "die Babywanne", en: "the carrycot", ru: "люлька" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la litera", de: "das Etagenbett", en: "the bunk bed", ru: "двухъярусная кровать" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
         title: "La habitación infantil – Bild 4",
         file: "ninos5.png",
         hotspots: [
-          { wort: { es: "el pañal", de: "die Windel", en: "the nappy", ru: "подгузник" }, clickX: 16.7, clickY: 18.0, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el biberón", de: "das Fläschchen", en: "the baby bottle", ru: "бутылочка" }, clickX: 50, clickY: 18.0, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el chupete", de: "der Schnuller", en: "the dummy", ru: "пустышка" }, clickX: 83.3, clickY: 18.0, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el termómetro", de: "das Thermometer", en: "the thermometer", ru: "термометр" }, clickX: 16.7, clickY: 50.0, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "la bañera para bebés", de: "die Babybadewanne", en: "the baby bath", ru: "детская ванночка" }, clickX: 50, clickY: 50.0, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "el orinal", de: "das Töpfchen", en: "the potty", ru: "горшок" }, clickX: 83.3, clickY: 50.0, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "el cubo para pañales", de: "der Windeleimer", en: "the nappy bin", ru: "ведро для подгузников" }, clickX: 16.7, clickY: 81.8, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "el vigilabebés", de: "das Babyfon", en: "the baby monitor", ru: "радионяня" }, clickX: 50, clickY: 81.8, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "la luz nocturna", de: "das Nachtlicht", en: "the night light", ru: "ночник" }, clickX: 83.3, clickY: 81.8, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "el pañal", de: "die Windel", en: "the nappy", ru: "подгузник" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el biberón", de: "das Fläschchen", en: "the baby bottle", ru: "бутылочка" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el chupete", de: "der Schnuller", en: "the dummy", ru: "пустышка" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el termómetro", de: "das Thermometer", en: "the thermometer", ru: "термометр" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la bañera para bebés", de: "die Babybadewanne", en: "the baby bath", ru: "детская ванночка" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el orinal", de: "das Töpfchen", en: "the potty", ru: "горшок" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el cubo para pañales", de: "der Windeleimer", en: "the nappy bin", ru: "ведро для подгузников" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el vigilabebés", de: "das Babyfon", en: "the baby monitor", ru: "радионяня" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la luz nocturna", de: "das Nachtlicht", en: "the night light", ru: "ночник" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
@@ -1822,30 +1822,30 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 6",
         file: "ninos6.png",
         hotspots: [
-          { wort: { es: "el oso de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый медведь" }, clickX: 16.7, clickY: 19.6, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la muñeca", de: "die Puppe", en: "the doll", ru: "кукла" }, clickX: 50, clickY: 19.6, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la pelota", de: "der Ball", en: "the ball", ru: "мяч" }, clickX: 83.3, clickY: 19.6, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el sonajero", de: "die Rassel", en: "the rattle", ru: "погремушка" }, clickX: 16.7, clickY: 51.2, labelX: 24, labelY: 42, areaW: 30, areaH: 30 },
-          { wort: { es: "el pato de goma", de: "die Gummiente", en: "the rubber duck", ru: "резиновая уточка" }, clickX: 50, clickY: 51.2, labelX: 50, labelY: 42, areaW: 30, areaH: 30 },
-          { wort: { es: "el tren de juguete", de: "der Spielzeugzug", en: "the toy train", ru: "игрушечный поезд" }, clickX: 83.3, clickY: 51.2, labelX: 76, labelY: 42, areaW: 30, areaH: 30 },
-          { wort: { es: "el coche de juguete", de: "das Spielzeugauto", en: "the toy car", ru: "игрушечная машинка" }, clickX: 16.7, clickY: 82.3, labelX: 24, labelY: 75, areaW: 30, areaH: 30 },
-          { wort: { es: "los bloques", de: "die Bauklötze", en: "the blocks", ru: "кубики" }, clickX: 50, clickY: 82.3, labelX: 50, labelY: 75, areaW: 30, areaH: 30 },
-          { wort: { es: "la casa de muñecas", de: "das Puppenhaus", en: "the doll's house", ru: "кукольный домик" }, clickX: 83.3, clickY: 82.3, labelX: 76, labelY: 75, areaW: 30, areaH: 30 }
+          { wort: { es: "el oso de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый медведь" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la muñeca", de: "die Puppe", en: "the doll", ru: "кукла" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la pelota", de: "der Ball", en: "the ball", ru: "мяч" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el sonajero", de: "die Rassel", en: "the rattle", ru: "погремушка" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el pato de goma", de: "die Gummiente", en: "the rubber duck", ru: "резиновая уточка" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el tren de juguete", de: "der Spielzeugzug", en: "the toy train", ru: "игрушечный поезд" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el coche de juguete", de: "das Spielzeugauto", en: "the toy car", ru: "игрушечная машинка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "los bloques", de: "die Bauklötze", en: "the blocks", ru: "кубики" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la casa de muñecas", de: "das Puppenhaus", en: "the doll's house", ru: "кукольный домик" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
         title: "La habitación infantil – Bild 7",
         file: "ninos7.png",
         hotspots: [
-          { wort: { es: "el rompecabezas", de: "das Puzzle", en: "the jigsaw puzzle", ru: "пазл" }, clickX: 16.7, clickY: 18.7, labelX: 24, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el libro ilustrado", de: "das Bilderbuch", en: "the picture book", ru: "книжка с картинками" }, clickX: 50, clickY: 18.7, labelX: 50, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el libro para colorear", de: "das Malbuch", en: "the colouring book", ru: "раскраска" }, clickX: 83.3, clickY: 18.7, labelX: 76, labelY: 9.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la caja de juguetes", de: "die Spielzeugkiste", en: "the toy box", ru: "ящик для игрушек" }, clickX: 16.7, clickY: 51.5, labelX: 24, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "el móvil de cuna", de: "das Mobile über dem Bettchen", en: "the cot mobile", ru: "мобиль для кроватки" }, clickX: 50, clickY: 51.5, labelX: 50, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "el caballito balancín", de: "das Schaukelpferd", en: "the rocking horse", ru: "лошадка-качалка" }, clickX: 83.3, clickY: 51.5, labelX: 76, labelY: 42, areaW: 30, areaH: 28 },
-          { wort: { es: "los juguetes", de: "die Spielsachen", en: "the toys", ru: "игрушки" }, clickX: 16.7, clickY: 83.3, labelX: 24, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "los lápices de colores", de: "die Buntstifte", en: "the coloured pencils", ru: "цветные карандаши" }, clickX: 50, clickY: 83.3, labelX: 50, labelY: 75, areaW: 30, areaH: 28 },
-          { wort: { es: "el papel", de: "das Papier", en: "the paper", ru: "бумага" }, clickX: 83.3, clickY: 83.3, labelX: 76, labelY: 75, areaW: 30, areaH: 28 }
+          { wort: { es: "el rompecabezas", de: "das Puzzle", en: "the jigsaw puzzle", ru: "пазл" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el libro ilustrado", de: "das Bilderbuch", en: "the picture book", ru: "книжка с картинками" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el libro para colorear", de: "das Malbuch", en: "the colouring book", ru: "раскраска" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la caja de juguetes", de: "die Spielzeugkiste", en: "the toy box", ru: "ящик для игрушек" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el móvil de cuna", de: "das Mobile über dem Bettchen", en: "the cot mobile", ru: "мобиль для кроватки" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el caballito balancín", de: "das Schaukelpferd", en: "the rocking horse", ru: "лошадка-качалка" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "los juguetes", de: "die Spielsachen", en: "the toys", ru: "игрушки" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "los lápices de colores", de: "die Buntstifte", en: "the coloured pencils", ru: "цветные карандаши" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el papel", de: "das Papier", en: "the paper", ru: "бумага" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
