@@ -982,15 +982,15 @@ window.APP_FOLDERS = {
         title: "Los utensilios de la cocina – Bild 2",
         file: "cocina11.png",
         hotspots: [
-          { wort: { es: "la espátula", de: "der Pfannenwender", en: "the spatula", ru: "лопатка" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la cuchara de madera", de: "der Kochlöffel", en: "the wooden spoon", ru: "деревянная ложка" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el cuchillo de cocina", de: "das Küchenmesser", en: "the kitchen knife", ru: "кухонный нож" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la espumadera", de: "die Schaumkelle", en: "the skimmer", ru: "шумовка" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "las pinzas de cocina", de: "die Küchenzange", en: "the kitchen tongs", ru: "кухонные щипцы" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el mazo para carne", de: "der Fleischklopfer", en: "the meat mallet", ru: "молоток для мяса" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "las varillas", de: "der Schneebesen", en: "the whisk", ru: "венчик" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el rodillo", de: "das Nudelholz", en: "the rolling pin", ru: "скалка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el pelador", de: "der Sparschäler", en: "the peeler", ru: "овощечистка" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la espátula", de: "der Pfannenwender", en: "the spatula", ru: "лопатка" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cuchara de madera", de: "der Kochlöffel", en: "the wooden spoon", ru: "деревянная ложка" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el cuchillo de cocina", de: "das Küchenmesser", en: "the kitchen knife", ru: "кухонный нож" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la espumadera", de: "die Schaumkelle", en: "the skimmer", ru: "шумовка" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las pinzas de cocina", de: "die Küchenzange", en: "the kitchen tongs", ru: "кухонные щипцы" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el mazo para carne", de: "der Fleischklopfer", en: "the meat mallet", ru: "молоток для мяса" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las varillas", de: "der Schneebesen", en: "the whisk", ru: "венчик" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el rodillo", de: "das Nudelholz", en: "the rolling pin", ru: "скалка" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el pelador", de: "der Sparschäler", en: "the peeler", ru: "овощечистка" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
@@ -1012,30 +1012,30 @@ window.APP_FOLDERS = {
         title: "Los utensilios de la cocina – Bild 4",
         file: "cocina13.png",
         hotspots: [
-          { wort: { es: "la pinza de azúcar", de: "die Zuckerzange", en: "the sugar tongs", ru: "щипцы для сахара" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el salero", de: "der Salzstreuer", en: "the salt shaker", ru: "солонка" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la bandeja", de: "das Tablett", en: "the tray", ru: "поднос" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el pimentero", de: "der Pfefferstreuer", en: "the pepper shaker", ru: "перечница" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la panera", de: "der Brotkorb", en: "the bread basket", ru: "хлебная корзина" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la aceitera", de: "die Ölflasche", en: "the oil dispenser", ru: "бутылка для масла" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la vinagrera", de: "die Essigflasche", en: "the vinegar cruet", ru: "бутылка для уксуса" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el termo", de: "die Thermoskanne", en: "the flask", ru: "термос" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la pinza de azúcar", de: "die Zuckerzange", en: "the sugar tongs", ru: "щипцы для сахара" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el salero", de: "der Salzstreuer", en: "the salt shaker", ru: "солонка" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la bandeja", de: "das Tablett", en: "the tray", ru: "поднос" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el pimentero", de: "der Pfefferstreuer", en: "the pepper shaker", ru: "перечница" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la panera", de: "der Brotkorb", en: "the bread basket", ru: "хлебная корзина" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la aceitera", de: "die Ölflasche", en: "the oil dispenser", ru: "бутылка для масла" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la vinagrera", de: "die Essigflasche", en: "the vinegar cruet", ru: "бутылка для уксуса" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el termo", de: "die Thermoskanne", en: "the flask", ru: "термос" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "Los utensilios de la cocina – Bild 5",
         file: "cocina14.png",
         hotspots: [
-          { wort: { es: "la taza medidora", de: "der Messbecher", en: "the measuring cup", ru: "мерный стакан" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la hielera", de: "der Eiskübel", en: "the ice bucket", ru: "ведёрко для льда" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el táper", de: "die Frischhaltedose", en: "the food container", ru: "контейнер" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la fiambrera", de: "die Brotdose", en: "the lunch box", ru: "ланч-бокс" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el bote", de: "die Dose", en: "the container", ru: "банка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el tarro", de: "das Glas", en: "the jar", ru: "банка" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el papel de aluminio", de: "die Alufolie", en: "the aluminium foil", ru: "алюминиевая фольга" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el film transparente", de: "die Frischhaltefolie", en: "the cling film", ru: "пищевая плёнка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la bolsa de congelación", de: "der Gefrierbeutel", en: "the freezer bag", ru: "пакет для заморозки" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la taza medidora", de: "der Messbecher", en: "the measuring cup", ru: "мерный стакан" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la hielera", de: "der Eiskübel", en: "the ice bucket", ru: "ведёрко для льда" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el táper", de: "die Frischhaltedose", en: "the food container", ru: "контейнер" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la fiambrera", de: "die Brotdose", en: "the lunch box", ru: "ланч-бокс" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el bote", de: "die Dose", en: "the container", ru: "банка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el tarro", de: "das Glas", en: "the jar", ru: "банка" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el papel de aluminio", de: "die Alufolie", en: "the aluminium foil", ru: "алюминиевая фольга" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el film transparente", de: "die Frischhaltefolie", en: "the cling film", ru: "пищевая плёнка" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la bolsa de congelación", de: "der Gefrierbeutel", en: "the freezer bag", ru: "пакет для заморозки" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
@@ -1094,15 +1094,15 @@ window.APP_FOLDERS = {
         title: "La vajilla – Bild 3",
         file: "cocina12.png",
         hotspots: [
-          { wort: { es: "la jarra de agua", de: "der Wasserkrug", en: "the water jug", ru: "кувшин для воды" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el azucarero", de: "die Zuckerdose", en: "the sugar bowl", ru: "сахарница" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la huevera", de: "der Eierbecher", en: "the egg cup", ru: "подставка для яйца" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la ensaladera", de: "die Salatschüssel", en: "the salad bowl", ru: "салатница" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la fuente", de: "die Servierplatte", en: "the serving dish", ru: "блюдо" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la mantequera", de: "die Butterdose", en: "the butter dish", ru: "маслёнка" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la sopera", de: "die Suppenschüssel", en: "the soup tureen", ru: "супница" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la salsera", de: "das Saucenschälchen", en: "the gravy boat", ru: "соусник" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la quesera", de: "die Käseglocke", en: "the cheese dish", ru: "сырница" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la jarra de agua", de: "der Wasserkrug", en: "the water jug", ru: "кувшин для воды" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el azucarero", de: "die Zuckerdose", en: "the sugar bowl", ru: "сахарница" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la huevera", de: "der Eierbecher", en: "the egg cup", ru: "подставка для яйца" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la ensaladera", de: "die Salatschüssel", en: "the salad bowl", ru: "салатница" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la fuente", de: "die Servierplatte", en: "the serving dish", ru: "блюдо" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la mantequera", de: "die Butterdose", en: "the butter dish", ru: "маслёнка" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la sopera", de: "die Suppenschüssel", en: "the soup tureen", ru: "супница" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la salsera", de: "das Saucenschälchen", en: "the gravy boat", ru: "соусник" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la quesera", de: "die Käseglocke", en: "the cheese dish", ru: "сырница" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       }
     ]
@@ -1116,45 +1116,45 @@ window.APP_FOLDERS = {
         file: "cocina15.png",
         openLabel: { wort: { es: "los electrodomésticos de la cocina", de: "Küchengeräte", en: "kitchen appliances", ru: "кухонная техника" }, labelX: 50, labelY: 14 },
         hotspots: [
-          { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el congelador", de: "der Gefrierschrank", en: "the freezer", ru: "морозильник" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "el lavavajillas", de: "der Geschirrspüler", en: "the dishwasher", ru: "посудомоечная машина" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la cocina con horno", de: "der Herd mit Backofen", en: "the cooker with oven", ru: "плита с духовкой" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el microondas", de: "die Mikrowelle", en: "the microwave", ru: "микроволновка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la tostadora", de: "der Toaster", en: "the toaster", ru: "тостер" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la cafetera eléctrica", de: "die Kaffeemaschine", en: "the coffee maker", ru: "кофеварка" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la arrocera", de: "der Reiskocher", en: "the rice cooker", ru: "рисоварка" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la sandwichera", de: "der Sandwichmaker", en: "the sandwich maker", ru: "сэндвичница" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el congelador", de: "der Gefrierschrank", en: "the freezer", ru: "морозильник" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el lavavajillas", de: "der Geschirrspüler", en: "the dishwasher", ru: "посудомоечная машина" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cocina con horno", de: "der Herd mit Backofen", en: "the cooker with oven", ru: "плита с духовкой" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el microondas", de: "die Mikrowelle", en: "the microwave", ru: "микроволновка" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la tostadora", de: "der Toaster", en: "the toaster", ru: "тостер" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cafetera eléctrica", de: "die Kaffeemaschine", en: "the coffee maker", ru: "кофеварка" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la arrocera", de: "der Reiskocher", en: "the rice cooker", ru: "рисоварка" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la sandwichera", de: "der Sandwichmaker", en: "the sandwich maker", ru: "сэндвичница" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "Los electrodomésticos de la cocina – Bild 2",
         file: "cocina16.png",
         hotspots: [
-          { wort: { es: "la freidora", de: "die Fritteuse", en: "the deep fryer", ru: "фритюрница" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la freidora de aire", de: "die Heißluftfritteuse", en: "the air fryer", ru: "аэрофритюрница" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la batidora de mano", de: "der Stabmixer", en: "the hand blender", ru: "погружной блендер" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la batidora de varillas", de: "das Handrührgerät", en: "the hand mixer", ru: "ручной миксер" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la batidora de vaso", de: "der Standmixer", en: "the blender", ru: "блендер" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la licuadora", de: "die Saftpresse", en: "the juicer", ru: "соковыжималка" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la amasadora", de: "die Küchenmaschine", en: "the stand mixer", ru: "тестомес" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el robot de cocina", de: "die Küchenmaschine", en: "the food processor", ru: "кухонный комбайн" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "el exprimidor eléctrico", de: "die elektrische Saftpresse", en: "the electric juicer", ru: "электрическая соковыжималка" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "la freidora", de: "die Fritteuse", en: "the deep fryer", ru: "фритюрница" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la freidora de aire", de: "die Heißluftfritteuse", en: "the air fryer", ru: "аэрофритюрница" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la batidora de mano", de: "der Stabmixer", en: "the hand blender", ru: "погружной блендер" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la batidora de varillas", de: "das Handrührgerät", en: "the hand mixer", ru: "ручной миксер" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la batidora de vaso", de: "der Standmixer", en: "the blender", ru: "блендер" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la licuadora", de: "die Saftpresse", en: "the juicer", ru: "соковыжималка" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la amasadora", de: "die Küchenmaschine", en: "the stand mixer", ru: "тестомес" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el robot de cocina", de: "die Küchenmaschine", en: "the food processor", ru: "кухонный комбайн" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el exprimidor eléctrico", de: "die elektrische Saftpresse", en: "the electric juicer", ru: "электрическая соковыжималка" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "Los electrodomésticos de la cocina – Bild 3",
         file: "cocina17.png",
         hotspots: [
-          { wort: { es: "el molinillo", de: "die Mühle", en: "the grinder", ru: "измельчитель" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la báscula de cocina", de: "die Küchenwaage", en: "the kitchen scales", ru: "кухонные весы" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la gofrera", de: "das Waffeleisen", en: "the waffle maker", ru: "вафельница" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 30, areaH: 31 },
-          { wort: { es: "la máquina de hacer pan", de: "der Brotbackautomat", en: "the bread maker", ru: "хлебопечка" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "el grill eléctrico", de: "der Elektrogrill", en: "the electric grill", ru: "электрогриль" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la heladera", de: "die Eismaschine", en: "the ice cream maker", ru: "мороженица" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 30, areaH: 31 },
-          { wort: { es: "la yogurtera", de: "der Joghurtbereiter", en: "the yoghurt maker", ru: "йогуртница" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la máquina de palomitas", de: "die Popcornmaschine", en: "the popcorn maker", ru: "попкорница" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 30, areaH: 31 },
-          { wort: { es: "la envasadora al vacío", de: "das Vakuumiergerät", en: "the vacuum sealer", ru: "вакуумный упаковщик" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 30, areaH: 31 }
+          { wort: { es: "el molinillo", de: "die Mühle", en: "the grinder", ru: "измельчитель" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la báscula de cocina", de: "die Küchenwaage", en: "the kitchen scales", ru: "кухонные весы" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la gofrera", de: "das Waffeleisen", en: "the waffle maker", ru: "вафельница" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la máquina de hacer pan", de: "der Brotbackautomat", en: "the bread maker", ru: "хлебопечка" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el grill eléctrico", de: "der Elektrogrill", en: "the electric grill", ru: "электрогриль" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la heladera", de: "die Eismaschine", en: "the ice cream maker", ru: "мороженица" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la yogurtera", de: "der Joghurtbereiter", en: "the yoghurt maker", ru: "йогуртница" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la máquina de palomitas", de: "die Popcornmaschine", en: "the popcorn maker", ru: "попкорница" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la envasadora al vacío", de: "das Vakuumiergerät", en: "the vacuum sealer", ru: "вакуумный упаковщик" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       }
     ]
