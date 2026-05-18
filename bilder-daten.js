@@ -835,7 +835,7 @@ window.APP_FOLDERS = {
           { wort: { es: "el despertador", de: "der Wecker", en: "the alarm clock", ru: "будильник" }, clickX: 15.5, clickY: 60.5, labelX: 23.0, labelY: 57.0, areaW: 8, areaH: 8 },
           { wort: { es: "la almohada", de: "das Kopfkissen", en: "the pillow", ru: "подушка" }, clickX: 34.0, clickY: 52.5, labelX: 42.0, labelY: 48.0, areaW: 20, areaH: 12 },
           { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 44.0, clickY: 66.0, labelX: 52.0, labelY: 61.5, areaW: 30, areaH: 12 },
-          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 60.0, clickY: 80.0, labelX: 69.0, labelY: 72.0, areaW: 36, areaH: 14 },
+          { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 67.0, clickY: 77.0, labelX: 69.0, labelY: 72.0, areaW: 12, areaH: 36 },
           { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 88.0, clickY: 66.5, labelX: 79.0, labelY: 62.5, areaW: 19, areaH: 24 },
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 38.0, clickY: 88.0, labelX: 48.0, labelY: 82.0, areaW: 57, areaH: 22 }
         ]
