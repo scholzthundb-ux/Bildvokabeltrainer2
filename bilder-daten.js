@@ -1534,60 +1534,60 @@ window.APP_FOLDERS = {
         title: "El lavadero – Bild 2",
         file: "lavadero2.png",
         hotspots: [
-          { wort: { es: "la lavadora", de: "die Waschmaschine", en: "the washing machine", ru: "стиральная машина" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la secadora", de: "der Trockner", en: "the tumble dryer", ru: "сушильная машина" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el fregadero", de: "das Spülbecken", en: "the sink", ru: "раковина" }, clickX: 16.8, clickY: 51.5, labelX: 16.8, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 50.0, clickY: 51.5, labelX: 50.0, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 83.2, clickY: 51.5, labelX: 83.2, labelY: 44.0, areaW: 31, areaH: 31 },
-          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 16.8, clickY: 83.0, labelX: 16.8, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el tendedero", de: "der Wäscheständer", en: "the clothes airer", ru: "сушилка для белья" }, clickX: 50.0, clickY: 83.0, labelX: 50.0, labelY: 75.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la cuerda de tender", de: "die Wäscheleine", en: "the washing line", ru: "бельевая верёвка" }, clickX: 83.2, clickY: 83.0, labelX: 83.2, labelY: 75.5, areaW: 31, areaH: 31 }
+          { wort: { es: "la lavadora", de: "die Waschmaschine", en: "the washing machine", ru: "стиральная машина" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la secadora", de: "der Trockner", en: "the tumble dryer", ru: "сушильная машина" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el fregadero", de: "das Spülbecken", en: "the sink", ru: "раковина" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el grifo", de: "der Wasserhahn", en: "the tap", ru: "кран" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el tendedero", de: "der Wäscheständer", en: "the clothes airer", ru: "сушилка для белья" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la cuerda de tender", de: "die Wäscheleine", en: "the washing line", ru: "бельевая верёвка" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El lavadero – Bild 3",
         file: "lavadero3.png",
         hotspots: [
-          { wort: { es: "las pinzas de la ropa", de: "die Wäscheklammern", en: "the clothes pegs", ru: "прищепки" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la tabla de planchar", de: "das Bügelbrett", en: "the ironing board", ru: "гладильная доска" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la plancha", de: "das Bügeleisen", en: "the iron", ru: "утюг" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el cesto de la ropa", de: "der Wäschekorb", en: "the laundry basket", ru: "корзина для белья" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la ropa sucia", de: "die schmutzige Wäsche", en: "the dirty laundry", ru: "грязное бельё" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la percha", de: "der Kleiderbügel", en: "the coat hanger", ru: "вешалка" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el cubo de plástico", de: "der Plastikeimer", en: "the plastic bucket", ru: "пластиковое ведро" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "las palanganas de plástico", de: "die Plastikschüsseln", en: "the plastic basins", ru: "пластиковые тазы" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el recogedor", de: "die Kehrschaufel", en: "the dustpan", ru: "совок" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "las pinzas de la ropa", de: "die Wäscheklammern", en: "the clothes pegs", ru: "прищепки" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la tabla de planchar", de: "das Bügelbrett", en: "the ironing board", ru: "гладильная доска" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la plancha", de: "das Bügeleisen", en: "the iron", ru: "утюг" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el cesto de la ropa", de: "der Wäschekorb", en: "the laundry basket", ru: "корзина для белья" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la ropa sucia", de: "die schmutzige Wäsche", en: "the dirty laundry", ru: "грязное бельё" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la percha", de: "der Kleiderbügel", en: "the coat hanger", ru: "вешалка" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el cubo de plástico", de: "der Plastikeimer", en: "the plastic bucket", ru: "пластиковое ведро" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las palanganas de plástico", de: "die Plastikschüsseln", en: "the plastic basins", ru: "пластиковые тазы" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el recogedor", de: "die Kehrschaufel", en: "the dustpan", ru: "совок" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El lavadero – Bild 4",
         file: "lavadero4.png",
         hotspots: [
-          { wort: { es: "el cepillo", de: "die Bürste", en: "the brush", ru: "щётка" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el detergente en polvo", de: "das Waschpulver", en: "the washing powder", ru: "стиральный порошок" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el detergente líquido", de: "das Flüssigwaschmittel", en: "the liquid detergent", ru: "жидкое средство для стирки" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el suavizante", de: "der Weichspüler", en: "the fabric softener", ru: "кондиционер для белья" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el spray quitamanchas", de: "das Fleckenspray", en: "the stain remover spray", ru: "спрей для удаления пятен" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el tinte para ropa", de: "die Textilfarbe", en: "the fabric dye", ru: "краска для ткани" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la lejía", de: "die Bleiche", en: "the bleach", ru: "отбеливатель" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el jabón", de: "die Seife", en: "the soap", ru: "мыло" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "las cápsulas de detergente", de: "die Waschmittelkapseln", en: "the detergent pods", ru: "капсулы для стирки" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "el cepillo", de: "die Bürste", en: "the brush", ru: "щётка" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el detergente en polvo", de: "das Waschpulver", en: "the washing powder", ru: "стиральный порошок" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el detergente líquido", de: "das Flüssigwaschmittel", en: "the liquid detergent", ru: "жидкое средство для стирки" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el suavizante", de: "der Weichspüler", en: "the fabric softener", ru: "кондиционер для белья" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el spray quitamanchas", de: "das Fleckenspray", en: "the stain remover spray", ru: "спрей для удаления пятен" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el tinte para ropa", de: "die Textilfarbe", en: "the fabric dye", ru: "краска для ткани" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la lejía", de: "die Bleiche", en: "the bleach", ru: "отбеливатель" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el jabón", de: "die Seife", en: "the soap", ru: "мыло" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las cápsulas de detergente", de: "die Waschmittelkapseln", en: "the detergent pods", ru: "капсулы для стирки" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El lavadero – Bild 5",
         file: "lavadero5.png",
         hotspots: [
-          { wort: { es: "clasificar la ropa", de: "die Wäsche sortieren", en: "to sort the laundry", ru: "сортировать бельё" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "quitar una mancha", de: "einen Fleck entfernen", en: "to remove a stain", ru: "выводить пятно" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "poner la lavadora", de: "die Waschmaschine anstellen", en: "to start the washing machine", ru: "запускать стиральную машину" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "vaciar la lavadora", de: "die Waschmaschine ausräumen", en: "to empty the washing machine", ru: "разгружать стиральную машину" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "tender la ropa", de: "die Wäsche aufhängen", en: "to hang out the washing", ru: "развешивать бельё" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "secar la ropa", de: "die Wäsche trocknen", en: "to dry the clothes", ru: "сушить бельё" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "planchar la ropa", de: "die Wäsche bügeln", en: "to iron the clothes", ru: "гладить бельё" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "doblar la ropa", de: "die Wäsche zusammenlegen", en: "to fold the clothes", ru: "складывать бельё" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "guardar la ropa", de: "die Wäsche wegräumen", en: "to put the clothes away", ru: "убирать одежду" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "clasificar la ropa", de: "die Wäsche sortieren", en: "to sort the laundry", ru: "сортировать бельё" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "quitar una mancha", de: "einen Fleck entfernen", en: "to remove a stain", ru: "выводить пятно" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "poner la lavadora", de: "die Waschmaschine anstellen", en: "to start the washing machine", ru: "запускать стиральную машину" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "vaciar la lavadora", de: "die Waschmaschine ausräumen", en: "to empty the washing machine", ru: "разгружать стиральную машину" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "tender la ropa", de: "die Wäsche aufhängen", en: "to hang out the washing", ru: "развешивать бельё" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "secar la ropa", de: "die Wäsche trocknen", en: "to dry the clothes", ru: "сушить бельё" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "planchar la ropa", de: "die Wäsche bügeln", en: "to iron the clothes", ru: "гладить бельё" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "doblar la ropa", de: "die Wäsche zusammenlegen", en: "to fold the clothes", ru: "складывать бельё" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "guardar la ropa", de: "die Wäsche wegräumen", en: "to put the clothes away", ru: "убирать одежду" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       }
     ]
