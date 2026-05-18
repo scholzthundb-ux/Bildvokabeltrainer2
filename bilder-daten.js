@@ -1815,12 +1815,12 @@ window.APP_FOLDERS = {
           { wort: { es: "la estantería de pared", de: "das Wandregal", en: "the wall shelf", ru: "настенная полка" }, clickX: 45.5, clickY: 34.0, labelX: 50.5, labelY: 27.5, areaW: 26, areaH: 16 },
           { wort: { es: "la cuna", de: "das Babybett", en: "the cot", ru: "детская кроватка" }, clickX: 19.0, clickY: 55.0, labelX: 11.0, labelY: 46.0, areaW: 35, areaH: 31 },
           { wort: { es: "la cómoda con cambiador", de: "die Wickelkommode", en: "the changing dresser", ru: "комод с пеленальным столиком" }, clickX: 59.0, clickY: 58.0, labelX: 46.0, labelY: 52.5, areaW: 30, areaH: 24 },
-          { wort: { es: "la trona", de: "der Hochstuhl", en: "the high chair", ru: "детский стульчик" }, clickX: 87.0, clickY: 66.0, labelX: 92.0, labelY: 60.0, areaW: 16, areaH: 28 },
-          { wort: { es: "los bloques de construcción", de: "die Bausteine", en: "the building blocks", ru: "строительные кубики" }, clickX: 24.5, clickY: 84.0, labelX: 24.0, labelY: 79.0, areaW: 26, areaH: 12 },
+          { wort: { es: "la trona", de: "der Hochstuhl", en: "the high chair", ru: "детский стульчик" }, clickX: 87.0, clickY: 64.0, labelX: 92.0, labelY: 60.0, areaW: 16, areaH: 32 },
+          { wort: { es: "los bloques de construcción", de: "die Bausteine", en: "the building blocks", ru: "строительные кубики" }, clickX: 24.5, clickY: 81.5, labelX: 24.0, labelY: 79.0, areaW: 26, areaH: 12 },
           { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 49.5, clickY: 82.0, labelX: 59.5, labelY: 78.5, areaW: 16, areaH: 10 },
-          { wort: { es: "el osito de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый мишка" }, clickX: 72.5, clickY: 79.5, labelX: 82.0, labelY: 76.0, areaW: 17, areaH: 18 },
+          { wort: { es: "el osito de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый мишка" }, clickX: 72.5, clickY: 78.5, labelX: 82.0, labelY: 76.0, areaW: 17, areaH: 14 },
           { wort: { es: "el chupete", de: "der Schnuller", en: "the dummy", ru: "пустышка" }, clickX: 52.0, clickY: 92.0, labelX: 59.5, labelY: 89.5, areaW: 10, areaH: 9 },
-          { wort: { es: "el sonajero", de: "die Rassel", en: "the rattle", ru: "погремушка" }, clickX: 75.0, clickY: 89.5, labelX: 84.0, labelY: 87.0, areaW: 13, areaH: 10 }
+          { wort: { es: "el sonajero", de: "die Rassel", en: "the rattle", ru: "погремушка" }, clickX: 72.5, clickY: 88.5, labelX: 84.0, labelY: 87.0, areaW: 13, areaH: 8 }
         ]
       },
       {
