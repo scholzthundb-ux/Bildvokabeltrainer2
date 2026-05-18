@@ -1596,6 +1596,11 @@
       setLearnInfoText(getUi("learnInfoDefault"));
     }
 
+    function buildFreshImageSrc(file) {
+      const separator = file.includes("?") ? "&" : "?";
+      return `${file}${separator}v=${Date.now()}`;
+    }
+
     function loadCurrentImage(afterLoadAction = null) {
       const imageData = getDisplayedImageData();
 
@@ -1630,7 +1635,7 @@
         }, 60);
       };
 
-      bild.src = imageData.file;
+      bild.src = buildFreshImageSrc(imageData.file);
     }
 
     function clearZoomReveal(clearPending = true) {
@@ -2228,7 +2233,7 @@
 
       animateImageChange("left", () => {
         currentImageIndex = (currentImageIndex + 1) % total;
-        bild.src = getCurrentImageData().file;
+        bild.src = buildFreshImageSrc(getCurrentImageData().file);
       });
     }
 
@@ -2244,7 +2249,7 @@
 
       animateImageChange("right", () => {
         currentImageIndex = (currentImageIndex - 1 + total) % total;
-        bild.src = getCurrentImageData().file;
+        bild.src = buildFreshImageSrc(getCurrentImageData().file);
       });
     }
 
