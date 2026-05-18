@@ -853,13 +853,13 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: { es: "la caja", de: "der Karton", en: "the cardboard box", ru: "картонная коробка" }, clickX: 23.0, clickY: 16.0, labelX: 26.0, labelY: 12.0, areaW: 19, areaH: 12 },
           { wort: { es: "la caja de plástico", de: "die Plastikbox", en: "the plastic box", ru: "пластиковый контейнер" }, clickX: 47.0, clickY: 17.0, labelX: 52.5, labelY: 13.0, areaW: 20, areaH: 12 },
-          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница-стремянка" }, clickX: 69.0, clickY: 31.0, labelX: 80.5, labelY: 20.0, areaW: 14, areaH: 36 },
+          { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница-стремянка" }, clickX: 66.0, clickY: 34.0, labelX: 80.5, labelY: 20.0, areaW: 14, areaH: 42 },
           { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 15.0, clickY: 40.0, labelX: 24.0, labelY: 36.0, areaW: 17, areaH: 16 },
-          { wort: { es: "el taladro", de: "die Bohrmaschine", en: "the drill", ru: "дрель" }, clickX: 44.5, clickY: 34.5, labelX: 57.5, labelY: 35.0, areaW: 12, areaH: 14 },
+          { wort: { es: "el taladro", de: "die Bohrmaschine", en: "the drill", ru: "дрель" }, clickX: 44.5, clickY: 31.5, labelX: 57.5, labelY: 35.0, areaW: 12, areaH: 14 },
           { wort: { es: "la bicicleta", de: "das Fahrrad", en: "the bicycle", ru: "велосипед" }, clickX: 85.0, clickY: 54.0, labelX: 80.0, labelY: 46.5, areaW: 30, areaH: 40 },
-          { wort: { es: "la herramienta", de: "das Werkzeug", en: "the tool", ru: "инструмент" }, clickX: 19.5, clickY: 33.0, labelX: 28.5, labelY: 36.5, areaW: 19, areaH: 11 },
-          { wort: { es: "la maleta", de: "der Koffer", en: "the suitcase", ru: "чемодан" }, clickX: 19.5, clickY: 60.5, labelX: 25.0, labelY: 59.5, areaW: 16, areaH: 14 },
-          { wort: { es: "la aspiradora", de: "der Staubsauger", en: "the vacuum cleaner", ru: "пылесос" }, clickX: 43.5, clickY: 55.0, labelX: 58.0, labelY: 51.0, areaW: 18, areaH: 24 },
+          { wort: { es: "la herramienta", de: "das Werkzeug", en: "the tool", ru: "инструмент" }, clickX: 21.5, clickY: 30.0, labelX: 28.5, labelY: 36.5, areaW: 24, areaH: 11 },
+          { wort: { es: "la maleta", de: "der Koffer", en: "the suitcase", ru: "чемодан" }, clickX: 19.5, clickY: 57.5, labelX: 25.0, labelY: 59.5, areaW: 16, areaH: 18 },
+          { wort: { es: "la aspiradora", de: "der Staubsauger", en: "the vacuum cleaner", ru: "пылесос" }, clickX: 39.5, clickY: 55.0, labelX: 58.0, labelY: 51.0, areaW: 18, areaH: 24 },
           { wort: { es: "el cubo", de: "der Eimer", en: "the bucket", ru: "ведро" }, clickX: 13.5, clickY: 77.0, labelX: 17.5, labelY: 79.0, areaW: 20, areaH: 18 },
           { wort: { es: "la fregona", de: "der Wischmopp", en: "the mop", ru: "швабра" }, clickX: 20.5, clickY: 89.5, labelX: 31.0, labelY: 88.0, areaW: 18, areaH: 12 },
           { wort: { es: "las luces de navidad", de: "die Weihnachtslichter", en: "the Christmas lights", ru: "рождественские гирлянды" }, clickX: 69.0, clickY: 82.0, labelX: 65.5, labelY: 88.5, areaW: 28, areaH: 15 }
