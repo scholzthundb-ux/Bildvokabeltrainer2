@@ -1632,30 +1632,30 @@ window.APP_FOLDERS = {
         title: "El despacho – Bild 3",
         file: "despacho3.png",
         hotspots: [
-          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la silla de oficina", de: "der Bürostuhl", en: "the office chair", ru: "офисное кресло" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la lámpara de escritorio", de: "die Schreibtischlampe", en: "the desk lamp", ru: "настольная лампа" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el archivador", de: "der Aktenordner", en: "the lever arch file", ru: "папка-регистратор" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la papelera", de: "der Papierkorb", en: "the waste bin", ru: "мусорная корзина" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la bandeja de documentos", de: "die Papierablage", en: "the paper tray", ru: "лоток для документов" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el tablón de anuncios", de: "die Pinnwand", en: "the noticeboard", ru: "доска объявлений" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el ordenador", de: "der Computer", en: "the computer", ru: "компьютер" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "el escritorio", de: "der Schreibtisch", en: "the desk", ru: "письменный стол" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la silla de oficina", de: "der Bürostuhl", en: "the office chair", ru: "офисное кресло" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la lámpara de escritorio", de: "die Schreibtischlampe", en: "the desk lamp", ru: "настольная лампа" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit / the bookcase", ru: "стеллаж / книжный шкаф" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el archivador", de: "der Aktenordner", en: "the lever arch file", ru: "папка-регистратор" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la papelera", de: "der Papierkorb", en: "the waste bin", ru: "мусорная корзина" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la bandeja de documentos", de: "die Papierablage", en: "the paper tray", ru: "лоток для документов" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el tablón de anuncios", de: "die Pinnwand", en: "the noticeboard", ru: "доска объявлений" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el ordenador", de: "der Computer", en: "the computer", ru: "компьютер" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El despacho – Bild 4",
         file: "despacho4.png",
         hotspots: [
-          { wort: { es: "el portátil", de: "der Laptop", en: "the laptop", ru: "ноутбук" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el teclado", de: "die Tastatur", en: "the keyboard", ru: "клавиатура" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el ratón", de: "die Maus", en: "the mouse", ru: "мышь" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la alfombrilla", de: "die Badematte", en: "the bath mat", ru: "коврик" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la impresora", de: "der Drucker", en: "the printer", ru: "принтер" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el escáner", de: "der Scanner", en: "the scanner", ru: "сканер" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el destructor de documentos", de: "der Aktenvernichter", en: "the paper shredder", ru: "уничтожитель документов" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el teléfono fijo", de: "das Festnetztelefon", en: "the landline phone", ru: "стационарный телефон" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "el portátil", de: "der Laptop", en: "the laptop", ru: "ноутбук" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el teclado", de: "die Tastatur", en: "the keyboard", ru: "клавиатура" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el ratón", de: "die Maus", en: "the mouse", ru: "мышь" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la alfombrilla", de: "die Badematte", en: "the bath mat", ru: "коврик" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la impresora", de: "der Drucker", en: "the printer", ru: "принтер" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el escáner", de: "der Scanner", en: "the scanner", ru: "сканер" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el destructor de documentos", de: "der Aktenvernichter", en: "the paper shredder", ru: "уничтожитель документов" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el teléfono fijo", de: "das Festnetztelefon", en: "the landline phone", ru: "стационарный телефон" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
