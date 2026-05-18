@@ -1692,45 +1692,45 @@ window.APP_FOLDERS = {
         title: "El despacho – Bild 7",
         file: "despacho7.png",
         hotspots: [
-          { wort: { es: "la chincheta", de: "die Reißzwecke", en: "the drawing pin", ru: "кнопка" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la goma de borrar", de: "der Radiergummi", en: "the rubber", ru: "ластик" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la regla", de: "das Lineal", en: "the ruler", ru: "линейка" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "las tijeras", de: "die Schere", en: "the scissors", ru: "ножницы" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el corrector líquido", de: "der Flüssigkorrektor", en: "the correction fluid", ru: "корректор" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el pegamento", de: "der Kleber", en: "the glue", ru: "клей" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el pegamento en barra", de: "der Klebestift", en: "the glue stick", ru: "клей-карандаш" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "las gomas elásticas", de: "die Gummibänder", en: "the elastic bands", ru: "резинки" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el portalápices", de: "der Stiftebecher", en: "the pen pot", ru: "карандашница" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "la chincheta", de: "die Reißzwecke", en: "the drawing pin", ru: "кнопка" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la goma de borrar", de: "der Radiergummi", en: "the rubber", ru: "ластик" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la regla", de: "das Lineal", en: "the ruler", ru: "линейка" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las tijeras", de: "die Schere", en: "the scissors", ru: "ножницы" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el corrector líquido", de: "der Flüssigkorrektor", en: "the correction fluid", ru: "корректор" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el pegamento", de: "der Kleber", en: "the glue", ru: "клей" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el pegamento en barra", de: "der Klebestift", en: "the glue stick", ru: "клей-карандаш" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las gomas elásticas", de: "die Gummibänder", en: "the elastic bands", ru: "резинки" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el portalápices", de: "der Stiftebecher", en: "the pen pot", ru: "карандашница" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El despacho – Bild 8",
         file: "despacho8.png",
         hotspots: [
-          { wort: { es: "el bolígrafo", de: "der Kugelschreiber", en: "the pen", ru: "шариковая ручка" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el lápiz", de: "der Bleistift", en: "the pencil", ru: "карандаш" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "los lápices de colores", de: "die Buntstifte", en: "the coloured pencils", ru: "цветные карандаши" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "el rotulador", de: "der Filzstift", en: "the felt-tip pen", ru: "фломастер" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "las notas adhesivas", de: "die Haftnotizen", en: "the sticky notes", ru: "стикеры" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el sobre", de: "der Briefumschlag", en: "the envelope", ru: "конверт" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "la hoja de papel", de: "das Blatt Papier", en: "the sheet of paper", ru: "лист бумаги" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el archivador", de: "der Aktenordner", en: "the lever arch file", ru: "папка-регистратор" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "el bolígrafo", de: "der Kugelschreiber", en: "the pen", ru: "шариковая ручка" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el lápiz", de: "der Bleistift", en: "the pencil", ru: "карандаш" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "los lápices de colores", de: "die Buntstifte", en: "the coloured pencils", ru: "цветные карандаши" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el rotulador", de: "der Filzstift", en: "the felt-tip pen", ru: "фломастер" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las notas adhesivas", de: "die Haftnotizen", en: "the sticky notes", ru: "стикеры" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el sobre", de: "der Briefumschlag", en: "the envelope", ru: "конверт" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la hoja de papel", de: "das Blatt Papier", en: "the sheet of paper", ru: "лист бумаги" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el archivador", de: "der Aktenordner", en: "the lever arch file", ru: "папка-регистратор" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       },
       {
         title: "El despacho – Bild 9",
         file: "despacho9.png",
         hotspots: [
-          { wort: { es: "el subrayador", de: "der Textmarker", en: "the highlighter", ru: "текстовыделитель" }, clickX: 16.8, clickY: 18.3, labelX: 16.8, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la carpeta", de: "die Mappe", en: "the folder", ru: "папка" }, clickX: 50.0, clickY: 18.3, labelX: 50.0, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "las fichas", de: "die Karteikarten", en: "the index cards", ru: "карточки" }, clickX: 83.2, clickY: 18.3, labelX: 83.2, labelY: 10.8, areaW: 31, areaH: 31 },
-          { wort: { es: "la libreta", de: "der Notizblock", en: "the notepad", ru: "записная книжка" }, clickX: 16.8, clickY: 50.0, labelX: 16.8, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el cuaderno", de: "das Heft", en: "the notebook", ru: "тетрадь" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "la agenda", de: "der Terminkalender", en: "the diary", ru: "ежедневник" }, clickX: 83.2, clickY: 50.0, labelX: 83.2, labelY: 42.5, areaW: 31, areaH: 31 },
-          { wort: { es: "el calendario de pared", de: "der Wandkalender", en: "the wall calendar", ru: "настенный календарь" }, clickX: 16.8, clickY: 81.7, labelX: 16.8, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "los documentos", de: "die Dokumente", en: "the documents", ru: "документы" }, clickX: 50.0, clickY: 81.7, labelX: 50.0, labelY: 74.2, areaW: 31, areaH: 31 },
-          { wort: { es: "el bloc de notas", de: "der Block", en: "the notepad", ru: "блокнот" }, clickX: 83.2, clickY: 81.7, labelX: 83.2, labelY: 74.2, areaW: 31, areaH: 31 }
+          { wort: { es: "el subrayador", de: "der Textmarker", en: "the highlighter", ru: "текстовыделитель" }, clickX: 16.7, clickY: 16.9, labelX: 16.7, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la carpeta", de: "die Mappe", en: "the folder", ru: "папка" }, clickX: 50.0, clickY: 16.9, labelX: 50.0, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "las fichas", de: "die Karteikarten", en: "the index cards", ru: "карточки" }, clickX: 83.3, clickY: 16.9, labelX: 83.3, labelY: 10.3, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la libreta", de: "der Notizblock", en: "the notepad", ru: "записная книжка" }, clickX: 16.7, clickY: 50.0, labelX: 16.7, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el cuaderno", de: "das Heft", en: "the notebook", ru: "тетрадь" }, clickX: 50.0, clickY: 50.0, labelX: 50.0, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "la agenda", de: "der Terminkalender", en: "the diary", ru: "ежедневник" }, clickX: 83.3, clickY: 50.0, labelX: 83.3, labelY: 43.4, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el calendario de pared", de: "der Wandkalender", en: "the wall calendar", ru: "настенный календарь" }, clickX: 16.7, clickY: 83.1, labelX: 16.7, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "los documentos", de: "die Dokumente", en: "the documents", ru: "документы" }, clickX: 50.0, clickY: 83.1, labelX: 50.0, labelY: 76.5, areaW: 32.3, areaH: 32.3 },
+          { wort: { es: "el bloc de notas", de: "der Block", en: "the notepad", ru: "блокнот" }, clickX: 83.3, clickY: 83.1, labelX: 83.3, labelY: 76.5, areaW: 32.3, areaH: 32.3 }
         ]
       }
     ]
