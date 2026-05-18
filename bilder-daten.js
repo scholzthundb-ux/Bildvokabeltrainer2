@@ -661,7 +661,7 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: { es: "el desván", de: "der Dachboden", en: "the loft", ru: "чердак" }, clickX: 50, clickY: 16.5, labelX: 50, labelY: 12, areaW: 47, areaH: 18 },
           { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, clickX: 34.2, clickY: 33.5, labelX: 28, labelY: 38, areaW: 28, areaH: 17 },
-          { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "dormitorio", openDelay: 900 },
+          { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
           { wort: { es: "el salón", de: "das Wohnzimmer", en: "the living room", ru: "гостиная" }, clickX: 30.0, clickY: 52.2, labelX: 22, labelY: 56, areaW: 21, areaH: 18 },
           { wort: { es: "el comedor", de: "das Esszimmer", en: "the dining room", ru: "столовая" }, clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18 },
@@ -687,7 +687,7 @@ window.APP_FOLDERS = {
         hotspots: [
           { wort: { es: "el desván", de: "der Dachboden", en: "the loft", ru: "чердак" }, clickX: 50, clickY: 16.5, labelX: 50, labelY: 12, areaW: 47, areaH: 18, openFolderKey: "desvan", openDelay: 900 },
           { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, clickX: 34.2, clickY: 33.5, labelX: 28, labelY: 38, areaW: 28, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
-          { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17 },
+          { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, clickX: 65.8, clickY: 33.8, labelX: 69, labelY: 38, areaW: 30, areaH: 17, openFolderKey: "dormitorio", openDelay: 900 },
           { wort: { es: "el salón", de: "das Wohnzimmer", en: "the living room", ru: "гостиная" }, clickX: 30.0, clickY: 52.2, labelX: 22, labelY: 56, areaW: 21, areaH: 18, openFolderKey: "salon" },
           { wort: { es: "el comedor", de: "das Esszimmer", en: "the dining room", ru: "столовая" }, clickX: 51.5, clickY: 51.0, labelX: 51, labelY: 51, areaW: 16, areaH: 18 },
           { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, clickX: 72.0, clickY: 51.0, labelX: 76, labelY: 57, areaW: 18, areaH: 18, openFolderKey: "cocina", openDelay: 900 },
