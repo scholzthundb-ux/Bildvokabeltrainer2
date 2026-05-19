@@ -1261,30 +1261,30 @@ window.APP_FOLDERS = {
         title: "El pasillo – Bild 2",
         file: "pasillo2.png",
         hotspots: [
-          { wort: { es: "la mirilla", de: "der Türspion", en: "the peephole", ru: "глазок" }, clickX: 17.2, clickY: 17.8, labelX: 24, labelY: 9.5, areaW: 30.6, areaH: 32.4 },
-          { wort: { es: "el suelo", de: "der Fußboden", en: "the floor", ru: "пол" }, clickX: 49.1, clickY: 17.8, labelX: 50, labelY: 9.5, areaW: 30.5, areaH: 32.4 },
-          { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 81.9, clickY: 17.8, labelX: 76, labelY: 9.5, areaW: 32.0, areaH: 32.4 },
-          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 17.2, clickY: 52.1, labelX: 24, labelY: 42, areaW: 30.6, areaH: 33.8 },
-          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 49.1, clickY: 52.1, labelX: 50, labelY: 42, areaW: 30.5, areaH: 33.8 },
-          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 81.9, clickY: 52.1, labelX: 76, labelY: 42, areaW: 32.0, areaH: 33.8 },
-          { wort: { es: "el cuelgallaves", de: "das Schlüsselbrett", en: "the key holder", ru: "ключница" }, clickX: 17.2, clickY: 84.3, labelX: 24, labelY: 75, areaW: 30.6, areaH: 28.4 },
-          { wort: { es: "las llaves", de: "die Schlüssel (Pl.)", en: "the keys", ru: "ключи" }, clickX: 49.1, clickY: 84.3, labelX: 50, labelY: 75, areaW: 30.5, areaH: 28.4 },
-          { wort: { es: "el felpudo", de: "die Fußmatte", en: "the doormat", ru: "коврик у двери" }, clickX: 81.9, clickY: 84.3, labelX: 76, labelY: 75, areaW: 32.0, areaH: 28.4 }
+          { wort: { es: "la mirilla", de: "der Türspion", en: "the peephole", ru: "глазок" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el suelo", de: "der Fußboden", en: "the floor", ru: "пол" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el perchero", de: "die Garderobe", en: "the coat rack", ru: "вешалка" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la alfombra", de: "der Läufer", en: "the runner rug", ru: "дорожка" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el cuelgallaves", de: "das Schlüsselbrett", en: "the key holder", ru: "ключница" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "las llaves", de: "die Schlüssel (Pl.)", en: "the keys", ru: "ключи" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el felpudo", de: "die Fußmatte", en: "the doormat", ru: "коврик у двери" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
         title: "El pasillo – Bild 3",
         file: "pasillo3.png",
         hotspots: [
-          { wort: { es: "el paragüero", de: "der Schirmständer", en: "the umbrella stand", ru: "подставка для зонтов" }, clickX: 16.9, clickY: 18.2, labelX: 24, labelY: 9.5, areaW: 32.0, areaH: 35.2 },
-          { wort: { es: "el zapatero", de: "das Schuhregal", en: "the shoe rack", ru: "обувная полка" }, clickX: 49.8, clickY: 18.2, labelX: 50, labelY: 9.5, areaW: 32.4, areaH: 35.2 },
-          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 82.6, clickY: 18.2, labelX: 76, labelY: 9.5, areaW: 32.2, areaH: 35.2 },
-          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 16.9, clickY: 52.0, labelX: 24, labelY: 42, areaW: 32.0, areaH: 31.4 },
-          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 49.8, clickY: 52.0, labelX: 50, labelY: 42, areaW: 32.4, areaH: 31.4 },
-          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 82.6, clickY: 52.0, labelX: 76, labelY: 42, areaW: 32.2, areaH: 31.4 },
-          { wort: { es: "el teléfono fijo", de: "das Festnetztelefon", en: "the landline phone", ru: "стационарный телефон" }, clickX: 16.9, clickY: 83.7, labelX: 24, labelY: 75, areaW: 32.0, areaH: 31.2 },
-          { wort: { es: "el reloj de pared", de: "die Wanduhr", en: "the wall clock", ru: "настенные часы" }, clickX: 49.8, clickY: 83.7, labelX: 50, labelY: 75, areaW: 32.4, areaH: 31.2 },
-          { wort: { es: "el portero automático", de: "die Gegensprechanlage", en: "the intercom", ru: "домофон" }, clickX: 82.6, clickY: 83.7, labelX: 76, labelY: 75, areaW: 32.2, areaH: 31.2 }
+          { wort: { es: "el paragüero", de: "der Schirmständer", en: "the umbrella stand", ru: "подставка для зонтов" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el zapatero", de: "das Schuhregal", en: "the shoe rack", ru: "обувная полка" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la planta", de: "die Pflanze", en: "the plant", ru: "растение" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el teléfono fijo", de: "das Festnetztelefon", en: "the landline phone", ru: "стационарный телефон" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el reloj de pared", de: "die Wanduhr", en: "the wall clock", ru: "настенные часы" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el portero automático", de: "die Gegensprechanlage", en: "the intercom", ru: "домофон" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       }
     ]
