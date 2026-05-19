@@ -1998,13 +1998,13 @@ window.APP_FOLDERS = {
         file: "ninos14.png",
         hotspots: [
           { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
-          { wort: { es: "el papel", de: "das Papier", en: "the paper", ru: "бумага" }, clickX: 49.8, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.3, areaH: 33.5 },
+          { wort: { es: "el papel", de: "das Papier", en: "the paper", ru: "бумага" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
           { wort: { es: "el bolígrafo", de: "der Kugelschreiber", en: "the pen", ru: "шариковая ручка" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
           { wort: { es: "el cuaderno", de: "das Heft", en: "the notebook", ru: "тетрадь" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
-          { wort: { es: "los rotuladores", de: "die Filzstifte", en: "the felt-tip pens", ru: "фломастеры" }, clickX: 49.8, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.3, areaH: 32.2 },
+          { wort: { es: "los rotuladores", de: "die Filzstifte", en: "the felt-tip pens", ru: "фломастеры" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
           { wort: { es: "el estuche", de: "das Mäppchen", en: "the pencil case", ru: "пенал" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
           { wort: { es: "la regla", de: "das Lineal", en: "the ruler", ru: "линейка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
-          { wort: { es: "las tijeras", de: "die Schere", en: "the scissors", ru: "ножницы" }, clickX: 49.8, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.3, areaH: 31.8 },
+          { wort: { es: "las tijeras", de: "die Schere", en: "the scissors", ru: "ножницы" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
           { wort: { es: "la calculadora", de: "der Taschenrechner", en: "the calculator", ru: "калькулятор" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
@@ -2012,45 +2012,45 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 15",
         file: "ninos15.png",
         hotspots: [
-          { wort: { es: "jugar a videojuegos", de: "Videospiele spielen", en: "to play video games", ru: "играть в видеоигры" }, clickX: 17.0, clickY: 16.9, labelX: 24, labelY: 8.3, areaW: 32.5, areaH: 32.9 },
-          { wort: { es: "escuchar música", de: "Musik hören", en: "to listen to music", ru: "слушать музыку" }, clickX: 50.0, clickY: 16.9, labelX: 50, labelY: 8.3, areaW: 32.2, areaH: 32.9 },
-          { wort: { es: "ver la televisión", de: "fernsehen", en: "to watch television", ru: "смотреть телевизор" }, clickX: 83.0, clickY: 16.9, labelX: 76, labelY: 8.3, areaW: 32.7, areaH: 32.9 },
-          { wort: { es: "navegar por internet", de: "im Internet surfen", en: "to browse the internet", ru: "сидеть в интернете" }, clickX: 17.0, clickY: 50.0, labelX: 24, labelY: 40.5, areaW: 32.5, areaH: 32.6 },
-          { wort: { es: "chatear con amigos", de: "mit Freunden chatten", en: "to chat with friends", ru: "общаться в чате с друзьями" }, clickX: 50.0, clickY: 50.0, labelX: 50, labelY: 40.5, areaW: 32.2, areaH: 32.6 },
-          { wort: { es: "llamar a un amigo", de: "einen Freund anrufen", en: "to call a friend", ru: "звонить другу" }, clickX: 83.0, clickY: 50.0, labelX: 76, labelY: 40.5, areaW: 32.7, areaH: 32.6 },
-          { wort: { es: "grabar vídeos", de: "Videos aufnehmen", en: "to record videos", ru: "снимать видео" }, clickX: 17.0, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.5, areaH: 32.8 },
-          { wort: { es: "hacer una videollamada", de: "einen Videoanruf machen", en: "to make a video call", ru: "делать видеозвонок" }, clickX: 50.0, clickY: 83.1, labelX: 50, labelY: 75, areaW: 32.2, areaH: 32.8 },
-          { wort: { es: "sacar fotos", de: "Fotos machen", en: "to take photos", ru: "фотографировать" }, clickX: 83.0, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.7, areaH: 32.8 }
+          { wort: { es: "jugar a videojuegos", de: "Videospiele spielen", en: "to play video games", ru: "играть в видеоигры" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "escuchar música", de: "Musik hören", en: "to listen to music", ru: "слушать музыку" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "ver la televisión", de: "fernsehen", en: "to watch television", ru: "смотреть телевизор" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "navegar por internet", de: "im Internet surfen", en: "to browse the internet", ru: "сидеть в интернете" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "chatear con amigos", de: "mit Freunden chatten", en: "to chat with friends", ru: "общаться в чате с друзьями" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "llamar a un amigo", de: "einen Freund anrufen", en: "to call a friend", ru: "звонить другу" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "grabar vídeos", de: "Videos aufnehmen", en: "to record videos", ru: "снимать видео" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "hacer una videollamada", de: "einen Videoanruf machen", en: "to make a video call", ru: "делать видеозвонок" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "sacar fotos", de: "Fotos machen", en: "to take photos", ru: "фотографировать" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
         title: "La habitación infantil – Bild 16",
         file: "ninos16.png",
         hotspots: [
-          { wort: { es: "tocar la guitarra", de: "Gitarre spielen", en: "to play the guitar", ru: "играть на гитаре" }, clickX: 16.9, clickY: 17.7, labelX: 24, labelY: 8.3, areaW: 32.8, areaH: 34.8 },
-          { wort: { es: "tocar el teclado", de: "Keyboard spielen", en: "to play the keyboard", ru: "играть на клавишах" }, clickX: 50.0, clickY: 17.7, labelX: 50, labelY: 8.3, areaW: 32.0, areaH: 34.8 },
-          { wort: { es: "cantar", de: "singen", en: "to sing", ru: "петь" }, clickX: 83.0, clickY: 17.7, labelX: 76, labelY: 8.3, areaW: 32.8, areaH: 34.8 },
-          { wort: { es: "dibujar", de: "zeichnen", en: "to draw", ru: "рисовать" }, clickX: 16.9, clickY: 51.7, labelX: 24, labelY: 40.5, areaW: 32.8, areaH: 32.6 },
-          { wort: { es: "pintar", de: "malen", en: "to paint", ru: "рисовать красками" }, clickX: 50.0, clickY: 51.7, labelX: 50, labelY: 40.5, areaW: 32.0, areaH: 32.6 },
-          { wort: { es: "escribir un diario", de: "Tagebuch schreiben", en: "to keep a diary", ru: "вести дневник" }, clickX: 83.0, clickY: 51.7, labelX: 76, labelY: 40.5, areaW: 32.8, areaH: 32.6 },
-          { wort: { es: "leer", de: "lesen", en: "to read", ru: "читать" }, clickX: 16.9, clickY: 84.0, labelX: 24, labelY: 75, areaW: 32.8, areaH: 31.2 },
-          { wort: { es: "escuchar música", de: "Musik hören", en: "to listen to music", ru: "слушать музыку" }, clickX: 50.0, clickY: 84.0, labelX: 50, labelY: 75, areaW: 32.0, areaH: 31.2 },
-          { wort: { es: "hacer una fiesta con amigos", de: "mit Freunden eine Party machen", en: "to have a party with friends", ru: "устраивать вечеринку с друзьями" }, clickX: 83.0, clickY: 84.0, labelX: 76, labelY: 75, areaW: 32.8, areaH: 31.2 }
+          { wort: { es: "tocar la guitarra", de: "Gitarre spielen", en: "to play the guitar", ru: "играть на гитаре" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "tocar el teclado", de: "Keyboard spielen", en: "to play the keyboard", ru: "играть на клавишах" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "cantar", de: "singen", en: "to sing", ru: "петь" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "dibujar", de: "zeichnen", en: "to draw", ru: "рисовать" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "pintar", de: "malen", en: "to paint", ru: "рисовать красками" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "escribir un diario", de: "Tagebuch schreiben", en: "to keep a diary", ru: "вести дневник" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "leer", de: "lesen", en: "to read", ru: "читать" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "escuchar música", de: "Musik hören", en: "to listen to music", ru: "слушать музыку" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "hacer una fiesta con amigos", de: "mit Freunden eine Party machen", en: "to have a party with friends", ru: "устраивать вечеринку с друзьями" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
         title: "La habitación infantil – Bild 17",
         file: "ninos17.png",
         hotspots: [
-          { wort: { es: "hacer la cama", de: "das Bett machen", en: "to make the bed", ru: "заправлять кровать" }, clickX: 16.7, clickY: 18.2, labelX: 24, labelY: 9.5, areaW: 32.3, areaH: 35.7 },
-          { wort: { es: "ordenar la habitación", de: "das Zimmer aufräumen", en: "to tidy the room", ru: "убирать комнату" }, clickX: 49.7, clickY: 18.2, labelX: 50, labelY: 9.5, areaW: 32.6, areaH: 35.7 },
-          { wort: { es: "guardar la ropa", de: "die Wäsche wegräumen", en: "to put the clothes away", ru: "убирать одежду" }, clickX: 82.9, clickY: 18.2, labelX: 76, labelY: 9.5, areaW: 32.9, areaH: 35.7 },
-          { wort: { es: "limpiar el escritorio", de: "den Schreibtisch aufräumen", en: "to clean the desk", ru: "убирать письменный стол" }, clickX: 16.7, clickY: 52.0, labelX: 24, labelY: 42, areaW: 32.3, areaH: 31.2 },
-          { wort: { es: "estudiar", de: "lernen", en: "to study", ru: "учиться" }, clickX: 49.7, clickY: 52.0, labelX: 50, labelY: 42, areaW: 32.6, areaH: 31.2 },
-          { wort: { es: "hacer los deberes", de: "Hausaufgaben machen", en: "to do homework", ru: "делать домашнее задание" }, clickX: 82.9, clickY: 52.0, labelX: 76, labelY: 42, areaW: 32.9, areaH: 31.2 },
-          { wort: { es: "descansar", de: "sich ausruhen", en: "to rest", ru: "отдыхать" }, clickX: 16.7, clickY: 83.8, labelX: 24, labelY: 75, areaW: 32.3, areaH: 31.8 },
-          { wort: { es: "preparar la mochila", de: "den Rucksack packen", en: "to pack the school bag", ru: "собирать рюкзак" }, clickX: 49.7, clickY: 83.8, labelX: 50, labelY: 75, areaW: 32.6, areaH: 31.8 },
-          { wort: { es: "dormir", de: "schlafen", en: "to sleep", ru: "спать" }, clickX: 82.9, clickY: 83.8, labelX: 76, labelY: 75, areaW: 32.9, areaH: 31.8 }
+          { wort: { es: "hacer la cama", de: "das Bett machen", en: "to make the bed", ru: "заправлять кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "ordenar la habitación", de: "das Zimmer aufräumen", en: "to tidy the room", ru: "убирать комнату" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "guardar la ropa", de: "die Wäsche wegräumen", en: "to put the clothes away", ru: "убирать одежду" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "limpiar el escritorio", de: "den Schreibtisch aufräumen", en: "to clean the desk", ru: "убирать письменный стол" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "estudiar", de: "lernen", en: "to study", ru: "учиться" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "hacer los deberes", de: "Hausaufgaben machen", en: "to do homework", ru: "делать домашнее задание" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "descansar", de: "sich ausruhen", en: "to rest", ru: "отдыхать" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "preparar la mochila", de: "den Rucksack packen", en: "to pack the school bag", ru: "собирать рюкзак" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "dormir", de: "schlafen", en: "to sleep", ru: "спать" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       }
     ]
