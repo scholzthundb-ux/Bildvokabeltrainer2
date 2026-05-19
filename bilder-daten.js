@@ -1172,7 +1172,7 @@ window.APP_FOLDERS = {
           { wort: { es: "la telaraña", de: "das Spinnennetz", en: "the cobweb", ru: "паутина" }, clickX: 16.0, clickY: 24.5, labelX: 28, labelY: 23, areaW: 16, areaH: 14 },
           { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 46.8, clickY: 27.2, labelX: 55, labelY: 21.8, areaW: 14, areaH: 13 },
           { wort: { es: "la ventana de tejado", de: "das Dachfenster", en: "the roof window", ru: "мансардное окно" }, clickX: 79.5, clickY: 20.0, labelX: 73.0, labelY: 14, areaW: 21, areaH: 17 },
-          { wort: { es: "la caja de ropa vieja", de: "die Kiste mit alter Kleidung", en: "the box of old clothes", ru: "коробка со старой одеждой" }, clickX: 18.0, clickY: 60.5, labelX: 26.0, labelY: 56.0, areaW: 17, areaH: 14 },
+          { wort: { es: "la caja", de: "der Karton", en: "the cardboard box", ru: "картонная коробка" }, clickX: 18.0, clickY: 60.5, labelX: 26.0, labelY: 56.0, areaW: 17, areaH: 14 },
           { wort: { es: "la silla plegable", de: "der Klappstuhl", en: "the folding chair", ru: "складной стул" }, clickX: 86.8, clickY: 60.5, labelX: 78.5, labelY: 55.5, areaW: 15, areaH: 14 },
           { wort: { es: "el baúl", de: "die Truhe", en: "the trunk", ru: "сундук" }, clickX: 50.0, clickY: 74.8, labelX: 51, labelY: 73.8, areaW: 24, areaH: 16 },
           { wort: { es: "la escalera", de: "die Leiter", en: "the ladder", ru: "лестница" }, clickX: 14.5, clickY: 82.5, labelX: 17, labelY: 88, areaW: 22, areaH: 34 },
