@@ -1884,6 +1884,14 @@ window.APP_FOLDERS = {
     images: [
       {
         title: "La habitación infantil – Bild 1",
+        file: "ninos18.png",
+        hotspots: [
+          { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, clickX: 50.0, clickY: 24.5, labelX: 23.0, labelY: 12.0, areaW: 100, areaH: 49 },
+          { wort: { es: "la habitación juvenil", de: "das Jugendzimmer", en: "the teenager's room", ru: "комната подростка" }, clickX: 50.0, clickY: 74.5, labelX: 24.0, labelY: 62.0, areaW: 100, areaH: 49 }
+        ]
+      },
+      {
+        title: "La habitación infantil – Bild 2",
         file: "ninos1.png",
         openLabel: { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, labelX: 50, labelY: 9 },
         speakOpenLabel: true,
@@ -1902,7 +1910,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 2",
+        title: "La habitación infantil – Bild 3",
         file: "ninos2.png",
         hotspots: [
           { wort: { es: "el móvil para bebés", de: "das Baby-Mobile", en: "the baby mobile", ru: "мобиль для малышей" }, clickX: 15.5, clickY: 29.5, labelX: 24.0, labelY: 23.5, areaW: 24, areaH: 26 },
@@ -1918,7 +1926,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 3",
+        title: "La habitación infantil – Bild 4",
         file: "ninos4.png",
         hotspots: [
           { wort: { es: "el armario", de: "der Schrank", en: "the wardrobe", ru: "шкаф" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -1933,7 +1941,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 4",
+        title: "La habitación infantil – Bild 5",
         file: "ninos5.png",
         hotspots: [
           { wort: { es: "el pañal", de: "die Windel", en: "the nappy", ru: "подгузник" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -1948,7 +1956,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 5",
+        title: "La habitación infantil – Bild 6",
         file: "ninos11.png",
         hotspots: [
           { wort: { es: "la báscula para bebés", de: "die Babywaage", en: "the baby scales", ru: "детские весы" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -1963,7 +1971,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 6",
+        title: "La habitación infantil – Bild 7",
         file: "ninos6.png",
         hotspots: [
           { wort: { es: "el oso de peluche", de: "der Teddybär", en: "the teddy bear", ru: "плюшевый медведь" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -1978,7 +1986,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 7",
+        title: "La habitación infantil – Bild 8",
         file: "ninos7.png",
         hotspots: [
           { wort: { es: "el rompecabezas", de: "das Puzzle", en: "the jigsaw puzzle", ru: "пазл" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -1993,7 +2001,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 8",
+        title: "La habitación infantil – Bild 9",
         file: "ninos8.png",
         hotspots: [
           { wort: { es: "llorar", de: "weinen", en: "to cry", ru: "плакать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2008,7 +2016,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 9",
+        title: "La habitación infantil – Bild 10",
         file: "ninos9.png",
         hotspots: [
           { wort: { es: "calmar al bebé", de: "das Baby beruhigen", en: "to calm the baby", ru: "успокаивать малыша" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2023,7 +2031,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 10",
+        title: "La habitación infantil – Bild 11",
         file: "ninos3.png",
         openLabel: { wort: { es: "la habitación juvenil", de: "das Jugendzimmer", en: "the teenager's room", ru: "комната подростка" }, labelX: 50, labelY: 9 },
         speakOpenLabel: true,
@@ -2044,7 +2052,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 11",
+        title: "La habitación infantil – Bild 12",
         file: "ninos10.png",
         hotspots: [
           { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2059,7 +2067,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 12",
+        title: "La habitación infantil – Bild 13",
         file: "ninos12.png",
         hotspots: [
           { wort: { es: "el ordenador", de: "der Computer", en: "the computer", ru: "компьютер" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2074,7 +2082,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 13",
+        title: "La habitación infantil – Bild 14",
         file: "ninos13.png",
         hotspots: [
           { wort: { es: "el televisor", de: "der Fernseher", en: "the television / the TV", ru: "телевизор" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2089,7 +2097,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 14",
+        title: "La habitación infantil – Bild 15",
         file: "ninos14.png",
         hotspots: [
           { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2104,7 +2112,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 15",
+        title: "La habitación infantil – Bild 16",
         file: "ninos15.png",
         hotspots: [
           { wort: { es: "jugar a videojuegos", de: "Videospiele spielen", en: "to play video games", ru: "играть в видеоигры" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2119,7 +2127,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 16",
+        title: "La habitación infantil – Bild 17",
         file: "ninos16.png",
         hotspots: [
           { wort: { es: "tocar la guitarra", de: "Gitarre spielen", en: "to play the guitar", ru: "играть на гитаре" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -2134,7 +2142,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "La habitación infantil – Bild 17",
+        title: "La habitación infantil – Bild 18",
         file: "ninos17.png",
         hotspots: [
           { wort: { es: "hacer la cama", de: "das Bett machen", en: "to make the bed", ru: "заправлять кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
