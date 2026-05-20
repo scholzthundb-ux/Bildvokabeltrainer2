@@ -1279,7 +1279,6 @@
     let pendingZoomReveal = null;
     let zoomRevealFrame = null;
     let zoomRevealTimer = null;
-    let pendingSpeechTimer = null;
 
     const MIN_REPEAT_DELAY = 3;
     const LABEL_AUTO_HIDE_MS = 5000;
@@ -2725,11 +2724,6 @@
     }
 
     function stopSpeech() {
-      if (pendingSpeechTimer) {
-        clearTimeout(pendingSpeechTimer);
-        pendingSpeechTimer = null;
-      }
-
       if ("speechSynthesis" in window) {
         speechSynthesis.cancel();
       }
@@ -2764,32 +2758,27 @@
 
       if (!resolvedEntry.text || !("speechSynthesis" in window)) return;
 
+      const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
+
+      utterance.lang = getSpeechLangCodeForEntry(entryOrText);
+      utterance.rate = 0.9;
+      utterance.pitch = 1.0;
+      utterance.volume = 1.0;
+
+      const voice = getPreferredVoice(entryOrText);
+
+      if (voice) {
+        utterance.voice = voice;
+      }
+
+      try {
+        speechSynthesis.resume();
+      } catch (err) {
+        // Nicht alle Browser unterstützen resume() zuverlässig.
+      }
+
       stopSpeech();
-
-      pendingSpeechTimer = setTimeout(() => {
-        pendingSpeechTimer = null;
-
-        const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
-
-        utterance.lang = getSpeechLangCodeForEntry(entryOrText);
-        utterance.rate = 0.9;
-        utterance.pitch = 1.0;
-        utterance.volume = 1.0;
-
-        const voice = getPreferredVoice(entryOrText);
-
-        if (voice) {
-          utterance.voice = voice;
-        }
-
-        try {
-          speechSynthesis.resume();
-        } catch (err) {
-          // Nicht alle Browser unterstützen resume() zuverlässig.
-        }
-
-        speechSynthesis.speak(utterance);
-      }, 40);
+      speechSynthesis.speak(utterance);
     }
 
     function speakCurrentQuestion() {
