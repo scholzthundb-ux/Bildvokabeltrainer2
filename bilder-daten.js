@@ -834,11 +834,11 @@ window.APP_FOLDERS = {
           { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 35.0, clickY: 31.5, labelX: 41.5, labelY: 27.5, areaW: 10, areaH: 11 },
           { wort: { es: "el aparador", de: "das Sideboard", en: "the sideboard", ru: "сервант" }, clickX: 12.0, clickY: 50.5, labelX: 19.5, labelY: 46.5, areaW: 34, areaH: 10 },
           { wort: { es: "el jarrón con flores", de: "die Blumenvase", en: "the vase with flowers", ru: "ваза с цветами" }, clickX: 21.0, clickY: 42.0, labelX: 27.0, labelY: 38.0, areaW: 12, areaH: 14 },
-          { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 50.0, clickY: 46.0, labelX: 56.0, labelY: 41.5, areaW: 3, areaH: 3 },
-          { wort: { es: "el plato", de: "der Teller", en: "the plate", ru: "тарелка" }, clickX: 39.5, clickY: 59.0, labelX: 46.5, labelY: 54.0, areaW: 11, areaH: 8 },
-          { wort: { es: "el vaso", de: "das Glas", en: "the glass", ru: "стакан" }, clickX: 61.5, clickY: 66.5, labelX: 68.0, labelY: 61.5, areaW: 5, areaH: 7 },
+          { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 49.0, clickY: 47.5, labelX: 55.0, labelY: 42.5, areaW: 5, areaH: 6 },
+          { wort: { es: "el plato", de: "der Teller", en: "the plate", ru: "тарелка" }, clickX: 44.0, clickY: 59.0, labelX: 51.0, labelY: 54.0, areaW: 11, areaH: 8 },
+          { wort: { es: "el vaso", de: "das Glas", en: "the glass", ru: "стакан" }, clickX: 56.0, clickY: 59.5, labelX: 63.0, labelY: 54.5, areaW: 5, areaH: 7 },
           { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 77.0, clickY: 73.0, labelX: 84.0, labelY: 68.0, areaW: 20, areaH: 25 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 14.0, clickY: 80.0, labelX: 21.0, labelY: 75.0, areaW: 18, areaH: 26 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 20.0, clickY: 72.0, labelX: 27.0, labelY: 67.0, areaW: 18, areaH: 34 },
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 65.0, clickY: 95.0, labelX: 60.0, labelY: 89.0, areaW: 60, areaH: 11 }
         ]
       }
