@@ -1279,6 +1279,7 @@
     let pendingZoomReveal = null;
     let zoomRevealFrame = null;
     let zoomRevealTimer = null;
+    let pendingSpeechTimer = null;
 
     const MIN_REPEAT_DELAY = 3;
     const LABEL_AUTO_HIDE_MS = 5000;
@@ -2718,6 +2719,11 @@
     }
 
     function stopSpeech() {
+      if (pendingSpeechTimer) {
+        clearTimeout(pendingSpeechTimer);
+        pendingSpeechTimer = null;
+      }
+
       if ("speechSynthesis" in window) {
         speechSynthesis.cancel();
       }
@@ -2754,20 +2760,30 @@
 
       stopSpeech();
 
-      const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
+      pendingSpeechTimer = setTimeout(() => {
+        pendingSpeechTimer = null;
 
-      utterance.lang = getSpeechLangCodeForEntry(entryOrText);
-      utterance.rate = 0.9;
-      utterance.pitch = 1.0;
-      utterance.volume = 1.0;
+        const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
 
-      const voice = getPreferredVoice(entryOrText);
+        utterance.lang = getSpeechLangCodeForEntry(entryOrText);
+        utterance.rate = 0.9;
+        utterance.pitch = 1.0;
+        utterance.volume = 1.0;
 
-      if (voice) {
-        utterance.voice = voice;
-      }
+        const voice = getPreferredVoice(entryOrText);
 
-      speechSynthesis.speak(utterance);
+        if (voice) {
+          utterance.voice = voice;
+        }
+
+        try {
+          speechSynthesis.resume();
+        } catch (err) {
+          // Nicht alle Browser unterstützen resume() zuverlässig.
+        }
+
+        speechSynthesis.speak(utterance);
+      }, 40);
     }
 
     function speakCurrentQuestion() {
