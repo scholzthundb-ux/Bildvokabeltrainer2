@@ -994,9 +994,10 @@
     const MIN_REPEAT_DELAY = 3;
     const LABEL_AUTO_HIDE_MS = 5000;
     const ZOOM_REVEAL_DURATION = 1850;
-    const LANGUAGE_ORDER = ["es", "de", "en", "ru"];
-    const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN", ru: "RU" };
-    const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-US", ru: "ru-RU" };
+    const LANGUAGE_ORDER = ["es", "de", "en", "en-us", "ru"];
+    const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN-UK", "en-us": "EN-US", ru: "RU" };
+    const LANGUAGE_HTML_CODES = { es: "es", de: "de", en: "en-GB", "en-us": "en-US", ru: "ru" };
+    const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-GB", "en-us": "en-US", ru: "ru-RU" };
     const UI_STRINGS = {
       es: {
         appTitle: "Entrenador de vocabulario",
@@ -1057,6 +1058,35 @@
         quizSoundOff: "Quizton ausschalten"
       },
       en: {
+        appTitle: "Vocabulary trainer",
+        subtitle: "Learn words directly from the picture.",
+        learnMode: "Learn",
+        quizMode: "Quiz",
+        menuButton: "Menu",
+        backToMenu: "Back to menu",
+        mute: "Mute",
+        unmute: "Sound on",
+        fullscreen: "Fullscreen",
+        fullscreenOff: "Exit fullscreen",
+        language: "Language",
+        switchLanguage: "Switch language",
+        swipeInfo: "Swipe left or right to change the picture.",
+        learnInfoDefault: "Tap a highlighted object.",
+        learnInfoClothes: "Tap an item of clothing.",
+        learnInfoRoutine: "Tap an activity or the timeline.",
+        learnInfoHouse: "Tap a room or area in the house.",
+        learnInfoActivity: "Tap an activity.",
+        correct: "👍 Correct",
+        wrong: "👎 Wrong",
+        image: "Image",
+        of: "of",
+        prevImage: "Previous image",
+        nextImage: "Next image",
+        speak: "Listen to word",
+        quizSoundOn: "Turn quiz sound on",
+        quizSoundOff: "Turn quiz sound off"
+      },
+      "en-us": {
         appTitle: "Vocabulary trainer",
         subtitle: "Learn words directly from the picture.",
         learnMode: "Learn",
@@ -1211,6 +1241,22 @@
       }
     }
 
+    function getLanguageCandidates(lang = currentLanguage) {
+      const primaryCandidates = {
+        "en-us": ["en-us", "en"],
+        en: ["en", "en-us"],
+        es: ["es"],
+        de: ["de"],
+        ru: ["ru"]
+      };
+
+      return [...new Set([...(primaryCandidates[lang] || [lang]), "es", "de", "en", "en-us", "ru"])];
+    }
+
+    function sameLanguageFamily(firstLang, secondLang) {
+      return String(firstLang).split("-")[0] === String(secondLang).split("-")[0];
+    }
+
     function resolveLocalizedEntry(value, lang = currentLanguage) {
       if (value == null) {
         return { text: "", lang: "es" };
@@ -1221,9 +1267,12 @@
       }
 
       if (typeof value === "object") {
-        for (const candidate of [lang, "es", "de", "en", "ru"]) {
+        for (const candidate of getLanguageCandidates(lang)) {
           if (typeof value[candidate] === "string") {
-            return { text: value[candidate], lang: candidate };
+            return {
+              text: value[candidate],
+              lang: sameLanguageFamily(lang, candidate) ? lang : candidate
+            };
           }
         }
 
@@ -1242,7 +1291,13 @@
     }
 
     function getUi(key) {
-      return UI_STRINGS[currentLanguage]?.[key] ?? UI_STRINGS.es[key] ?? key;
+      for (const candidate of getLanguageCandidates(currentLanguage)) {
+        if (UI_STRINGS[candidate]?.[key]) {
+          return UI_STRINGS[candidate][key];
+        }
+      }
+
+      return key;
     }
 
     function formatLearnInfoText(text) {
@@ -1328,7 +1383,7 @@
     }
 
     function updateStaticUiTexts() {
-      document.documentElement.lang = currentLanguage;
+      document.documentElement.lang = LANGUAGE_HTML_CODES[currentLanguage] ?? currentLanguage;
       document.title = getUi("appTitle");
       menuTitle.textContent = getUi("appTitle");
       menuSubtitle.textContent = getUi("subtitle");
