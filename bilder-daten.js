@@ -1871,6 +1871,7 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 1",
         file: "ninos1.png",
         openLabel: { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 61.5, clickY: 16.5, labelX: 68.0, labelY: 14.0, areaW: 16, areaH: 13 },
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 57.0, clickY: 38.0, labelX: 47.0, labelY: 33.0, areaW: 36, areaH: 22 },
@@ -2010,6 +2011,7 @@ window.APP_FOLDERS = {
         title: "La habitación infantil – Bild 10",
         file: "ninos3.png",
         openLabel: { wort: { es: "la habitación juvenil", de: "das Jugendzimmer", en: "the teenager's room", ru: "комната подростка" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         specialTopLabel: {"es":"la habitación juvenil","de":"das Jugendzimmer","en":"the teenager's room","ru":"комната подростка"},
         hotspots: [
           { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 13.5, clickY: 56.5, labelX: 22.5, labelY: 50.5, areaW: 28, areaH: 31 },
