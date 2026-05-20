@@ -904,15 +904,15 @@ window.APP_FOLDERS = {
         title: "El dormitorio – Bild 6",
         file: "dormitorio3.png",
         hotspots: [
-          { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "платяной шкаф" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
-          { wort: { es: "el vestidor", de: "das Ankleidezimmer", en: "the walk-in wardrobe", ru: "гардеробная" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
-          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
-          { wort: { es: "el tocador", de: "der Schminktisch", en: "the dressing table", ru: "туалетный столик" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
-          { wort: { es: "el puf", de: "der Hocker / Pouf", en: "the pouffe", ru: "пуф" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
-          { wort: { es: "la estantería", de: "das Regal", en: "the shelving unit", ru: "стеллаж" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
-          { wort: { es: "la balda", de: "das Wandbrett / Regalbrett", en: "the wall shelf", ru: "настенная полка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
-          { wort: { es: "el sillón", de: "der Sessel", en: "the armchair", ru: "кресло" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
-          { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+          { wort: { es: "el cajón de la cama", de: "die Bettschublade", en: "the bed drawer", ru: "выдвижной ящик кровати" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la cabecera", de: "das Kopfteil des Bettes", en: "the headboard", ru: "изголовье кровати" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "las patas de la cama", de: "die Bettfüße", en: "the bed legs", ru: "ножки кровати" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la mesita de noche", de: "der Nachttisch", en: "the bedside table", ru: "прикроватная тумбочка" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "платяной шкаф" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el vestidor", de: "das Ankleidezimmer", en: "the walk-in wardrobe", ru: "гардеробная" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el tocador", de: "der Schminktisch", en: "the dressing table", ru: "туалетный столик" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el puf", de: "der Hocker / Pouf", en: "the pouffe", ru: "пуф" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       }
     ]
