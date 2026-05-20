@@ -395,18 +395,6 @@
       font-size: 1.1em;
     }
 
-    .submenu-primary-open-btn {
-      background: linear-gradient(180deg, #eef4ff 0%, #dfeafd 100%);
-      color: #1f3f74;
-      font-weight: 800;
-    }
-
-    .submenu-primary-open-btn::before {
-      content: "↳";
-      color: #1f3f74;
-      font-size: 1em;
-    }
-
     .submenu-folder-open-btn:hover {
       filter: brightness(1.02);
     }
@@ -1689,7 +1677,7 @@
 
       const mainButton = document.createElement("button");
       mainButton.type = "button";
-      mainButton.className = "ui-btn submenu-folder-open-btn submenu-primary-open-btn";
+      mainButton.className = "ui-btn submenu-folder-open-btn";
       mainButton.dataset.folder = "habitaciones";
       mainButton.textContent = getFolderDisplayTitle("habitaciones");
       mainButton.addEventListener("click", () => openFolder("habitaciones"));
