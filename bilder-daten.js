@@ -961,6 +961,21 @@ window.APP_FOLDERS = {
           { wort: { es: "las gafas", de: "die Brille", en: "the glasses", ru: "очки" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
           { wort: { es: "la bolsa de agua caliente", de: "die Wärmflasche", en: "the hot water bottle", ru: "грелка" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
+      },
+      {
+        title: "El dormitorio – Bild 10",
+        file: "dormitorio10.png",
+        hotspots: [
+          { wort: { es: "el móvil", de: "das Handy", en: "the mobile phone", ru: "мобильный телефон" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el libro", de: "das Buch", en: "the book", ru: "книга" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la revista", de: "die Zeitschrift", en: "the magazine", ru: "журнал" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el vaso de agua", de: "das Glas Wasser", en: "the glass of water", ru: "стакан воды" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "los auriculares", de: "die Kopfhörer", en: "the headphones", ru: "наушники" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el portátil", de: "der Laptop", en: "the laptop", ru: "ноутбук" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el pijama", de: "der Schlafanzug", en: "the pyjamas", ru: "пижама" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el camisón", de: "das Nachthemd", en: "the nightdress", ru: "ночная рубашка" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la bata", de: "der Morgenmantel", en: "the dressing gown", ru: "халат" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+        ]
       }
     ]
   },
