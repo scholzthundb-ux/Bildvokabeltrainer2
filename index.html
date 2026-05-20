@@ -2734,24 +2734,6 @@
       return SPEECH_LANG_CODES[resolvedLanguage] ?? SPEECH_LANG_CODES.es;
     }
 
-    function getPreferredVoice(entry) {
-      if (!("speechSynthesis" in window)) return null;
-
-      const voices = speechSynthesis.getVoices();
-
-      if (!voices || !voices.length) return null;
-
-      const speechLangCode = getSpeechLangCodeForEntry(entry);
-      const preferredPrefix = speechLangCode.toLowerCase();
-      const shortPrefix = preferredPrefix.split("-")[0];
-
-      return (
-        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith(preferredPrefix)) ||
-        voices.find((v) => v.lang && v.lang.toLowerCase().startsWith(shortPrefix)) ||
-        null
-      );
-    }
-
     function speakWord(entryOrText) {
       if (isMuted) return;
       const resolvedEntry = resolveLocalizedEntry(entryOrText);
@@ -2765,19 +2747,14 @@
       utterance.pitch = 1.0;
       utterance.volume = 1.0;
 
-      const voice = getPreferredVoice(entryOrText);
-
-      if (voice) {
-        utterance.voice = voice;
-      }
-
       try {
-        speechSynthesis.resume();
+        if (speechSynthesis.speaking || speechSynthesis.pending) {
+          speechSynthesis.cancel();
+        }
       } catch (err) {
-        // Nicht alle Browser unterstützen resume() zuverlässig.
+        // Manche Browser reagieren hier empfindlich; dann einfach direkt sprechen.
       }
 
-      stopSpeech();
       speechSynthesis.speak(utterance);
     }
 
