@@ -229,6 +229,12 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
     }
 
+    .menu-folder-group.is-open {
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.82),
+        0 16px 30px rgba(31, 42, 55, 0.08);
+    }
+
     .menu-folder-group > .ui-btn,
     .folder-open-btn {
       width: 100%;
@@ -262,6 +268,16 @@
       font-size: 24px;
       font-weight: 900;
       opacity: 0.88;
+    }
+
+    #mainHabitacionesBtn::after {
+      content: "▾";
+      transform: translateY(-50%);
+      transition: transform 0.18s ease;
+    }
+
+    #mainHabitacionesBtn.is-expanded::after {
+      transform: translateY(-50%) rotate(180deg);
     }
 
     .folder-open-btn[data-folder="zahlen"]::before { content: "🔢"; }
@@ -306,6 +322,18 @@
       margin-right: 10px;
       color: #2f796f;
       font-size: 1.1em;
+    }
+
+    .submenu-primary-open-btn {
+      background: linear-gradient(180deg, #eef4ff 0%, #dfeafd 100%);
+      color: #1f3f74;
+      font-weight: 800;
+    }
+
+    .submenu-primary-open-btn::before {
+      content: "↳";
+      color: #1f3f74;
+      font-size: 1em;
     }
 
     .submenu-folder-open-btn:hover {
@@ -1099,9 +1127,9 @@
         <button class="ui-btn folder-open-btn" data-folder="ropa">La ropa</button>
         <button class="ui-btn folder-open-btn" data-folder="rutina">Rutina diaria</button>
         <button class="ui-btn folder-open-btn" data-folder="casa">La casa</button>
-        <div class="menu-folder-group">
-          <button class="ui-btn folder-open-btn" data-folder="habitaciones">Las habitaciones</button>
-          <div class="submenu-actions" id="habitacionesSubmenu"></div>
+        <div class="menu-folder-group" id="habitacionesMenuGroup">
+          <button class="ui-btn folder-open-btn" id="mainHabitacionesBtn" data-folder="habitaciones" type="button" aria-expanded="false">Las habitaciones</button>
+          <div class="submenu-actions" id="habitacionesSubmenu" hidden></div>
         </div>
       </div>
     </div>
@@ -1364,6 +1392,8 @@
     const menuTitle = document.getElementById("menuTitle");
     const menuSubtitle = document.getElementById("menuSubtitle");
     const menuLanguageBtn = document.getElementById("menuLanguageBtn");
+    const habitacionesMenuGroup = document.getElementById("habitacionesMenuGroup");
+    const mainHabitacionesBtn = document.getElementById("mainHabitacionesBtn");
     const habitacionesSubmenu = document.getElementById("habitacionesSubmenu");
     const appLanguageBtn = document.getElementById("appLanguageBtn");
     const hotspotsLayer = document.getElementById("hotspots");
@@ -1388,7 +1418,13 @@
     const prevImageBtn = document.getElementById("prevImageBtn");
     const nextImageBtn = document.getElementById("nextImageBtn");
     const backToFolderBtn = document.getElementById("backToFolderBtn");
+    let habitacionesSubmenuExpanded = false;
     document.querySelectorAll(".folder-open-btn").forEach((btn) => {
+      if (btn === mainHabitacionesBtn) {
+        btn.addEventListener("click", toggleHabitacionesSubmenu);
+        return;
+      }
+
       btn.addEventListener("click", () => openFolder(btn.dataset.folder));
     });
 
@@ -1562,10 +1598,31 @@
       return Array.from(uniqueEntries.entries()).map(([folderKey, label]) => ({ folderKey, label }));
     }
 
+    function toggleHabitacionesSubmenu() {
+      habitacionesSubmenuExpanded = !habitacionesSubmenuExpanded;
+      renderHabitacionesSubmenu();
+    }
+
     function renderHabitacionesSubmenu() {
       if (!habitacionesSubmenu) return;
 
       habitacionesSubmenu.innerHTML = "";
+      const hasExpandedEntries = habitacionesSubmenuExpanded;
+
+      mainHabitacionesBtn.classList.toggle("is-expanded", hasExpandedEntries);
+      mainHabitacionesBtn.setAttribute("aria-expanded", hasExpandedEntries ? "true" : "false");
+      habitacionesMenuGroup.classList.toggle("is-open", hasExpandedEntries);
+      habitacionesSubmenu.hidden = !hasExpandedEntries;
+
+      if (!hasExpandedEntries) return;
+
+      const mainButton = document.createElement("button");
+      mainButton.type = "button";
+      mainButton.className = "ui-btn submenu-folder-open-btn submenu-primary-open-btn";
+      mainButton.dataset.folder = "habitaciones";
+      mainButton.textContent = getFolderDisplayTitle("habitaciones");
+      mainButton.addEventListener("click", () => openFolder("habitaciones"));
+      habitacionesSubmenu.appendChild(mainButton);
 
       getHabitacionesSubfolderEntries().forEach(({ folderKey, label }) => {
         const button = document.createElement("button");
@@ -1799,6 +1856,8 @@
 
       app.style.display = "none";
       menu.style.display = "flex";
+      habitacionesSubmenuExpanded = false;
+      renderHabitacionesSubmenu();
 
       clearTimeout(timer);
       timer = null;
