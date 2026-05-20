@@ -844,13 +844,14 @@ window.APP_FOLDERS = {
         title: "El dormitorio – Bild 2",
         file: "dormitorio6.png",
         hotspots: [
-          { wort: { es: "el cabecero", de: "das Kopfteil des Bettes", en: "the headboard", ru: "изголовье кровати" }, clickX: 48.5, clickY: 12.5, labelX: 59, labelY: 9.5, areaW: 26, areaH: 17 },
-          { wort: { es: "la almohada", de: "das Kopfkissen", en: "the pillow", ru: "подушка" }, clickX: 45.5, clickY: 26.0, labelX: 59, labelY: 23.0, areaW: 22, areaH: 14 },
-          { wort: { es: "la sábana", de: "das Bettlaken", en: "the sheet", ru: "простыня" }, clickX: 14.0, clickY: 42.0, labelX: 25.0, labelY: 38.5, areaW: 20, areaH: 21 },
-          { wort: { es: "el edredón", de: "die Bettdecke", en: "the duvet", ru: "одеяло" }, clickX: 73.0, clickY: 42.0, labelX: 83.0, labelY: 37.5, areaW: 28, areaH: 18 },
-          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "плед" }, clickX: 86.0, clickY: 56.0, labelX: 82.0, labelY: 52.5, areaW: 24, areaH: 13 },
-          { wort: { es: "el colchón", de: "die Matratze", en: "the mattress", ru: "матрас" }, clickX: 86.5, clickY: 73.0, labelX: 77.0, labelY: 68.5, areaW: 20, areaH: 13 },
-          { wort: { es: "las patas de la cama", de: "die Bettfüße", en: "the bed legs", ru: "ножки кровати" }, clickX: 93.5, clickY: 91.0, labelX: 82.0, labelY: 87.5, areaW: 12, areaH: 16 }
+          { wort: { es: "el cabecero", de: "das Kopfteil des Bettes", en: "the headboard", ru: "изголовье кровати" }, clickX: 39.5, clickY: 11.5, labelX: 53.0, labelY: 8.8, areaW: 44, areaH: 11 },
+          { wort: { es: "la almohada", de: "das Kopfkissen", en: "the pillow", ru: "подушка" }, clickX: 35.0, clickY: 23.0, labelX: 52.0, labelY: 20.0, areaW: 36, areaH: 14 },
+          { wort: { es: "la sábana", de: "das Bettlaken", en: "the sheet", ru: "простыня" }, clickX: 11.5, clickY: 35.5, labelX: 21.5, labelY: 32.0, areaW: 20, areaH: 10.5 },
+          { wort: { es: "el edredón", de: "die Bettdecke", en: "the duvet", ru: "одеяло" }, clickX: 73.0, clickY: 37.0, labelX: 83.0, labelY: 33.0, areaW: 28, areaH: 18 },
+          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "плед" }, clickX: 86.0, clickY: 47.0, labelX: 82.0, labelY: 43.5, areaW: 24, areaH: 13 },
+          { wort: { es: "el colchón", de: "die Matratze", en: "the mattress", ru: "матрас" }, clickX: 86.5, clickY: 61.0, labelX: 77.0, labelY: 56.5, areaW: 20, areaH: 13 },
+          { wort: { es: "el somier", de: "der Lattenrost", en: "the slatted bed base", ru: "реечное основание кровати" }, clickX: 12.0, clickY: 88.0, labelX: 23.0, labelY: 82.5, areaW: 26, areaH: 26, shape: "circle" },
+          { wort: { es: "las patas de la cama", de: "die Bettfüße", en: "the bed legs", ru: "ножки кровати" }, clickX: 93.5, clickY: 75.0, labelX: 82.0, labelY: 71.5, areaW: 12, areaH: 16 }
         ]
       },
       {
