@@ -872,6 +872,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "El dormitorio – Bild 4",
+        file: "dormitorio5.png",
+        hotspots: [
+          { wort: { es: "la lámpara de techo", de: "die Deckenlampe", en: "the ceiling lamp", ru: "потолочная лампа" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la lámpara de noche", de: "die Nachttischlampe", en: "the bedside lamp", ru: "прикроватная лампа" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el radiador", de: "die Heizung", en: "the radiator", ru: "радиатор" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "el ventilador portátil", de: "der tragbare Ventilator", en: "the portable fan", ru: "переносной вентилятор" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el ventilador de techo", de: "der Deckenventilator", en: "the ceiling fan", ru: "потолочный вентилятор" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el aire acondicionado", de: "die Klimaanlage", en: "the air conditioner", ru: "кондиционер" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el deshumidificador", de: "der Luftentfeuchter", en: "the dehumidifier", ru: "осушитель воздуха" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "el enchufe", de: "die Steckdose", en: "the socket", ru: "розетка" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "el interruptor", de: "der Lichtschalter", en: "the light switch", ru: "выключатель" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+        ]
+      },
+      {
+        title: "El dormitorio – Bild 5",
         file: "dormitorio2.png",
         hotspots: [
           { wort: { es: "la cama individual", de: "das Einzelbett", en: "the single bed", ru: "односпальная кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -886,7 +901,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "El dormitorio – Bild 5",
+        title: "El dormitorio – Bild 6",
         file: "dormitorio3.png",
         hotspots: [
           { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "платяной шкаф" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
