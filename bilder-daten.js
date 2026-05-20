@@ -890,14 +890,14 @@ window.APP_FOLDERS = {
         file: "dormitorio2.png",
         hotspots: [
           { wort: { es: "la cama individual", de: "das Einzelbett", en: "the single bed", ru: "односпальная кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
-          { wort: { es: "la cama de matrimonio", de: "das Doppelbett / Ehebett", en: "the double bed", ru: "двуспальная кровать" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la cama de matrimonio", de: "das Doppelbett", en: "the double bed", ru: "двуспальная кровать" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
           { wort: { es: "la litera", de: "das Etagenbett", en: "the bunk bed", ru: "двухъярусная кровать" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
-          { wort: { es: "la cama plegable", de: "das Gästebett / Reisebett", en: "the folding bed", ru: "раскладная кровать" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
-          { wort: { es: "la cuna", de: "das Babybett / Gitterbett", en: "the cot", ru: "детская кроватка" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
-          { wort: { es: "el colchón", de: "die Matratze", en: "the mattress", ru: "матрас" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
-          { wort: { es: "el somier", de: "der Lattenrost", en: "the slatted bed base", ru: "реечное основание кровати" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
-          { wort: { es: "el cabecero", de: "das Kopfteil des Bettes", en: "the headboard", ru: "изголовье кровати" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
-          { wort: { es: "la mesita de noche", de: "der Nachttisch", en: "the bedside table", ru: "прикроватная тумбочка" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+          { wort: { es: "la cama plegable", de: "das Klappbett", en: "the folding bed", ru: "раскладная кровать" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el canapé", de: "das Bett mit Bettkasten", en: "the ottoman bed", ru: "кровать с ящиком для хранения" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la cama articulada", de: "das verstellbare Bett", en: "the adjustable bed", ru: "регулируемая кровать" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la cuna", de: "das Babybett", en: "the cot", ru: "детская кроватка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "la cama nido", de: "das Ausziehbett", en: "the trundle bed", ru: "кровать с выдвижным спальным местом" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la cama alta", de: "das Hochbett", en: "the loft bed", ru: "кровать-чердак" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
