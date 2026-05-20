@@ -2007,6 +2007,7 @@ window.APP_FOLDERS = {
       {
         title: "La habitación infantil – Bild 10",
         file: "ninos3.png",
+        openLabel: { wort: { es: "la habitación juvenil", de: "das Jugendzimmer", en: "the teenager's room", ru: "комната подростка" }, labelX: 50, labelY: 9 },
         specialTopLabel: {"es":"la habitación juvenil","de":"das Jugendzimmer","en":"the teenager's room","ru":"комната подростка"},
         hotspots: [
           { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, clickX: 13.5, clickY: 56.5, labelX: 22.5, labelY: 50.5, areaW: 28, areaH: 31 },
