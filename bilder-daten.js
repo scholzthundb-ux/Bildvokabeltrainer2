@@ -946,6 +946,21 @@ window.APP_FOLDERS = {
           { wort: { es: "la funda nórdica", de: "der Bettbezug", en: "the duvet cover", ru: "пододеяльник" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
           { wort: { es: "la funda de almohada", de: "der Kissenbezug", en: "the pillowcase", ru: "наволочка" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
+      },
+      {
+        title: "El dormitorio – Bild 9",
+        file: "dormitorio9.png",
+        hotspots: [
+          { wort: { es: "la sábana", de: "das Bettlaken", en: "the bed sheet", ru: "простыня" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la sábana bajera", de: "das Spannbettlaken", en: "the fitted sheet", ru: "простыня на резинке" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la caja", de: "die Kiste / Schachtel", en: "the box", ru: "коробка" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la cesta de ropa", de: "der Wäschekorb", en: "the laundry basket", ru: "корзина для белья" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la percha", de: "der Kleiderbügel", en: "the clothes hanger", ru: "плечики" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el joyero", de: "die Schmuckschatulle", en: "the jewellery box", ru: "шкатулка для украшений" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "el despertador", de: "der Wecker", en: "the alarm clock", ru: "будильник" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "las gafas", de: "die Brille", en: "the glasses", ru: "очки" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la bolsa de agua caliente", de: "die Wärmflasche", en: "the hot water bottle", ru: "грелка" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+        ]
       }
     ]
   },
