@@ -830,14 +830,15 @@ window.APP_FOLDERS = {
           { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 24.0, clickY: 22.0, labelX: 30.0, labelY: 17.0, areaW: 11, areaH: 30 },
           { wort: { es: "la lámpara", de: "die Lampe", en: "the lamp", ru: "лампа" }, clickX: 52.0, clickY: 27.0, labelX: 58.0, labelY: 22.0, areaW: 14, areaH: 12 },
           { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 65.0, clickY: 29.0, labelX: 72.0, labelY: 22.0, areaW: 14, areaH: 33 },
-          { wort: { es: "la vitrina", de: "die Vitrine", en: "the display cabinet", ru: "витрина" }, clickX: 86.0, clickY: 39.0, labelX: 81.0, labelY: 30.0, areaW: 24, areaH: 45 },
-          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 36.0, clickY: 28.0, labelX: 43.0, labelY: 24.0, areaW: 12, areaH: 14 },
-          { wort: { es: "el aparador", de: "das Sideboard", en: "the sideboard", ru: "сервант" }, clickX: 23.5, clickY: 54.0, labelX: 31.0, labelY: 50.0, areaW: 23, areaH: 10 },
+          { wort: { es: "la vitrina", de: "die Vitrine", en: "the display cabinet", ru: "витрина" }, clickX: 86.0, clickY: 36.0, labelX: 81.0, labelY: 28.0, areaW: 24, areaH: 39 },
+          { wort: { es: "el cuadro", de: "das Bild", en: "the picture", ru: "картина" }, clickX: 35.0, clickY: 31.5, labelX: 41.5, labelY: 27.5, areaW: 10, areaH: 11 },
+          { wort: { es: "el aparador", de: "das Sideboard", en: "the sideboard", ru: "сервант" }, clickX: 18.5, clickY: 50.5, labelX: 26.0, labelY: 46.5, areaW: 23, areaH: 10 },
           { wort: { es: "el jarrón con flores", de: "die Blumenvase", en: "the vase with flowers", ru: "ваза с цветами" }, clickX: 21.0, clickY: 42.0, labelX: 27.0, labelY: 38.0, areaW: 12, areaH: 14 },
-          { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 51.5, clickY: 53.0, labelX: 58.0, labelY: 48.0, areaW: 9, areaH: 14 },
-          { wort: { es: "el plato", de: "der Teller", en: "the plate", ru: "тарелка" }, clickX: 40.0, clickY: 71.0, labelX: 47.0, labelY: 66.0, areaW: 11, areaH: 8 },
+          { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 50.5, clickY: 52.0, labelX: 57.0, labelY: 47.0, areaW: 7, areaH: 11 },
+          { wort: { es: "el plato", de: "der Teller", en: "the plate", ru: "тарелка" }, clickX: 39.5, clickY: 67.0, labelX: 46.5, labelY: 62.0, areaW: 11, areaH: 8 },
           { wort: { es: "el vaso", de: "das Glas", en: "the glass", ru: "стакан" }, clickX: 60.0, clickY: 69.5, labelX: 67.0, labelY: 64.5, areaW: 8, areaH: 10 },
           { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 77.0, clickY: 79.0, labelX: 84.0, labelY: 74.0, areaW: 20, areaH: 31 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 52.0, clickY: 61.0, labelX: 59.0, labelY: 56.0, areaW: 14, areaH: 19 },
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 65.0, clickY: 95.0, labelX: 60.0, labelY: 89.0, areaW: 60, areaH: 11 }
         ]
       }
