@@ -96,8 +96,37 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      padding: clamp(18px, 4vw, 32px);
+      padding: clamp(18px, 4vw, 36px);
       overflow: visible;
+      position: relative;
+      isolation: isolate;
+    }
+
+    #menu::before,
+    #menu::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      z-index: -1;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(6px);
+    }
+
+    #menu::before {
+      width: 280px;
+      height: 280px;
+      top: 22px;
+      left: -70px;
+      background: radial-gradient(circle, rgba(255, 210, 138, 0.38) 0%, rgba(255, 210, 138, 0) 72%);
+    }
+
+    #menu::after {
+      width: 360px;
+      height: 360px;
+      right: -120px;
+      bottom: 50px;
+      background: radial-gradient(circle, rgba(98, 146, 255, 0.24) 0%, rgba(98, 146, 255, 0) 72%);
     }
 
     #app {
@@ -117,16 +146,54 @@
       flex: 0 0 auto;
     }
 
+    .menu-card {
+      position: relative;
+      overflow: hidden;
+      max-width: 760px;
+      padding: clamp(24px, 4vw, 42px);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(248, 250, 255, 0.88) 100%);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow:
+        0 24px 60px rgba(31, 42, 55, 0.14),
+        inset 0 1px 0 rgba(255,255,255,0.86);
+    }
+
+    .menu-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 150px;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.72), transparent 46%),
+        linear-gradient(135deg, rgba(255, 229, 172, 0.52) 0%, rgba(145, 185, 255, 0.28) 100%);
+      pointer-events: none;
+    }
+
+    .menu-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .menu-hero {
+      padding: 6px 0 12px;
+      margin-bottom: 14px;
+    }
+
     .start-icon {
-      width: 88px;
-      height: 88px;
-      margin: 0 auto 18px;
-      border-radius: 28px;
+      width: 94px;
+      height: 94px;
+      margin: 8px auto 18px;
+      border-radius: 32px;
       display: grid;
       place-items: center;
-      font-size: 46px;
-      background: linear-gradient(180deg, rgba(61, 113, 228, 0.18), rgba(47, 95, 207, 0.28));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+      font-size: 48px;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.9), transparent 34%),
+        linear-gradient(160deg, rgba(255, 211, 133, 0.82) 0%, rgba(72, 122, 236, 0.92) 100%);
+      box-shadow:
+        0 18px 34px rgba(47, 95, 207, 0.2),
+        inset 0 1px 0 rgba(255,255,255,0.82);
     }
 
     h1 {
@@ -145,38 +212,100 @@
 
     .menu-actions {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
       width: 100%;
     }
 
     .menu-folder-group {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
       width: 100%;
+      padding: 10px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(223, 233, 251, 0.62) 0%, rgba(244, 247, 255, 0.88) 100%);
+      border: 1px solid rgba(197, 213, 240, 0.72);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
     }
 
-    .menu-folder-group > .ui-btn {
+    .menu-folder-group > .ui-btn,
+    .folder-open-btn {
       width: 100%;
+      text-align: left;
+      justify-content: flex-start;
+      position: relative;
+      min-height: 90px;
+      padding: 20px 58px 20px 70px;
+      border-radius: 24px;
+      font-size: clamp(1.02rem, 2.3vw, 1.35rem);
+      line-height: 1.15;
+      overflow: hidden;
+    }
+
+    .folder-open-btn::before {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+      line-height: 1;
+      opacity: 0.95;
+    }
+
+    .folder-open-btn::after {
+      content: "→";
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      font-weight: 900;
+      opacity: 0.88;
+    }
+
+    .folder-open-btn[data-folder="zahlen"]::before { content: "🔢"; }
+    .folder-open-btn[data-folder="playa"]::before { content: "🏖️"; }
+    .folder-open-btn[data-folder="ropa"]::before { content: "👕"; }
+    .folder-open-btn[data-folder="rutina"]::before { content: "⏰"; }
+    .folder-open-btn[data-folder="casa"]::before { content: "🏡"; }
+    .folder-open-btn[data-folder="habitaciones"]::before { content: "🚪"; }
+
+    .folder-open-btn[data-folder="casa"] {
+      background: linear-gradient(180deg, #456fd4 0%, #2952bb 100%);
+    }
+
+    .folder-open-btn[data-folder="habitaciones"] {
+      background: linear-gradient(180deg, #2f796f 0%, #205c55 100%);
+      box-shadow: 0 18px 34px rgba(32, 92, 85, 0.24);
     }
 
     .submenu-actions {
       display: grid;
-      gap: 8px;
+      gap: 9px;
       width: 100%;
-      padding-left: 18px;
+      padding-left: 12px;
     }
 
     .submenu-folder-open-btn {
       width: 100%;
       justify-self: stretch;
-      font-size: clamp(0.95rem, 2.1vw, 1.18rem);
-      padding: 12px 16px;
-      border-radius: 16px;
-      background: linear-gradient(180deg, #e5ebf7 0%, #d6dfef 100%);
+      text-align: left;
+      font-size: clamp(0.92rem, 2vw, 1.08rem);
+      padding: 13px 16px 13px 18px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(231, 238, 250, 0.94) 100%);
       color: #26374d;
-      box-shadow: 0 8px 18px rgba(31, 42, 55, 0.12);
+      box-shadow: 0 10px 18px rgba(31, 42, 55, 0.09);
+      border: 1px solid rgba(208, 220, 244, 0.84);
+      position: relative;
+    }
+
+    .submenu-folder-open-btn::before {
+      content: "•";
+      margin-right: 10px;
+      color: #2f796f;
+      font-size: 1.1em;
     }
 
     .submenu-folder-open-btn:hover {
@@ -186,11 +315,17 @@
     .menu-utility-row {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
     }
 
     .menu-utility-row .ui-btn {
       width: auto;
+      border-radius: 999px;
+      padding-inline: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(231, 238, 250, 0.96) 100%);
+      color: #2b415e;
+      border: 1px solid rgba(207, 220, 244, 0.9);
+      box-shadow: 0 10px 20px rgba(31, 42, 55, 0.08);
     }
 
     .folder-title {
@@ -776,6 +911,10 @@
         padding: 22px 18px 20px;
       }
 
+      .menu-card {
+        padding: 22px 18px 24px;
+      }
+
       .start-icon {
         width: 72px;
         height: 72px;
@@ -898,6 +1037,17 @@
         grid-template-columns: 1fr;
       }
 
+      .folder-open-btn,
+      .menu-folder-group > .ui-btn {
+        min-height: 82px;
+        padding: 18px 50px 18px 62px;
+      }
+
+      .folder-open-btn::before {
+        left: 18px;
+        font-size: 24px;
+      }
+
       .nav-right {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -933,13 +1083,15 @@
 
 <body>
   <div id="menu">
-    <div class="card">
-      <div class="menu-utility-row">
-        <button class="ui-btn secondary small" id="menuLanguageBtn" type="button"></button>
+    <div class="card menu-card">
+      <div class="menu-hero">
+        <div class="menu-utility-row">
+          <button class="ui-btn secondary small" id="menuLanguageBtn" type="button"></button>
+        </div>
+        <div class="start-icon">🧠</div>
+        <h1 id="menuTitle">Vokabeltrainer</h1>
+        <div class="subtitle" id="menuSubtitle">Lerne spanische Wörter direkt am Bild.</div>
       </div>
-      <div class="start-icon">🧠</div>
-      <h1 id="menuTitle">Vokabeltrainer</h1>
-      <div class="subtitle" id="menuSubtitle">Lerne spanische Wörter direkt am Bild.</div>
 
       <div class="menu-actions">
         <button class="ui-btn folder-open-btn" data-folder="zahlen">Los números</button>
