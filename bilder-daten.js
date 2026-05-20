@@ -889,15 +889,15 @@ window.APP_FOLDERS = {
         title: "El dormitorio – Bild 5",
         file: "dormitorio2.png",
         hotspots: [
-          { wort: { es: "cajón de la cama", de: "die Bettschublade", en: "the bed drawer", ru: "выдвижной ящик кровати" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
-          { wort: { es: "la cabecera", de: "das Kopfteil des Bettes", en: "the headboard", ru: "изголовье кровати" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
-          { wort: { es: "las patas de la cama", de: "die Bettfüße", en: "the bed legs", ru: "ножки кровати" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
-          { wort: { es: "la mesita de noche", de: "der Nachttisch", en: "the bedside table", ru: "прикроватная тумбочка" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
-          { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "платяной шкаф" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
-          { wort: { es: "el vestidor", de: "das Ankleidezimmer", en: "the walk-in wardrobe", ru: "гардеробная" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
-          { wort: { es: "la cómoda", de: "die Kommode", en: "the chest of drawers", ru: "комод" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
-          { wort: { es: "el tocador", de: "der Schminktisch", en: "the dressing table", ru: "туалетный столик" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
-          { wort: { es: "el puf", de: "der Hocker / Pouf", en: "the pouffe", ru: "пуф" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+          { wort: { es: "la cama individual", de: "das Einzelbett", en: "the single bed", ru: "односпальная кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "la cama de matrimonio", de: "das Doppelbett", en: "the double bed", ru: "двуспальная кровать" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "la litera", de: "das Etagenbett", en: "the bunk bed", ru: "двухъярусная кровать" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la cama plegable", de: "das Klappbett", en: "the folding bed", ru: "раскладная кровать" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el canapé", de: "das Bett mit Bettkasten", en: "the ottoman bed", ru: "кровать с ящиком для хранения" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la cama articulada", de: "das verstellbare Bett", en: "the adjustable bed", ru: "регулируемая кровать" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la cuna", de: "das Babybett", en: "the cot", ru: "детская кроватка" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "la cama nido", de: "das Ausziehbett", en: "the trundle bed", ru: "кровать с выдвижным спальным местом" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la cama alta", de: "das Hochbett", en: "the loft bed", ru: "кровать-чердак" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
       },
       {
