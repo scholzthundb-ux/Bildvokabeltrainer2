@@ -1831,6 +1831,10 @@
       return !!getCurrentImageData().disableWordInLearnMode;
     }
 
+    function currentImageMutesFolderHotspotSpeech() {
+      return !!getCurrentImageData().muteFolderHotspotSpeech;
+    }
+
     function getDisplayedImageData() {
       if (!activeZoomHotspot) {
         return getCurrentImageData();
@@ -2273,7 +2277,9 @@
           timer = null;
 
           showLabel(h);
-          speakWord(h.wort);
+          if (!currentImageMutesFolderHotspotSpeech()) {
+            speakWord(h.wort);
+          }
 
           timer = setTimeout(() => {
             openNestedFolder(h.openFolderKey, h);

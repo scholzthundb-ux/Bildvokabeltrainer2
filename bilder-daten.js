@@ -684,6 +684,7 @@ window.APP_FOLDERS = {
         title: "Las habitaciones – Bild 1",
         file: "Haus8.png",
         disableWordInLearnMode: true,
+        muteFolderHotspotSpeech: true,
         hotspots: [
           { wort: { es: "el desván", de: "der Dachboden", en: "the loft", ru: "чердак" }, clickX: 50, clickY: 16.5, labelX: 50, labelY: 12, areaW: 47, areaH: 18, openFolderKey: "desvan", openDelay: 900 },
           { wort: { es: "la habitación infantil", de: "das Kinderzimmer", en: "the children's room", ru: "детская комната" }, clickX: 34.2, clickY: 33.5, labelX: 28, labelY: 38, areaW: 28, areaH: 17, openFolderKey: "cuartoNinos", openDelay: 900 },
@@ -709,6 +710,7 @@ window.APP_FOLDERS = {
         title: "El salón – Bild 1",
         file: "salon1.png",
         openLabel: { wort: { es: "el salón", de: "das Wohnzimmer", en: "the living room", ru: "гостиная" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 14.5, clickY: 31.5, labelX: 17.5, labelY: 22.0, areaW: 16, areaH: 30 },
           { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 28.0, clickY: 34.0, labelX: 33.0, labelY: 26.0, areaW: 8, areaH: 38 },
@@ -825,6 +827,7 @@ window.APP_FOLDERS = {
         title: "El dormitorio – Bild 1",
         file: "dormitorio1.png",
         openLabel: { wort: { es: "el dormitorio", de: "das Schlafzimmer", en: "the bedroom", ru: "спальня" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 15.0, clickY: 27.0, labelX: 20.5, labelY: 22.0, areaW: 21, areaH: 34 },
           { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 28.0, clickY: 29.0, labelX: 35.0, labelY: 22.0, areaW: 12, areaH: 40 },
@@ -942,6 +945,7 @@ window.APP_FOLDERS = {
         title: "El trastero – Bild 1",
         file: "trastero1.png",
         openLabel: { wort: { es: "el trastero", de: "der Abstellraum", en: "the storage room", ru: "кладовка" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la caja", de: "der Karton", en: "the cardboard box", ru: "картонная коробка" }, clickX: 23.0, clickY: 16.0, labelX: 26.0, labelY: 12.0, areaW: 19, areaH: 12 },
           { wort: { es: "la caja de plástico", de: "die Plastikbox", en: "the plastic box", ru: "пластиковый контейнер" }, clickX: 47.0, clickY: 17.0, labelX: 52.5, labelY: 13.0, areaW: 20, areaH: 12 },
@@ -967,6 +971,7 @@ window.APP_FOLDERS = {
         title: "La cocina – Bild 1",
         file: "cocina1.png",
         openLabel: { wort: { es: "la cocina", de: "die Küche", en: "the kitchen", ru: "кухня" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la nevera", de: "der Kühlschrank", en: "the fridge", ru: "холодильник" }, clickX: 13.5, clickY: 35.0, labelX: 21.0, labelY: 26.5, areaW: 18, areaH: 28 },
           { wort: { es: "el congelador", de: "der Gefrierschrank", en: "the freezer", ru: "морозильник" }, clickX: 13.5, clickY: 58.0, labelX: 22.5, labelY: 53.5, areaW: 16, areaH: 16 },
@@ -1259,6 +1264,7 @@ window.APP_FOLDERS = {
         title: "El desván – Bild 1",
         file: "desvan1.png",
         openLabel: { wort: { es: "el desván", de: "der Dachboden", en: "the loft", ru: "чердак" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "las vigas de madera", de: "die Holzbalken", en: "the wooden beams", ru: "деревянные балки" }, clickX: 36.5, clickY: 9.3, labelX: 39, labelY: 6.4, areaW: 52, areaH: 9 },
           { wort: { es: "la telaraña", de: "das Spinnennetz", en: "the cobweb", ru: "паутина" }, clickX: 72.8, clickY: 12.3, labelX: 68, labelY: 9.8, areaW: 18, areaH: 7 },
@@ -1335,6 +1341,7 @@ window.APP_FOLDERS = {
         title: "El pasillo – Bild 1",
         file: "pasillo1.png",
         openLabel: { wort: { es: "el pasillo", de: "der Flur", en: "the hallway", ru: "прихожая" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "el espejo", de: "der Spiegel", en: "the mirror", ru: "зеркало" }, clickX: 11.5, clickY: 27.5, labelX: 19.0, labelY: 20.0, areaW: 14, areaH: 36 },
           { wort: { es: "las llaves", de: "die Schlüssel (Pl.)", en: "the keys", ru: "ключи" }, clickX: 16.5, clickY: 64.0, labelX: 24.5, labelY: 59.5, areaW: 15, areaH: 5.5 },
@@ -1456,6 +1463,7 @@ window.APP_FOLDERS = {
         title: "El baño – Bild 1",
         file: "bano1.png",
         openLabel: { wort: { es: "el baño", de: "das Badezimmer", en: "the bathroom", ru: "ванная комната" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 6.0, clickY: 18.0, labelX: 15, labelY: 11, areaW: 9, areaH: 26 },
           { wort: { es: "la cortina de ducha", de: "der Duschvorhang", en: "the shower curtain", ru: "занавеска для душа" }, clickX: 21.0, clickY: 32.5, labelX: 28, labelY: 20, areaW: 11, areaH: 34 },
@@ -1660,6 +1668,7 @@ window.APP_FOLDERS = {
         title: "El lavadero – Bild 1",
         file: "lavadero1.png",
         openLabel: { wort: { es: "el lavadero", de: "die Waschküche", en: "the utility room", ru: "прачечная" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la secadora", de: "der Trockner", en: "the tumble dryer", ru: "сушильная машина" }, clickX: 14.5, clickY: 38.0, labelX: 20.5, labelY: 31.5, areaW: 21, areaH: 23 },
           { wort: { es: "la lavadora", de: "die Waschmaschine", en: "the washing machine", ru: "стиральная машина" }, clickX: 15.5, clickY: 66.5, labelX: 19.5, labelY: 63.5, areaW: 24, areaH: 24 },
@@ -1742,6 +1751,7 @@ window.APP_FOLDERS = {
         title: "El despacho – Bild 1",
         file: "despacho1.png",
         openLabel: { wort: { es: "el despacho", de: "das Arbeitszimmer", en: "the study", ru: "кабинет" }, labelX: 50, labelY: 9 },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "la lámpara de escritorio", de: "die Schreibtischlampe", en: "the desk lamp", ru: "настольная лампа" }, clickX: 23.0, clickY: 36.0, labelX: 31.5, labelY: 32.5, areaW: 16, areaH: 22 },
           { wort: { es: "el tablón de anuncios", de: "die Pinnwand", en: "the noticeboard", ru: "доска объявлений" }, clickX: 43.5, clickY: 19.5, labelX: 52.0, labelY: 15.0, areaW: 26, areaH: 20 },
