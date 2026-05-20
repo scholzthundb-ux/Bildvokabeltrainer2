@@ -1277,6 +1277,7 @@
     let repeatQueue = [];
     let recentQuestions = [];
     let folderNavigationStack = [];
+    let silentReturnFolderKey = null;
     let currentLabelHotspot = null;
     let currentLabelIsPersistent = false;
     let labelHideTimer = null;
@@ -1837,7 +1838,7 @@
     }
 
     function currentImageMutesFolderHotspotSpeech() {
-      return !!getCurrentImageData().muteFolderHotspotSpeech;
+      return !!getCurrentImageData().muteFolderHotspotSpeech || silentReturnFolderKey === currentFolderKey;
     }
 
     function getDisplayedImageData() {
@@ -1885,6 +1886,7 @@
     }
 
     function openFolder(folderKey) {
+      silentReturnFolderKey = null;
       folderNavigationStack = [];
       currentFolderKey = folderKey;
       currentImageIndex = 0;
@@ -1894,6 +1896,7 @@
     function openNestedFolder(folderKey, triggerHotspot = null) {
       clearTimeout(timer);
       timer = null;
+      silentReturnFolderKey = null;
 
       folderNavigationStack.push({
         folderKey: currentFolderKey,
@@ -1917,6 +1920,7 @@
 
       if (folderNavigationStack.length > 0) {
         const previousView = folderNavigationStack.pop();
+        silentReturnFolderKey = previousView.folderKey === "cuartoNinos" ? previousView.folderKey : null;
         currentFolderKey = previousView.folderKey;
         currentImageIndex = previousView.imageIndex;
         openImage(previousView.imageIndex);
@@ -1937,6 +1941,7 @@
       feedback.className = "";
 
       stopSpeech();
+      silentReturnFolderKey = null;
       await exitFullscreen();
     }
 
@@ -2359,7 +2364,7 @@
 
       showLabel(imageData.openLabel, { persistent: true });
 
-      if (imageData.speakOpenLabel) {
+      if (imageData.speakOpenLabel && silentReturnFolderKey !== currentFolderKey) {
         speakWord(imageData.openLabel.wort);
       }
     }
