@@ -835,10 +835,10 @@ window.APP_FOLDERS = {
           { wort: { es: "el aparador", de: "das Sideboard", en: "the sideboard", ru: "сервант" }, clickX: 18.5, clickY: 50.5, labelX: 26.0, labelY: 46.5, areaW: 23, areaH: 10 },
           { wort: { es: "el jarrón con flores", de: "die Blumenvase", en: "the vase with flowers", ru: "ваза с цветами" }, clickX: 21.0, clickY: 42.0, labelX: 27.0, labelY: 38.0, areaW: 12, areaH: 14 },
           { wort: { es: "la botella", de: "die Flasche", en: "the bottle", ru: "бутылка" }, clickX: 50.5, clickY: 52.0, labelX: 57.0, labelY: 47.0, areaW: 7, areaH: 11 },
-          { wort: { es: "el plato", de: "der Teller", en: "the plate", ru: "тарелка" }, clickX: 39.5, clickY: 67.0, labelX: 46.5, labelY: 62.0, areaW: 11, areaH: 8 },
-          { wort: { es: "el vaso", de: "das Glas", en: "the glass", ru: "стакан" }, clickX: 60.0, clickY: 69.5, labelX: 67.0, labelY: 64.5, areaW: 8, areaH: 10 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 77.0, clickY: 79.0, labelX: 84.0, labelY: 74.0, areaW: 20, areaH: 31 },
-          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 52.0, clickY: 61.0, labelX: 59.0, labelY: 56.0, areaW: 14, areaH: 19 },
+          { wort: { es: "el plato", de: "der Teller", en: "the plate", ru: "тарелка" }, clickX: 39.5, clickY: 59.0, labelX: 46.5, labelY: 54.0, areaW: 11, areaH: 8 },
+          { wort: { es: "el vaso", de: "das Glas", en: "the glass", ru: "стакан" }, clickX: 61.5, clickY: 66.5, labelX: 68.0, labelY: 61.5, areaW: 5, areaH: 7 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 77.0, clickY: 73.0, labelX: 84.0, labelY: 68.0, areaW: 20, areaH: 25 },
+          { wort: { es: "la silla", de: "der Stuhl", en: "the chair", ru: "стул" }, clickX: 14.0, clickY: 80.0, labelX: 21.0, labelY: 75.0, areaW: 18, areaH: 26 },
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 65.0, clickY: 95.0, labelX: 60.0, labelY: 89.0, areaW: 60, areaH: 11 }
         ]
       }
