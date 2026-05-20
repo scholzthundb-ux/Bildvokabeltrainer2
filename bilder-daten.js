@@ -931,6 +931,21 @@ window.APP_FOLDERS = {
           { wort: { es: "la alfombra", de: "der Teppich", en: "the rug", ru: "ковёр" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
           { wort: { es: "el reloj de pared", de: "die Wanduhr", en: "the wall clock", ru: "настенные часы" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
         ]
+      },
+      {
+        title: "El dormitorio – Bild 8",
+        file: "dormitorio8.png",
+        hotspots: [
+          { wort: { es: "la manta", de: "die Decke", en: "the blanket", ru: "одеяло" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el nórdico", de: "das Federbett / die Daunendecke", en: "the duvet", ru: "пуховое одеяло" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el edredón", de: "die Bettdecke", en: "the quilt", ru: "стёганое одеяло" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la almohada", de: "das Kopfkissen", en: "the pillow", ru: "подушка" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "el cojín", de: "das Kissen", en: "the cushion", ru: "декоративная подушка" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "la colcha", de: "die Tagesdecke", en: "the bedspread", ru: "покрывало" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la ropa de cama", de: "die Bettwäsche", en: "the bedding", ru: "постельное бельё" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "la funda nórdica", de: "der Bettbezug", en: "the duvet cover", ru: "пододеяльник" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la funda de almohada", de: "der Kissenbezug", en: "the pillowcase", ru: "наволочка" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+        ]
       }
     ]
   },
