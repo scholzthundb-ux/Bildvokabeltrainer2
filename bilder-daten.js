@@ -844,6 +844,8 @@ window.APP_FOLDERS = {
         title: "El dormitorio – Bild 2",
         file: "dormitorio6.png",
         openLabel: { wort: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" }, labelX: 50, labelY: 9 },
+        specialTopLabel: { es: "la cama", de: "das Bett", en: "the bed", ru: "кровать" },
+        speakOpenLabel: true,
         hotspots: [
           { wort: { es: "el cabecero", de: "das Kopfteil des Bettes", en: "the headboard", ru: "изголовье кровати" }, clickX: 39.5, clickY: 11.5, labelX: 53.0, labelY: 8.8, areaW: 44, areaH: 11 },
           { wort: { es: "la almohada", de: "das Kopfkissen", en: "the pillow", ru: "подушка" }, clickX: 35.0, clickY: 23.0, labelX: 52.0, labelY: 20.0, areaW: 36, areaH: 14 },
