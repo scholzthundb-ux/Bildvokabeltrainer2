@@ -1267,6 +1267,8 @@
     let isMuted = false;
     let quizSpeechEnabled = false;
     let currentLanguage = loadSavedLanguage();
+    let speechAudio = null;
+    let speechRequestId = 0;
 
     let quizQueue = [];
     let repeatQueue = [];
@@ -1287,6 +1289,7 @@
     const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN-UK", "en-us": "EN-US", ru: "RU" };
     const LANGUAGE_HTML_CODES = { es: "es", de: "de", en: "en-GB", "en-us": "en-US", ru: "ru" };
     const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-GB", "en-us": "en-US", ru: "ru-RU" };
+    const LOCAL_TTS_ENDPOINT = "http://127.0.0.1:8124/tts";
     const UI_STRINGS = {
       es: {
         appTitle: "Entrenador de vocabulario",
@@ -2724,6 +2727,19 @@
     }
 
     function stopSpeech() {
+      speechRequestId += 1;
+
+      if (speechAudio) {
+        try {
+          speechAudio.pause();
+          speechAudio.currentTime = 0;
+          speechAudio.src = "";
+        } catch (err) {
+          // Audio kann bereits freigegeben sein.
+        }
+        speechAudio = null;
+      }
+
       if ("speechSynthesis" in window) {
         speechSynthesis.cancel();
       }
@@ -2734,11 +2750,52 @@
       return SPEECH_LANG_CODES[resolvedLanguage] ?? SPEECH_LANG_CODES.es;
     }
 
+    async function tryPlayLocalTts(text, lang) {
+      const requestId = ++speechRequestId;
+      const audioUrl = `${LOCAL_TTS_ENDPOINT}?text=${encodeURIComponent(text)}&lang=${encodeURIComponent(lang)}`;
+      const audio = new Audio(audioUrl);
+      audio.preload = "auto";
+
+      speechAudio = audio;
+
+      await new Promise((resolve, reject) => {
+        const cleanup = () => {
+          audio.oncanplaythrough = null;
+          audio.onerror = null;
+        };
+
+        audio.oncanplaythrough = () => {
+          cleanup();
+          resolve();
+        };
+
+        audio.onerror = () => {
+          cleanup();
+          reject(new Error("audio-load-failed"));
+        };
+
+        audio.load();
+      });
+
+      if (requestId !== speechRequestId) return true;
+
+      await audio.play();
+      return true;
+    }
+
     function speakWord(entryOrText) {
       if (isMuted) return;
       const resolvedEntry = resolveLocalizedEntry(entryOrText);
 
-      if (!resolvedEntry.text || !("speechSynthesis" in window)) return;
+      if (!resolvedEntry.text) {
+        console.log("TTS: kein Text aufgelöst");
+        return;
+      }
+
+      if (!("speechSynthesis" in window)) {
+        console.log("TTS: speechSynthesis nicht verfügbar");
+        return;
+      }
 
       const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
 
@@ -2746,16 +2803,29 @@
       utterance.rate = 0.9;
       utterance.pitch = 1.0;
       utterance.volume = 1.0;
+      utterance.onstart = () => console.log(`TTS start: ${utterance.lang} :: ${resolvedEntry.text}`);
+      utterance.onend = () => console.log(`TTS end: ${resolvedEntry.text}`);
+      utterance.onerror = (event) => console.log(`TTS error: ${event.error || "unbekannt"}`);
 
-      try {
-        if (speechSynthesis.speaking || speechSynthesis.pending) {
-          speechSynthesis.cancel();
-        }
-      } catch (err) {
-        // Manche Browser reagieren hier empfindlich; dann einfach direkt sprechen.
-      }
+      console.log(`TTS speak angefragt: ${utterance.lang} :: ${resolvedEntry.text}`);
 
-      speechSynthesis.speak(utterance);
+      tryPlayLocalTts(resolvedEntry.text, utterance.lang)
+        .then(() => {
+          console.log(`TTS lokal abgespielt: ${utterance.lang} :: ${resolvedEntry.text}`);
+        })
+        .catch(() => {
+          console.log(`TTS lokal nicht verfügbar, Fallback auf Browser: ${utterance.lang} :: ${resolvedEntry.text}`);
+
+          try {
+            if (speechSynthesis.speaking || speechSynthesis.pending) {
+              speechSynthesis.cancel();
+            }
+          } catch (err) {
+            // Manche Browser reagieren hier empfindlich; dann einfach direkt sprechen.
+          }
+
+          speechSynthesis.speak(utterance);
+        });
     }
 
     function speakCurrentQuestion() {
