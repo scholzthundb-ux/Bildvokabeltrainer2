@@ -1277,7 +1277,7 @@
     let repeatQueue = [];
     let recentQuestions = [];
     let folderNavigationStack = [];
-    let silentReturnFolderKey = null;
+    let silentAfterDoubleClick = false;
     let currentLabelHotspot = null;
     let currentLabelIsPersistent = false;
     let labelHideTimer = null;
@@ -1523,7 +1523,7 @@
         return;
       }
 
-      backToStart();
+      backToStart({ silent: true });
     });
 
     document.addEventListener("fullscreenchange", handleViewportChange);
@@ -1838,7 +1838,7 @@
     }
 
     function currentImageMutesFolderHotspotSpeech() {
-      return !!getCurrentImageData().muteFolderHotspotSpeech || silentReturnFolderKey === currentFolderKey;
+      return !!getCurrentImageData().muteFolderHotspotSpeech || silentAfterDoubleClick;
     }
 
     function getDisplayedImageData() {
@@ -1886,7 +1886,7 @@
     }
 
     function openFolder(folderKey) {
-      silentReturnFolderKey = null;
+      silentAfterDoubleClick = false;
       folderNavigationStack = [];
       currentFolderKey = folderKey;
       currentImageIndex = 0;
@@ -1896,7 +1896,7 @@
     function openNestedFolder(folderKey, triggerHotspot = null) {
       clearTimeout(timer);
       timer = null;
-      silentReturnFolderKey = null;
+      silentAfterDoubleClick = false;
 
       folderNavigationStack.push({
         folderKey: currentFolderKey,
@@ -1912,7 +1912,9 @@
       openImage(0, { preservePendingReveal: !!triggerHotspot });
     }
 
-    async function backToStart() {
+    async function backToStart(options = {}) {
+      const silent = !!options.silent;
+
       if (isZoomOpen()) {
         closeZoomImage();
         return;
@@ -1920,7 +1922,7 @@
 
       if (folderNavigationStack.length > 0) {
         const previousView = folderNavigationStack.pop();
-        silentReturnFolderKey = previousView.folderKey === "cuartoNinos" ? previousView.folderKey : null;
+        silentAfterDoubleClick = silent;
         currentFolderKey = previousView.folderKey;
         currentImageIndex = previousView.imageIndex;
         openImage(previousView.imageIndex);
@@ -1941,7 +1943,7 @@
       feedback.className = "";
 
       stopSpeech();
-      silentReturnFolderKey = null;
+      silentAfterDoubleClick = false;
       await exitFullscreen();
     }
 
@@ -2364,7 +2366,7 @@
 
       showLabel(imageData.openLabel, { persistent: true });
 
-      if (imageData.speakOpenLabel && silentReturnFolderKey !== currentFolderKey) {
+      if (imageData.speakOpenLabel && !silentAfterDoubleClick) {
         speakWord(imageData.openLabel.wort);
       }
     }
