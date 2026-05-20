@@ -83,9 +83,11 @@
       min-height: 100vh;
       min-height: 100dvh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       padding: clamp(18px, 4vw, 32px);
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
     }
 
     #app {
@@ -101,6 +103,7 @@
       box-shadow: var(--shadow-soft);
       border: 1px solid var(--panel-border);
       backdrop-filter: blur(12px);
+      margin: 0 auto;
     }
 
     .start-icon {
@@ -134,6 +137,39 @@
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 12px;
       width: 100%;
+    }
+
+    .menu-folder-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .menu-folder-group > .ui-btn {
+      width: 100%;
+    }
+
+    .submenu-actions {
+      display: grid;
+      gap: 8px;
+      width: 100%;
+      padding-left: 18px;
+    }
+
+    .submenu-folder-open-btn {
+      width: 100%;
+      justify-self: stretch;
+      font-size: clamp(0.95rem, 2.1vw, 1.18rem);
+      padding: 12px 16px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #e5ebf7 0%, #d6dfef 100%);
+      color: #26374d;
+      box-shadow: 0 8px 18px rgba(31, 42, 55, 0.12);
+    }
+
+    .submenu-folder-open-btn:hover {
+      filter: brightness(1.02);
     }
 
     .menu-utility-row {
@@ -900,7 +936,10 @@
         <button class="ui-btn folder-open-btn" data-folder="ropa">La ropa</button>
         <button class="ui-btn folder-open-btn" data-folder="rutina">Rutina diaria</button>
         <button class="ui-btn folder-open-btn" data-folder="casa">La casa</button>
-        <button class="ui-btn folder-open-btn" data-folder="habitaciones">Las habitaciones</button>
+        <div class="menu-folder-group">
+          <button class="ui-btn folder-open-btn" data-folder="habitaciones">Las habitaciones</button>
+          <div class="submenu-actions" id="habitacionesSubmenu"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -1162,6 +1201,7 @@
     const menuTitle = document.getElementById("menuTitle");
     const menuSubtitle = document.getElementById("menuSubtitle");
     const menuLanguageBtn = document.getElementById("menuLanguageBtn");
+    const habitacionesSubmenu = document.getElementById("habitacionesSubmenu");
     const appLanguageBtn = document.getElementById("appLanguageBtn");
     const hotspotsLayer = document.getElementById("hotspots");
     const specialImageLabel = document.getElementById("specialImageLabel");
@@ -1347,6 +1387,34 @@
       return resolveLocalizedText(folders[folderKey]?.title ?? "");
     }
 
+    function getHabitacionesSubfolderEntries() {
+      const firstImage = folders.habitaciones?.images?.[0];
+      const uniqueEntries = new Map();
+
+      (firstImage?.hotspots || []).forEach((hotspot) => {
+        if (!hotspot.openFolderKey || uniqueEntries.has(hotspot.openFolderKey)) return;
+        uniqueEntries.set(hotspot.openFolderKey, hotspot.wort ?? folders[hotspot.openFolderKey]?.title ?? hotspot.openFolderKey);
+      });
+
+      return Array.from(uniqueEntries.entries()).map(([folderKey, label]) => ({ folderKey, label }));
+    }
+
+    function renderHabitacionesSubmenu() {
+      if (!habitacionesSubmenu) return;
+
+      habitacionesSubmenu.innerHTML = "";
+
+      getHabitacionesSubfolderEntries().forEach(({ folderKey, label }) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "ui-btn submenu-folder-open-btn";
+        button.dataset.folder = folderKey;
+        button.textContent = resolveLocalizedText(label);
+        button.addEventListener("click", () => openFolder(folderKey));
+        habitacionesSubmenu.appendChild(button);
+      });
+    }
+
     function getLanguageButtonText() {
       return `🌐 ${LANGUAGE_LABELS[currentLanguage]}`;
     }
@@ -1380,6 +1448,8 @@
       document.querySelectorAll(".folder-open-btn").forEach((btn) => {
         btn.textContent = getFolderDisplayTitle(btn.dataset.folder);
       });
+
+      renderHabitacionesSubmenu();
     }
 
     function updateStaticUiTexts() {
