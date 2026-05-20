@@ -842,6 +842,21 @@ window.APP_FOLDERS = {
       },
       {
         title: "El dormitorio – Bild 2",
+        file: "dormitorio4.png",
+        hotspots: [
+          { wort: { es: "la puerta", de: "die Tür", en: "the door", ru: "дверь" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
+          { wort: { es: "el techo", de: "die Decke", en: "the ceiling", ru: "потолок" }, clickX: 49.9, clickY: 17.7, labelX: 50, labelY: 9.5, areaW: 31.4, areaH: 33.5 },
+          { wort: { es: "el techo inclinado", de: "die Dachschräge", en: "the sloping ceiling", ru: "скошенный потолок" }, clickX: 82.2, clickY: 17.7, labelX: 76, labelY: 9.5, areaW: 32.6, areaH: 33.5 },
+          { wort: { es: "la ventana", de: "das Fenster", en: "the window", ru: "окно" }, clickX: 17.6, clickY: 50.8, labelX: 24, labelY: 42, areaW: 32.4, areaH: 32.2 },
+          { wort: { es: "la ventana del tejado", de: "das Dachfenster", en: "the roof window", ru: "мансардное окно" }, clickX: 49.9, clickY: 50.8, labelX: 50, labelY: 42, areaW: 31.4, areaH: 32.2 },
+          { wort: { es: "el alféizar", de: "die Fensterbank", en: "the windowsill", ru: "подоконник" }, clickX: 82.2, clickY: 50.8, labelX: 76, labelY: 42, areaW: 32.6, areaH: 32.2 },
+          { wort: { es: "la persiana", de: "der Rollladen", en: "the roller shutter", ru: "рольставня" }, clickX: 17.6, clickY: 83.1, labelX: 24, labelY: 75, areaW: 32.4, areaH: 31.8 },
+          { wort: { es: "la veneciana", de: "die Jalousie", en: "the Venetian blind", ru: "жалюзи" }, clickX: 49.9, clickY: 83.1, labelX: 50, labelY: 75, areaW: 31.4, areaH: 31.8 },
+          { wort: { es: "la cortina", de: "der Vorhang", en: "the curtain", ru: "штора" }, clickX: 82.2, clickY: 83.1, labelX: 76, labelY: 75, areaW: 32.6, areaH: 31.8 }
+        ]
+      },
+      {
+        title: "El dormitorio – Bild 3",
         file: "dormitorio2.png",
         hotspots: [
           { wort: { es: "la cama individual", de: "das Einzelbett", en: "the single bed", ru: "односпальная кровать" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
@@ -856,7 +871,7 @@ window.APP_FOLDERS = {
         ]
       },
       {
-        title: "El dormitorio – Bild 3",
+        title: "El dormitorio – Bild 4",
         file: "dormitorio3.png",
         hotspots: [
           { wort: { es: "el armario", de: "der Kleiderschrank", en: "the wardrobe", ru: "платяной шкаф" }, clickX: 17.6, clickY: 17.7, labelX: 24, labelY: 9.5, areaW: 32.4, areaH: 33.5 },
