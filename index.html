@@ -363,6 +363,10 @@
       background: linear-gradient(180deg, #ffe7c7 0%, #ffd8a6 100%);
     }
 
+    .submenu-folder-open-btn[data-folder="comedor"] {
+      background: linear-gradient(180deg, #f7e7cb 0%, #edd5a7 100%);
+    }
+
     .submenu-folder-open-btn[data-folder="cocina"] {
       background: linear-gradient(180deg, #ffe4d8 0%, #ffd2be 100%);
     }
@@ -1448,6 +1452,7 @@
       rutina: { es: "Rutina diaria", de: "Tagesablauf", en: "Daily routine", ru: "Распорядок дня" },
       casa: { es: "La casa", de: "Das Haus", en: "The house", ru: "Дом" },
       habitaciones: { es: "Las habitaciones", de: "Die Zimmer", en: "The rooms", ru: "Комнаты" },
+      comedor: { es: "El comedor", de: "Das Esszimmer", en: "The dining room", ru: "Столовая" },
       pasillo: { es: "El pasillo", de: "Der Flur", en: "The hallway", ru: "Прихожая" }
     };
 
@@ -1655,13 +1660,39 @@
     function getHabitacionesSubfolderEntries() {
       const firstImage = folders.habitaciones?.images?.[0];
       const uniqueEntries = new Map();
+      const preferredOrder = [
+        "desvan",
+        "cuartoNinos",
+        "dormitorio",
+        "salon",
+        "comedor",
+        "cocina",
+        "bano",
+        "pasillo",
+        "despacho",
+        "lavadero",
+        "sotano",
+        "trastero"
+      ];
 
       (firstImage?.hotspots || []).forEach((hotspot) => {
         if (!hotspot.openFolderKey || uniqueEntries.has(hotspot.openFolderKey)) return;
         uniqueEntries.set(hotspot.openFolderKey, hotspot.wort ?? folders[hotspot.openFolderKey]?.title ?? hotspot.openFolderKey);
       });
 
-      return Array.from(uniqueEntries.entries()).map(([folderKey, label]) => ({ folderKey, label }));
+      const orderedEntries = [];
+
+      preferredOrder.forEach((folderKey) => {
+        if (!uniqueEntries.has(folderKey)) return;
+        orderedEntries.push({ folderKey, label: uniqueEntries.get(folderKey) });
+        uniqueEntries.delete(folderKey);
+      });
+
+      uniqueEntries.forEach((label, folderKey) => {
+        orderedEntries.push({ folderKey, label });
+      });
+
+      return orderedEntries;
     }
 
     function toggleHabitacionesSubmenu() {
