@@ -3041,12 +3041,6 @@
 
       console.log(`TTS speak angefragt: ${utterance.lang} :: ${resolvedEntry.text}`);
 
-      if (IS_APPLE_TOUCH_DEVICE) {
-        console.log(`TTS Browser auf Apple-Touch: ${utterance.lang} :: ${resolvedEntry.text}`);
-        speakViaBrowserTts(utterance);
-        return;
-      }
-
       tryPlayLocalTts(resolvedEntry.text, utterance.lang)
         .then(() => {
           console.log(`TTS lokal abgespielt: ${utterance.lang} :: ${resolvedEntry.text}`);
