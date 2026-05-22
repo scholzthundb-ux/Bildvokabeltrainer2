@@ -1282,6 +1282,7 @@
     let recentQuestions = [];
     let folderNavigationStack = [];
     let silentAfterDoubleClick = false;
+    let pendingLearnHotspotTimer = null;
     let currentLabelHotspot = null;
     let currentLabelIsPersistent = false;
     let labelHideTimer = null;
@@ -1292,6 +1293,7 @@
 
     const MIN_REPEAT_DELAY = 3;
     const LABEL_AUTO_HIDE_MS = 5000;
+    const HOTSPOT_DOUBLE_CLICK_DELAY_MS = 260;
     const ZOOM_REVEAL_DURATION = 1850;
     const LANGUAGE_ORDER = ["es", "de", "en", "en-us", "ru"];
     const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN-UK", "en-us": "EN-US", ru: "RU" };
@@ -1536,6 +1538,12 @@
 
     bildContainer.addEventListener("dblclick", (e) => {
       e.preventDefault();
+      clearPendingLearnHotspotAction();
+      clearTimeout(timer);
+      timer = null;
+      stopSpeech();
+      hideLabel();
+      hideSpecialImageLabel();
 
       if (isZoomOpen()) {
         closeZoomImage();
@@ -1917,6 +1925,11 @@
       updateMuteButton();
     }
 
+    function clearPendingLearnHotspotAction() {
+      clearTimeout(pendingLearnHotspotTimer);
+      pendingLearnHotspotTimer = null;
+    }
+
     function updateCurrentTitle() {
       const total = folders[currentFolderKey].images.length;
       currentImageTitle.textContent = `${getFolderDisplayTitle(currentFolderKey)} · ${getUi("image")} ${currentImageIndex + 1} ${getUi("of")} ${total}`;
@@ -1931,6 +1944,7 @@
     }
 
     function openFolder(folderKey) {
+      clearPendingLearnHotspotAction();
       silentAfterDoubleClick = false;
       folderNavigationStack = [];
       currentFolderKey = folderKey;
@@ -1939,6 +1953,7 @@
     }
 
     function openNestedFolder(folderKey, triggerHotspot = null) {
+      clearPendingLearnHotspotAction();
       clearTimeout(timer);
       timer = null;
       silentAfterDoubleClick = false;
@@ -1959,6 +1974,7 @@
 
     async function backToStart(options = {}) {
       const silent = !!options.silent;
+      clearPendingLearnHotspotAction();
 
       if (isZoomOpen()) {
         closeZoomImage();
@@ -1994,6 +2010,7 @@
 
     async function openImage(index, options = {}) {
       const preservePendingReveal = !!options.preservePendingReveal;
+      clearPendingLearnHotspotAction();
 
       currentImageIndex = index;
       activeZoomHotspot = null;
@@ -2297,6 +2314,7 @@
 
     function setMode(neu) {
       mode = neu;
+      clearPendingLearnHotspotAction();
 
       clearTimeout(timer);
       timer = null;
@@ -2327,44 +2345,52 @@
       }
     }
 
-    function onHotspotClick(h, el) {
-      if (mode === "lernen") {
-        if (h.openFolderKey) {
-          clearTimeout(timer);
-          timer = null;
+    function runLearnHotspotClick(h) {
+      if (h.openFolderKey) {
+        clearTimeout(timer);
+        timer = null;
 
-          showLabel(h);
-          if (!currentImageMutesFolderHotspotSpeech()) {
-            speakWord(h.wort);
-          }
-
-          timer = setTimeout(() => {
-            openNestedFolder(h.openFolderKey, h);
-          }, h.openDelay ?? 650);
-          return;
-        }
-
-        if (currentImageDisablesWordsInLearnMode()) {
-          stopSpeech();
-          hideLabel();
-          return;
-        }
-
-        if (h.zoomImage && !isZoomOpen()) {
-          clearTimeout(timer);
-          timer = null;
-
-          showLabel(h);
+        showLabel(h);
+        if (!currentImageMutesFolderHotspotSpeech()) {
           speakWord(h.wort);
-
-          timer = setTimeout(() => {
-            openZoomImage(h);
-          }, 650);
-          return;
         }
+
+        timer = setTimeout(() => {
+          openNestedFolder(h.openFolderKey, h);
+        }, h.openDelay ?? 650);
+        return;
+      }
+
+      if (currentImageDisablesWordsInLearnMode()) {
+        stopSpeech();
+        hideLabel();
+        return;
+      }
+
+      if (h.zoomImage && !isZoomOpen()) {
+        clearTimeout(timer);
+        timer = null;
 
         showLabel(h);
         speakWord(h.wort);
+
+        timer = setTimeout(() => {
+          openZoomImage(h);
+        }, 650);
+        return;
+      }
+
+      showLabel(h);
+      speakWord(h.wort);
+    }
+
+    function onHotspotClick(h, el) {
+      if (mode === "lernen") {
+        clearPendingLearnHotspotAction();
+        pendingLearnHotspotTimer = setTimeout(() => {
+          pendingLearnHotspotTimer = null;
+          runLearnHotspotClick(h);
+        }, HOTSPOT_DOUBLE_CLICK_DELAY_MS);
         return;
       }
 
