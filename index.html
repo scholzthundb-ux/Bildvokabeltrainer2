@@ -1300,10 +1300,6 @@
     const LANGUAGE_HTML_CODES = { es: "es", de: "de", en: "en-GB", "en-us": "en-US", ru: "ru" };
     const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-GB", "en-us": "en-US", ru: "ru-RU" };
     const TTS_HELPER_PORT = "8124";
-    const APP_UA = navigator.userAgent || "";
-    const IS_APPLE_TOUCH_DEVICE =
-      /iPad|iPhone|iPod/i.test(APP_UA) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
     function getLocalTtsEndpoint() {
       if (window.location.protocol === "http:" || window.location.protocol === "https:") {
@@ -2901,12 +2897,6 @@
       utterance.onerror = (event) => console.log(`TTS error: ${event.error || "unbekannt"}`);
 
       console.log(`TTS speak angefragt: ${utterance.lang} :: ${resolvedEntry.text}`);
-
-      if (IS_APPLE_TOUCH_DEVICE) {
-        console.log(`TTS Browser direkt bevorzugt: ${utterance.lang} :: ${resolvedEntry.text}`);
-        speakViaBrowserTts(utterance);
-        return;
-      }
 
       tryPlayLocalTts(resolvedEntry.text, utterance.lang)
         .then(() => {
