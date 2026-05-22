@@ -1278,6 +1278,7 @@
     let speechSource = null;
     let speechRequestId = 0;
     let audioPrimed = false;
+    let availableSpeechVoices = [];
 
     let quizQueue = [];
     let repeatQueue = [];
@@ -1316,6 +1317,15 @@
     }
 
     const LOCAL_TTS_ENDPOINT = getLocalTtsEndpoint();
+
+    function refreshSpeechVoices() {
+      if (!("speechSynthesis" in window) || typeof speechSynthesis.getVoices !== "function") {
+        availableSpeechVoices = [];
+        return;
+      }
+
+      availableSpeechVoices = speechSynthesis.getVoices() || [];
+    }
     const UI_STRINGS = {
       es: {
         appTitle: "Entrenador de vocabulario",
@@ -2944,6 +2954,30 @@
       speechSynthesis.speak(utterance);
     }
 
+    function pickSpeechVoice(langCode) {
+      const normalizedLangCode = (langCode || "").toLowerCase();
+      const baseLangCode = normalizedLangCode.split("-")[0];
+
+      if (!availableSpeechVoices.length) {
+        refreshSpeechVoices();
+      }
+
+      const exactVoice = availableSpeechVoices.find((voice) =>
+        (voice.lang || "").toLowerCase() === normalizedLangCode
+      );
+
+      if (exactVoice) return exactVoice;
+
+      const baseVoice = availableSpeechVoices.find((voice) =>
+        (voice.lang || "").toLowerCase().startsWith(`${baseLangCode}-`) ||
+        (voice.lang || "").toLowerCase() === baseLangCode
+      );
+
+      if (baseVoice) return baseVoice;
+
+      return null;
+    }
+
     function speakWord(entryOrText) {
       if (isMuted) return;
       primeAudioPlayback();
@@ -2962,6 +2996,10 @@
       const utterance = new SpeechSynthesisUtterance(resolvedEntry.text.replace(/\n/g, " "));
 
       utterance.lang = getSpeechLangCodeForEntry(entryOrText);
+      const preferredVoice = pickSpeechVoice(utterance.lang);
+      if (preferredVoice) {
+        utterance.voice = preferredVoice;
+      }
       utterance.rate = 0.9;
       utterance.pitch = 1.0;
       utterance.volume = 1.0;
@@ -2970,6 +3008,12 @@
       utterance.onerror = (event) => console.log(`TTS error: ${event.error || "unbekannt"}`);
 
       console.log(`TTS speak angefragt: ${utterance.lang} :: ${resolvedEntry.text}`);
+
+      if (IS_APPLE_TOUCH_DEVICE) {
+        console.log(`TTS Browser auf Apple-Touch: ${utterance.lang} :: ${resolvedEntry.text}`);
+        speakViaBrowserTts(utterance);
+        return;
+      }
 
       tryPlayLocalTts(resolvedEntry.text, utterance.lang)
         .then(() => {
@@ -3069,6 +3113,12 @@
     }
 
     window.addEventListener("resize", refreshDisplayedLayout);
+
+    if ("speechSynthesis" in window && "onvoiceschanged" in speechSynthesis) {
+      speechSynthesis.onvoiceschanged = refreshSpeechVoices;
+    }
+
+    refreshSpeechVoices();
 
     applyLanguage();
     updateImageNavButtons();
