@@ -1297,7 +1297,21 @@
     const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN-UK", "en-us": "EN-US", ru: "RU" };
     const LANGUAGE_HTML_CODES = { es: "es", de: "de", en: "en-GB", "en-us": "en-US", ru: "ru" };
     const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-GB", "en-us": "en-US", ru: "ru-RU" };
-    const LOCAL_TTS_ENDPOINT = "http://127.0.0.1:8124/tts";
+    const TTS_HELPER_PORT = "8124";
+    const APP_UA = navigator.userAgent || "";
+    const IS_APPLE_TOUCH_DEVICE =
+      /iPad|iPhone|iPod/i.test(APP_UA) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+    function getLocalTtsEndpoint() {
+      if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+        return `${window.location.protocol}//${window.location.hostname}:${TTS_HELPER_PORT}/tts`;
+      }
+
+      return `http://127.0.0.1:${TTS_HELPER_PORT}/tts`;
+    }
+
+    const LOCAL_TTS_ENDPOINT = getLocalTtsEndpoint();
     const UI_STRINGS = {
       es: {
         appTitle: "Entrenador de vocabulario",
@@ -2824,6 +2838,18 @@
       return true;
     }
 
+    function speakViaBrowserTts(utterance) {
+      try {
+        if (speechSynthesis.speaking || speechSynthesis.pending) {
+          speechSynthesis.cancel();
+        }
+      } catch (err) {
+        // Manche Browser reagieren hier empfindlich; dann einfach direkt sprechen.
+      }
+
+      speechSynthesis.speak(utterance);
+    }
+
     function speakWord(entryOrText) {
       if (isMuted) return;
       const resolvedEntry = resolveLocalizedEntry(entryOrText);
@@ -2850,22 +2876,19 @@
 
       console.log(`TTS speak angefragt: ${utterance.lang} :: ${resolvedEntry.text}`);
 
+      if (IS_APPLE_TOUCH_DEVICE) {
+        console.log(`TTS Browser direkt bevorzugt: ${utterance.lang} :: ${resolvedEntry.text}`);
+        speakViaBrowserTts(utterance);
+        return;
+      }
+
       tryPlayLocalTts(resolvedEntry.text, utterance.lang)
         .then(() => {
           console.log(`TTS lokal abgespielt: ${utterance.lang} :: ${resolvedEntry.text}`);
         })
         .catch(() => {
           console.log(`TTS lokal nicht verfügbar, Fallback auf Browser: ${utterance.lang} :: ${resolvedEntry.text}`);
-
-          try {
-            if (speechSynthesis.speaking || speechSynthesis.pending) {
-              speechSynthesis.cancel();
-            }
-          } catch (err) {
-            // Manche Browser reagieren hier empfindlich; dann einfach direkt sprechen.
-          }
-
-          speechSynthesis.speak(utterance);
+          speakViaBrowserTts(utterance);
         });
     }
 

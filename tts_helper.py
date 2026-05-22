@@ -10,7 +10,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
 PORT = 8124
 CACHE_DIR = Path(tempfile.gettempdir()) / "bildvokabeltrainer-tts-cache"
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
