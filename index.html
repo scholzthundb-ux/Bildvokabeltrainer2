@@ -1275,6 +1275,7 @@
     let quizSpeechEnabled = false;
     let currentLanguage = loadSavedLanguage();
     let speechAudio = null;
+    let speechSource = null;
     let speechRequestId = 0;
 
     let quizQueue = [];
@@ -1300,6 +1301,10 @@
     const LANGUAGE_HTML_CODES = { es: "es", de: "de", en: "en-GB", "en-us": "en-US", ru: "ru" };
     const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-GB", "en-us": "en-US", ru: "ru-RU" };
     const TTS_HELPER_PORT = "8124";
+    const APP_UA = navigator.userAgent || "";
+    const IS_APPLE_TOUCH_DEVICE =
+      /iPad|iPhone|iPod/i.test(APP_UA) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
 
     function getLocalTtsEndpoint() {
       if (window.location.protocol === "http:" || window.location.protocol === "https:") {
@@ -1524,6 +1529,7 @@
     appLanguageBtn.addEventListener("click", cycleLanguage);
 
     bildContainer.addEventListener("touchstart", (e) => {
+      ensureAudioContext();
       touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
 
@@ -2806,6 +2812,16 @@
     function stopSpeech() {
       speechRequestId += 1;
 
+      if (speechSource) {
+        try {
+          speechSource.stop();
+        } catch (err) {
+          // Source kann bereits beendet sein.
+        }
+        speechSource.disconnect?.();
+        speechSource = null;
+      }
+
       if (speechAudio) {
         try {
           speechAudio.pause();
@@ -2830,6 +2846,42 @@
     async function tryPlayLocalTts(text, lang) {
       const requestId = ++speechRequestId;
       const audioUrl = `${LOCAL_TTS_ENDPOINT}?text=${encodeURIComponent(text)}&lang=${encodeURIComponent(lang)}`;
+
+      if (IS_APPLE_TOUCH_DEVICE) {
+        const ctx = ensureAudioContext();
+
+        if (!ctx) {
+          throw new Error("audio-context-unavailable");
+        }
+
+        const response = await fetch(audioUrl, { mode: "cors", cache: "default" });
+
+        if (!response.ok) {
+          throw new Error(`audio-fetch-failed-${response.status}`);
+        }
+
+        const audioBufferData = await response.arrayBuffer();
+
+        if (requestId !== speechRequestId) return true;
+
+        const decodedBuffer = await ctx.decodeAudioData(audioBufferData.slice(0));
+
+        if (requestId !== speechRequestId) return true;
+
+        const source = ctx.createBufferSource();
+        source.buffer = decodedBuffer;
+        source.connect(ctx.destination);
+        source.onended = () => {
+          if (speechSource === source) {
+            speechSource = null;
+          }
+        };
+
+        speechSource = source;
+        source.start();
+        return true;
+      }
+
       const audio = new Audio(audioUrl);
       audio.preload = "auto";
       audio.playsInline = true;
