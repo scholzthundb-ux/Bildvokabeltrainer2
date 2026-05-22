@@ -1302,6 +1302,13 @@
     const LANGUAGE_LABELS = { es: "ES", de: "DE", en: "EN-UK", "en-us": "EN-US", ru: "RU" };
     const LANGUAGE_HTML_CODES = { es: "es", de: "de", en: "en-GB", "en-us": "en-US", ru: "ru" };
     const SPEECH_LANG_CODES = { es: "es-ES", de: "de-DE", en: "en-GB", "en-us": "en-US", ru: "ru-RU" };
+    const PREFERRED_BROWSER_VOICE_NAMES = {
+      "de-de": ["anna", "petra", "markus", "yannick", "helena", "deutsch"],
+      "es-es": ["monica", "jorge", "marisol", "paulina", "spanisch"],
+      "en-gb": ["daniel", "serena", "arthur", "british", "united kingdom"],
+      "en-us": ["samantha", "allison", "ava", "tom", "american", "united states"],
+      "ru-ru": ["milena", "yuri", "russian", "russisch"]
+    };
     const TTS_HELPER_PORT = "8124";
     const APP_UA = navigator.userAgent || "";
     const IS_APPLE_TOUCH_DEVICE =
@@ -2962,17 +2969,42 @@
         refreshSpeechVoices();
       }
 
-      const exactVoice = availableSpeechVoices.find((voice) =>
+      const exactVoices = availableSpeechVoices.filter((voice) =>
         (voice.lang || "").toLowerCase() === normalizedLangCode
       );
 
-      if (exactVoice) return exactVoice;
-
-      const baseVoice = availableSpeechVoices.find((voice) =>
+      const baseVoices = availableSpeechVoices.filter((voice) =>
         (voice.lang || "").toLowerCase().startsWith(`${baseLangCode}-`) ||
         (voice.lang || "").toLowerCase() === baseLangCode
       );
 
+      const preferredNames =
+        PREFERRED_BROWSER_VOICE_NAMES[normalizedLangCode] ||
+        PREFERRED_BROWSER_VOICE_NAMES[baseLangCode] ||
+        [];
+
+      const pickBestVoice = (voices) => {
+        if (!voices.length) return null;
+
+        for (const preferredName of preferredNames) {
+          const preferredVoice = voices.find((voice) =>
+            (voice.name || "").toLowerCase().includes(preferredName)
+          );
+
+          if (preferredVoice) return preferredVoice;
+        }
+
+        const nonCompactVoice = voices.find((voice) =>
+          !(voice.name || "").toLowerCase().includes("compact")
+        );
+
+        return nonCompactVoice || voices[0];
+      };
+
+      const exactVoice = pickBestVoice(exactVoices);
+      if (exactVoice) return exactVoice;
+
+      const baseVoice = pickBestVoice(baseVoices);
       if (baseVoice) return baseVoice;
 
       return null;
