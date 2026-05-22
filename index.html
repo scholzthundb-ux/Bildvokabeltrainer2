@@ -1308,7 +1308,7 @@
 
     function getLocalTtsEndpoint() {
       if (window.location.protocol === "http:" || window.location.protocol === "https:") {
-        return `${window.location.protocol}//${window.location.hostname}:${TTS_HELPER_PORT}/tts`;
+        return new URL("/tts", window.location.href).toString();
       }
 
       return `http://127.0.0.1:${TTS_HELPER_PORT}/tts`;
