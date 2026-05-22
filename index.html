@@ -2832,24 +2832,39 @@
       const audioUrl = `${LOCAL_TTS_ENDPOINT}?text=${encodeURIComponent(text)}&lang=${encodeURIComponent(lang)}`;
       const audio = new Audio(audioUrl);
       audio.preload = "auto";
+      audio.playsInline = true;
 
       speechAudio = audio;
 
       await new Promise((resolve, reject) => {
+        let loadTimeout = null;
+
         const cleanup = () => {
-          audio.oncanplaythrough = null;
+          if (loadTimeout) {
+            clearTimeout(loadTimeout);
+            loadTimeout = null;
+          }
+          audio.onloadeddata = null;
+          audio.oncanplay = null;
           audio.onerror = null;
         };
 
-        audio.oncanplaythrough = () => {
+        const resolveWhenReady = () => {
           cleanup();
           resolve();
         };
 
+        audio.onloadeddata = resolveWhenReady;
+        audio.oncanplay = resolveWhenReady;
         audio.onerror = () => {
           cleanup();
           reject(new Error("audio-load-failed"));
         };
+
+        loadTimeout = setTimeout(() => {
+          cleanup();
+          reject(new Error("audio-load-timeout"));
+        }, 2200);
 
         audio.load();
       });
